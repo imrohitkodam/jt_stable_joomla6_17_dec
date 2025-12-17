@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+        <field name="id"
+			type="text"
+			default="0"
+			label="COM_JLIKE_FORM_LBL_LIKE_ID"
+			readonly="true"
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"
+		/> 
+
+ 
+		<field name="created_by"
+			type="createdby"
+			default=""
+			label="COM_JLIKE_FORM_LBL_LIKE_CREATED_BY"
+			description="COM_JLIKE_FORM_DESC_LIKE_CREATED_BY" 
+			hint="COM_JLIKE_FORM_LBL_LIKE_CREATED_BY"
+		/> 
+
+ 
+		<field name="modified_by"
+			type="modifiedby"
+			default=""
+			label="COM_JLIKE_FORM_LBL_LIKE_MODIFIED_BY"
+			description="COM_JLIKE_FORM_DESC_LIKE_MODIFIED_BY" 
+			hint="COM_JLIKE_FORM_LBL_LIKE_MODIFIED_BY"
+		/> 
+
+ 
+		<field name="content_id"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_LIKE_CONTENT_ID"
+			description="COM_JLIKE_FORM_DESC_LIKE_CONTENT_ID" 
+			hint="COM_JLIKE_FORM_LBL_LIKE_CONTENT_ID"
+			filter="safehtml"
+		/> 
+
+ 
+		<field name="annotation_id"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_LIKE_ANNOTATION_ID"
+			description="COM_JLIKE_FORM_DESC_LIKE_ANNOTATION_ID" 
+			hint="COM_JLIKE_FORM_LBL_LIKE_ANNOTATION_ID"
+			filter="safehtml"
+		/> 
+
+ 
+		<field name="userid"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_LIKE_USERID"
+			description="COM_JLIKE_FORM_DESC_LIKE_USERID" 
+			hint="COM_JLIKE_FORM_LBL_LIKE_USERID"
+			filter="safehtml"
+		/> 
+
+ 
+		<field name="like"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_LIKE_LIKE"
+			description="COM_JLIKE_FORM_DESC_LIKE_LIKE" 
+			hint="COM_JLIKE_FORM_LBL_LIKE_LIKE"
+			filter="safehtml"
+		/> 
+
+ 
+		<field name="dislike"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_LIKE_DISLIKE"
+			description="COM_JLIKE_FORM_DESC_LIKE_DISLIKE" 
+			hint="COM_JLIKE_FORM_LBL_LIKE_DISLIKE"
+			filter="safehtml"
+		/> 
+
+ 
+		<field name="date"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_LIKE_DATE"
+			description="COM_JLIKE_FORM_DESC_LIKE_DATE" 
+			hint="COM_JLIKE_FORM_LBL_LIKE_DATE"
+			filter="safehtml"
+		/> 
+
+ 
+		<field name="created"
+			type="calendar"
+			class="inputbox"
+			default="0000-00-00 00:00:00" 
+			label="COM_JLIKE_FORM_LBL_LIKE_CREATED"
+			description="COM_JLIKE_FORM_DESC_LIKE_CREATED" 
+			hint="COM_JLIKE_FORM_LBL_LIKE_CREATED"
+			filter="safehtml"
+		/> 
+
+ 
+		<field name="modified"
+			type="calendar"
+			class="inputbox"
+			default="0000-00-00 00:00:00" 
+			label="COM_JLIKE_FORM_LBL_LIKE_MODIFIED"
+			description="COM_JLIKE_FORM_DESC_LIKE_MODIFIED" 
+			hint="COM_JLIKE_FORM_LBL_LIKE_MODIFIED"
+			filter="safehtml"
+		/> 
+
+ 
+		<field name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="inputbox"
+			size="1"
+			default="1"
+		>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field> 
+
+ 
+		<field name="checked_out"
+			type="hidden"
+			filter="unset"
+		/>
+
+		<field name="checked_out_time"
+			type="hidden"
+			filter="unset"
+		/>
+
+	</fieldset>
+
+</form>

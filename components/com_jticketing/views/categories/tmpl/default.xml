@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JTICKETING_TITLE_CATEGORIES_ALL" option="View">
+		<message><![CDATA[COM_JTICKETING_TITLE_CATEGORIES_ALL_DESC]]></message>
+	</layout>
+
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+		<fieldset name="advanced" label="COM_MENUS_LAYOUT_FEATURED_OPTIONS">
+			<field name="show_child_categories" type="radio" description="COM_JTICKETING_MENU_PRODUCTS_FIELD_SHOW_CHILD_CAT_DESC" label="COM_JTICKETING_MENU_PRODUCTS_FIELD_SHOW_CHILD_CAT" class="btn-group" default="0">
+				<option value="1">COM_JT_YES</option>
+				<option value="0">COM_JT_NO</option>
+			</field>
+
+			<field name="show_categories_layout" type="radio" description="COM_JTICKETING_MENU_SHOW_CATEGORIES_LAYOUT_DESC" label="COM_JTICKETING_MENU_SHOW_CATEGORIES_LAYOUT" class="btn-group" default="1">
+				<option value="1">COM_JTICKETING_PIN_VIEW</option>
+				<option value="0">COM_JTICKETING_LIST_VIEW</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

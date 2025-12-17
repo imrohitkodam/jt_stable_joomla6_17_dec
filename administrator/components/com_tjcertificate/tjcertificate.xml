@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="5.0" method="upgrade">
+  <name>com_tjcertificate</name>
+  <creationDate>2019-08-13</creationDate>
+  <copyright>2020 Techjoomla</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <author>Techjoomla</author>
+  <authorEmail>extensions@techjoomla.com</authorEmail>
+  <authorUrl>http://techjoomla.com</authorUrl>
+  <description />
+  <version>2.0.0</version>
+  <install>
+    <!-- Runs on install -->
+    <sql>
+      <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <!-- Runs on uninstall -->
+    <sql>
+      <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+    </sql>
+  </uninstall>
+  <update>
+    <!-- Runs on Update -->
+    <schemas>
+      <schemapath type="mysql">sql/updates/mysql</schemapath>
+    </schemas>
+  </update>
+  <files folder="site">
+    <filename>index.html</filename>
+    <filename>tjcertificate.php</filename>
+    <filename>controller.php</filename>
+    <filename>router.php</filename>
+    <folder>controllers</folder>
+    <folder>helpers</folder>
+    <folder>events</folder>
+    <folder>views</folder>
+    <folder>models</folder>
+    <folder>languages</folder>
+  </files>
+  <languages folder="site">
+    <language tag="en-GB">languages/en-GB/en-GB.com_tjcertificate.ini</language>
+  </languages>
+  <administration>
+    <menu>COM_TJCERTIFICATE</menu>
+    <submenu>
+      <menu link="option=com_tjcertificate&amp;view=templates" view="templates" alt="Templates">COM_TJCERTIFICATE_TITLE_CERTIFICATES</menu>
+      <menu link="option=com_tjcertificate&amp;view=certificates" view="certificates" alt="Issued Certificates">COM_TJCERTIFICATE_TITLE_ISSUED_CERTIFICATES</menu>
+    </submenu>
+    <files folder="administrator">
+      <filename>access.xml</filename>
+      <filename>config.xml</filename>
+      <filename>controller.php</filename>
+      <filename>index.html</filename>
+      <filename>tjcertificate.php</filename>
+      <filename>tjcertificateTemplate.json</filename>
+      <folder>controllers</folder>
+      <folder>includes</folder>
+      <folder>helpers</folder>
+      <folder>models</folder>
+      <folder>sql</folder>
+      <folder>tables</folder>
+      <folder>views</folder>
+      <folder>libraries</folder>
+      <folder>languages</folder>
+      <folder>layouts</folder>
+    </files>
+    <languages folder="administrator">
+      <language tag="en-GB">languages/en-GB/en-GB.com_tjcertificate.ini</language>
+      <language tag="en-GB">languages/en-GB/en-GB.com_tjcertificate.sys.ini</language>
+    </languages>
+  </administration>
+  <media destination="com_tjcertificate" folder="media">
+    <folder>certificate-templates</folder>
+    <folder>css</folder>
+    <folder>js</folder>
+    <folder>images</folder>
+    <folder>vendors</folder>
+    <folder>fields</folder>
+  </media>
+  <scriptfile>script.tjcertificate.php</scriptfile>
+  <config>
+    <fields>
+      <fieldset>
+        <!--General settings-->
+        <field name="certificate_prefix" default="CERT" />
+        <field name="certificate_random_string_length" default="30" />
+        <field name="certificate_fixed_random_string_length" default="1" />
+        <field name="certificate_scope" default="1" />
+        <field name="show_search_box" default="0" />
+        <field name="date_format_show" default="Y-m-d H:i:s" />
+        <field name="enable_multiagency" default="0" />
+        <field name="qr_code_width" default="130" />
+        <field name="qr_code_height" default="130" />
+
+        <!--Social sharing-->
+        <field name="social_sharing" default="0" />
+        <field name="linkedin_profile_btn" default="1" />
+        <field name="organization_info" default="organizationName" />
+
+        <!-- Media setting  -->
+        <field name="media_sets" default="10" />
+        <field name="upload_extensions" default="image/jpeg,image/jpg,image/png,application/pdf" />
+
+        <!-- Certificate Image -->
+        <field name="cert_image_gen_type" default="canvas" />
+      </fieldset>
+    </fields>
+  </config>
+</extension>

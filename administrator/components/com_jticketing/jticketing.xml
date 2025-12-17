@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension method="upgrade" type="component" version="6.0">
+	<name>com_jticketing</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2009 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>28th Apr 2025</creationDate>
+	<version>5.1.1</version>
+	<description>COM_JTICKETING_PRODUCT_DESC</description>
+	<targetplatform name="joomla" version="^6\." />
+	<!-- Site Main File Copy Section -->
+	<files folder="site">
+		<file>jticketing.php</file>
+		<file>index.html</file>
+		<file>controller.php</file>
+		<file>router.php</file>
+		<folder>assets</folder>
+		<folder>events</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>models</folder>
+		<folder>language</folder>
+		<folder>layouts</folder>
+		<folder>views</folder>
+		<folder>addtickes_types</folder>
+		<folder>includes</folder>
+	</files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_jticketing.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.com_jticketing_common.ini</language>
+	</languages>
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">sql/install.sql</file>
+		</sql>
+	</install>
+	<update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+	<!-- Media files -->
+	<media destination="com_jticketing" folder="media">
+		<folder>images</folder>
+		<folder>events</folder>
+		<folder>samplecsv</folder>
+		<folder>js</folder>
+		<folder>css</folder>
+		<folder>vendors</folder>
+		<folder>integrations</folder>
+		<folder>themes</folder>
+		<folder>certificate-templates</folder>
+	</media>
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu img="components/com_jticketing/assets/images/jticketing16x16.png">com_jticketing</menu>
+		<submenu>
+			<menu link="option=com_jticketing&amp;view=cp">JT_CP</menu>
+			<menu link="option=com_categories&amp;view=categories&amp;extension=com_jticketing.venues">COM_JTICKETING_TITLE_VENUES_CATS</menu>
+			<menu link="option=com_jticketing&amp;view=venues">COM_JTICKETING_VENUES</menu>
+
+			<!-- int - 2  -->
+			<menu link="option=com_categories&amp;view=categories&amp;extension=com_jticketing">COM_CATEGORIES</menu>
+			<menu link="option=com_jticketing&amp;view=events">COM_EVENTS</menu>
+			<menu link="option=com_jticketing&amp;view=catimpexp">COM_CATIMPORTEXPORT</menu>
+			<!-- int - 2  -->
+
+			<menu link="option=com_jticketing&amp;view=allticketsales">COM_SALE</menu>
+			<menu link="option=com_jticketing&amp;view=orders">COM_ORDERS</menu>
+			<menu link="option=com_jticketing&amp;view=attendees">COM_ATTENDEES_VIEW</menu>
+
+			<!-- enableWaitingList -->
+			<menu link="option=com_jticketing&amp;view=waitinglist">COM_JTICKETING_WAITING_LIST</menu>
+			<!-- enableWaitingList -->
+
+			<menu link="option=com_jticketing&amp;view=email_config">COM_EMAIL_CONFIG</menu>
+			<menu link="option=com_jticketing&amp;view=pdftemplates">COM_JTICKETING_PDF_TEMPLATES</menu>
+			<menu link="option=com_tjnotifications&amp;view=notifications&amp;extension=com_jticketing">COM_JTICKETING_TITLE_EMAIL_TEMPLATE</menu>
+			<menu link="option=com_tjnotifications&amp;view=subscriptions&amp;extension=com_jticketing">COM_JTICKETING_NOTIFICATIONS_SUBSCRIPTIONS</menu>
+
+			<!-- enableCertification -->
+			<menu link="option=com_tjcertificate&amp;view=templates&amp;extension=com_jticketing.event">COM_JTICKETING_CERTIFICATE_TEMPLATE</menu>
+			<menu link="option=com_tjcertificate&amp;view=certificates&amp;extension=com_jticketing.event">COM_JTICKETING_CERTIFICATE_ISSUED</menu>
+			<!-- enableCertification -->
+
+			<menu link="option=com_jlike&amp;view=reminders&amp;extension=com_jticketing">COM_JTICKETING_TITLE_REMINDERS</menu>
+			<menu link="option=com_jticketing&amp;view=coupons">COM_COUPON</menu>
+
+			<!-- tjfieldsIntegration -->
+			<menu link="option=com_tjfields&amp;view=fields&amp;client=com_jticketing.event">COM_JTICKETING_EVENT_TJFIELD_MENU</menu>
+			<menu link="option=com_tjfields&amp;view=groups&amp;client=com_jticketing.event">COM_JTICKETING_EVENT_TJGROUP_MENU</menu>
+			<!-- tjfieldsIntegration -->
+
+			<!-- fieldsIntegration -->
+			<menu link="option=com_fields&amp;context=com_jticketing.event">COM_JTICKETING_EVENT_FIELD_MENU</menu>
+			<menu link="option=com_fields&amp;view=groups&amp;context=com_jticketing.event">COM_JTICKETING_EVENT_GROUP_MENU</menu>
+			<!-- fieldsIntegration -->
+
+			<menu link="option=com_tjfields&amp;view=fields&amp;client=com_jticketing.ticket">COM_JTICKETING_ATTENDEE_FIELD_MENU</menu>
+			<menu link="option=com_tjfields&amp;view=groups&amp;client=com_jticketing.ticket">COM_JTICKETING_ATTENDEE_FIELDS_GROUP</menu>
+			<menu link="option=com_jticketing&amp;view=attendeecorefields&amp;client=com_jticketing">COM_JTICKETING_CORE_ATTENDEE_FIELDS</menu>
+
+			<!-- Event Category fields and fieldgroups -->
+			<menu link="option=com_fields&amp;context=com_jticketing.categories">COM_JTICKETING_EVENT_CATEGORIES_FIELD</menu>
+			<menu link="option=com_fields&amp;view=groups&amp;context=com_jticketing.categories">COM_JTICKETING_EVENT_CATEGORIES_FIELD_GROUPS</menu>
+			<!-- Event Category fields and fieldgroups -->
+
+			<!-- Venue Category fields and fieldgroups -->
+			<menu link="option=com_fields&amp;context=com_jticketing.venue">COM_JTICKETING_VENUE_FIELD</menu>
+			<menu link="option=com_fields&amp;view=groups&amp;context=com_jticketing.venue">COM_JTICKETING_VENUE_FIELD_GROUPS</menu>
+			<!-- Venue Category fields and fieldgroups -->
+
+			<menu link="option=com_tjvendors&amp;view=vendors&amp;client=com_jticketing">COM_JTICKETING_VENDORS</menu>
+			<menu link="option=com_tjfields&amp;view=countries&amp;client=com_jticketing">COM_JTICKETING_COUNTRIES</menu>
+			<menu link="option=com_tjfields&amp;view=regions&amp;client=com_jticketing">COM_JTICKETING_REGIONS</menu>
+
+			<!-- tjreports - enabledPlugins -->
+			<menu link="option=com_tjreports&amp;client=com_jticketing&amp;task=reports.defaultReport">COM_JTICKETING_TITLE_TJREPORT</menu>
+			<!-- tjreports - enabledPlugins -->
+		</submenu>
+		<!-- Administration Main File Copy Section -->
+		<files folder="admin">
+			<file>access.xml</file>
+			<file>config.xml</file>
+			<file>config_default.php</file>
+			<file>default_email_template.php</file>
+			<file>email_template.php</file>
+			<file>jticketingTemplate.json</file>
+			<file>certificateTemplate.json</file>
+			<file>controller.php</file>
+			<file>index.html</file>
+			<file>jticketing.php</file>
+			<file>uninstall.sql</file>
+			<folder>assets</folder>
+			<folder>tjcertificates</folder>
+			<folder>config</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<folder>language</folder>
+			<folder>houseKeeping</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_jticketing.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_jticketing.menu.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_jticketing.sys.ini</language>
+
+		</languages>
+	</administration>
+	<scriptfile>install.jticketing.php</scriptfile>
+
+	<!-- default component params values backend -->
+	<config>
+		<fields>
+			<fieldset>
+
+				<!--general_settings-->
+				<!-- ######################### J2.5 params ######################### -->
+				<field name="integration" default="2" />
+				<field name="gravatar" default="0" />dor
+				<field name="silent_vendor" default="1" />
+				<field name="social_integration" default="joomla" />
+				<field name="collect_attendee_info_checkout" default="0" />
+				<field name="show_access_level" default="0" />
+				<field name="default_accesslevels" default="1" />
+				<field name="profile_import" default="0" />
+				<field name="allow_buy_guest" default="0" />
+				<field name="allow_buy_guestreg" default="0" />
+				<field name="guest_reg_id" default="0" />
+				<field name="show_js_toolbar" default="0" />
+				<field name="affect_js_native_seats" default="0" />
+				<field name="auto_fix_seats" default="0" />
+				<field name="gateways" default="bycheck" />
+				<field name="handle_transactions" default="0" />
+				<field name="siteadmin_comm_per" default="0" />
+				<field name="siteadmin_comm_flat" default="0" />
+				<field name="currency" default="USD" />
+				<field name="currency_symbol" default="$" />
+				<field name="currency_display_format" default="{AMOUNT} {CURRENCY_SYMBOL} " />
+				<field name="allow_taxation" default="0" />
+				<field name="enable_coupon" default="0" />
+				<field name="enable_bill_vat" default="0" />
+				<field name="billing_info_field" default="0" />
+				<field name="event_approval" default="0" />
+				<field name="notify_admin_user" default="1" />
+				<field name="jticketing_media_upload_path" default="media/com_jticketing/events" />
+				<field name="enrollment_id_prefix" default="JT" />
+				<field name="append_eventID" default="0" />
+				<field name="append_zeros_to_event_id" default="0" />
+				<field name="random_enrollmentID" default="1" />
+				<field name="count_random" default="15" />
+				<field name="append_zeros" default="0" />
+				<field name="bootstrap_version" default="bs3" />
+
+				<!--Integrations Settings-->
+				<field name="integrate_with" default="none" />
+				<field name="streamAddEvent" default="0" />
+				<field name="streamBuyTicket" default="0" />
+				<field name="streamCheckinTicket" default="0" />
+				<field name="default_country" default="" />
+				<field name="default_country_mobile_code" default="" />
+				<field name="eventowner_buy" default="1" />
+				<field name="reply_to" default="" />
+				<field name="pdf_attach_in_mail" default="3" />
+				<field name="load_bootstrap" default="0" />
+				<field name="show_ticket_type_description" default="0" />
+				<field name="pin_width" default="300" />
+				<field name="pin_padding" default="10" />
+				<field name="desc_length" default="100" />
+				<field name="qr_code_width" default="80" />
+				<field name="qr_code_height" default="80" />
+				<field name="article" default="0" />
+				<field name="tnc" default="0" />
+				<field name="social_sharing" default="1" />
+				<field name="social_shring_type" default="native" />
+				<field name="addtoany_universal_button" default="after" />
+				<field name="addtoany_share_buttons" default="" />
+				<field name="order_prefix" default="JT" />
+				<field name="separator" default="-" />
+				<field name="random_orderid" default="0" />
+				<field name="padding_count" default="3" />
+				<field name="send_auto_reminders" default="0" />
+				<field name="smsgateways" default="plug_tjsms_clickatell" />
+				<field name="enb_batch" default="1" />
+				<field name="batch_size_reminders" default="30" />
+				<field name="pkey_for_reminder" default="abcd1234" />
+				<field name="pending_email_enb_batch" default="1" />
+				<field name="pending_email_batch_size" default="30" />
+				<field name="attendee_email_limit" default="30" />
+				<field name="company_name" default="" />
+				<field name="company_address" default="" />
+				<field name="company_vat_no" default="" />
+				<field name="downloadid" default="" />
+				<field name="enable_online_events" default="0" />
+				<field name="gmaps_default_zoom_level" default="10" />
+				<field name="event_filter" default="tj-filters-mod-pos" />
+				<field name="date_format_show" default="F j, Y, g:i a" />
+				<field name="enable_waiting_list" default="none" />
+				<field name="cron_limit" default="10" />
+				<field name="show_tags" default="0" />
+				<field name="max_noticket_peruserperpurchase" default="8" />
+				<field name="display_remaining_count" default="5" />
+				<field name="admin_fee_mode" default="1" />
+				<field name="admin_fee_level" default="order" />
+				<field name="ga_ec_analytics" default="0" />
+				<field name="track_attendee_step" default="0" />
+				<field name="ga_product_type_dimension" default="event" />
+				<field name="trackOnOrderFailure" default="1" />
+				<field name="small_width" default="128" />
+				<field name="small_height" default="128" />
+				<field name="medium_width" default="240" />
+				<field name="medium_height" default="240" />
+				<field name="large_width" default="800" />
+				<field name="large_height" default="286" />
+				<field name="redirect_tags_to_events" default="0" />
+				<field name="regexforAttendeeMob" default="^(\+\d{1,3}[- ]?)?\d{10}$" />
+				<field name="activity" default="0" />
+				<field name="ticket_access" default="include" />
+				<field name="tnc_for_create_event" default="0" />
+				<field name="fields_integrate_with" default="com_tjfields" />
+				<field name="venue_gallery" default="0" />
+				<field name="enable_eventstartdateinname" default="0" />
+				<field name="display_timezone" default="0" />
+				<field name="ticket_page_size" default="A4" />
+				<field name="ticket_orientation" default="portrait" />
+				<field name="barcode_width" default="1" />
+				<field name="barcode_height" default="90" />
+				<field name="currency_code_or_symbol" default="symbol" />
+				<field name="front_event_pin_view" default="media_s" />
+				<field name="front_event_detail_view" default="media" />
+				<field name="front_event_gallery_view" default="media_s" />
+				<field name="admin_event_detail_view" default="media_s" />
+				<field name="admin_event_gallery_view" default="media_s" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

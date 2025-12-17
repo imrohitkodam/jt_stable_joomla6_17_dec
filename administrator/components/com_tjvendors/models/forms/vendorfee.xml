@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/administrator/components/com_tjvendors/models/fields">
+		<field
+			name="id"
+			type="int"
+			label="COM_TJVENDORS_FORM_LBL_VENDOR_ID"
+			readonly="true"
+			class="readonly required"
+			description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field
+			name="vendor_title"
+			type="text"
+			label="COM_TJVENDORS_FORM_LBL_VENDOR_TITLE"
+			description="COM_TJVENDORS_FORM_DESC_VENDOR_TITLE"
+			hint="COM_TJVENDORS_FORM_LBL_VENDOR_TITLE"
+			filter=""
+			readonly="true"
+			class="readonly required" />
+
+		<field
+			name="client"
+			type="text"
+			label="COM_TJVENDORS_FORM_LBL_VENDOR_CLIENT"
+			description="COM_TJVENDORS_FORM_DESC_VENDOR_CLIENT"
+			hint="COM_TJVENDORS_FORM_LBL_VENDOR_CLIENT"
+			filter="" />
+
+		<field
+			name="currency"
+			type="currencylist"
+			label="COM_TJVENDORS_FORM_LBL_VENDOR_CURRENCY"
+			required="true"
+			default="USD"
+			description="COM_TJVENDORS_FORM_DESC_VENDOR_CURRENCY"
+			hint="COM_TJVENDORS_FORM_DESC_VENDOR_CURRENCY"
+			filter="" />
+
+		<field
+			name="percent_commission"
+			type="number"
+			size="40"
+			class="inputbox validate-numeric"
+			label="COM_TJVENDORS_VENDORS_PERCENT_COMMISSION"
+			description="COM_TJVENDORS_FORM_DESC_VENDOR_PERCENT_COMMISSION"
+			hint="COM_TJVENDORS_VENDORS_PERCENT_COMMISSION"
+			min="0"
+			max="100"
+			filter=""
+			default="0" />
+
+		<field
+			name="flat_commission"
+			type="number"
+			min="0"
+			size="40"
+			default="0"
+			class="inputbox validate-numeric"
+			label="COM_TJVENDORS_FORM_LBL_VENDOR_FLAT_COMMISSION"
+			description="COM_TJVENDORS_FORM_DESC_VENDOR_FLAT_COMMISSION"
+			hint="COM_TJVENDORS_FORM_LBL_VENDOR_FLAT_COMMISSION" filter="" />
+	</fieldset>
+</form>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="filter">
+		<field name="search" type="text"
+			label="COM_JTICKETING_FILTER_SEARCH_DESC_MYTICKET"
+			hint="COM_JTICKETING_FILTER_SEARCH_DESC_MYTICKET"
+		/>
+		<field name="tickets" type="ticketslist"
+			label="COM_JTICKETING_FILTER_SELECT_TICKET"
+			description="COM_JTICKETING_FILTER_SELECT_TICKET_DESC"
+			onchange="this.form.submit();"
+			>
+		</field>
+		<field name="show_ticket" type="list" label="COM_JTICKETING_TICKET_SHOW_TIME" description="COM_JTICKETING_TICKET_SHOW_TIME_DESC" onchange="this.form.submit();"
+>
+			<option value="">COM_JTICKETING_SELECT_TICKET</option>
+			<option value="upcoming">COM_JTICKETING_TICKET_UPCOMING</option>
+			<option value="past">COM_JTICKETING_TICKET_PAST</option>
+		</field>
+	</fields>
+		<fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			label="COM_JTICKETING_LIST_LIMIT"
+			description="COM_JTICKETING_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

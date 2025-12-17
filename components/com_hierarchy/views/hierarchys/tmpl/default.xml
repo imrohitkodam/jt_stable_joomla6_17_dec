@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_HIERARCHY_TITLE_LIST_VIEW_HIERARCHYS" option="View">
+		<message>
+			<![CDATA[COM_HIERARCHY_TITLE_LIST_VIEW_HIERARCHYS_DESC]]>
+		</message>
+	</layout>
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+		<fieldset name="advanced" label="COM_MENUS_LAYOUT_FEATURED_OPTIONS">
+			<field name="select_layout" type="list" description="COM_HIERARCHY_SELECT_LAYOUT_MENU_LBL_DESC" label="COM_HIERARCHY_SELECT_LAYOUT_MENU_LBL" default="" >
+				<option value=" ">COM_HIERARCHY_NONE</option>
+				<option value="0">COM_HIERARCHY_LIST</option>
+				<option value="1">COM_HIERARCHY_CHART</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

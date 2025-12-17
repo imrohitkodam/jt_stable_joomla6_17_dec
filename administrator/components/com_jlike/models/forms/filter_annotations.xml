@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="COM_JLIKE_FILTER_SEARCH_LABEL"
+			hint="JSEARCH_FILTER"
+		/>
+		<field
+			name="published"
+			type="status"
+			label="JOPTION_SELECT_PUBLISHED"
+			onchange="this.form.submit();"
+			extension="com_jlike"
+			>
+			<option value="">JOPTION_SELECT_PUBLISHED</option>
+		</field>
+	</fields>
+
+	<fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			label="COM_JLIKE_LIST_LIMIT"
+			default="25"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

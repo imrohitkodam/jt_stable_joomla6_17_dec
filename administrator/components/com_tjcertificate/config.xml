@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset name="component" label="COM_TJCERTIFICATE_GENEARAL_SETINGS" description="" addfieldpath="/media/com_tjcertificate/fields">
+		<field
+			name="certificate_prefix"
+			type="text"
+			default="CERT"
+			maxlength="10"
+			label="COM_TJCERTIFICATE_CERTIFICATE_PREFIX_LABEL"
+			description="COM_TJCERTIFICATE_CERTIFICATE_PREFIX_DESC"
+		/>
+		<field
+			name="certificate_random_string_length"
+			type="text"
+			default="30"
+			hint="Maxlength is 50"
+			label="COM_TJCERTIFICATE_CERTIFICATE_RANDOM_STRING_LENTGH_LABEL"
+			description="COM_TJCERTIFICATE_CERTIFICATE_RANDOM_STRING_LENTGH_DESC"
+		/>
+		<field
+			name="certificate_fixed_random_string_length"
+			type="hidden"
+			label="COM_TJCERTIFICATE_CERTIFICATE_FIXED_RANDOM_STRING_LENTGH_LABEL"
+			description="COM_TJCERTIFICATE_CERTIFICATE_FIXED_RANDOM_STRING_LENTGH_DESC"
+			class="btn-group btn-group-yesno"
+			default="1"
+			filter="integer"
+			>
+			<!-- <option value="1">COM_TJCERTIFICATE_CERTIFICATE_FIXED_RANDOM_STRING_LENTGH_FIXED</option>
+			<option value="0">COM_TJCERTIFICATE_CERTIFICATE_FIXED_RANDOM_STRING_LENTGH_RANDOM</option> -->
+		</field>
+		<field name="certificate_scope" class="btn-group" type="radio"  default="1" description="COM_TJCERTIFICATE_SHOW_PUBLIC_PRIVATE_DESC" label="COM_TJCERTIFICATE_SHOW_PUBLIC_PRIVATE" >
+			<option value="1">COM_TJCERTIFICATE_OPTION_PUBLIC</option>
+			<option value="0">COM_TJCERTIFICATE_OPTION_PRIVATE</option>
+		</field>
+		<field name="show_search_box" class="btn-group" type="radio"  default="0" description="COM_TJCERTIFICATE_SHOW_SEARCH_BOX_DESC" label="COM_TJCERTIFICATE_SHOW_SEARCH_BOX" >
+			<option value="1">JYES</option>
+			<option value="0">JNo</option>
+		</field>
+		<field name="date_format_show" class="btn-group" default="Y-m-d H:i:s" type="list" label="COM_TJCERTIFICATE_DATE_FORMAT_TO_SHOW" description="COM_TJCERTIFICATE_DATE_FORMAT_TO_SHOW_DESC">
+			<option value="Y-m-d H:i:s">COM_TJCERTIFICATE_DATE_FORMAT_1</option>
+			<option value="D, M d h:i A">COM_TJCERTIFICATE_DATE_FORMAT_2</option>
+			<option value="F j, Y, g:i a">COM_TJCERTIFICATE_DATE_FORMAT_3</option>
+			<option value="m.d.y">COM_TJCERTIFICATE_DATE_FORMAT_4</option>
+			<option value="j, n, Y">COM_TJCERTIFICATE_DATE_FORMAT_5</option>
+			<option value="h-i-s, j-m-y">COM_TJCERTIFICATE_DATE_FORMAT_6</option>
+			<option value="H:i:s">COM_TJCERTIFICATE_DATE_FORMAT_7</option>
+			<option value="custom">Custom</option>
+		</field>
+		<field name="custom_format" class="inputbox" type="text" label="COM_TJCERTIFICATE_CUSTOM_DATE_FORMAT"
+			showon="date_format_show:custom" description="COM_TJCERTIFICATE_CUSTOM_DATE_FORMAT_DESC" />
+
+		<field name="enable_multiagency" class="btn-group" type="radio"  default="0" description="COM_TJCERTIFICATE_INTEGRATE_MULTIAGENCY_DESC" label="COM_TJCERTIFICATE_INTEGRATE_MULTIAGENCY" >
+			<option value="1">JYES</option>
+			<option value="0">JNo</option>
+		</field>
+
+		<field menu="hide" name="" type="legend" default="COM_TJCERTIFICATE_QR_CODE_SETTING" label="" description="" />
+		<field name="qr_code_width" class="validate-numeric" type="text" default="130" label="COM_TJCERTIFICATE_QR_CODE_WIDTH" description="COM_TJCERTIFICATE_QR_CODE_WIDTH_DESC" />
+		<field name="qr_code_height" class="validate-numeric" type="text" default="130" label="COM_TJCERTIFICATE_QR_CODE_HEIGHT" description="COM_TJCERTIFICATE_QR_CODE_HEIGHT_DESC" />
+		<field type="note" name="qr-code-settings-note" label="COM_TJCERTIFICATE_QR_CODE_SETTINGS_NOTE" />
+	</fieldset>
+
+	<!-- Social sharing -->
+	<fieldset name="social_sharing" label="COM_TJCERTIFICATE_SOCIAL_SHARING_SETINGS">
+		<field name="social_sharing" class="btn-group" type="radio"  default="0" description="COM_TJCERTIFICATE_SOCIAL_SHARING_DESC" label="COM_TJCERTIFICATE_SOCIAL_SHARING" >
+			<option value="1">JYES</option>
+			<option value="0">JNo</option>
+		</field>
+		<field name="sharing_option" type="list" multiple="multiple" label="COM_TJCERTIFICATE_SOCIAL_SHARING_OPTIONS" showon="social_sharing:1">
+		   <option value="facebook">COM_TJCERTIFICATE_SOCIAL_SHARING_FACEBOOK</option>
+		   <option value="linkedin">COM_TJCERTIFICATE_SOCIAL_SHARING_LINKEDIN</option>
+		   <option value="twitter">COM_TJCERTIFICATE_SOCIAL_SHARING_TWITTER</option>
+		   <option value="whatsapp">COM_TJCERTIFICATE_SOCIAL_SHARING_WHATSAPP</option>
+		</field>
+		<field name="linkedin_profile_btn" class="btn-group" type="radio"  default="1" description="COM_TJCERTIFICATE_LINKEDIN_PROFILE_BTN_DESC" label="COM_TJCERTIFICATE_LINKEDIN_PROFILE_BTN" >
+			<option value="1">JYES</option>
+			<option value="0">JNo</option>
+		</field>
+		<field name="organization_info" class="btn-group" type="radio" default="organizationName" label="COM_TJCERTIFICATE_LINKEDIN_ORGANIZATION_INFO" description="COM_TJCERTIFICATE_LINKEDIN_ORGANIZATION_INFO_DESC" showon="linkedin_profile_btn:1">
+		   <option value="organizationName">COM_TJCERTIFICATE_LINKEDIN_ORGANIZATION_NAME</option>
+		   <option value="organizationId">COM_TJCERTIFICATE_LINKEDIN_ORGANIZATION_ID</option>
+		</field>
+		<field name="organization_id_name" type="text" label="COM_TJCERTIFICATE_LINKEDIN_ORGANIZATION_ID_NAME" showon="linkedin_profile_btn:1" description="COM_TJCERTIFICATE_LINKEDIN_ORGANIZATION_ID_NAME_DESC" />
+<!--
+		<field name="social_sharing_type" class="btn-group" type="radio" default="native" label="COM_TJCERTIFICATE_SOCIAL_SHARING_TYPE" description="COM_TJCERTIFICATE_SOCIAL_SHARING_TYPE_DESC" >
+			<option value="addthis">COM_TJCERTIFICATE_ADDTHIS_SOCIAL</option>
+			<option value="native">COM_TJCERTIFICATE_NATIVE</option>
+		</field>
+
+		<field name="addthis_publishid" type="text" default="" label="COM_TJCERTIFICATE_SELECT_ADDTHIS_PUBLISHED_ID" showon="social_sharing_type:addthis" description="COM_TJCERTIFICATE_SELECT_ADDTHIS_PUBLISHED_ID_DESC" />
+-->
+	</fieldset>
+
+	<!-- Media setting  -->
+	<fieldset name="media_sets" label="COM_TJCERTIFICATE_MEDIA_SETS" description="">
+		<field name="upload_maxsize" type="text" default="10" label="COM_TJCERTIFICATE_UPLOAD_MAX_SIZE" description="COM_TJCERTIFICATE_UPLOAD_MAX_SIZE_DESC" />
+		<field name="upload_extensions" type="text" cols="60" rows="5" default="image/jpeg,image/jpg,image/png,application/pdf" label="COM_TJCERTIFICATE_LEGAL_EXTENSION" description="COM_TJCERTIFICATE_LEGAL_EXTENSION_DESC" />
+	</fieldset>
+
+	<fieldset name="certificate_image_generation" label="COM_TJCERTIFICATE_IMAGE_GENERATION">
+		<field type="note" id="tjcert-certificate-image-settings" name="tjcert-certificate-image-settings" label="COM_TJCERTIFICATE_IMAGE_GENERATION_SETTINGS" />
+		<field name="cert_image_gen_type" class="btn-group" type="radio" default="canvas" label="COM_TJCERTIFICATE_IMAGE_GENERATION_TYPE" description="COM_TJCERTIFICATE_IMAGE_GENERATION_TYPE_DESC" >
+			<option value="canvas">COM_TJCERTIFICATE_IMAGE_GENERATION_TYPE_CANVAS</option>
+			<option value="imagick">COM_TJCERTIFICATE_IMAGE_GENERATION_TYPE_IMAGICK</option>
+		</field>
+		<field type="note" id="tjcert-certificate-image-settings-note" name="tjcert-certificate-image-settings-note" label="COM_TJCERTIFICATE_IMAGE_GENERATION_SETTINGS_NOTE" showon="cert_image_gen_type:imagick" />
+	</fieldset>
+
+	<!-- Bulk record setting  -->
+	<fieldset name="bulk_record" label="COM_TJCERTIFICATE_BULK_RECORD_SETTINGS">
+		<field
+			name="users_select_limit"
+			type="text"
+			default="40"
+			label="COM_TJCERTIFICATE_RECORDS_USER_SELECT_LIMIT"
+			description="COM_TJCERTIFICATE_RECORDS_USER_SELECT_LIMIT_DESC"
+		/>
+		<field name="tjqueue_records" class="btn-group" type="radio"  default="0" description="COM_TJCERTIFICATE_TJQUEUE_SETTING_DESC" label="COM_TJCERTIFICATE_TJQUEUE_SETTING" >
+			<option value="1">JYES</option>
+			<option value="0">JNo</option>
+		</field>
+		<field type="note" label="COM_TJCERTIFICATE_BULK_RECORD_SETTINGS_NOTE" showon="tjqueue_records:1" />
+	</fieldset>
+
+	<!-- Permission setting  -->
+	<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+		<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" class="inputbox" validate="rules" filter="rules" component="com_tjcertificate" section="component" />
+	</fieldset>
+</config>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="payment_gateways" type="paymentGateway" filter="" class="gateway_name" onchange="tjCommon.getGatewayFields(this)" label="COM_TJVENDORS_FORM_LBL_VENDOR_PAYMENT_GATEWAY" description="COM_TJVENDORS_FORM_LBL_VENDOR_PAYMENT_GATEWAY_DESC"/>
+	</fieldset>
+</form>

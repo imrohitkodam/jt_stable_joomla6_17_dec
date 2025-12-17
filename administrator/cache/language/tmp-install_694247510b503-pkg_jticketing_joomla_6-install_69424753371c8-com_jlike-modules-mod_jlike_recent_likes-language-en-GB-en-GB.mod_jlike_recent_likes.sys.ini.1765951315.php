@@ -1,0 +1,6 @@
+<?php
+defined('_JEXEC') or die;
+return array (
+  'MOD_JLIKE_RECENT_LIKES' => 'Recently liked content',
+  'MOD_JLIKE_RECENT_LIKES_DESC' => 'Module to show recently liked content',
+);

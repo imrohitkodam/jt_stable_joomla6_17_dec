@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			filter="string"
+			label="COM_TJCERTIFICATE_CERTIFICATE_FILTER_SEARCH_LABEL"
+			description="COM_TJCERTIFICATE_CERTIFICATE_FILTER_SEARCH_LABEL_DESC"
+			hint="JSEARCH_FILTER"
+		/>
+		<field
+			name="certificate_template_id"
+			type="sql"
+			query="SELECT id, title FROM `#__tj_certificate_templates` ORDER BY id DESC" key_field="id" value_field="title"
+			translate="false"
+			filter="int"
+			label="COM_TJCERTIFICATE_CERTIFICATE_FILTER_CERTIFICATE_TEMPLATE"
+			description="COM_TJCERTIFICATE_CERTIFICATE_FILTER_DESC_CERTIFICATE_TEMPLATE"
+			onchange="this.form.submit();">
+			<option value="">COM_TJCERTIFICATE_CERTIFICATE_FILTER_CERTIFICATE_TEMPLATE_SELECT</option>
+		</field>
+
+		<field name="client"
+			type="getclientlist"
+			filter="safehtml"
+			label="COM_TJCERTIFICATE_CERTIFICATE_FILTER_CERTIFICATE_CLIENT"
+			description="COM_TJCERTIFICATE_CERTIFICATE_FILTER_DESC_CERTIFICATE_CLIENT"
+			addfieldpath="/components/com_tjcertificate/models/fields"
+			clientByUser="0"
+			onchange="this.form.submit();" />
+
+		<!-- <field
+			name="user_id"
+			type="sql"
+			query="SELECT DISTINCT (`ci`.`user_id`), u.name FROM `#__tj_certificate_issue` AS ci LEFT JOIN `#__users` AS u ON (ci.user_id = u.id)" key_field="user_id" value_field="name"
+			filter="safehtml"
+			label="COM_TJCERTIFICATE_CERTIFICATE_FILTER_ISSUED_USER"
+			description="COM_TJCERTIFICATE_CERTIFICATE_FILTER_ISSUED_USER"
+			onchange="this.form.submit();">
+			<option value="">COM_TJCERTIFICATE_CERTIFICATE_FILTER_ISSUED_USER_SELECT</option>
+		</field> -->
+
+		<field name="agency_id"
+			type="agencies"
+			filter="integer"
+			label="COM_TJCERTIFICATE_CERTIFICATE_FILTER_CERTIFICATE_CLIENT"
+			description="COM_TJCERTIFICATE_CERTIFICATE_FILTER_DESC_CERTIFICATE_CLIENT"
+			addfieldpath="/components/com_tjcertificate/models/fields"
+			onchange="this.form.submit();" />
+
+		<field name="user_id"
+			type="users"
+			filter="integer"
+			label="COM_TJCERTIFICATE_CERTIFICATE_FILTER_ISSUED_USER"
+			description="COM_TJCERTIFICATE_CERTIFICATE_FILTER_ISSUED_USER"
+			addfieldpath="/components/com_tjcertificate/models/fields"
+			onchange="this.form.submit();" />
+
+		<field
+			name="state"
+			type="list"
+			label="COM_TJCERTIFICATE_CERTIFICATE_FILTER_PUBLISHED"
+			description="COM_TJCERTIFICATE_CERTIFICATE_FILTER_PUBLISHED_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">JOPTION_SELECT_PUBLISHED</option>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="-1">COM_TJCERTIFICATE_STATUS_PENDING</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field>
+		<input type="hidden" name="form_submited" value="1"/>
+	</fields>
+
+	<fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

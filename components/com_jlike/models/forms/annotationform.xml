@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+        <field name="id"
+			type="text"
+			default="0"
+			label="COM_JLIKE_FORM_LBL_ANNOTATION_ID"
+			readonly="true"
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"
+		/> 
+
+ 
+		<field name="created_by"
+			type="createdby"
+			default=""
+			label="COM_JLIKE_FORM_LBL_ANNOTATION_CREATED_BY"
+			description="COM_JLIKE_FORM_DESC_ANNOTATION_CREATED_BY" 
+			hint="COM_JLIKE_FORM_LBL_ANNOTATION_CREATED_BY"
+		/> 
+
+ 
+		<field name="modified_by"
+			type="modifiedby"
+			default=""
+			label="COM_JLIKE_FORM_LBL_ANNOTATION_MODIFIED_BY"
+			description="COM_JLIKE_FORM_DESC_ANNOTATION_MODIFIED_BY" 
+			hint="COM_JLIKE_FORM_LBL_ANNOTATION_MODIFIED_BY"
+		/> 
+
+ 
+		<field name="content_id"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_ANNOTATION_CONTENT_ID"
+			description="COM_JLIKE_FORM_DESC_ANNOTATION_CONTENT_ID" 
+			hint="COM_JLIKE_FORM_LBL_ANNOTATION_CONTENT_ID"
+			filter="safehtml"
+		/> 
+
+ 
+		<field name="annotation"
+			type="editor"
+			buttons="true"
+			class="inputbox"
+			filter="safehtml"
+			label="COM_JLIKE_FORM_LBL_ANNOTATION_ANNOTATION"
+			description="COM_JLIKE_FORM_DESC_ANNOTATION_ANNOTATION" 
+			hint="COM_JLIKE_FORM_LBL_ANNOTATION_ANNOTATION"
+		/> 
+
+ 
+		<field name="privacy"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_ANNOTATION_PRIVACY"
+			description="COM_JLIKE_FORM_DESC_ANNOTATION_PRIVACY" 
+			hint="COM_JLIKE_FORM_LBL_ANNOTATION_PRIVACY"
+			filter="safehtml"
+		/> 
+
+ 
+		<field name="annotation_date"
+			type="calendar"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_ANNOTATION_ANNOTATION_DATE"
+			description="COM_JLIKE_FORM_DESC_ANNOTATION_ANNOTATION_DATE" 
+			hint="COM_JLIKE_FORM_LBL_ANNOTATION_ANNOTATION_DATE"
+          	translateformat="true"
+          	showtime="true"
+	          filter="user_utc"
+		/> 
+
+ 
+		<field name="parent_id"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_ANNOTATION_PARENT_ID"
+			description="COM_JLIKE_FORM_DESC_ANNOTATION_PARENT_ID" 
+			hint="COM_JLIKE_FORM_LBL_ANNOTATION_PARENT_ID"
+			filter="safehtml"
+		/> 
+
+ 
+		<field name="note"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_ANNOTATION_NOTE"
+			description="COM_JLIKE_FORM_DESC_ANNOTATION_NOTE" 
+			hint="COM_JLIKE_FORM_LBL_ANNOTATION_NOTE"
+			filter="safehtml"
+		/> 
+
+ 
+		<field name="type"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_ANNOTATION_TYPE"
+			description="COM_JLIKE_FORM_DESC_ANNOTATION_TYPE" 
+			hint="COM_JLIKE_FORM_LBL_ANNOTATION_TYPE"
+			filter="safehtml"
+		/> 
+
+ 
+		<field name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="inputbox"
+			size="1"
+			default="1"
+		>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field> 
+
+ 
+		<field name="checked_out"
+			type="hidden"
+			filter="unset"
+		/>
+
+		<field name="checked_out_time"
+			type="hidden"
+			filter="unset"
+		/>
+
+	</fieldset>
+
+</form>

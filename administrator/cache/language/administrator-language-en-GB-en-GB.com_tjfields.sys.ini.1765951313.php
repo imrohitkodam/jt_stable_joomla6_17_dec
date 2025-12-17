@@ -1,0 +1,9 @@
+<?php
+defined('_JEXEC') or die;
+return array (
+  'COM_TJFIELDS' => 'TJFields',
+  'COM_TJFIELDS_XML_DESCRIPTION' => 'TJFields - Common code for TJ Fields Manager and TJ Geo Manager!',
+  'COM_TJFIELDS_TEST_LABEL' => 'Test label',
+  'COM_TJFIELDS_TITLE_FIELDS' => 'Fields',
+  'COM_TJFIELDS_TITLE_GROUPS' => 'Groups',
+);

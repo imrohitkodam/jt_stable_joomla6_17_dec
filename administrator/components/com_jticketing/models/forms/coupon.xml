@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="hidden"
+			default="0"
+			label="COM_JTICKETING_FORM_LBL_COUPON_ID"
+			readonly="true"
+			class="readonly required"
+			description="JGLOBAL_FIELD_ID_DESC"
+			filter="integer"
+		/>
+
+		<field
+			name="created_by"
+			type="hidden"
+			default="0"
+			label="COM_JTICKETING_FORM_LBL_COUPON_CREATED_BY"
+			description="COM_JTICKETING_FORM_DESC_COUPON_CREATED_BY"
+			filter="integer"
+		/>
+
+		<field
+			name="name"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JTICKETING_FORM_LBL_COUPON_NAME"
+			description="COM_JTICKETING_FORM_DESC_COUPON_NAME"
+			required="true"
+			filter="string"
+		/>
+
+		<field
+			name="code"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JTICKETING_COUPONS_CODE"
+			description="COM_JTICKETING_FORM_DESC_COUPON_CODE"
+			required="true"
+			filter="string"
+		/>
+
+		<field
+			name="value"
+			type="number"
+			size="40"
+			class="inputbox"
+			label="COM_JTICKETING_FORM_LBL_COUPON_VALUE"
+			description="COM_JTICKETING_FORM_DESC_COUPON_VALUE"
+			required="true"
+			step="0.01"
+		/>
+
+		<field
+			name="limit"
+			type="number"
+			size="40"
+			class="inputbox"
+			label="COM_JTICKETING_FORM_LBL_COUPON_MAX_USE"
+			description="COM_JTICKETING_FORM_DESC_COUPON_MAX_USE"
+			filter="integer"
+		/>
+
+		<field
+			name="max_per_user"
+			type="number"
+			size="40"
+			class="inputbox"
+			label="COM_JTICKETING_FORM_LBL_COUPON_MAX_PER_USER"
+			description="COM_JTICKETING_FORM_DESC_COUPON_MAX_PER_USER"
+			filter="integer"
+		/>
+
+		<field
+			name="description"
+			type="textarea"
+			buttons="true"
+			class="inputbox"
+			filter="safehtml"
+			label="COM_JTICKETING_FORM_LBL_COUPON_DESCRIPTION"
+			description="COM_JTICKETING_FORM_DESC_COUPON_DESCRIPTION"
+		/>
+
+		<field
+			name="params"
+			type="textarea"
+			class="inputbox"
+			label="COM_JTICKETING_FORM_LBL_COUPON_PARAMS"
+			description="COM_JTICKETING_FORM_DESC_COUPON_PARAMS"
+			filter="string"
+		/>
+
+		<field
+			name="valid_from"
+			type="calendar"
+			class="inputbox"
+			default="0000-00-00 00:00:00"
+			label="COM_JTICKETING_FORM_LBL_COUPON_FROM_DATE"
+			description="COM_JTICKETING_FORM_DESC_COUPON_FROM_DATE"
+			format="%Y-%m-%d %H:%M:%S"
+			filter="user_utc"
+		/>
+
+		<field
+			name="valid_to"
+			type="calendar"
+			class="inputbox"
+			default="0000-00-00 00:00:00"
+			label="COM_JTICKETING_FORM_LBL_COUPON_EXP_DATE"
+			description="COM_JTICKETING_FORM_DESC_COUPON_EXP_DATE"
+			format="%Y-%m-%d %H:%M:%S"
+			filter="user_utc"
+		/>
+
+		<field
+			name="event_ids"
+			type="vendoreventslist"
+			label="COM_JTICKETING_FORM_COUPON_SELECT_EVENT"
+			description="COM_JTICKETING_FORM_COUPON_DESC_SELECT_EVENT"
+			multiple="true">
+		</field>
+
+		<field
+			name="vendor_id"
+			type="vendorslist"
+			label="COM_JTICKETING_FORM_LBL_COUPON_VENDOR"
+			description="COM_JTICKETING_FORM_DESC_COUPON_VENDOR"
+			client="com_jticketing"
+			multiple="false"
+			addfieldpath="/administrator/components/com_tjvendors/models/fields"
+		/>
+
+		<field
+			name="checked_out"
+			type="hidden"
+			filter="unset"
+		/>
+
+		<field
+			name="checked_out_time"
+			type="hidden"
+			filter="unset"
+		/>
+
+		<field name="state" type="radio" label="COM_JTICKETING_COUPONS_STATUS" description="JFIELD_PUBLISHED_DESC" class="btn-group inputbox" size="1" default="1">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+		<field name="val_type" type="radio" size="40" class="inputbox btn-group" label="COM_JTICKETING_FORM_LBL_COUPON_VAL_TYPE" description="COM_JTICKETING_FORM_DESC_COUPON_VAL_TYPE" default="0" filter="safehtml">
+			<option value = "1">COM_JTICKETING_PERCENTAGE</option>
+			<option value = "0">COM_JTICKETING_FLAT_RATE</option>
+		</field>
+
+		<field
+			name="group_discount"
+			type="radio"
+			default="0"
+			label="COM_JTICKETING_FORM_LBL_GROUP_DISCOUNT"
+			class="btn-group btn-group-yesno"
+			maxlength="50">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</field>
+
+		<field
+			name="group_discount_tickets"
+			type="number"
+			size="40"
+			default="0"
+			showon="group_discount:1"
+			class="inputbox"
+			label="COM_JTICKETING_FORM_LBL_GROUP_DISCOUNT_TICKET_COUNT"
+			filter="integer"
+		/>
+	</fieldset>
+</form>

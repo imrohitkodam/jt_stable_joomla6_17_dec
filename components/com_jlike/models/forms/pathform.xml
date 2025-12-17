@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id"
+			type="text"
+			default="0"
+			label="COM_JLIKE_PATH_ID"
+			readonly="true"
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"
+			filter="integer"/>
+
+		<field name="created_by"
+			type="createdby"
+			default=""
+			label="COM_JLIKE_PATH_FORM_LBL_CREATED_BY"
+			description="COM_JLIKE_PATH_FORM_FORM_DESC_CREATED_BY"
+			filter="integer" />
+
+		<field name="created_date"
+			type="calendar"
+			class="inputbox"
+			default="0000-00-00 00:00:00"
+			label="COM_JLIKE_PATH_FORM_LBL_CREATED_DATE"
+			description="COM_JLIKE_PATH_FORM_DESC_CREATED_DATE"
+			filter="safehtml" />
+	</fieldset>
+</form>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="4.0" method="upgrade">
+    <name>com_hierarchy</name>
+    <creationDate>29th Apr 2022</creationDate>
+    <copyright>Copyright (C) 2016 - 2022 Techjoomla. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <author>Techjoomla</author>
+    <authorEmail>extensions@techjoomla.com</authorEmail>
+    <authorUrl>https://techjoomla.com</authorUrl>
+    <version>2.0.0</version>
+    <description>This tool will let the admin set a ‘Reports to’ field for each user in the system. This will be updated en masse using a CSV</description>
+
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+   
+    <update> 
+		<schemas> 
+			<schemapath type="mysql">sql/updates/mysql</schemapath> 
+		</schemas> 
+	</update>
+	<scriptfile>script.hierarchy.php</scriptfile>
+    <files folder="site">
+        <filename>hierarchy.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <languages folder="site/language">
+			<language tag="en-GB">en-GB/en-GB.com_hierarchy.ini</language>
+    </languages>
+    <media destination="com_hierarchy" folder="media">
+		<file>index.html</file>
+		<folder>samplecsv</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>vendors</folder>
+	</media>
+    <administration>
+        <menu img="components/com_hierarchy/assets/images/s_com_hierarchy.png" >COM_HIERARCHY</menu>
+        <submenu>
+
+			<menu link="option=com_hierarchy&amp;view=hierarchys" view="hierarchys" img="components/com_hierarchy/assets/images/s_hierarchys.png" alt="Hierarchy/Hierarchys">COM_HIERARCHY_TITLE_HIERARCHYS</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>hierarchy.php</filename>
+            <filename>deletelist.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="administrator/language">
+			<language tag="en-GB">en-GB/en-GB.com_hierarchy.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_hierarchy.sys.ini</language>
+        </languages>
+    </administration>
+</extension>

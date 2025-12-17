@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter" >
+		<field
+			name="search"
+			type="text"
+			label="JSEARCH_FILTER"
+			hint="JSEARCH_FILTER"
+			description="JSEARCH_FILTER"
+		/>
+		<field
+			name="content_id"
+			type="sql"
+			default="0"
+			class="inputbox"
+			onchange="this.form.submit();"
+			label="COM_JLIKE_VIEW_RATING_SELECT_CONTENT_TITLE"
+			description="COM_JLIKE_VIEW_RATING_SELECT_CONTENT_TITLE_DESC"
+			query="SELECT DISTINCT a.content_id as id, c.title as title FROM #__jlike_ratings AS a INNER JOIN #__jlike_content AS c ON a.content_id = c.id ORDER by c.id DESC"
+			key_field="id"
+			value_field="title">
+				<option value="">COM_JLIKE_VIEW_RATING_SELECT_CONTENT_TITLE</option>
+		</field>
+		<field
+			name="rating_type_id"
+			type="sql"
+			default="0"
+			class="inputbox"
+			onchange="this.form.submit();"
+			label="COM_JLIKE_VIEW_RATING_SELECT_RATING_TYPE"
+			description="COM_JLIKE_VIEW_RATING_SELECT_RATING_TYPE_DESC"
+			query="SELECT id, CONCAT(title, ' (', IF(state = 1, 'Published', 'Unpublished'), ')') as title FROM #__jlike_rating_types"
+			key_field="id"
+			value_field="title">
+				<option value="">COM_JLIKE_VIEW_RATING_SELECT_RATING_TYPE</option>
+		</field>
+	</fields>
+
+	<fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			label="COM_CONTENT_LIST_LIMIT"
+			description="COM_CONTENT_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

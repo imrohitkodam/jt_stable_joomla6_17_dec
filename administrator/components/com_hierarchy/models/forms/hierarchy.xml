@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="COM_HIERARCHY_FORM_LBL_HIERARCHY_ID" readonly="true" class="readonly" description="JGLOBAL_FIELD_ID_DESC" />
+		<field name="reports_to" type="users" default="" multiple="multiple" label="COM_HIERARCHY_SELECT_MANAGERS" description="COM_HIERARCHY_SELECT_MANAGERS_DESC" />
+		<field name="context" type="text" label="COM_HIERARCHY_CONTEXT" description="COM_HIERARCHY_CONTEXT_DESC" />
+		<field name="context_id" type="text" label="COM_HIERARCHY_CONTEXT_ID" description="COM_HIERARCHY_CONTEXT_ID_DESC" />
+	</fieldset>
+</form>

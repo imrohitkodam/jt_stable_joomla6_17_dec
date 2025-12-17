@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+<!-- ######################### J2.5 params ######################### -->
+<!--General Settings-->
+<fieldset name="integration_settings" label="JT_INTEGRATION_SET" description="" addfieldpath="/administrator/components/com_jticketing/assets/elements">
+	<field name="integration" class="radio btn-group" type="integrations" default="2" description="JTGEOEN_TOOLTIP" label="JTGEOEN" />
+	<field name="site_panel_vendor" type="note" label="COM_JTICKETING_VENDOR" />
+	<field name="silent_vendor" class="btn-group" type="createsilentvendor" default="1" label="COM_JTICKETING_CREATE_SILENT_VENDOR" description="COM_JTICKETING_CREATE_SILENT_VENDOR_DESC" >
+	</field>
+	<field name="profile_complete" class="btn-group" type="radio" default="0" label="COM_JTICKETING_PROFILE_COMPLETE" description="COM_JTICKETING_PROFILE_COMPLETE_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="site_panel_event" type="note" label="COM_JTICKETING_EVENT" />
+	<field name="event_approval" class="btn-group" default="0" type="radio" label="COM_JTICKETING_EVENT_APPROVAL" description="COM_JTICKETING_EVENT_APPROVAL_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="notify_admin_user" class="btn-group" default="1" type="radio" label="COM_JTICKETING_ADMIN_APPROVAL" description="COM_JTICKETING_ADMIN_APPROVAL_DESC" showon="event_approval:1">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="send_approval_to" type="text" default="" label="COM_JTICKETING_EVENT_APPROVAL_TO_EMAIL" description="COM_JTICKETING_EVENT_APPROVAL_TO_EMAIL_DESC" showon="event_approval:1" />
+	<field name="enable_online_events" class="btn-group" default="0" type="radio" label="COM_JTICKETING_ENABLE_ALLOW_EVENTS" description="COM_JTICKETING_ENABLE_ALLOW_EVENTS_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="google_map_api_key" type="text" default="" label="JT_SITE_ADMIN_GOOGLE_MAP_API_KEY_LBL" description="JT_SITE_ADMIN_GOOGLE_MAP_API_KEY_DES" />
+	<field name="jticketing_google_map_api_note" type="note" id="jticketing_google_map_api_note" label="" default="" hint="" />
+		<!--Golbal config for tags-->
+	<field name="show_tags" class="btn-group" default="0" type="radio" label="COM_JTICKETING_ENABLE_TAGS" description="COM_JTICKEING_ENABLE_TAGS_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+
+	<field name="redirect_tags_to_events" class="btn-group" default="0" type="radio" label="COM_JTICKETING_REDIRECT_TAGS_TO_EVENTS" description="COM_JTICKETING_REDIRECT_TAGS_TO_EVENTS_DESC" showon="show_tags:1">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="collect_attendee_info_checkout" class="radio btn-group" type="radio" default="0" label="COM_JTICKETING_COLLECT_ATTENDEE_INFO" description="COM_JTICKETING_COLLECT_ATTENDEE_INFO_DES">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="regexforAttendeeMob" type="text" default="^(\+\d{1,3}[- ]?)?\d{10}$" label="COM_JTICKETING_ATTENDEE_MOB_REGEX" description="COM_JTICKETING_ATTENDEE_MOB_REGEX_DESC" showon="collect_attendee_info_checkout:1" />
+	<field name="activity" class="btn-group" default="0" type="radio" label="COM_JTICKETING_SHOW_ACTIVITY" description="COM_JTICKETING_SHOW_ACTIVITY_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="entry_number_assignment" class="radio btn-group" type="radio" default="0" label="COM_JTICKETING_ENTRY_NUMBER_ASSIGNMENT" description="COM_JTICKETING_ENTRY_NUMBER_ASSIGNMENT_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="site_panel_ticket" type="note" label="COM_JTICKETING_TICKET" />
+	<field name="ticket_access" type="list" default="include" label="COM_JTICKETING_ENABLE_TICKET_ACCESS" description="COM_JTICKETING_ENABLE_TICKET_ACCESS_DES">
+	<option value="include">Include</option>
+	<option value="exclude">Exclude</option>
+	</field>
+	<field name="show_access_level" class="btn-group" type= "radio"  default="0" label="COM_JTICKETING_SHOW_ACCESS_LEVELS" description="COM_JTICKETING_SHOW_ACCESS_LEVELS_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="default_accesslevels" type="accesslevels" default="1" showon="show_access_level:0" label="COM_JTICKETING_SELECT_ACCESS_LEVELS" description="COM_JTICKETING_SELECT_ACCESS_LEVELS_DESC" />
+	<field name="show_ticket_type_description" type="radio" default="0" label="COM_JTICKETING_SHOW_TICKET_DESCRIPTION" description="COM_JTICKETING_SHOW_TICKET_DESCRIPTION_DESC" class="btn-group">
+	<option value="1">JYES</option>
+	<option value="0">JNO</option>
+	</field>
+
+	<!-- Ateendee Listing configuration -->
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_ATTENDEE_LISTING_SETTING" label="" description="" />
+	<field name="attendee_listing_fields" type="list" default="COM_JTICKETING_ENROLMENT_USER_USERNAME,COM_JTICKEITNG_ATTENDEE_EMAIL,COM_JTICKETING_ENROLMENT_ACTION,COM_JTICKETING_CHECKIN" layout="joomla.form.field.list-fancy-select" multiple="multiple" label="COM_JTICKETING_ATTENDEE_LISTING_FIELDS" description="COM_JTICKETING_ATTENDEE_LISTING_FIELDS_DESC">
+		<option value="COM_JTICKETING_ENROLMENT_USER_USERNAME">COM_JTICKETING_ENROLMENT_USER_USERNAME</option>
+		<option value="COM_JTICKEITNG_ATTENDEE_EMAIL">COM_JTICKEITNG_ATTENDEE_EMAIL</option>
+		<option value="COM_JTICKETING_ENROLMENT_ACTION">COM_JTICKETING_ENROLMENT_ACTION</option>
+		<option value="COM_JTICKETING_CHECKIN_TIME">COM_JTICKETING_CHECKIN_TIME</option>
+		<option value="COM_JTICKETING_CHECKIN">COM_JTICKETING_CHECKIN</option>
+		<option value="COM_JTICKEITNG_TICKET_TYPE_COLUMN">COM_JTICKEITNG_TICKET_TYPE_COLUMN</option>
+		<option value="COM_JTICKETING_ORDER_ID">COM_JTICKETING_ORDER_ID</option>
+		<option value="COM_JTICKETING_BUYER_NAME">COM_JTICKETING_BUYER_NAME</option>
+		<option value="TICKET_PRICE">TICKET_PRICE</option>
+		<option value="COM_JTICKEITNG_ATTENDEE_ENTRY_NUMBER">COM_JTICKEITNG_ATTENDEE_ENTRY_NUMBER</option>
+	</field>
+
+	<!-- Orders Listing configuration -->
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_ORDERS_LISTING_SETTING" label="" description="" />
+	<field name="orders_listing_fields" type="list" 
+		default="COUPON_CODE_DIS,PAY_METHOD,COM_JTICKETING_FEE" 
+		layout="joomla.form.field.list-fancy-select" multiple="multiple" 
+		label="COM_JTICKETING_ORDERS_LISTING_FIELDS" 
+		description="COM_JTICKETING_ORDERS_LISTING_FIELDS_DESC">
+		<option value="COUPON_CODE_DIS">COUPON_CODE_DIS</option>
+		<option value="PAY_METHOD">PAY_METHOD</option>
+		<option value="COM_JTICKETING_COLUMN_EVENT_START_DATE">COM_JTICKETING_COLUMN_EVENT_START_DATE</option>
+		<option value="COM_JTICKETING_COLUMN_COUPON_CODE_DISCOUNT">COM_JTICKETING_COLUMN_COUPON_CODE_DISCOUNT</option>
+		<option value="COM_JTICKETING_FEE">COM_JTICKETING_FEE</option>
+	</field>
+	
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_ENROLLMENT_ID_SETTING" label="" description="" />
+	<field name="enrollment_id_prefix" type="text" default="JT" maxlength="10" label="COM_JTICKETING_ENROLLMENTID_PREFIX" description="COM_JTICKETING_ENROLLMENTID_PREFIX_DESC" />
+	<field name="append_eventID" class="radio btn-group" type="radio" default="0" label="COM_JTICKETING_APPEND_EVENTID" description="COM_JTICKETING_APPEND_EVENTID_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="append_zeros_to_event_id" type="text" default="0" class="validate-numeric" label="COM_JTICKETING_APPEND_ZEROS_TO_EVENT_ID_COUNT" description="COM_JTICKETING_APPEND_ZEROS_TO_EVENT_ID_COUNT_DESC" showon="append_eventID:1"/>
+	<field name="random_enrollmentID" class="radio btn-group" type="radio" default="1" label="COM_JTICKETING_RANDOM_ENROLLMENTID" description="COM_JTICKETING_RANDOM_ENROLLMENTID_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="count_random" type="text" default="15" class="validate-numeric" label="COM_JTICKETING_RANDOM_COUNT" description="COM_JTICKETING_RANDOM_COUNT_DESC" showon="random_enrollmentID:1"/>
+	<field name="append_zeros" type="text" default="0" class="validate-numeric" label="COM_JTICKETING_ZEROS_COUNT" description="COM_JTICKETING_ZEROS_COUNT_DESC" />
+		<!--GDPR User Privacy Setting-->
+	<field menu="hide" type="legend" id="jticketing_user_privacy_sets" name="jticketing_user_privacy_sets" label="" default="COM_JTICKETING_PRIVACY_CONSENT_SETS" hint="" />
+	<field name="article" class="radio btn-group" type="radio" default="0"  label="ENABLE_ARTICLE" description="ENABLE_ARTICLE_DES">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="tnc" type="text" default="0" showon="article:1" label="COM_JTICKETING_PRIVACY_ORDER_ARTICLE" description="COM_JTICKETING_PRIVACY_ORDER_ARTICLE_DESC"/>
+	<field name="tnc_for_create_event" class="radio btn-group" type="radio" default="0" label="COM_JTICKETING_ENABLE_TNC_FOR_EVENT_CREATION" description="COM_JTICKETING_ENABLE_TNC_FOR_EVENT_CREATION_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="create_eventform_privacy_terms_article" type="text" default="0" showon="tnc_for_create_event:1" label="COM_JTICKETING_PRIVACY_EVENT_CREATE_ARTICLE" description="COM_JTICKETING_PRIVACY_EVENT_CREATE_ARTICLE_DESC"/>
+
+	<!--Attendee export Setting-->
+	<field menu="hide" type="legend" id="jticketing_attendee_export" name="jticketing_attendee_export" label="" default="COM_JTICKETING_ATTENDEE_EXPORT_LABEL" hint="" />
+	<field name="signin_export" class="btn-group" default="0" type="radio" label="COM_JTICKETING_EVENT_ATTENDEE_SIGN_IN_EXPORT" description="COM_JTICKETING_EVENT_ATTENDEE_SIGN_IN_EXPORT_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="namecard_export" class="btn-group" default="0" type="radio" label="COM_JTICKETING_EVENT_ATTENDEE_NAME_CARD_EXPORT" description="COM_JTICKETING_EVENT_ATTENDEE_NAME_CARD_EXPORT_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="attendee_field" type="attendeefields" multiple="multiple" label="COM_JTICKETING_EVENT_ATTENDEE_NAME_CARD_ATTENDEE_FIELDS" description="COM_JTICKETING_EVENT_ATTENDEE_NAME_CARD_ATTENDEE_FIELDS_DESC" />
+	<field name="fields_integrate_with" type="list" default="com_tjfields" description="COM_JTICKETING_FIELDS_INTEGRATE_WITH_DESC" label="COM_JTICKETING_FIELDS_INTEGRATE_WITH">
+		<option value="com_fields">COM_JTICKETING_JOOMLAFIELDS</option>
+		<option value="com_tjfields">COM_JTICKETING_TJFIELDS</option>
+	</field>
+</fieldset>
+
+<!--Display Settings-->
+<fieldset name="guest_settings" label="JT_GUEST_SET" description="" addfieldpath="/administrator/components/com_jticketing/assets/elements">
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_DISPLAY_SETTINGS" label="" description="" />
+	<field name="bootstrap_version" class="btn-group" type="radio" default="bs3" description="COM_JTICKETING_LOAD_BS_VIEWS_DESC" label="COM_JTICKETING_LOAD_BS_VIEWS" >
+		<option value="bs3">COM_JTICKETING_BS3</option>
+		<option value="bs5">COM_JTICKETING_BS5</option>
+	</field>
+	<field name="load_bootstrap" type="radio" default="0" label="COM_JTICKETING_LOAD_BOOTSTRAP" description="COM_JTICKETING_LOAD_BOOTSTRAP_DESC" class="btn-group">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="date_format_show" type="dateformat" label="COM_JTICKETING_DATE_FORMAT_TO_SHOW" description="COM_JTICKETING_DATE_FORMAT_TO_SHOW_DESC"/>
+
+	<field name="custom_format" class="inputbox" type="text" label="COM_JTICKETING_CUSTOM_DATE_FORMAT"
+		showon="date_format_show:custom" description="COM_JTICKETING_CUSTOM_DATE_FORMAT_DESC" />
+
+	<field name="desc_length" class="validate-numeric" type="text" default="100" label="COM_JTICKETING_EVENT_DESC_LBL" description="COM_JTICKETING_EVENT_DESC" />
+	<field name="display_remaining_count" class="validate-numeric" type="text" default="5" label="COM_JTICKETING_TICKET_REMAINING_COUNT_DISPLAY" description="COM_JTICKETING_TICKET_REMAINING_COUNT_DISPLAY_DESC" />
+	<field name="venue_gallery" class="radio btn-group" type="radio" default="0" label="COM_JTICKETING_ENABLE_VENUE_GALLERY" description="COM_JTICKETING_ENABLE_VENUE_GALLERY_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="gravatar" class="btn-group" type="radio" default="0" label="COM_JTICKETING_GRAVATAR_INT_CONF" description="COM_JTICKETING_GRAVATAR_INT_CONF_DESC" >
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="gmaps_default_zoom_level" type="number" default="10" label="COM_JTICKETING_GMAPS_DEFAULT_ZOOM_LEVEL" description="COM_JTICKETING_GMAPS_DEFAULT_ZOOM_LEVEL_DESC" />
+	<field name="show_em_btn" type="number" class="required" min="1" default="5" label="COM_JTICKETING_DISPLAY_ENTER_MEETING_BTN_BEFORE" description="COM_JTICKETING_DISPLAY_ENTER_MEETING_BTN_BEFORE_DESC" />
+	<field name="enable_eventstartdateinname" class="btn-group" default="0" type="radio" label="COM_JTICKETING_ENABLE_START_DATE_IN_EVENTNAME" description="COM_JTICKETING_ENABLE_START_DATE_IN_EVENTNAME_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="display_timezone" class="btn-group" type="radio" default="0" label="COM_JTICKETING_DISPLAY_IN_TIMEZONE" description="COM_JTICKETING_DISPLAY_IN_TIMEZONE_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_PIN_VIEW_SETTING" label="" description="" />
+	<field name="pin_width" class="validate-numeric" type="text" default="300" label="COM_JTICKETING_PIN_WIDTH" description="COM_JTICKETING_PIN_WIDTH_DESC" />
+	<field name="pin_padding" type="text" class="validate-numeric" default="10" label="COM_JTICKETING_PIN_PADDING" description="COM_JTICKETING_PIN_PADDING_DESC" />
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_TICKET_PDF_SETTING" label="" description="" />
+	<field name="ticket_page_size" type="list" default="A4"
+		description="COM_JTICKETING_TICKET_PDF_SIZE_DESC"
+		label="COM_JTICKETING_TICKET_PDF_SIZE">
+		<option value="A1">COM_JTICKETING_TICKET_PDF_SIZE_A1</option>
+		<option value="A2">COM_JTICKETING_TICKET_PDF_SIZE_A2</option>
+		<option value="A3">COM_JTICKETING_TICKET_PDF_SIZE_A3</option>
+		<option value="A4">COM_JTICKETING_TICKET_PDF_SIZE_A4</option>
+		<option value="A5">COM_JTICKETING_TICKET_PDF_SIZE_A5</option>
+		<option value="A6">COM_JTICKETING_TICKET_PDF_SIZE_A6</option>
+		<option value="Legal">COM_JTICKETING_TICKET_PDF_SIZE_LEGAL</option>
+		<option value="Letter">COM_JTICKETING_TICKET_PDF_SIZE_LETTER</option>
+		<option value="custom">COM_JTICKETING_TICKET_PDF_SIZE_CUSTOME</option>
+	</field>
+
+	<field name="ticket_pdf_width" class="validate-numeric" type="text"
+		default="80" label="COM_JTICKETING_TICKET_PDF_WIDTH"
+		showon="ticket_page_size:custom" description="COM_JTICKETING_TICKET_PDF_WIDTH_DESC" />
+	<field name="ticket_pdf__height" class="validate-numeric" type="text"
+		default="80" label="COM_JTICKETING_TICKET_PDF_HEIGHT"
+		showon="ticket_page_size:custom" description="COM_JTICKETING_TICKET_PDF_HEIGHT_DESC" />
+
+	<field name="ticket_orientation" type="list"
+		default="portrait" label="COM_JTICKETING_TICKET_ORIENTATION" description="COM_JTICKETING_TICKET_ORIENTATION_DESC">
+		<option value="portrait">COM_JTICKETING_PORTRAIT_TICKET</option>
+		<option value="landscape">COM_JTICKETING_LANDSCAPE_TICKET</option>
+	</field>
+	<field name="pdf_ticket_font" type="list"
+		default="dejavu sans" label="COM_JTICKETING_PDF_TICKET_FONT" description="COM_JTICKETING_PDF_TICKET_FONT_DESC">
+		<option value="sans-serif">COM_JTICKETING_PDF_TICKET_FONT_HELVETICA</option>
+		<option value="times">COM_JTICKETING_PDF_TICKET_FONT_TIMER_ROMAN</option>
+		<option value="courier">COM_JTICKETING_PDF_TICKET_FONT_COURIER</option>
+		<option value="dejavu sans">COM_JTICKETING_PDF_TICKET_FONT_DEVAVUSANS</option>
+		<option value="dejavu sans mono">COM_JTICKETING_PDF_TICKET_FONT_DEVAVUSANS_MONO</option>
+		<option value="dejavu serif">COM_JTICKETING_PDF_TICKET_FONT_DEVAVUSERIF_BOLD</option>
+		<option value="mgenplus">COM_JTICKETING_PDF_TICKET_FONT_MGENPLUS</option>
+	</field>
+	<field menu="hide" type="legend" label="" default="COM_JTICKETING_OPTIONAL_BILLING_INFO_FIELDS" description=""/>
+	<field name="show_selected_fields" class="btn-group" type="radio" default="0" label="COM_JTICKETING_SHOW_ALL_FIELDS" description="COM_JTICKETING_SHOW_ALL_FIELDS_DESC" >
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="billing_info_field" type="list" default="" layout="joomla.form.field.list-fancy-select" showon="show_selected_fields:1" multiple="multiple" label="COM_JTICKETING_SELECT_FIELD_TO_HIDE_BILLING_INFO" description="COM_JTICKETING_SELECT_FIELD_TO_HIDE_BILLING_INFO_DESC">
+		<option value="address">COM_JTICKETING_BILLING_ADDRESS</option>
+		<option value="country">COM_JTICKETING_BILLING_COUNTRY</option>
+		<option value="state">COM_JTICKETING_BILLING_STATE</option>
+		<option value="city">COM_JTICKETING_BILLING_CITY</option>
+		<option value="zip">COM_JTICKETING_BILLING_ZIPCODE</option>
+		<option value="customer_note">COM_JTICKETING_BILLING_CUSTOMER_NOTE</option>
+	</field>
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_SOCIAL_SHARE" label="" description="" />
+	<field name="social_sharing" class="btn-group" type="radio" default="1" label="COM_JTICKETING_ENABLE_SOCIAL_SHARING" description="COM_JTICKETING_ENABLE_SOCIAL_SHARING_DES">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="social_shring_type" type="list" default="native" label="COM_JTICKETING_SOCIAL_SHARING_TYPE" description="COM_JTICKETING_SOCIAL_SHARING_TYPE_DESC">
+		<option value="addtoany">COM_JTICKETING_ADDTOANY_SOCIAL</option>
+		<option value="native">COM_JTICKETING_NATIVE_NATIVE</option>
+	</field>
+	<field name="addtoany_share_buttons" filter="raw" type="textarea" rows="3" default="" label="COM_JTICKETING_SELECT_ADDTOANY_BUTTONS" showon="social_shring_type:addtoany" description="COM_JTICKETING_SELECT_ADDTOANY_BUTTONS_DESC"  hint="COM_JTICKETING_SELECT_ADDTOANY_BUTTONS_HINT"/>
+	<field name="addtoany_universal_button" class="btn-group" type="radio" default="after" showon="social_shring_type:addtoany" label="COM_JTICKETING_ADDTOANY_UNIVERSAL_BUTTON" description="COM_JTICKETING_ADDTOANY_UNIVERSAL_BUTTON_DESC" >
+		<option value="disable">COM_JTICKETING_ADDTOANY_UNIVERSAL_DISABLE</option>
+		<option value="before">COM_JTICKETING_ADDTOANY_UNIVERSAL_BEFORE</option>
+		<option value="after">COM_JTICKETING_ADDTOANY_UNIVERSAL_AFTER</option>
+	</field>
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_QR_CODE_SETTING" label="" description="" />
+	<field name="qr_code_width" class="validate-numeric" type="text" default="80" label="COM_JTICKETING_QR_CODE_WIDTH" description="COM_JTICKETING_QR_CODE_WIDTH_DESC" />
+	<field name="qr_code_height" class="validate-numeric" type="text" default="80" label="COM_JTICKETING_QR_CODE_HEIGHT" description="COM_JTICKETING_QR_CODE_HEIGHT_DESC" />
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_BARCODE_SETTING" label="" description="" />
+	<field name="barcode_width" class="validate-numeric" type="text" default="1" label="COM_JTICKETING_BARCODE_WIDTH" description="COM_JTICKETING_BARCODE_WIDTH_DESC" />
+	<field name="barcode_height" class="validate-numeric" type="text" default="90" label="COM_JTICKETING_BARCODE_HEIGHT" description="COM_JTICKETING_BARCODE_HEIGHT_DESC" />
+</fieldset>
+
+<!--Payment and order Settings-->
+<fieldset name="pricing_settings" label="JT_PRICING_SET" description="" addfieldpath="/administrator/components/com_jticketing/assets/elements">
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_PAYMENT_GATEWAY_SETTING" label="" description="" />
+	<field name="gateways" type="gatewayplg" default="bycheck" multiple="multiple" label="SELECT_GATEWAY" description="SELECT_GATEWAY_DES" />
+	<field name="currency" type="currencylist" label="COM_JTICKETING_CURRENCY_LIST" description="COM_JTICKETING_CURRENCY_LIST_DES" />
+	<field name="currency_code_or_symbol" type="list" default="symbol" label="COM_JTICKETING_CURRENCY_SYMBOL_OR_CODE" description="COM_JTICKETING_CURRENCY_SYMBOL_OR_CODE_DES">
+		<option value="code">COM_JTICKETING_CODE</option>
+		<option value="symbol">COM_JTICKETING_SYMBOL</option>
+	</field>
+	<field name="currency_display_format" type="text" default="{AMOUNT} {CURRENCY_SYMBOL} " label="COM_JTICKETING_CURRENCY_DISPLAY_FORMAT" description="COM_JTICKETING_CURRENCY_DISPLAY_FORMAT_DESC" />
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_CHECKOUT_CONFIG_SETTING" label="" description="" />
+	<field name="allow_buy_guest" class="radio btn-group" type="radio" default="0" label="JT_ALLOW_BUY_GUEST" description="JT_ALLOW_BUY_GUEST_DES">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="enable_coupon" type="radio" class="radio btn-group" default="0" label="COM_JTICKETING_ALLOW_COUPON" description="COM_JTICKETING_ALLOW_COUPON_DES">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="allow_buy_guestreg" class="radio btn-group" type="radio" default="0" label="JT_ALLOW_BUY_GUEST_REG" description="JT_ALLOW_BUY_GUEST_REG_DES">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+
+	<field name="eventowner_buy" class="radio btn-group" type="radio" default="1" label="JT_SHOW_EVENT_OWNER_BUY" description="JT_SHOW_EVENT_OWNER_BUY_DES">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="single_ticket_per_user" class="radio btn-group" type="radio" default="0" label="COM_JTICKETING_SINGLE_TICKET_PER_USER" description="COM_JTICKETING_SINGLE_TICKET_PER_USER_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="max_noticket_peruserperpurchase" showon="single_ticket_per_user:0" class="validate-numeric" type="text" default="8" label="JT_MAX_NO_OF_TICKETS_PER_USER_PER_PURCHASE" description="JT_MAX_NO_OF_TICKETS_PER_USER_PER_PURCHASE_DES" />
+	<field name="default_country" type="countries" default="" label="COM_JTICKETING_SELECT_DEFAULT_COUNTRY" description="COM_JTICKETING_SELECT_DEFAULT_COUNTRY_DES" />
+	<field name="default_country_mobile_code" type="text" default="" label="COM_JTICKETING_SELECT_DEFAULT_COUNTRY_MOBILE" description="COM_JTICKETING_SELECT_DEFAULT_COUNTRY_MOBILE_DESC" />
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_FEES_CONFIG_SETTING" label="" description="" />
+	<field name="handle_transactions" class="radio btn-group" type="radio" default="0" label="COM_JTICKETING_HANDLE_TRANSACTIONS" description="COM_JTICKETING_HANDLE_TRANSACTIONS_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="admin_fee_mode" class="radio btn-group" type="radio" default="1" label="COM_JTICKETING_ADMIN_FEE_MODE" description="COM_JTICKETING_ADMIN_FEE_MODE_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="admin_fee_level" type="list" default="order" label="COM_JTICKETING_ADMIN_FEE_LEVEL" description="COM_JTICKETING_ADMIN_FEE_LEVEL_DESC">
+		<option value="order">COM_JTICKETING_ADMIN_FEE_LEVEL_ORDERBASE</option>
+		<option value="orderitem">COM_JTICKETING_ADMIN_FEE_LEVEL_ORDERITEMBASE</option>
+	</field>
+	<field name="siteadmin_comm_per" class="validate-numeric" type="text" default="0" label="JT_SITE_ADMIN_COMMISSION_PER" description="JT_SITE_ADMIN_COMMISSION_PER_DES" />
+	<field name="siteadmin_comm_flat" type="text" class="validate-numeric" default="0" label="JT_SITE_ADMIN_COMMISSION_FLAT" description="JT_SITE_ADMIN_COMMISSION_FLAT_DES" />
+	<field name="siteadmin_comm_cap" type="number" id="jticketing_siteadmin_comm_cap" class="validate-numeric" default="0" min="0" step="any" label="JT_SITE_ADMIN_COMMISSION_CAP" description="JT_SITE_ADMIN_COMMISSION_CAP_DES" />
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_ORDER_CHECKOUT_TAX_SETTING" label="" description="" />
+	<field name="order_prefix" type="text" default="JT" maxlength="5" label="COM_JTICKETING_ORDER_PREFIX" description="COM_JTICKETING_ORDER_PREFIX_DESC" />
+	<field name="separator" type="text" default="-" maxlength="1" label="COM_JTICKETING_SEPARATOR" description="COM_JTICKETING_SEPARATOR_DESC" />
+	<field name="random_orderid" class="radio btn-group" type="radio" default="0" label="COM_JTICKETING_RANDOM_OREDRID" description="COM_JTICKETING_RANDOM_OREDRID_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="padding_count" type="text" default="3" class="validate-numeric" label="COM_JTICKETING_PADDING_COUNT" description="COM_JTICKETING_PADDING_COUNT_DESC" />
+	<field name="allow_taxation" type="radio" class="radio btn-group" default="0" label="COM_JTICKETING_ALLOW_TAXATION" description="COM_JTICKETING_ALLOW_TAXATION_DES">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="enable_buy_as_business" class="btn-group" type="radio" default="0" label="JT_BUY_AS_BUSINESS" description="JT_BUY_AS_BUSINESS_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="add_default_ticket" class="btn-group" type="radio" default="0" label="COM_JTICKETING_DEFAULT_TICKET" description="COM_JTICKETING_DEFAULT_TICKET_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="billing_for_free_event" class="btn-group" type="radio" default="0" label="COM_JTICKETING_BILLING_FOR_FREE_EVENT" description="COM_JTICKETING_BILLING_FOR_FREE_EVENT_DESC" >
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_COMPANY_INFO_ORDER_INVOICE_SETTING" label="" description="" />
+	<field name="display_vendor_details" class="btn-group" type="radio" default="0" label="COM_JTICKETING_ADMIN_DISPLAY_VENDOR_DETAILS" description="COM_JTICKETING_ADMIN_DISPLAY_VENDOR_DETAILS_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="company_name" type="text" default="" label="COM_JTICKETING_COMPANY_NAME" showon="display_vendor_details:0" description="COM_JTICKETING_COMPANY_NAME_DESC" />
+	<field name="company_address" type="text" default="" label="COM_JTICKETING_COMPANY_ADDRESS"  showon="display_vendor_details:0" description="COM_JTICKETING_COMPANY_ADDRESS_DESC" />
+	<field name="company_vat_no" type="text" default="" label="COM_JTICKETING_COMPANY_VAT_NO" showon="display_vendor_details:0" description="COM_JTICKETING_COMPANY_VAT_NO_DESC" />
+	<!--Google Analytics Setting-->
+	<field menu="hide" type="legend" id="jticketing_google_analtics_set" name="jticketing_google_analtics_set" label="" default="COM_JTICKETING_ECOMMERECE_ANALYTICS_TRACKING" hint="" />
+	<field name="ga_ec_analytics" class="radio btn-group" type="radio" default="0"  label="COM_JTICKETING_ENABLE_ENHANCE_ECOMMERECE_GOOGLE_ANALYTICS_TRACKING" description="COM_JTICKETING_ENABLE_ENHANCE_ECOMMERECE_GOOGLE_ANALYTICS_TRACKING_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="track_attendee_step" class="radio btn-group" type="radio" default="0" showon="ga_ec_analytics:1" label="COM_JTICKETING_TRACK_ATTENDEE_FORM_FILL" description="COM_JTICKETING_TRACK_ATTENDEE_FORM_FILL_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="ga_product_type_dimension" type="text" default="event" showon="ga_ec_analytics:1" label="COM_JTICKETING_GA_PRODUCT_TYPE_DIMESION_VALUE" description="COM_JTICKETING_GA_PRODUCT_TYPE_DIMESION_VALUE_DESC"/>
+	<field name="trackOnOrderFailure" type="radio" class="btn-group" label="COM_JTICKETING_ON_FAILTURE_TRACK_ORDER_IN_TJANALYTICS" description="COM_JTICKETING_ON_FAILTURE_TRACK_ORDER_IN_TJANALYTICS_DESC" default="1">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+</fieldset>
+
+<!--Media Settings-->
+<fieldset name="media_settings"
+		label="COM_JTICKETING_MEDIA_SETTINGS"
+		description="">
+	<field name="jticketing_media_upload_path" type="text"
+		default="media/com_jticketing/events"
+		description="COM_JTICKETING_MEDIA_PATH_DESC"
+		label="COM_JTICKETING_MEDIA_PATH" />
+	<field name="jticketing_venue_media_upload_path" type="text"
+		default="media/com_jticketing/venues"
+		description="COM_JTICKETING_VENUE_MEDIA_PATH_DESC"
+		label="COM_JTICKETING_VENUE_MEDIA_PATH" />
+	<field name="jticketing_media_size" type="number"
+		default="15"
+		description="COM_JTICKETING_MEDIA_SIZE_DESC"
+		label="COM_JTICKETING_MEDIA_SIZE" />
+	<field menu="hide" type="legend"
+		id="jticketing-image-display-settings"
+		name="jticketing-image-display-settings"
+		label=""
+		default="COM_JTICKETING_IMAGE_DISPLAY_SETTINGS"
+		hint="" />
+	<field name="site_panel_images" type="note" label="COM_JTICKETING_SITE" />
+	<field name="front_event_pin_view" type="list" default="media_s"
+		description="COM_JTICKETING_FRONT_EVENT_PIN_VIEW_IMAGE_DESC"
+		label="COM_JTICKETING_FRONT_EVENT_PIN_VIEW_IMAGE">
+		<option value="media_s">COM_JTICKETING_IMAGE_SMALL</option>
+		<option value="media_m">COM_JTICKETING_IMAGE_MEDIUM</option>
+		<option value="media_l">COM_JTICKETING_IMAGE_LARGE</option>
+		<option value="media">COM_JTICKETING_IMAGE_ORIGINAL</option>
+	</field>
+	<field name="front_event_detail_view" type="list" default="media"
+		description="COM_JTICKETING_FRONT_EVENT_DETAIL_VIEW_IMAGE_DESC"
+		label="COM_JTICKETING_FRONT_EVENT_DETAIL_VIEW_IMAGE">
+		<option value="media_s">COM_JTICKETING_IMAGE_SMALL</option>
+		<option value="media_m">COM_JTICKETING_IMAGE_MEDIUM</option>
+		<option value="media_l">COM_JTICKETING_IMAGE_LARGE</option>
+		<option value="media">COM_JTICKETING_IMAGE_ORIGINAL</option>
+	</field>
+	<field name="front_event_gallery_view" type="list" default="media_s"
+		description="COM_JTICKETING_FRONT_EVENT_GALLERY_VIEW_IMAGE_DESC"
+		label="COM_JTICKETING_FRONT_EVENT_GALLERY_VIEW_IMAGE">
+		<option value="media_s">COM_JTICKETING_IMAGE_SMALL</option>
+		<option value="media_m">COM_JTICKETING_IMAGE_MEDIUM</option>
+		<option value="media_l">COM_JTICKETING_IMAGE_LARGE</option>
+		<option value="media">COM_JTICKETING_IMAGE_ORIGINAL</option>
+	</field>
+	<field name="admin_panel_images" type="note" label="COM_JTICKETING_ADMIN"/>
+	<field name="admin_event_detail_view" type="list" default="media_s"
+		description="COM_JTICKETING_ADMIN_EVENT_DETAIL_VIEW_IMAGE_DESC"
+		label="COM_JTICKETING_ADMIN_EVENT_DETAIL_VIEW_IMAGE">
+		<option value="media_s">COM_JTICKETING_IMAGE_SMALL</option>
+		<option value="media_m">COM_JTICKETING_IMAGE_MEDIUM</option>
+		<option value="media_l">COM_JTICKETING_IMAGE_LARGE</option>
+		<option value="media">COM_JTICKETING_IMAGE_ORIGINAL</option>
+	</field>
+	<field name="admin_event_gallery_view" type="list" default="media_s"
+		description="COM_JTICKETING_ADMIN_EVENT_GALLERY_VIEW_IMAGE_DESC"
+		label="COM_JTICKETING_ADMIN_EVENT_GALLERY_VIEW_IMAGE">
+		<option value="media_s">COM_JTICKETING_IMAGE_SMALL</option>
+		<option value="media_m">COM_JTICKETING_IMAGE_MEDIUM</option>
+		<option value="media_l">COM_JTICKETING_IMAGE_LARGE</option>
+		<option value="media">COM_JTICKETING_IMAGE_ORIGINAL</option>
+	</field>
+	<field menu="hide" type="legend"
+		id="jticketing-image-resize-settings"
+		name="jticketing-image-resize-settings"
+		label=""
+		default="COM_JTICKETING_IMAGE_RESIZE_SETTINGS"
+		hint="" />
+	<field name="small_width" type="number"
+		class="validate-numeric" default="128"
+		label="COM_JTICKETING_IMAGE_SMALL_WIDTH"
+		description="COM_JTICKETING_IMAGE_SMALL_WIDTH_DESC" />
+	<field name="small_height" type="number"
+		class="validate-numeric" default="128"
+		label="COM_JTICKETING_IMAGE_SMALL_HT"
+		description="COM_JTICKETING_IMAGE_SMALL_HT_DESC" />
+	<field name="medium_width" type="number"
+		class="validate-numeric" default="240"
+		label="COM_JTICKETING_IMAGE_MED_WIDTH"
+		description="COM_JTICKETING_IMAGE_MED_WIDTH_DESC" />
+	<field name="medium_height" type="number"
+		class="validate-numeric" default="240"
+		label="COM_JTICKETING_IMAGE_MED_HT"
+		description="COM_JTICKETING_IMAGE_MED_HT_DESC" />
+	<field name="large_width" type="number"
+		class="validate-numeric" default="744"
+		label="COM_JTICKETING_IMAGE_LARG_WIDTH"
+		description="COM_JTICKETING_IMAGE_LARG_WIDTH_DESC" />
+	<field name="large_height" type="number"
+		class="validate-numeric" default="390"
+		label="COM_JTICKETING_IMAGE_LARG_HT"
+		description="COM_JTICKETING_IMAGE_LARG_HT_DESC" />
+</fieldset>
+
+<!--Social Integration Settings-->
+<fieldset name="jomsocial_settings" label="JT_JOM_SPECIFIC_SET" description="" addfieldpath="/administrator/components/com_jticketing/assets/elements">
+	<field name="affect_js_native_seats" class="radio btn-group" type="radio" default="0" label="JT_AFFECT_NAT_JS_SEAT" description="JT_AFFECT_NAT_JS_SEAT_DES">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_JOMSOCIAL_SPECIFIC_SETTING" label="" description="" />
+	<field name="guest_reg_id" type="text" default="0" label="GUEST_REG_ID" description="GUEST_REG_ID_DES" />
+	<field name="show_js_toolbar" class="radio btn-group" type="radio" default="0" label="JT_SHOW_JS_TOOLBAR" description="JT_SHOW_JS_TOOLBAR_DES">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="auto_fix_seats" class="radio btn-group" type="radio" default="0" label="AUTO_FIX_SEATS" description="AUTO_FIX_SEATS_DES">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field menu="hide" type="legend" id="jticket-integration-activity" name="jticket-integration-activity" default="COM_JTICKETING_ACTIVITY_STREAM_INTEGRATION" label="" />
+	<field name="site_panel_vendor" type="note" label="COM_JTICKETING_ACTIVITY_STREAM_INTEGRATION_HINT" />
+	<field name="integrate_with" type="list" default="none" description="COM_JTICKETING_INTEGRATE_WITH_DESC" label="COM_JTICKETING_INTEGRATE_WITH">
+		<option value="none">JNONE</option>
+		<option value="EasySocial">COM_JTICKETING_EASYSOCIAL</option>
+		<option value="JomSocial">COM_JTICKETING_JOMSOCIAL</option>
+	</field>
+	<field name="streamAddEvent" class="btn-group" showon="integrate_with:EasySocial[OR]integrate_with:JomSocial" type="radio" default="0" label="COM_JTICKETING_ACTIVITY_STREAM_ADD_EVENT" description="COM_JTICKETING_ACTIVITY_STREAM_ADD_EVENT_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="streamBuyTicket" class="btn-group" showon="integrate_with:EasySocial[OR]integrate_with:JomSocial" type="radio" default="0" description="COM_JTICKETING_ACTIVITY_BUY_TICKET" label="COM_JTICKETING_ACTIVITY_BUY_TICKET_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="streamCheckinTicket" class="btn-group" showon="integrate_with:EasySocial[OR]integrate_with:JomSocial" type="radio" default="0" label="COM_JTICKETING_ACTIVITY_CHECKIN_TICKET" description="COM_JTICKETING_ACTIVITY_CHECKIN_TICKET_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_BILLING_INFO_SETTING" label="" description="" />
+	<field name="social_integration" class="btn-group" type="integrations" default="joomla" description="COM_JTICKETING_INTERATION_DESC" label="COM_JTICKETING_INTERATION" />
+	<field name="profile_import" class="btn-group" type= "radio"  default="0" label="COM_JTICKETING_PROFILE_IMPORT" description="COM_JTICKETING_PROFILE_IMPORT_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="fieldmap" type="fieldmapping" label="COM_JTICKETING_JOOMLA_PROFILE_MAPPING" description="COM_JTICKETING_JOOMLA_PROFILE_MAPPING_DESC" cols="35" rows="5" />
+	<field name="jomsocial_fieldmap" type="jomsocialfieldmapping" label="COM_JTICKETING_JOMSOCIAL_PROFILE_MAPPING" description="COM_JTICKETING_JOMSOCIAL_PROFILE_MAPPING_DESC" cols="35" rows="5" />
+	<field name="cb_fieldmap" type="cbfieldmapping" label="COM_JTICKETING_CB_PROFILE_MAPPING" description="COM_JTICKETING_CB_PROFILE_MAPPING_DESC" cols="35" rows="5" />
+	<field name="easysocial_fieldmap" type="easysocialfieldmapping" label="COM_JTICKETING_EASYSOCIAL_PROFILE_MAPPING" description="COM_JTICKETING_EASYSOCIAL_PROFILE_MAPPING_DESC" cols="35" rows="5" />
+</fieldset>
+
+<!--Integrations Settings-->
+<fieldset name="integrations" label="COM_JTICKETING_SOCIAL_INTEGRATION_MANAGER" description="COM_JTICKETING_NOTIFICATION_DESC" addfieldpath="/administrator/components/com_jticketing/assets/elements">
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_EMAIL_NOTIFICATION_SETTING" label="" description="" />
+	<field name="reply_to" type="text" default="" label="COM_JTICKETING_REPLY_TO_EMAIL" description="COM_JTICKETING_REPLY_TO_EMAIL_DESC" />
+	<field name="pdf_attach_in_mail" type="list" default="3" label="ATTACH_PDF_EMAIL" description="ATTACH_PDF_EMAIL_DES">
+	<option value="1">COM_JTICKETING_EMAIL_TICKET_ATTACH_PDF</option>
+	<option value="3">COM_JTICKETING_EMAIL_TICKET_SEND_ONLY_HTML</option>
+	</field>
+	<field name="pending_email_enb_batch" class="btn-group" default="1" type="radio" label="COM_JTICKETING_ENB_BATCH" description="COM_JTICKETING_ENB_BATCH_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="pending_email_batch_size" default="30" type="text" label="COM_JTICKETING_BATCH_SIZE" description="COM_JTICKETING_BATCH_SIZE_DESC" />
+	<field name="pkey_for_pending_email" type="cron" label="PRIVATE_KEY_CRON_PENDING_EMAIL" description="PRIVATE_KEY_CRON_PENDING_EMAIL_DESC" />
+	<field name="cronjoburl_pending_emails" type="cron" label="COM_JTICKETING_SEND_PENDING_EMAIL_CRON" description="COM_JTICKETING_SEND_PENDING_EMAIL_CRON" />
+	<field name="attendee_email_limit" default="30" type="text" label="COM_JTICKETING_BULK_EMAIL_LIMIT" description="COM_JTICKETING_BULK_EMAIL_LIMIT_DESC" />
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_CONFIGURE_REMINDER_SETTING" label="" description="" />
+	<field name="send_auto_reminders" class="btn-group" default="0" type="radio" label="COM_JTICKETING_SEND_AUTO_REMIND" description="COM_JTICKETING_SEND_AUTO_REMIND_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="pkey_for_reminder" default="abcd1234" type="text" label="PRIVATE_KEY_CRON_REM" description="PRIVATE_KEY_CRON_REM_DESC" />
+	<field name="cronjoburl_reminder" type="CronReminder" label="COM_JTICKETING_SEND_AUTO_REMIND_CRON" description="COM_JTICKETING_SEND_AUTO_REMIND_CRON_DESC" />
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_ONLINE_EVENT_CHECKIN" label="" description="" />
+	<field name="attendancecron_key" class="inputbox" type="cron" label="PRIVATE_KEY_CRON" description="PRIVATE_KEY_CRON_DES" />
+	<field name="cron_limit" type="text" default="10" label="COM_JTICKETING_CRON_RUN_LIMIT" description="COM_JTICKETING_CRON_RUN_LIMIT_DESC"/>
+	<field name="onlineattendance" type="cron" label="COM_JTICKETING_CRON_TO_ONLINE_EVENT_ATTENDANCE" description="COM_JTICKETING_CRON_TO_ONLINE_EVENT_ATTENDANCE_DESC" />
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_NEW_EVENT_NOTIFY" label="" description="" />
+	<field name="neweventnotify_key" class="inputbox" type="cron" label="COM_JTICKETING_NEW_EVENT_NOTIFY_KEY" description="COM_JTICKETING_NEW_EVENT_NOTIFY_KEY_DESC" />
+	<field name="neweventnotify_cron" type="cron" label="COM_JTICKETING_NEW_EVENT_NOTIFY_CRON" description="COM_JTICKETING_NEW_EVENT_NOTIFY_CRON_DESC" />
+	<field menu="hide" name="" type="legend" default="FeedBack Mail" label="" description="" />
+	<field name="feedbackmail_key" type="cron" label="COM_JTICKETING_FEEDBACKMAIL_KEY_LABEL" description="COM_JTICKETING_FEEDBACKMAIL_KEY_DESC"/>
+	<field name="feedbackmail_cron_url" type="cron" label="COM_JTICKETING_FEEDBACKMAIL_CRON_LABEL" description="COM_JTICKETING_FEEDBACKMAIL_CRON_DESC"/>
+<!--
+	<field menu="hide" name="" type="legend" default="COM_JTICKETING_SMS_NOTIFICATION_SETTING" label="" description="" />
+	<field name="smsgateways" type="gatewayplgsms" default="plug_tjsms_clickatell" label="COM_JTICKETING_SELECT_GATEWAY_SMS" description="COM_JTICKETING_SELECT_GATEWAY_SMS_DESC" />
+-->
+</fieldset>
+
+<!--Classroom training Settings-->
+<fieldset name="classroom_training_settings" label="COM_JTICKETING_CLASSROOM_TRAINING_SETTING" description="COM_JTICKETING_CLASSROOM_TRAINING_SETTING_DESC" addfieldpath="/administrator/components/com_jticketing/assets/elements">
+
+	<field name="enable_self_enrollment" class="btn-group" default="0" type="radio" label="COM_JTICKETING_ENABLE_SELF_ENROLLMENT" description="COM_JTICKETING_ENABLE_SELF_ENROLLMENT_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+
+	<field name="enable_enrollment_approval" class="btn-group" default="0" type="radio" label="COM_JTICKETING_ENABLE_ENROLLMENT_APPROVAL" description="COM_JTICKETING_ENABLE_ENROLLMENT_APPROVAL_DESC" showon="enable_self_enrollment:1">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+
+	<field name="enable_ideal_time" class="btn-group" default="0" type="radio" label="COM_JTICKETING_ENABLE_IDEAL_TIME" description="COM_JTICKETING_ENABLE_IDEAL_TIME_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+
+	<field name="enable_certification" class="btn-group" default="0" type="radio" label="COM_JTICKETING_ENABLE_CERTIFICATION" description="COM_JTICKETING_ENABLE_CERTIFICATION_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+	<field name="enable_attendee_move" class="btn-group" default="0" type="radio" label="COM_JTICKETING_ENABLE_MOVE_ATTENDEE" description="COM_JTICKETING_ENABLE_MOVE_ATTENDEE_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+</fieldset>
+
+<!--Waiting List Settings-->
+<fieldset name="waiting_list_settings" label="COM_JTICKETING_WAITING_LIST_SETTING" description="COM_JTICKETING_WAITING_LIST_SETTING_DESC" addfieldpath="/administrator/components/com_jticketing/assets/elements">
+
+	<field name="enable_waiting_list" class="btn-group" default="none" type="waitinglist" label="COM_JTICKETING_ENABLE_WAITING_LIST" description="COM_JTICKETING_ENABLE_WAITING_LIST_DESC"></field>
+
+	<field name="auto_advance_waiting_list" class="btn-group" showon="enable_waiting_list:classroom_training[OR]enable_waiting_list:both" type="radio" default="0" label="COM_JTICKETING_AUTO_ADVANCE_WAITING_LIST" description="COM_JTICKETING_AUTO_ADVANCE_WAITING_LIST_DESC">
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+	</field>
+
+	<field name="waitlistcron_key" type="cron" label="PRIVATE_KEY_CRON" description="PRIVATE_KEY_CRON_DES" showon="enable_waiting_list!:none"/>
+
+	<field name="waitinglistclear" type="cron" label="COM_JTICKETING_CRON_TO_WAITING_LIST_CLEAR" description="COM_JTICKETING_CRON_TO_WAITING_LIST_CLEAR_DESC" showon="enable_waiting_list!:none"/>
+
+</fieldset>
+
+<!--Updates Settings-->
+<fieldset name="updates" label="COM_JTICKETING_OPTIONS_UPDATES_LBL">
+	<field name="downloadid" type="text" default="" size="30" label="COM_JTICKETING_OPTIONS_DOWNLOADID_LBL" description="COM_JTICKETING_OPTIONS_DOWNLOADID_DESC" />
+</fieldset>
+
+<!--Permission Settings-->
+<fieldset name="permissions" description="JCONFIG_PERMISSIONS_DESC" label="JCONFIG_PERMISSIONS_LABEL">
+	<field name="rules" type="rules" component="com_jticketing" class="inputbox" filter="rules" validate="rules" label="JCONFIG_PERMISSIONS_LABEL" section="component" />
+</fieldset>
+</config>

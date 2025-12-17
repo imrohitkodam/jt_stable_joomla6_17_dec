@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="COM_JLIKE_TITLE_TODO_CALENDAR" option="View">
+    <message><![CDATA[COM_JLIKE_TITLE_TODO_CALENDAR_DESC]]></message>
+  </layout>
+  <!-- Add fields to the parameters object for the layout. -->
+  <fields name="params">
+    <fieldset name="advanced" label="COM_MENUS_LAYOUT_FEATURED_OPTIONS">
+      <field name="client_filter" type="clientlist" description="COM_JLIKE_TITLE_TODO_CALENDAR_CLIENT_FILTER_DESC" label="COM_JLIKE_TITLE_TODO_CALENDAR_CLIENT_FILTER" default="" addfieldpath="/components/com_jlike/models/fields/">
+		  <option value="">COM_JLIKE_CLIENT_FILTER_RESET_FILTER_TO_ALL</option>
+	  </field>
+    </fieldset>
+  </fields>
+</metadata>

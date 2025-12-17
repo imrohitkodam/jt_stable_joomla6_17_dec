@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="vendor_id"
+			type="text"
+			default="0"
+			size="45"
+			label="COM_TJVENDORS_FORM_LBL_VENDOR_ID"
+			readonly="true"
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field
+			name="user_id"
+			type="user"
+			label="COM_TJVENDORS_FORM_LBL_VENDOR_USER_ID"
+			description="COM_TJVENDORS_FORM_DESC_VENDOR_USER_ID"
+			hint="COM_TJVENDORS_FORM_LBL_VENDOR_USER_ID"
+			menu_published="0"
+			filter=""
+			directory_stripext="true"
+			directory_hidenode="true"
+			directory_hidedefault="true"
+			heading="h4"
+			close="true"
+			option_on="Yes"
+			option_off="Yes"
+			toggle_default_value="0" />
+
+		<field
+			name="vendor_client"
+			type="text"
+			size="45"
+			label="COM_TJVENDORS_FORM_LBL_VENDOR_CLIENT"
+			description="COM_TJVENDORS_FORM_DESC_VENDOR_CLIENT"
+			hint="COM_TJVENDORS_FORM_LBL_VENDOR_CLIENT"
+			menu_published="0"
+			filter="string"
+			directory_stripext="true"
+			directory_hidenode="true"
+			directory_hidedefault="true"
+			heading="h4"
+			close="true"
+			option_on="Yes"
+			option_off="Yes"
+			toggle_default_value="0" />
+
+		<field
+			name="version_note"
+			type="text"
+			label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
+			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
+			class="inputbox"
+			size="45"
+			labelclass="control-label" />
+
+		<field
+			name="vendor_title"
+			type="text"
+			required="true"
+			size="45"
+			class="inputbox validate-blankspace"
+			label="COM_TJVENDORS_FORM_LBL_VENDOR_TITLE"
+			description="COM_TJVENDORS_FORM_DESC_VENDOR_TITLE"
+			hint="COM_TJVENDORS_FORM_LBL_VENDOR_TITLE"
+			filter="string"/>
+
+		<field
+			name="alias"
+			type="text"
+			size="45"
+			label="COM_TJVENDORS_FORM_LBL_ALIAS"
+			description="COM_TJVENDORS_FORM_DESC_ALIAS"
+			filter="alias"
+			hint="COM_TJVENDORS_FORM_LBL_ALIAS"/>
+
+		<field
+			name="vendor_description"
+			type="textarea"
+			class="inputbox"
+			label="COM_TJVENDORS_FORM_LBL_VENDOR_PROFILE_DESCRIPTION"
+			description="COM_TJVENDORS_FORM_DESC_VENDOR_PROFILE_DESCRIPTION"
+			hint="COM_TJVENDORS_FORM_LBL_VENDOR_PROFILE_DESCRIPTION"
+			rows="5"
+			cols="45"
+			filter="string"/>
+
+		<field
+			name="vendor_logo"
+			id="vendor_logo"
+			type="file"
+			accept="image/jpeg,image/png,image/jpg"
+			label="COM_TJVENDORS_FORM_LBL_VENDOR_PROFILE_AVATAR"
+			description="COM_TJVENDORS_FORM_DESC_VENDOR_PROFILE_AVATAR"
+			hint="COM_TJVENDORS_FORM_LBL_VENDOR_PROFILE_AVATAR"
+			filter=""/>
+
+		<field
+			name="created_by"
+			type="hidden"
+			default="0"
+			filter="INT" />
+
+		<field
+			name="modified_by"
+			type="hidden"
+			default="0"
+			filter="INT" />
+		
+		<field
+			name="created_time"
+			default="0000-00-00 00:00:00"
+			type="hidden"
+			filter="user_utc" />
+		
+		<field
+			name="modified_time"
+			default="0000-00-00 00:00:00"
+			type="hidden"
+			filter="user_utc" />
+
+		<field
+			name="checked_out_time"
+			default="0000-00-00 00:00:00"
+			type="hidden"
+			filter="unset" />
+
+		<field 	
+			name="state" 
+			default="1" 
+			type="list" 
+			label="JSTATUS"
+			filter="intval"
+			description="JFIELD_PUBLISHED_DESC" 
+			class="inputbox" size="1">
+				<option value="1">JPUBLISHED</option>
+				<option value="0">JUNPUBLISHED</option>
+		</field>
+
+		<field
+			name="address"
+			type="textarea"
+			class="inputbox"
+			label="COM_TJVENDORS_FORM_LBL_ADDRESS"
+			description="COM_TJVENDORS_FORM_DESC_ADDRESS"
+			rows="3"
+			cols="22"
+			filter="string"/>
+
+		<field
+			name="country"
+			type="list"
+			label="COM_TJVENDORS_FORM_LBL_COUNTRY"
+			description="COM_TJVENDORS_FORM_DESC_COUNTRY"
+			filter="integer"/>
+
+		<field
+			name="region"
+			type="list"
+			class="form-select"
+			label="COM_TJVENDORS_FORM_LBL_REGION"
+			description="COM_TJVENDORS_FORM_DESC_REGION"
+			filter="integer">
+		</field>
+
+		<field
+			name="city"
+			type="list"
+			label="COM_TJVENDORS_FORM_LBL_CITY"
+			description="COM_TJVENDORS_FORM_DESC_CITY"
+			onchange="CommonObj.showOtherCity('jform_city')"
+			maxlength="50"
+			class="form-select"
+			filter="string">
+		</field>
+
+		<field
+			name="other_city"
+			type="text"
+			label="COM_TJVENDORS_FORM_LBL_OTHER_CITY"
+			class="no-whitespace hide"
+			description="COM_TJVENDORS_FORM_DESC_OTHER_CITY"
+			filter="string"
+			maxlength="50"/>
+
+		<field
+			name="zip"
+			type="text"
+			default=""
+			label="COM_TJVENDORS_FORM_LBL_ZIP"
+			description="COM_TJVENDORS_FORM_DESC_ZIP"
+			filter="string"
+			maxlength="50"/>
+
+		<field
+			name="phone_number"
+			type="tel"
+			default=""
+			label="COM_TJVENDORS_FORM_LBL_PHONE_NUMBER"
+			description="COM_TJVENDORS_FORM_DESC_PHONE_NUMBER"
+			rows="2"
+			cols="3"
+			filter="integer"
+			maxlength="50"/>
+		
+		<field
+			name="website_address"
+			type="url"
+			default=""
+			label="COM_TJVENDORS_FORM_LBL_WEBSITE"
+			class="form-control validate-urlformat"
+			description="COM_TJVENDORS_FORM_DESC_WEBSITE"
+			validate="url"
+			schemes="http,https"
+			filter="url"
+			size="40"
+			maxlength="250"/>
+
+		<field
+			name="vat_number"
+			type="text"
+			default=""
+			label="COM_TJVENDORS_FORM_LBL_VAT_NUMBER"
+			description="COM_TJVENDORS_FORM_DESC_VAT_NUMBER"
+			filter="string"
+			maxlength="50"/>
+
+		<field name="checked_out" type="hidden" />
+
+		<field name="ordering" type="hidden" />
+
+		<field name="currency" type="text" class="inputbox" label="COM_TJVENDORS_FORM_LBL_VENDOR_CURRENCY" rows="10" cols="5" />
+
+		<field name="approved" default="0" type="hidden" filter="" />
+	</fieldset>
+	<fieldset name= "paymentgateway">
+		<field
+			name= "payment_gateway"
+			description= ""
+			type= "subform"
+			label=""
+			min= "1"
+			formsource= "/components/com_tjvendors/models/forms/payment_gateway.xml"
+			multiple= "true"
+			buttons= "add,remove"
+			layout="com_tjvendors.subform.repeatable"
+			groupByFieldset="false"
+			/>
+	</fieldset>
+</form>

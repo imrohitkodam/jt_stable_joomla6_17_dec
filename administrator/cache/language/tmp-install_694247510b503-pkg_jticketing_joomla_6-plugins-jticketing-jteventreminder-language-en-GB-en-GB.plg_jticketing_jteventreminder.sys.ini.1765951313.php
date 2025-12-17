@@ -1,0 +1,6 @@
+<?php
+defined('_JEXEC') or die;
+return array (
+  'PLG_JTICKETING_JTEVENTREMINDER' => 'Event Reminder Plugin',
+  'PLG_TICKETING_JTEVENTREMINDER_DESC' => 'Plugin for creating JLike Reminder on create JT Event',
+);

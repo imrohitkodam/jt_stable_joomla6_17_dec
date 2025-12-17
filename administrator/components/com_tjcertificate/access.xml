@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<access component="com_tjcertificate">
+	<section name="component">
+		<action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC" />
+		<action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />
+		<action name="core.create" title="JACTION_CREATE" description="JACTION_CREATE_COMPONENT_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="JACTION_DELETE_COMPONENT_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="JACTION_EDIT_COMPONENT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="JACTION_EDITSTATE_COMPONENT_DESC" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" description="JACTION_EDITOWN_COMPONENT_DESC" />
+		<action name="template.edit" title="COM_TJCERTIFICATE_PERMISSION_TEMPLATE_EDIT_ALL_TITLE" description="COM_TJCERTIFICATE_PERMISSION_TEMPLATE_EDIT_ALL_DESC" />
+		<action name="template.edit.own" title="COM_TJCERTIFICATE_PERMISSION_TEMPLATE_EDIT_OWN_TITLE" description="COM_TJCERTIFICATE_PERMISSION_TEMPLATE_EDIT_OWN_DESC" />
+		<action name="certificate.download.own" title="COM_TJCERTIFICATE_PERMISSION_CERTIFICATE_DOWNLOAD_OWN" description="COM_TJCERTIFICATE_PERMISSION_CERTIFICATE_DOWNLOAD_OWN_DESC" />
+		<action name="certificate.download.all" title="COM_TJCERTIFICATE_PERMISSION_CERTIFICATE_DOWNLOAD_ALL" description="COM_TJCERTIFICATE_PERMISSION_CERTIFICATE_DOWNLOAD_ALL_DESC" />
+		<action name="certificate.external.create" title="COM_TJCERTIFICATE_PERMISSION_CREATE_EXTERNAL_CERTIFICATE" description="COM_TJCERTIFICATE_PERMISSION_CREATE_EXTERNAL_CERTIFICATE_DESC" />
+		<action name="certificate.external.manage" title="COM_TJCERTIFICATE_PERMISSION_MANAGE_EXTERNAL_CERTIFICATE" description="COM_TJCERTIFICATE_PERMISSION_MANAGE_EXTERNAL_CERTIFICATE_DESC" />
+		<action name="certificate.external.delete" title="COM_TJCERTIFICATE_PERMISSION_DELETE_EXTERNAL_CERTIFICATE" description="COM_TJCERTIFICATE_PERMISSION_DELETE_EXTERNAL_CERTIFICATE_DESC" />
+		<action name="certificate.external.manageown" title="COM_TJCERTIFICATE_PERMISSION_MANAGEOWN_EXTERNAL_CERTIFICATE" description="COM_TJCERTIFICATE_PERMISSION_MANAGEOWN_EXTERNAL_CERTIFICATE_DESC" />
+		<action name="certificate.external.deleteown" title="COM_TJCERTIFICATE_PERMISSION_DELETEOWN_EXTERNAL_CERTIFICATE" description="COM_TJCERTIFICATE_PERMISSION_DELETEOWN_EXTERNAL_CERTIFICATE_DESC" />
+	</section>
+</access>

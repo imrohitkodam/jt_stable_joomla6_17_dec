@@ -1,0 +1,2528 @@
+{
+  "template1": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "any_order_status",
+    "title": "Order status change notification to Event Buyer",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Your order status changed for event {{subject.title}} on site",
+          "body": "<pre><span style='color: #000000; font-size: medium;'>Hi,<br />Your ticket on site </span><b style='color: #000000; font-size: medium;'>{{event.site}}</b><span style='color: #000000; font-size: medium;'> for </span><b style='color: #000000; font-size: medium;'>{{event.title}}</b><span style='color: #000000; font-size: medium;'> status has been </span><b><span style='color: #000000; font-size: medium;'>{{order.newStatus}}</span></b><span style='color: #000000; font-size: medium;'>.</span></pre>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Your order status has been changed into {{order.newStatus}} for {{event.title}}."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Your order status changed for event {{subject.title}} on site",
+          "body": "Your order status has been changed into {{order.newStatus}} for {{event.title}}."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "event.site",
+        "description": "Site of event"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of event"
+      },
+      {
+        "name": "order.newStatus",
+        "description": "Status of order"
+      },
+      {
+        "name": "order.orderid_with_prefix",
+        "description": "Order ID"
+      },
+      {
+        "name": "event.event_url",
+        "description": "Link for event"
+      }
+    ]
+  },
+  "template2": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "e-tickets",
+    "title": "Offline Event ticket notification to Event Buyer",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.site}} ETicket For {{subject.title}}.",
+          "body": "<p style='padding-left: 30px;'> </p> <p> </p> <table class='demoTable' style='background-color: #f7f7f7;' width='80%' cellpadding='10'> <tbody> <tr> <td><span style='font-size: 20px;'>Hi <br>Welcome to {{ticket.title}}</span><br><br>{{ticket.ticket_type_desc}}</td> <td colspan='2'><span style='color: #999999; font-size: 14px;'>Booking ID: </span> {{{ticket.ticket_id}} {{buyer.last_name}} <br><br><span style='color: #999999; font-size: 14px;'> Name: </span> {{buyer.first_name}} {{buyer.last_name}} <br /><br /><span style='color: #999999; font-size: 14px;'>Ticket Type: </span>{{ticket.ticket_type_title}} .</td> </tr> <tr> <td><img style='max-width: 58px; display: block; height: auto !important;' src='https://cdn0.iconfinder.com/data/icons/business-economics/64/calendar_date_icon_organizer_plan_planning_schedule_approved_event_month-128.png' alt='editors' /><br /> <span style='color: #999999; font-size: 14px;'>Event Start Date</span><br />{{ticket.startdate}}</td> <td><img style='max-width: 58px; display: block; height: auto !important;' src='https://cdn0.iconfinder.com/data/icons/business-economics/64/calendar_date_icon_organizer_plan_planning_schedule_approved_event_month-128.png' alt='cleaning' /><br /> <span style='color: #999999; font-size: 14px;'>Event END Date</span> <br />{{ticket.enddate}}</td> <td><img style='max-width: 58px; display: block; height: auto !important;' src='https://cdn0.iconfinder.com/data/icons/hotel-services-3/64/hotel_icon_signboard_five_star_service_luxury_board-128.png' alt='editors' /><br /> <span style='color: #999999; font-size: 14px;'>Event Location</span> <br />{{ticket.location}}</td> </tr> <tr> <td colspan='3'><strong>**Note:- Show this email at the time of event</strong></td> </tr> </tbody> </table>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Check your ticket details for {{event.title}} here {{ticket.ticketLink}}"
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.site}} ETicket For {{subject.title}}.",
+          "body": "Check your ticket details for {{event.title}} here {{ticket.ticketLink}}"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "ticket.title",
+        "description": "Ticket title"
+      },
+      {
+        "name": "ticket.ticket_type_desc",
+        "description": "Description of ticket"
+      },
+      {
+        "name": "ticket.ticket_id",
+        "description": "Ticket id"
+      },
+      {
+        "name": "ticket.ticket_type_title",
+        "description": "Ticket type"
+      },
+      {
+        "name": "ticket.startdate",
+        "description": "Event start date"
+      },
+      {
+        "name": "ticket.enddate",
+        "description": "Event end date"
+      },
+      {
+        "name": "ticket.location",
+        "description": "Event location"
+      },
+      {
+        "name": "buyer.first_name",
+        "description": "Buyer first name"
+      },
+      {
+        "name": "buyer.last_name",
+        "description": "Buyer last name"
+      },
+      {
+        "name": "ticket.qr_url",
+        "description": "QR code url"
+      },
+      {
+        "name": "ticket.cdate",
+        "description": "Booking Date"
+      },
+      {
+        "name": "event.link",
+        "description": "Link for Event"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of Event"
+      },
+      {
+        "name": "customFields.field-name",
+        "description": "To showing custom fields data in email use given tag formate.For. e.g custom field label 'Participant name', the tag will be the 'customFields.participant-name'"
+      },
+      {
+        "name": "customFields.field-name-subfield-name",
+        "description": "To show Joomla repeatable custom fields of event data in email use given tag format. For. e.g custom field label 'Participant name' and its sub field 'Mobile Number', the tag will be 'customFields.participant-name-mobile-number'. Note - Blank space should be replace with '-'."
+      },
+      {
+        "name": "ticket.ticketLink",
+        "description": "Url of Ticket Bought"
+      },
+      {
+        "name": "ticket.barcode_url",
+        "description": "Add this tag for Barcode. Do not use image HTML tag to add it."
+      }
+    ]
+  },
+  "template3": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "payment",
+    "title": "Payment invoice notification to Event Buyer",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Ticket booking order status for event '{{subject.title}}'",
+          "body": "<div class='jticketing-wrapper'><div id='printDiv'><div class='row-fluid'><hr class='hr hr-condensed' /><div class=''><div class='span8'><div class='span4'><h3 class=''>{{event.title}}</h3></div></div><div style='text-align: right;'><div class='pull-right '> </div><div style='clear: both;'> </div><div class='pull-right '><div><strong>Order Id</strong> {{order.orderid_with_prefix}}</div><div class='row-fluid'><strong>Payment Status</strong> {{order.newStatus}}</div><div><strong>Order Date</strong> {{order.cdate}}</div></div></div></div><div class='span12'><hr class='hr hr-condensed' /><div class='pull-left'><div>{{order.firstname}} {{order.lastname}}</div><div>{{order.phone}}</div><div>{{order.user_email}}</div><div>{{order.address}} {{order.city}}</div><div>{{order.zipcode}}, {{order.state}}, {{order.country}}</div></div></div></div><div class='row-fluid'><hr class='hr hr-condensed' /><div class='span12 well'><div class='jt-payment-info'><h3>Payment Information:</h3></div><h3>Ticket Information:</h3><div class='table-responsive'><table style='width: 100.161%; border: 1px solid black;'><tbody><tr><td>{{ticket.TICKET_INFO}}</td></tr><tr><td style='width: 86.2453%; border: 1px solid black;' colspan='5'> </td></tr><tr><td style='padding: 7px; width: 41%; border: 1px solid black;' colspan='3'> </td><td class='jtitem_tprice_label' style='border: 1px solid black; padding: 7px; width: 27%;' align='left'><strong>Sub Total</strong></td><td class='jtitem_tprice' style='text-align: right; width: 18.2453%; border: 1px solid black;'><span>{{order.subTotal}}</span></td></tr><tr><td style='padding: 7px; width: 41%; border: 1px solid black;' colspan='3'> </td><td class='jtitem_tprice_label' style='border: 1px solid black; padding: 7px; width: 27%;' align='left'><strong>Fee</strong></td><td class='jtitem_tprice' style='text-align: right; width: 18.2453%; border: 1px solid black;'><span>{{order.platform_fee}}</span></td></tr><tr><td style='padding: 7px; width: 41%; border: 1px solid black;' colspan='3'> </td><td class='jtitem_tprice_label' style='border: 1px solid black; padding: 7px; width: 27%;' align='left'><strong>Total Amount With Fee</strong></td><td class='jtitem_tprice' style='text-align: right; width: 18.2453%; border: 1px solid black;'><span id='cop_discount'>{{order.amountwithFee}}</span></td></tr><tr><td style='border: 1px solid black; padding: 7px; width: 41%;' colspan='3'> </td><td class='jtitem_tprice_label' style='border: 1px solid black; padding: 7px; width: 27%;' align='left'><b>Discount of coupon ({{order.coupon}})</b></td><td class='jtitem_tprice' style='text-align: right; width: 18.2453%; border: 1px solid black;'><span id='cop_discount'> {{order.discount}} </span></td></tr><tr><td style='border: 1px solid black; padding: 7px; width: 41%;' colspan='3'> </td><td class='jtitem_tprice_label' style='border: 1px solid black; padding: 7px; width: 27%;' align='left'><strong><strong>Tax Amount </strong></strong><strong>{{order.taxPercent}}</strong></td><td class='jtitem_tprice' style='text-align: right; width: 18.2453%; border: 1px solid black;'><span id='cop_discount'> {{order.taxAmount}} </span></td></tr><tr><td style='border: 1px solid black; padding: 7px; width: 41%;' colspan='3'> </td><td class='jtitem_tprice_label' style='border: 1px solid black; padding: 7px; width: 27%;' align='left'><strong>Order Total</strong></td><td class='jtitem_tprice' style='text-align: right; width: 18.2453%; border: 1px solid black;'><strong><span id='final_amt_pay'>{{order.total}}</span></strong></td></tr></tbody></table></div></div></div></div></div>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Your order status is {{order.newStatus}} for {{event.title}}. Please check {{order.url}} for invoice details."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Ticket booking order status for event '{{subject.title}}'",
+          "body": "Your order status is {{order.newStatus}} for {{event.title}}. Please check {{order.url}} for invoice details."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "event.title",
+        "description": "Name of event"
+      },
+      {
+        "name": "event.organizer",
+        "description": "Event creator name"
+      },
+      {
+        "name": "event.organizer_detail",
+        "description": "Event Creator details"
+      },
+      {
+        "name": "order.orderid_with_prefix",
+        "description": "Order Id"
+      },
+      {
+        "name": "order.newStatus",
+        "description": "Status of order"
+      },
+      {
+        "name": "order.cdate",
+        "description": "Order date"
+      },
+      {
+        "name": "order.firstname",
+        "description": "Buyer first name"
+      },
+      {
+        "name": "order.lastname",
+        "description": "Buyer last name"
+      },
+      {
+        "name": "order.phone",
+        "description": "Buyer phone number"
+      },
+      {
+        "name": "order.user_email",
+        "description": "Buyer email id"
+      },
+      {
+        "name": "order.address",
+        "description": "Buyer address"
+      },
+      {
+        "name": "order.city",
+        "description": "Buyer city"
+      },
+      {
+        "name": "order.zipcode",
+        "description": "Buyer zipcode"
+      },
+      {
+        "name": "order.state",
+        "description": "Buyer state"
+      },
+      {
+        "name": "order.country",
+        "description": "Buyer country"
+      },
+      {
+        "name": "order.taxPercent",
+        "description": "Tax percent on order"
+      },
+      {
+        "name": "order.amountwithFee",
+        "description": "Amount including Fee"
+      },
+      {
+        "name": "order.subTotal",
+        "description": "Sub Total"
+      },
+      {
+        "name": "order.platform_fee",
+        "description": "Total Fee"
+      },
+      {
+        "name": "order.taxAmount",
+        "description": "Tax amount"
+      },
+      {
+        "name": "order.coupon",
+        "description": "Coupon code"
+      },
+      {
+        "name": "order.discount",
+        "description": "Coupon discount"
+      },
+      {
+        "name": "order.total",
+        "description": "Order total price"
+      },
+      {
+        "name": "order.business_name",
+        "description": "Buyer Business name"
+      },
+      {
+        "name": "order.vat_number",
+        "description": "Order vat number"
+      },
+      {
+        "name": "ticket.TICKET_INFO",
+        "description": "TICKET_INFO contain all ticket type information. TICKET_INFO is a language constant which have two langauge constant TICKET_HEAD and TICKET_TYPES. You can accordingly change your HTML from langauge file. This tag can only be used in email template"
+      },
+      {
+        "name": "order.url",
+        "description": "Order Invoice Url"
+      }
+    ]
+  },
+  "template4": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "e-ticketsOnlineEvent",
+    "title": "Online event ticket notification to Event Buyer",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.site}} ETicket For {{subject.title}}.",
+          "body": "<p><span style='font-weight: 400;'>Hello <strong> {{user.name}}</strong>,</span></p><p><span style='font-weight: 400;'>Your ticket for <strong>{{event.title}} </strong></span></p><p><span style='font-weight: 400;'>Time:<strong>{{event.startdate}} - {{event.enddate}}</strong></span></p><p><span style='font-weight: 400;'>Meeting Url: <a href='{{user.url}}'><strong>Link</strong></a> - On event time you can click on this link to join the event or you can log in to the site and click on 'Enter Meeting' button to join the event.</span></p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "To join {{event.title}} on {{event.startdate}}, use this link {{user.url}}."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.site}} ETicket For {{subject.title}}.",
+          "body": "To join {{event.title}} on {{event.startdate}}, use this link {{user.url}}."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "user.name",
+        "description": "Event Buyer Name"
+      },
+      {
+        "name": "user.onlineProviderDetails",
+        "description": "User Details(eg. Username and Password)"
+      },
+      {
+        "name": "user.url",
+        "description": "Meeting URL"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of Event"
+      },
+      {
+        "name": "event.startdate",
+        "description": "Event start date"
+      },
+      {
+        "name": "event.enddate",
+        "description": "Event end date"
+      }
+    ]
+  },
+  "template5": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "checkin",
+    "title": "Checkin notification to Event Buyer",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "You have checked into {{subject.title}}.",
+          "body": "<p>Hi {{checkin.attendee_name}},</p><p>The ticket you booked has checked into {{event.title}}.</p><p>Thanks!</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "You have successfully checked into {{event.title}}. Thank you for your presence."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "You have checked into {{subject.title}}.",
+          "body": "You have successfully checked into {{event.title}}. Thank you for your presence."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "checkin.attendee_name",
+        "description": "Attendee name"
+      },
+      {
+        "name": "checkin.checkintime",
+        "description": "Checkin time"
+      },
+      {
+        "name": "checkin.checkouttime",
+        "description": "Checkout time"
+      },
+      {
+        "name": "checkin.spent_time",
+        "description": "Spent time"
+      },
+      {
+        "name": "checkin.certificateUrl",
+        "description": "Event certificate.This tag can only be used in email template."
+      },
+      {
+        "name": "checkin.certificateRawUrl",
+        "description": "Event certificate.This tag can only be used in email template."
+      },
+      {
+        "name": "event.title",
+        "description": "Name of Event"
+      },
+      {
+        "name": "event.startdate",
+        "description": "Event start date"
+      },
+      {
+        "name": "event.enddate",
+        "description": "Event end date"
+      },
+      {
+        "name": "event.feedbackformlink",
+        "description": "Event feedback form link"
+      }
+    ]
+  },
+  "template6": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "waitinglistClassroomTrainingAutoAdvance",
+    "title": "Waiting List Classroom Training Auto-advance Notification",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "You have been added to the waiting list for {{subject.title}}.",
+          "body": "<p><span style='font-weight: 400;'>Hi {{user.name}},</span></p><p><span style='font-weight: 400;'>Thank you for your interest in <strong>{{event.title}}</strong>. Since all seats are booked right now, you have been enrolled to the waiting list for the event. In case we get any cancellations or event capacity increases, we shall automatically enroll you in the event and notify you about the same.</span></p><p><span style='font-weight: 400;'>Thank you!<br /></span></p><p><span style='font-weight: 400;'>{{event.site}}</span></p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Thank you for your interest in {{event.title}}. We have added you to the waiting list. we will automatically enroll you incase change in availability."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "You have been added to the waiting list for {{subject.title}}.",
+          "body": "Thank you for your interest in {{event.title}}. We have added you to the waiting list. we will automatically enroll you incase change in availability."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "user.name",
+        "description": "Name of user"
+      },
+      {
+        "name": "user.username",
+        "description": "Username of user"
+      },
+      {
+        "name": "user.email",
+        "description": "Email of user"
+      },
+      {
+        "name": "event.site",
+        "description": "Site name of event"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of Event"
+      }
+    ]
+  },
+  "template7": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "waitinglistAddedUser",
+    "title": "Added in Waiting List notification",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "You have been added to the waiting list for {{subject.title}}.",
+          "body": "<p><span style='font-weight: 400;'>Hi {{user.name}},</span></p><p><span style='font-weight: 400;'>Thank you for your interest in<strong> {{event.title}}</strong>. We have added you to the waiting list since seats are exhausted. We shall notify you when seats are available for booking for this event</span></p><p><span style='font-weight: 400;'>Thank you!</span></p><p><span style='font-weight: 400;'>{{event.site}}</span></p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Thank you for your interest in {{event.title}}. We have added you to the waiting list. We will notify you when seats are available for booking."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "You have been added to the waiting list for {{subject.title}}.",
+          "body": "Thank you for your interest in {{event.title}}. We have added you to the waiting list. We will notify you when seats are available for booking."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "user.name",
+        "description": "Name of user"
+      },
+      {
+        "name": "user.username",
+        "description": "Username of user"
+      },
+      {
+        "name": "user.email",
+        "description": "Email of user"
+      },
+      {
+        "name": "event.site",
+        "description": "Site name of event"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of Event"
+      }
+    ]
+  },
+  "template8": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "waitinglistTicketsAvailable",
+    "title": "Tickets are available notification for waitlisted users",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Tickets are now available for the event {{subject.title}}",
+          "body": "<p><span style='font-weight: 400;'>Hi {{user.name}},</span></p><p><span style='font-weight: 400;'>Thank you for your interest in <strong>{{event.title}}</strong> . </span></p><p><span style='font-weight: 400;'>We have increased seat availability. Now you can buy the ticket.</span></p><p><span style='font-weight: 400;'>Thank you!</span></p><p><span style='font-weight: 400;'>{{event.site}}</span></p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Tickets are now available for the {{event.title}}. Now you can buy a ticket. "
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Tickets are now available for the event {{subject.title}}",
+          "body": "Tickets are now available for the {{event.title}}. Now you can buy a ticket. "
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "user.name",
+        "description": "Name of user"
+      },
+      {
+        "name": "user.username",
+        "description": "Username of user"
+      },
+      {
+        "name": "user.email",
+        "description": "Email of user"
+      },
+      {
+        "name": "event.site",
+        "description": "Site name of event"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of Event"
+      }
+    ]
+  },
+  "template9": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "m-tickets",
+    "title": "Offline Event Ticket Notification to Event Buyer after attendee moved",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.site}} ETicket For {{subject.title}}.",
+          "body": "<p><span style='font-size: 20px;'>Hi {{buyer.first_name}} {{buyer.last_name}},</span></p><p><span style='font-size: 20px;'>You have been moved from {{oldevent.title}} to {{event.title}}. Please find the details below</span></p><table class='demoTable' style='background-color: #f7f7f7;' width='80%' cellpadding='10'> <tbody> <tr> <td><img class='qrimg' src='{{ticket.qr_url}}' /><br /><br /> <span style='color: #999999; font-size: 14px;'>Booking ID: </span> {{ticket.ticket_id}}</td> <td colspan='2'><span style='font-size: 20px;'>Hi <br />Welcome to {{ticket.title}}</span><br /> <br />{{ticket.description}} <br /><br /> <span style='color: #999999; font-size: 14px;'>Name: </span> {{buyer.first_name}} {{buyer.last_name}} <br /><br /><span style='color: #999999; font-size: 14px;'>Ticket Type: </span>{{ticket.ticket_type_title}} .</td> </tr> <tr> <td><img style='max-width: 58px; display: block; height: auto !important;' src='https://cdn0.iconfinder.com/data/icons/business-economics/64/calendar_date_icon_organizer_plan_planning_schedule_approved_event_month-128.png' alt='editors' /><br /> <span style='color: #999999; font-size: 14px;'>Event Start Date</span><br />{{ticket.startdate}}</td> <td><img style='max-width: 58px; display: block; height: auto !important;' src='https://cdn0.iconfinder.com/data/icons/business-economics/64/calendar_date_icon_organizer_plan_planning_schedule_approved_event_month-128.png' alt='cleaning' /><br /> <span style='color: #999999; font-size: 14px;'>Event END Date</span> <br />{{ticket.enddate}}</td> <td><img style='max-width: 58px; display: block; height: auto !important;' src='https://cdn0.iconfinder.com/data/icons/hotel-services-3/64/hotel_icon_signboard_five_star_service_luxury_board-128.png' alt='editors' /><br /> <span style='color: #999999; font-size: 14px;'>Event Location</span> <br />{{ticket.location}}</td> </tr> <tr> <td colspan='3'><strong>**Note:- Show this email at the time of event</strong></td> </tr> </tbody> </table>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "You have been moved from {{oldevent.title}} to {{event.title}}. Check your ticket details here {{ticket.ticketLink}}."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.site}} ETicket For {{subject.title}}.",
+          "body": "You have been moved from {{oldevent.title}} to {{event.title}}. Check your ticket details here {{ticket.ticketLink}}."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "ticket.title",
+        "description": "Ticket title"
+      },
+      {
+        "name": "ticket.description",
+        "description": "Description of ticket"
+      },
+      {
+        "name": "ticket.ticket_id",
+        "description": "Ticket id"
+      },
+      {
+        "name": "ticket.ticket_type_title",
+        "description": "Ticket type"
+      },
+      {
+        "name": "ticket.startdate",
+        "description": "Event start date"
+      },
+      {
+        "name": "ticket.enddate",
+        "description": "Event end date"
+      },
+      {
+        "name": "ticket.location",
+        "description": "Event location"
+      },
+      {
+        "name": "buyer.first_name",
+        "description": "Buyer first name"
+      },
+      {
+        "name": "buyer.last_name",
+        "description": "Buyer last name"
+      },
+      {
+        "name": "ticket.qr_url",
+        "description": "QR code"
+      },
+      {
+        "name": "ticket.cdate",
+        "description": "Booking Date"
+      },
+      {
+        "name": "event.link",
+        "description": "Link for Event"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of Event"
+      },
+      {
+        "name": "user.name",
+        "description": "Name of user"
+      },
+      {
+        "name": "user.username",
+        "description": "Username of user"
+      },
+      {
+        "name": "user.email",
+        "description": "Email of user"
+      },
+      {
+        "name": "event.site",
+        "description": "Site name of event"
+      },
+      {
+        "name": "attendee.phone",
+        "description": "Phone no of Attendee"
+      },
+      {
+        "name": "attendee.email",
+        "description": "Email of Attendee"
+      },
+      {
+        "name": "ticket.ticketLink",
+        "description": "Url of Ticket Bought"
+      },
+      {
+        "name": "oldevent.title",
+        "description": "Name of old event"
+      },
+      {
+        "name": "customFields.field-name",
+        "description": "To showing custom fields data in email use given tag formate.For. e.g custom field label 'Participant name', the tag will be the 'customFields.participant-name'"
+      },
+      {
+        "name": "customFields.field-name-subfield-name",
+        "description": "To show Joomla repeatable custom fields of event data in email use given tag format. For. e.g custom field label 'Participant name' and its sub field 'Mobile Number', the tag will be 'customFields.participant-name-mobile-number'. Note - Blank space should be replace with '-'."
+      },
+      {
+        "name": "ticket.barcode_url",
+        "description": "Add this tag for Barcode. Do not use image HTML tag to add it."
+      }
+    ]
+  },
+  "template10": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "r-email",
+    "title": "Enrolment Rejection notification to Event Buyer",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Enrollment-{{subject.enrollmentId}} rejected for {{subject.title}}.",
+          "body": "<p><span style='font-size: 20px;'>Hi {{buyer.first_name}},</span> </p><p> </p><p><span style='font-size: 20px;'>Your enrollment-{{buyer.enrollmentId}} has been rejected for {{event.title}}. If you have any queries regarding the same then please contact {{buyer.site}} administrator.</span></p><p> </p><p><span style='font-size: 20px;'>Thank you.</span> </p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Your enrollment-{{buyer.enrollmentId}} for {{event.title}} has been rejected. Please contact administrator for any queries."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Enrollment-{{subject.enrollmentId}} rejected for {{subject.title}}.",
+          "body": "Your enrollment-{{buyer.enrollmentId}} for {{event.title}} has been rejected. Please contact administrator for any queries."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "user.name",
+        "description": "Name of user"
+      },
+      {
+        "name": "user.username",
+        "description": "Username of user"
+      },
+      {
+        "name": "user.email",
+        "description": "Email of user"
+      },
+      {
+        "name": "event.site",
+        "description": "Site name of event"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of Event"
+      },
+      {
+        "name": "attendee.phone",
+        "description": "Phone no of Attendee"
+      },
+      {
+        "name": "attendee.email",
+        "description": "Email of Attendee"
+      },
+      {
+        "name": "buyer.first_name",
+        "description": "First Name of Attendee"
+      },
+      {
+        "name": "buyer.site",
+        "description": "Name of site"
+      },
+      {
+        "name": "buyer.enrollmentId",
+        "description": "Enrollment Id for Attendee"
+      }
+    ]
+  },
+  "template11": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "enrolmentDone",
+    "title": "Enrollment notification to event creator and manager",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.attendee_name}} has enrolled to event {{subject.title}}",
+          "body": "<p><span style='font-weight: 400;'>Hello,</span></p><p><span style='font-weight: 400;'>This is to inform that user <strong>{{attendee.attendee_name}}</strong> has enrolled to event <strong>{{event.title}}</strong>. You can go to <a href='{{event.admin_attendeelist}}'>attendee list</a> and decide the approval of the same.</span></p><p><span style='font-weight: 400;'>Thank you!</span></p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "{{attendee.attendee_name}} has enrolled to the {{event.title}}."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.attendee_name}} has enrolled to event {{subject.title}}",
+          "body": "{{attendee.attendee_name}} has enrolled to the {{event.title}}."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "attendee.attendee_name",
+        "description": "Attendee Name"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of Event"
+      },
+      {
+        "name": "event.admin_attendeelist",
+        "description": "Admin Attendee List URL"
+      },
+      {
+        "name": "event.site_attendeelist",
+        "description": "Frontend Attendee List URL"
+      }
+    ]
+  },
+  "template12": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "eventPurchaseNotification",
+    "title": "New purchase notification to event creator",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.firstname}}{{subject.lastname}} has purchased tickets for {{subject.title}}",
+          "body": "<p><span style='font-weight: 400;'>Hello {{event.creator}},</span></p><p><span style='font-weight: 400;'>{{buyer.quantity}} tickets has been purchased by {{buyer.firstname}} {{buyer.lastname}}</strong> for following event<strong> {{event.eventTitle}}</strong> {{event.startDate}} - {{event.endDate}}</span></p>You are receiving this email as you are the event creator.<p><span style='font-weight: 400;'>Thank you!</span></p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "{{buyer.quantity}} tickets has been purchased by {{buyer.firstname}} {{buyer.lastname}} for {{event.eventTitle}}."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.firstname}}{{subject.lastname}} has purchased tickets for {{subject.title}}",
+          "body": "{{buyer.quantity}} tickets has been purchased by {{buyer.firstname}} {{buyer.lastname}} for {{event.eventTitle}}."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "event.eventTitle",
+        "description": "Event Name"
+      },
+      {
+        "name": "buyer.quantity",
+        "description": "Ticket Quantity"
+      },
+      {
+        "name": "event.startDate",
+        "description": "Event Start Date"
+      },
+      {
+        "name": "event.endDate",
+        "description": "Event End Date"
+      },
+      {
+        "name": "event.creator",
+        "description": "Event creator name"
+      },
+      {
+        "name": "buyer.firstname",
+        "description": "Firstname"
+      },
+      {
+        "name": "buyer.lastname",
+        "description": "Lastname"
+      }
+    ]
+  },
+  "template13": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "admin_order_status",
+    "title": "Order status change notification to Site Administrator",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Order-{{subject.orderid_with_prefix}} status has been changed for {{subject.title}}",
+          "body": "<p>Hello,</p><p>This is to inform you that, order-{{order.orderid_with_prefix}} status has been changed to <b>{{order.newStatus}}</b> for {{event.title}} on site {{event.site}}.</p><p>Thank you!</p><p>{{event.site}}</p><p>Note: This is a system generated email. Please do not reply to these emails.</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Status of order-{{order.orderid_with_prefix}} for {{event.title}} has been changed to {{order.newStatus}} on your site."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Order-{{subject.orderid_with_prefix}} status has been changed for {{subject.title}}",
+          "body": "Status of order-{{order.orderid_with_prefix}} for {{event.title}} has been changed to {{order.newStatus}} on your site."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "event.site",
+        "description": "Site of event"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of event"
+      },
+      {
+        "name": "order.newStatus",
+        "description": "Status of order"
+      },
+      {
+        "name": "order.orderid_with_prefix",
+        "description": "Order ID"
+      }
+    ]
+  },
+  "template14": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "creator_order_status",
+    "title": "Order status change notification to Event Creator",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Order-{{subject.orderid_with_prefix}} status has been changed for {{subject.title}}",
+          "body": "<p>Hello {{event.creator}},</p><p>This is to inform you that, order-{{order.orderid_with_prefix}} status has been changed to <b>{{order.newStatus}}</b> for {{event.title}} on site {{event.site}}.</p><p>Thank you!</p><p>{{event.site}}</p><p>Note: This is a system generated email. Please do not reply to these emails.</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Status of order-{{order.orderid_with_prefix}} for {{event.title}} has been changed to {{order.newStatus}}."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Order-{{subject.orderid_with_prefix}} status has been changed for {{subject.title}}",
+          "body": "Status of order-{{order.orderid_with_prefix}} for {{event.title}} has been changed to {{order.newStatus}}."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "event.site",
+        "description": "Site of event"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of event"
+      },
+      {
+        "name": "order.newStatus",
+        "description": "Status of order"
+      },
+      {
+        "name": "order.orderid_with_prefix",
+        "description": "Order ID"
+      },
+      {
+        "name": "event.creator",
+        "description": "Creator of event"
+      }
+    ]
+  },
+  "template15": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "e-ticketsAdmin",
+    "title": "Offline event ticket notification to Site Administrator",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.first_name}} {{subject.last_name}} confirmed ticket for {{subject.title}}.",
+          "body": "<p>Hello,</p><p>This is to inform you that, {{buyer.first_name}} {{buyer.last_name}} have booked ticket(s) for {{event.title}}. Please check <a href='{{event.attendeelist}}'>attendee list</a> page for more details.</p><p>Thank you!</p><p>{{event.site}}</p><p>Note: This is a system generated email. Please do not reply to these emails.</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "{{buyer.first_name}} {{buyer.last_name}} have booked ticket for {{event.title}} on your Site. Please check {{event.attendeelist}} for attendee details. "
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.first_name}} {{subject.last_name}} confirmed ticket for {{subject.title}}.",
+          "body": "{{buyer.first_name}} {{buyer.last_name}} have booked ticket for {{event.title}} on your Site. Please check {{event.attendeelist}} for attendee details. "
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "buyer.first_name",
+        "description": "Buyer first name"
+      },
+      {
+        "name": "buyer.last_name",
+        "description": "Buyer last name"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of Event"
+      },
+      {
+        "name": "event.site",
+        "description": "Site of event"
+      },
+      {
+        "name": "event.attendeelist",
+        "description": "Attendee List Url"
+      }
+    ]
+  },
+  "template16": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "e-ticketsCreator",
+    "title": "Offline email ticket notification to Event Creator",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.first_name}} {{subject.last_name}} confirmed ticket for {{subject.title}}.",
+          "body": "<p>Hello {{event.creator}},</p><p>This is to inform you that, {{buyer.first_name}} {{buyer.last_name}} have booked ticket(s) for {{event.title}}.Please check <a href='{{event.attendeelist}}'>attendee list</a> page for more details.</p><p>Thank you!</p><p>{{event.site}}</p><p>Note: This is a system generated email. Please do not reply to these emails.</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "{{buyer.first_name}} {{buyer.last_name}} have booked ticket for {{event.title}}. Please check {{event.attendeelist}} for attendee details."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.first_name}} {{subject.last_name}} confirmed ticket for {{subject.title}}.",
+          "body": "{{buyer.first_name}} {{buyer.last_name}} have booked ticket for {{event.title}}. Please check {{event.attendeelist}} for attendee details."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "buyer.first_name",
+        "description": "Buyer first name"
+      },
+      {
+        "name": "buyer.last_name",
+        "description": "Buyer last name"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of Event"
+      },
+      {
+        "name": "event.site",
+        "description": "Site of event"
+      },
+      {
+        "name": "event.creator",
+        "description": "Creator of event"
+      },
+      {
+        "name": "event.attendeelist",
+        "description": "Attendee List Url"
+      }
+     ]
+  },
+  "template17": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "paymentInvoiceAdmin",
+    "title": "Payment invoice notification to Site Administrator",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.firstname}} {{subject.lastname}} placed order for '{{subject.title}}'",
+          "body": "<p>Hello,</p><p>This is to inform you that, {{order.firstname}} {{order.lastname}} has placed order for '{{event.title}}' with order status '{{order.newStatus}}'. Please check invoice details <a href='{{order.url}}'>here</a>.</p><p>Thank you!</p><p>{{event.site}}</p><p> </p><p>Note: This is a system generated email. Please do not reply to these emails.</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "{{order.firstname}} {{order.lastname}} has placed order for event '{{event.title}}' with order status '{{order.newStatus}}'. Please check {{order.url}} for invoice details."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.firstname}} {{subject.lastname}} placed order for '{{subject.title}}'",
+          "body": "{{order.firstname}} {{order.lastname}} has placed order for event '{{event.title}}' with order status '{{order.newStatus}}'. Please check {{order.url}} for invoice details."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "event.title",
+        "description": "Name of event"
+      },
+      {
+        "name": "order.newStatus",
+        "description": "Status of order"
+      },
+      {
+        "name": "order.firstname",
+        "description": "Buyer first name"
+      },
+      {
+        "name": "order.lastname",
+        "description": "Buyer last name"
+      },
+      {
+        "name": "event.site",
+        "description": "Site of event"
+      },
+      {
+        "name": "order.url",
+        "description": "Order Invoice Url"
+      }
+    ]
+  },
+  "template18": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "paymentInvoiceCreator",
+    "title": "Payment Invoice notification to Event Creator",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.firstname}} {{subject.lastname}} placed order for '{{subject.title}}'",
+          "body": "<p>Hello {{event.creator}},</p><p>This is to inform you that, {{order.firstname}} {{order.lastname}} has placed order for '{{event.title}}' with order status '{{order.newStatus}}'. Please check invoice details <a href='{{order.url}}'>here</a>.</p><p>Thank you!</p><p>{{event.site}}</p><p> </p><p>Note: This is a system generated email. Please do not reply to these emails.</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "{{order.firstname}} {{order.lastname}} has placed order for event '{{event.title}}' with order status '{{order.newStatus}}'. Please check {{order.url}} for invoice details."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.firstname}} {{subject.lastname}} placed order for '{{subject.title}}'",
+          "body": "{{order.firstname}} {{order.lastname}} has placed order for event '{{event.title}}' with order status '{{order.newStatus}}'. Please check {{order.url}} for invoice details."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "event.title",
+        "description": "Name of event"
+      },
+      {
+        "name": "order.newStatus",
+        "description": "Status of order"
+      },
+      {
+        "name": "order.firstname",
+        "description": "Buyer first name"
+      },
+      {
+        "name": "order.lastname",
+        "description": "Buyer last name"
+      },
+      {
+        "name": "event.site",
+        "description": "Site of event"
+      },
+      {
+        "name": "order.url",
+        "description": "Order Invoice Url"
+      },
+      {
+        "name": "event.creator",
+        "description": "Creator of event"
+      }
+    ]
+  },
+  "template19": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "e-ticketsOnlineEventAdmin",
+    "title": "Online event ticket notification to Site Administrator",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.name}} confirmed ticket for {{subject.title}}",
+          "body": "<p>Hello,</p><p>This is to inform you {{user.name}} have booked ticket(s) for {{event.title}} .</p><p>Thank you!</p><p>{{event.site}}</p><p>Note: This is a system generated email. Please do not reply to these emails.</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "{{user.name}} have booked ticket for {{event.title}}. Please check {{event.attendeelist}} for attendee details."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.name}} confirmed ticket for {{subject.title}}",
+          "body": "{{user.name}} have booked ticket for {{event.title}}. Please check {{event.attendeelist}} for attendee details."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "user.name",
+        "description": "Event Buyer Name"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of Event"
+      },
+      {
+        "name": "event.site",
+        "description": "Site of event"
+      },
+      {
+        "name": "event.attendeelist",
+        "description": "Attendee List Url"
+      }
+    ]
+  },
+
+  "template20": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "e-ticketsOnlineEventCreator",
+    "title": "Online event ticket notification to Event Creator",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.name}} confirmed ticket for {{subject.title}}",
+          "body": "<p>Hello {{event.creator}},</p><p>This is to inform you {{user.name}} have booked ticket(s) for {{event.title}}.Please check <a href='{{event.attendeelist}}'>attendee list</a> page for more details.</p><p>Thank you!</p><p>{{event.site}}</p><p>Note: This is a system generated email. Please do not reply to these emails.</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "{{user.name}} have booked ticket for {{event.title}}. Please check {{event.attendeelist}} for attendee details."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.name}} confirmed ticket for {{subject.title}}",
+          "body": "{{user.name}} have booked ticket for {{event.title}}. Please check {{event.attendeelist}} for attendee details."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "user.name",
+        "description": "Event Buyer Name"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of Event"
+      },
+      {
+        "name": "event.site",
+        "description": "Site of event"
+      },
+      {
+        "name": "event.attendeelist",
+        "description": "Attendee list Url"
+      },
+      {
+        "name": "event.creator",
+        "description": "Creator of event"
+      }
+    ]
+  },
+  "template21": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "checkin_site_admin",
+    "title": "Checkin notification to Site Administrator",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.attendee_name}} have checked into {{subject.title}}.",
+          "body": "<p>Hi,</p><p>{{checkin.attendee_name}} has checked into {{event.title}}.</p><p>Thanks!</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "{{checkin.attendee_name}} has checked into event {{event.title}}."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.attendee_name}} have checked into {{subject.title}}.",
+          "body": "{{checkin.attendee_name}} has checked into event {{event.title}}."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "checkin.attendee_name",
+        "description": "Attendee name"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of Event"
+      },
+      {
+        "name": "event.site",
+        "description": "Site of event"
+      }
+    ]
+  },
+  "template22": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "checkin_event_creator",
+    "title": "Checkin notification to Event Creator",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.attendee_name}} have checked into {{subject.title}}.",
+          "body": "<p>Hello {{event.creator}},</p><p>{{checkin.attendee_name}} has checked into {{event.title}}.</p><p>Thank you!</p><p>{{event.site}}</p><p>Note: This is a system generated email. Please do not reply to these emails.</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "{{checkin.attendee_name}} has checked into your event {{event.title}}."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.attendee_name}} have checked into {{subject.title}}.",
+          "body": "{{checkin.attendee_name}} has checked into your event {{event.title}}."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "checkin.attendee_name",
+        "description": "Attendee name"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of Event"
+      },
+      {
+        "name": "event.site",
+        "description": "Site of event"
+      },
+      {
+        "name": "event.creator",
+        "description": "Creator of event"
+      }
+    ]
+  },
+  "template23": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "m-ticketsSiteAdministrator",
+    "title": "Offline Event Ticket Notification to Site Administrator after attendee moved",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.first_name}} {{subject.last_name}} moved to {{subject.title}}",
+          "body": "<p>Hello,</p><p>{{buyer.first_name}} {{buyer.last_name}} has been moved from {{oldevent.title}} to {{event.title}}. Please check <a href='{{event.attendeelist}}'>attendee list</a> for more details.</p><p>Thank you!</p><p>{{event.site}}</p><p>Note: This is a system generated email. Please do not reply to these emails.</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "{{buyer.first_name}} {{buyer.last_name}} have been moved from {{oldevent.title}} to {{event.title}}. Please check {{event.attendeelist}} for attendee details"
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.first_name}} {{subject.last_name}} moved to {{subject.title}}",
+          "body": "{{buyer.first_name}} {{buyer.last_name}} have been moved from {{oldevent.title}} to {{event.title}}. Please check {{event.attendeelist}} for attendee details"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "event.site",
+        "description": "Site name of event"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of new Event"
+      },
+      {
+        "name": "buyer.first_name",
+        "description": "First Name of Attendee"
+      },
+      {
+        "name": "buyer.last_name",
+        "description": "Last Name of Attendee"
+      },
+      {
+        "name": "oldevent.title",
+        "description": "Name of new Event"
+      },
+      {
+        "name": "event.attendeelist",
+        "description": "Attendee List Url"
+      }
+    ]
+  },
+  "template24": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "m-ticketsEventCreator",
+    "title": "Offline Event Ticket Notification to Event Creator after attendee moved",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.first_name}} {{subject.last_name}} moved to {{subject.title}}",
+          "body": "<p>Hello {{event.creator}},</p><p>{{buyer.first_name}} {{buyer.last_name}} has been moved from {{oldevent.title}} to {{event.title}}. Please check <a href='{{event.attendeelist}}'>attendee list</a> for more details.</p><p>Thank you!</p><p>{{event.site}}</p><p>Note: This is a system generated email. Please do not reply to these emails.</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "{{buyer.first_name}} {{buyer.last_name}} have been moved from {{oldevent.title}} to {{event.title}}.  Please check {{event.attendeelist}} for attendee details"
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.first_name}} {{subject.last_name}} moved to {{subject.title}}",
+          "body": "{{buyer.first_name}} {{buyer.last_name}} have been moved from {{oldevent.title}} to {{event.title}}.  Please check {{event.attendeelist}} for attendee details"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "event.site",
+        "description": "Site name of event"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of new Event"
+      },
+      {
+        "name": "buyer.first_name",
+        "description": "First Name of Attendee"
+      },
+      {
+        "name": "buyer.last_name",
+        "description": "Last Name of Attendee"
+      },
+      {
+        "name": "oldevent.title",
+        "description": "Name of new Event"
+      },
+      {
+        "name": "event.creator",
+        "description": "Creator of event"
+      },
+      {
+        "name": "event.attendeelist",
+        "description": "Attendee List Url"
+      }
+    ]
+  },
+  "template25": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "r-mailAdmin",
+    "title": "Enrolment Rejection notification to Site Administrator",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Enrollment-{{subject.enrollmentId}} rejected for {{subject.title}}",
+          "body": "<p>Hello ,</p><p>Enrollment-{{buyer.enrollmentId}} for {{event.title}} has been rejected on site {{buyer.site}}.</p><p>Thank you! </p><p>{{buyer.site}}</p><p>Note: This is a system generated email. Please do not reply to these emails.</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Enrollment-{{buyer.enrollmentId}} for {{event.title}} has been rejected on site {{buyer.site}}."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Enrollment-{{subject.enrollmentId}} rejected for {{subject.title}}",
+          "body": "Enrollment-{{buyer.enrollmentId}} for {{event.title}} has been rejected on site {{buyer.site}}."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "buyer.site",
+        "description": "Site name of event"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of Event"
+      },
+      {
+        "name": "buyer.enrollmentId",
+        "description": "Enrollment Id of Event Buyer"
+      }
+    ]
+  },
+  "template26": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "r-mailcreator",
+    "title": "Enrolment Rejection notification to Event Creator",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Enrollment-{{subject.enrollmentId}} rejected for {{subject.title}}",
+          "body": "<p>Hello {{event.creator}} ,</p><p>Enrollment-{{buyer.enrollmentId}} for {{event.title}} has been rejected. If this action is not initiated or within your knowledge please contact {{buyer.site}} administrator.</p><p>Thank you!</p><p>{{buyer.site}}</p><p>Note: This is a system generated email. Please do not reply to these emails.</p><p> </p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Enrollment-{{buyer.enrollmentId}} for your event {{event.title}} has been rejected. Please contact administrator for any queries."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Enrollment-{{subject.enrollmentId}} rejected for {{subject.title}}",
+          "body": "Enrollment-{{buyer.enrollmentId}} for your event {{event.title}} has been rejected. Please contact administrator for any queries."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "buyer.site",
+        "description": "Site name of event"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of Event"
+      },
+      {
+        "name": "event.creator",
+        "description": "Creator of event"
+      },
+      {
+        "name": "buyer.enrollmentId",
+        "description": "Enrollment Id of Event Buyer"
+      }
+    ]
+  },
+  "template27": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "m-ticketsOnlineEvent",
+    "title": "Online Event Ticket Notification to Event Buyer after attendee moved",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.site}} ETicket For {{subject.title}}.",
+          "body": "<p><span style='font-weight: 400;'>Hello <strong> {{user.name}}</strong>,</span></p><p><span style='font-weight: 400;'>You have been moved from <strong>'{{oldevent.title}}'</strong> to <strong>'{{event.title}}'</strong>. Please find the event details below.</span></p><span style='font-weight: 400;'>Time:<strong>{{event.startdate}} - {{event.enddate}}</strong></span></p><p><span style='font-weight: 400;'>Meeting Url: <a href='{{user.url}}'><strong>Link</strong></a> - On event time you can click on this link to join the event or you can log in to the site and click on 'Enter Meeting' button to join the event.</span></p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "You have been moved from {{oldevent.title}} to {{event.title}}. On {{event.startdate}} join this link {{user.url}}."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.site}} ETicket For {{subject.title}}.",
+          "body": "You have been moved from {{oldevent.title}} to {{event.title}}. On {{event.startdate}} join this link {{user.url}}."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "user.name",
+        "description": "Event Buyer Name"
+      },
+      {
+        "name": "user.onlineProviderDetails",
+        "description": "User Details(eg. Username and Password)"
+      },
+      {
+        "name": "user.url",
+        "description": "Meeting URL"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of Event"
+      },
+      {
+        "name": "event.startdate",
+        "description": "Event start date"
+      },
+      {
+        "name": "event.enddate",
+        "description": "Event end date"
+      },
+      {
+        "name": "oldevent.title",
+        "description": "Name of old event"
+      },
+      {
+        "name": "event.site",
+        "description": "Site name of event"
+      }
+    ]
+  },
+  "template28": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "m-ticketsOnlineEventAdmin",
+    "title": "Online Event Ticket Notification to Site Administrator after attendee moved ",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.first_name}} {{subject.last_name}} moved to {{subject.title}}",
+          "body": "<p>Hello,</p><p>{{user.first_name}} {{user.last_name}} has been moved from {{oldevent.title}} to {{event.title}}. Please check <a href='{{event.attendeelist}}'>attendee list</a> for more details.</p><p>Thank you!</p><p>{{event.site}}</p><p>Note: This is a system generated email. Please do not reply to these emails.</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "{{user.first_name}} {{user.last_name}} have been moved from {{oldevent.title}} to {{event.title}}. Please check {{event.attendeelist}} for attendee details"
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.first_name}} {{subject.last_name}} moved to {{subject.title}}",
+          "body": "{{user.first_name}} {{user.last_name}} have been moved from {{oldevent.title}} to {{event.title}}. Please check {{event.attendeelist}} for attendee details"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "event.site",
+        "description": "Site name of event"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of new Event"
+      },
+      {
+        "name": "user.first_name",
+        "description": "First Name of Attendee"
+      },
+      {
+        "name": "user.last_name",
+        "description": "Last Name of Attendee"
+      },
+      {
+        "name": "oldevent.title",
+        "description": "Name of new Event"
+      },
+      {
+        "name": "event.attendeelist",
+        "description": "Attendee List Url"
+      }
+    ]
+  },
+  "template29": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "m-ticketsOnlineEventCreator",
+    "title": "Online Event Ticket Notification to Event Creator after attendee moved",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.first_name}} {{subject.last_name}} moved to {{subject.title}}",
+          "body": "<p>Hello {{event.creator}},</p><p>{{user.first_name}} {{user.last_name}} has been moved from {{oldevent.title}} to {{event.title}}. Please check <a href='{{event.attendeelist}}'>attendee list</a> for more details.</p><p>Thank you!</p><p>{{event.site}}</p><p>Note: This is a system generated email. Please do not reply to these emails.</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "{{user.first_name}} {{user.last_name}} have been moved from {{oldevent.title}} to {{event.title}}.  Please check {{event.attendeelist}} for attendee details"
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.first_name}} {{subject.last_name}} moved to {{subject.title}}",
+          "body": "{{user.first_name}} {{user.last_name}} have been moved from {{oldevent.title}} to {{event.title}}.  Please check {{event.attendeelist}} for attendee details"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "event.site",
+        "description": "Site name of event"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of new Event"
+      },
+      {
+        "name": "user.first_name",
+        "description": "First Name of Attendee"
+      },
+      {
+        "name": "user.last_name",
+        "description": "Last Name of Attendee"
+      },
+      {
+        "name": "oldevent.title",
+        "description": "Name of new Event"
+      },
+      {
+        "name": "event.creator",
+        "description": "Creator of event"
+      },
+      {
+        "name": "event.attendeelist",
+        "description": "Attendee List Url"
+      }
+    ]
+  },
+  "template30": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "adminApprovalNotification",
+    "title": "Event Approval",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Approve and publish the event '{{subject.eventTitle}}' created by {{subject.eventCreator}}",
+          "body": "<p>This is to inform you that '{{event.creator}}' has created an<b data-stringify-type='bold'> event-- {{event.eventTitle}}</b> , which you can check and publish from <a href='{{event.link}}'>here</a></p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Hi, please check and publish the event-- {{event.eventTitle}} created by {{event.creator}}."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "Approve and publish the event '{{subject.eventTitle}}' created by {{subject.eventCreator}}",
+          "body": "Hi, please check and publish the event-- {{event.eventTitle}} created by {{event.creator}}."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "event.creator",
+        "description": "Event creator"
+      },
+      {
+        "name": "event.eventTitle",
+        "description": "Name of event"
+      },
+      {
+        "name": "event.link",
+        "description": "Link of event"
+      }
+    ]
+  },
+  "template31": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "eventApprovedNotification",
+    "title": "Event is Approved",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "The {{subject.eventTitle}} you approved and now published on site.",
+          "body": "<p>This is to inform you that your event {{event.eventTitle}} is approved and published <a href='{{event.link}}'>here</a>.</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "This is to inform you that your event {{event.eventTitle}} is approved and published {{event.link}}"
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "The {{subject.eventTitle}} you approved and now published on site.",
+          "body": "This is to inform you that your event {{event.eventTitle}} is approved and published {{event.link}}"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "event.creator",
+        "description": "Event creator"
+      },
+      {
+        "name": "event.eventTitle",
+        "description": "Name of event"
+      },
+      {
+        "name": "event.link",
+        "description": "Event link"
+      }
+    ]
+  },
+  "template32": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "e-ticketsforEventBuyer",
+    "title": "Offline Event ticket notification to Event Buyer for All E-tickets in one email",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email":{
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.site}} E-Tickets of all attendees for Event {{subject.title}}.",
+          "body": "<p>Hello {{buyer.eventBuyer}},</p><p>You have bought {{buyer.ticketCount}} tickets for event {{ticket.title}}. Please find attached e-tickets for all the attendees.</p>"        }
+      }
+    },
+    "sms": {
+      "state": 0,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "You have bought {{buyer.ticketCount}} tickets for event {{ticket.title}}. Please find e-tickets on your mail."
+        }
+      }
+    },
+    "web": {
+      "state": 0,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "{{subject.site}} E-Tickets of all attendees for Event {{subject.title}}.",
+          "body": "You have bought {{buyer.ticketCount}} tickets for event {{ticket.title}}. Please find e-tickets on your mail."
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "ticket.title",
+        "description": "Ticket title"
+      },
+      {
+        "name": "buyer.eventBuyer",
+        "description": "Buyer's Name"
+      },
+      {
+        "name": "buyer.ticketCount",
+        "description": "Total ticket purchased"
+      },
+      {
+        "name": "event.link",
+        "description": "Link for Event"
+      },
+      {
+        "name": "event.title",
+        "description": "Name of Event"
+      }
+    ]
+  },
+  "template33": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "eventAttendeeNotification",
+    "title": "New Event Mail Sender",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email": {
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "An Unmissable Opportunity Awaits You",
+          "body": "<p>Dear Attendee, </p><p>We are excited to inform you about an upcoming event, <b>{{event.eventTitle}}</b>, that aligns with your interests.</p><p>As someone who has attended similar events, we believe this will be a valuable opportunity for you to connect, learn, and engage with like-minded professionals.</p><p>Stay tuned for more details, and we look forward to your participation.</p><p>Best Regards,<br>JTicketing Team</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 1,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Hey! A new event {{event.eventTitle}} is happening. Check it out: {{event.link}}"
+        }
+      }
+    },
+    "web": {
+      "state": 1,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "New Event Alert: {{subject.eventTitle}}",
+          "body": "You attended a similar event before. Check out the new event: <a href='{{event.link}}'>{{event.eventTitle}}</a>"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "event.creator",
+        "description": "Event creator"
+      },
+      {
+        "name": "event.eventTitle",
+        "description": "Name of event"
+      },
+      {
+        "name": "event.link",
+        "description": "Event link"
+      }
+    ]
+  },
+  "template34": {
+    "id": "",
+    "client": "com_jticketing",
+    "key": "postEventFeedbackNotification",
+    "title": "Post Event Feedback Request",
+    "state": 1,
+    "user_control": 1,
+    "core": 1,
+    "email": {
+      "state": 1,
+      "cc": "",
+      "bcc": "",
+      "from_name": "",
+      "from_email": "",
+      "emailfields": {
+        "emailfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "We’d love to hear your thoughts about the event.",
+          "body": "<p>Dear Attendee,</p> <p>Thank you for attending <strong>{{event.eventTitle}}</strong>. We trust that you found the event valuable and enjoyable.</p> <p>To ensure we continue to provide high-quality experiences, we would be grateful if you could take a few moments to share your feedback. Your input is invaluable to us in enhancing our future events.</p> <p><a href='{{event.feedbackLink}}'>Provide Feedback</a></p> <p>We appreciate your time and input. Thank you.</p> <p>Best regards,<br>The JTicketing Team</p>"
+        }
+      }
+    },
+    "sms": {
+      "state": 1,
+      "smsfields": {
+        "smsfields0": {
+          "id": "",
+          "language": "*",
+          "body": "Thanks for attending {{event.eventTitle}}! We'd love your feedback: {{event.feedbackLink}}"
+        }
+      }
+    },
+    "web": {
+      "state": 1,
+      "webfields": {
+        "webfields0": {
+          "id": "",
+          "language": "*",
+          "subject": "How was {{event.eventTitle}}?",
+          "body": "We appreciate your participation in {{event.eventTitle}}. Please <a href='{{event.feedbackLink}}'>click here</a> to tell us what you think!"
+        }
+      }
+    },
+    "replacement_tags": [
+      {
+        "name": "event.eventTitle",
+        "description": "Name of event"
+      },
+      {
+        "name": "event.feedbackLink",
+        "description": "Feedback link"
+      },
+      {
+        "name": "event.attendeeName",
+        "description": "Attendee's name (optional)"
+      }
+    ]
+  }
+}

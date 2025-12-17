@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/administrator/components/com_jlike/models/fields">
+		<field name="path_id"
+			type="hidden"
+			default="0"
+			label="COM_JLIKE_PATH_ID"
+			readonly="true"
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"/>
+
+		<field name="path_title"
+			type="text"
+			label="COM_JLIKE_PATH_TITLE"
+			required="true"
+			description="COM_JLIKE_ADMIN_PATH_TITLE"/>
+
+		<field name="alias"
+			type="text"
+			hint="JFIELD_ALIAS_PLACEHOLDER"
+			label="COM_JLIKE_PATH_ALIAS"
+			description="COM_JLIKE_ADMIN_PATH_ALIAS"/>
+
+		<field name="path_description"
+			type="textarea"
+			label="COM_JLIKE_PATH_DESCRIPTION"
+			description="COM_JLIKE_ADMIN_PATH_DESCRIPTIONS"
+			rows="7"
+			cols="80"
+			/>
+
+		<!--<field
+			name="path_image"
+			type="file"
+			label="COM_JLIKE_PATH_IMAGE"
+			description="COM_JLIKE_PATH_IMAGE_DESC"
+			size="10"
+			accept="image/*"/>-->
+
+		<field name="path_type"
+			type="typetitle"
+			required="true"
+			default="Genral"
+			label="COM_JLIKE_PATH_TYPE"
+			description=""/>
+
+		<field name="category_id"
+			type="list"
+			label="COM_JLIKE_PATH_CATEGORY"
+			description="COM_JLIKE_PATH_CATEGORY_DESC"
+			default="0"
+			size="1"
+			>
+			<option value="0">COM_JLIKE_PATH_CATEGORY</option>
+		</field>
+
+		<field name="params"
+			type="textarea"
+			label="COM_JLIKE_PATH_PARAMS"
+			description="COM_JLIKE_PATH_PARAMS_DESC"
+			rows="10"
+			cols="80"
+			/>
+
+		<field name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			default="1"
+			class="chzn-color-state"
+			size="1">
+				<option value="1">JPUBLISHED</option>
+				<option value="0">JUNPUBLISHED</option>
+		</field>
+
+		<field
+			name="image"
+			type="hidden"
+			label="COM_JLIKE_PATH_HIDDEN_IMAGE"
+			description="COM_JLIKE_PATH_HIDDEN_IMAGE_DESC"
+			size="10"/>
+
+		<field name="created_by"
+			type="hidden"
+			default=""
+			label="COM_JLIKE_PATH_FORM_LBL_CREATED_BY"
+			description="COM_JLIKE_PATH_FORM_FORM_DESC_CREATED_BY" />
+
+		<field name="created_date"
+			type="hidden"
+			class="inputbox"
+			default="0000-00-00 00:00:00"
+			label="COM_JLIKE_PATH_FORM_LBL_CREATED_DATE"
+			description="COM_JLIKE_PATH_FORM_DESC_CREATED_DATE"
+			filter="safehtml" />
+
+		<field name="modified_by"
+			type="hidden"
+			default=""
+			label="COM_JLIKE_PATH_FORM_LBL_MODIFIED_BY"
+			description="COM_JLIKE_PATH_FORM_FORM_DESC_MODIFIED_BY" />
+
+		<field name="modified_date"
+			type="hidden"
+			class="inputbox"
+			default="0000-00-00 00:00:00"
+			label="COM_JLIKE_PATH_FORM_LBL_MODIFIED_DATE"
+			description="COM_JLIKE_PATH_FORM_DESC_MODIFIED_DATE"
+			filter="safehtml" />
+
+		<field
+			name="depth"
+			type="number"
+			class="inputbox"
+			label="COM_JLIKE_PATH_FORM_LBL_DEPTH"
+			description="COM_JLIKE_PATH_FORM_DESC_DEPTH"
+			filter="integer"
+			default="0"
+		/>
+
+		<field
+			name="subscribe_start_date"
+			type="calendar"
+			default=""
+			filter="user_utc"
+			format="%Y-%m-%d %H:%M:%S"
+			singleheader="true"
+			showtime="true"
+			timeformat="24"
+			todaybutton="false"
+			weeknumbers="false"
+			filltable="true"
+			minyear="-1"
+			maxyear="5"
+			label="COM_JLIKE_PATH_FORM_LBL_SUBSCRIBE_START_DATE"
+			description="COM_JLIKE_PATH_FORM_DESC_SUBSCRIBE_START_DATE"
+			/>
+
+		<field
+			name="subscribe_end_date"
+			type="calendar"
+			default=""
+			filter="user_utc"
+			format="%Y-%m-%d %H:%M:%S"
+			singleheader="true"
+			showtime="true"
+			timeformat="24"
+			todaybutton="false"
+			weeknumbers="false"
+			filltable="true"
+			minyear="-1"
+			maxyear="5"
+			label="COM_JLIKE_PATH_FORM_LBL_SUBSCRIBE_END_DATE"
+			description="COM_JLIKE_PATH_FORM_DESC_SUBSCRIBE_END_DATE"
+			/>
+
+		<field
+			name="access"
+			type="accesslevel"
+			label="JFIELD_ACCESS_LABEL"
+			description="JFIELD_ACCESS_DESC"
+			size="1"
+		/>
+
+	</fieldset>
+		<fieldset name="accesscontrol">
+		<field
+			name="asset_id"
+			type="hidden"
+			filter="unset"/>
+		<field
+			name="rules"
+			type="rules"
+			label="JFIELD_RULES_LABEL"
+			translate_label="false"
+			filter="rules"
+			validate="rules"
+			class="inputbox"
+			component="com_jlike"
+			section="path"/>
+		</fieldset>
+</form>

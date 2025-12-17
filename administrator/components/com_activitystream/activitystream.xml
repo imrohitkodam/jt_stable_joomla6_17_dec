@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="6.0" method="upgrade">
+	<name>com_activitystream</name>
+	<creationDate>26th November 2025</creationDate>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2016 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>6.0.0</version>
+	<description>COM_ACTIVITYSTREAM_DESCRIPTION</description>
+	<scriptfile>script.activitystream.php</scriptfile>
+	<install>
+		<!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update>
+		<!-- Runs on update; New in 2.5 -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	<languages folder="site/language">
+		<language tag="en-GB">/en-GB/en-GB.com_activitystream.ini</language>
+	</languages>
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>activitystream.php</filename>
+		<filename>controller.php</filename>
+		<filename>helper.php</filename>
+		<filename>router.php</filename>
+		<folder>models</folder>
+		<folder>controllers</folder>
+	</files>
+	<administration>
+		<menu link="option=com_activitystream" view="activities">com_activitystream</menu>
+		<languages folder="admin/language">
+			<language tag="en-GB">/en-GB/en-GB.com_activitystream.sys.ini</language>
+			<language tag="en-GB">/en-GB/en-GB.com_activitystream.ini</language>
+		</languages>
+		<files folder="admin">
+			<!-- Admin Main File Copy Section -->
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>activitystream.php</filename>
+			<filename>controller.php</filename>
+			<!-- SQL files section -->
+			<folder>sql</folder>
+			<!-- tables files section -->
+			<folder>tables</folder>
+			<!-- models files section -->
+			<folder>models</folder>
+			<!-- views files section -->
+			<folder>views</folder>
+			<!-- controllers files section -->
+			<folder>controllers</folder>
+			<!-- Helpers files section -->
+			<folder>helpers</folder>
+		</files>
+	</administration>
+	<!-- Media files -->
+	<media folder="media" destination="com_activitystream">
+		<folder>scripts</folder>
+		<folder>themes</folder>
+	</media>
+</extension>

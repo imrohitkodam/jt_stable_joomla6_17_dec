@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<access component="com_hierarchy">
+	<section name="component">
+		<action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC" />
+		<action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />
+		<action name="core.create" title="JACTION_CREATE" description="JACTION_CREATE_COMPONENT_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="JACTION_DELETE_COMPONENT_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="JACTION_EDIT_COMPONENT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="JACTION_EDITSTATE_COMPONENT_DESC" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" description="JACTION_EDITOWN_COMPONENT_DESC" />
+		<action name="core.chart.view" title="COM_HIERARCHY_CHART_TITLE" description="COM_HIERARCHY_CHART_VIEW_DESC" />
+		<action name="core.csv.import" title="COM_HIERARCHY_IMPCSV_TITLE" description="COM_HIERARCHY_IMPCSV_DESC" />
+		<action name="core.csv.export" title="COM_HIERARCHY_EXPCSV_TITLE" description="COM_HIERARCHY_EXPCSV_DESC" />
+	</section>
+</access>

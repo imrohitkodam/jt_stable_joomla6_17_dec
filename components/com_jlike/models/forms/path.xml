@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="path_id"
+			type="text"
+			default="0"
+			label="COM_JLIKE_PATH_ID"
+			readonly="true"
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"
+			filter="integer"/>
+
+		<field name="path_title"
+			type="text"
+			label="COM_JLIKE_PATH_TITLE"
+			description=""
+			filter="string"/>
+
+		<field name="alias"
+			type="text"
+			label="COM_JLIKE_PATH_ALIAS"
+			description=""
+			filter="alias"/>
+
+		<field name="path_description"
+			type="text"
+			label="COM_JLIKE_PATH_DESCRIPTION"
+			description=""
+			filter="string"/>
+
+		<field name="path_image"
+			type="file"
+			label="COM_JLIKE_PATH_IMAGE"
+			description=""
+			accept="image/jpeg,image/png,image/jpg"/>
+
+		<field name="category_id"
+			type="list"
+			label="COM_JLIKE_PATH_CATEGORY"
+			description=""
+			filter="integer"
+			/>
+
+		<field name="order"
+			type="text"
+			default="0"
+			label="COM_JLIKE_PATH_ID"
+			description=""
+			filter="integer"/>
+
+		<field name="path_type"
+			type="text"
+			label="COM_JLIKE_PATH_TYPE"
+			description=""
+			filter="string"/>
+
+		<field name="depth"
+			type="text"
+			label="COM_JLIKE_PATH_DEPTH"
+			description=""
+			filter="integer"/>
+
+		<field name="params"
+			type="text"
+			label="COM_JLIKE_PATH_PARAMS"
+			description=""
+			filter="string"/>
+
+		<field name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			default="1"
+			class="chzn-color-state"
+			size="1"
+			filter="integer">
+				<option value="1">JPUBLISHED</option>
+				<option value="0">JUNPUBLISHED</option>
+				<option value="2">JARCHIVED</option>
+				<option value="-2">JTRASHED</option>
+		</field>
+
+		<field name="created_by"
+			type="createdby"
+			default=""
+			label="COM_JLIKE_PATH_FORM_LBL_CREATED_BY"
+			description="COM_JLIKE_PATH_FORM_FORM_DESC_CREATED_BY"
+			filter="integer"/>
+
+		<field name="created_date"
+			type="calendar"
+			class="inputbox"
+			default="0000-00-00 00:00:00"
+			label="COM_JLIKE_PATH_FORM_LBL_CREATED_DATE"
+			description="COM_JLIKE_PATH_FORM_DESC_CREATED_DATE"
+			filter="safehtml" />
+
+		<field name="modified_by"
+			type="modified_by"
+			default=""
+			label="COM_JLIKE_PATH_FORM_LBL_MODIFIED_BY"
+			description="COM_JLIKE_PATH_FORM_FORM_DESC_MODIFIED_BY"
+			filter="integer"/>
+
+		<field name="modified_date"
+			type="calendar"
+			class="inputbox"
+			default="0000-00-00 00:00:00"
+			label="COM_JLIKE_PATH_FORM_LBL_MODIFIED_DATE"
+			description="COM_JLIKE_PATH_FORM_DESC_MODIFIED_DATE"
+			filter="safehtml" />
+	</fieldset>
+</form>

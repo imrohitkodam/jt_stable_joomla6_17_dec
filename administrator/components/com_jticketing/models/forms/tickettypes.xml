@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath ="/administrator/components/com_jticketing/models/fields" >
+		<field
+				name="id"
+				type="hidden"
+		/>
+
+		<field
+			name="title"
+			type="text"
+			label="COM_JTICKETING_TICKET_TITLE"
+			required="true"
+			class="required"
+			description="COM_JTICKETING_TICKET_TITLE_DESC"
+			validation="required"
+		/>
+
+		<field
+			name="desc"
+			type="textarea"
+			label="COM_JTICKETING_TICKET_DESCRIPTION"
+			description="COM_JTICKETING_TICKET_DESCRIPTION_DESC"
+			class="inputbox"
+		/>
+
+		<field name="state" type="list" default="1" label="JSTATUS" description="COM_JTICKETING_TICKET_STATE_DESC">
+			<option value="1">COM_JTICKETING_PUBLISH</option>
+			<option value="0">COM_JTICKETING_UNPUBLISH</option>
+		</field>
+
+		<field
+			name="price"
+			type="price"
+			label="COM_JTICKETING_TICKET_PRICE"
+			description="COM_JTICKETING_TICKET_PRICE_DESC"
+			size="40"
+			class="price inputbox validate-positive-number required input-append"
+			required="true"
+			filter="string"
+			default="0"
+			/>
+
+		<field
+			name="ticket_enddate"
+			type="calendar"
+			class="inputbox-date ticket-end-date"
+			format="%Y-%m-%d %H:%M"
+			default=""
+			showtime="true"
+			label="COM_JTICKETING_TICKET_ENDDATE"
+			description="COM_JTICKETING_TICKET_ENDDATE_DESC"
+			filter="user_utc"
+			/>
+
+		<field
+			name="allow_ticket_level_sequence"
+			type="radio"
+			default="0"
+			label="COM_JTICKETING_ALLOW_TICKET_LEVEL_SEQUENCE"
+			description="COM_JTICKETING_ALLOW_TICKET_LEVEL_SEQUENCE_DESC"
+			class="inputbox radio btn-group btn-group-yesno">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field
+			name="start_number_for_sequence"
+			type="text"
+			label="COM_JTICKETING_START_NUMBER_FOR_SEQUENCE"
+			description="COM_JTICKETING_START_NUMBER_FOR_SEQUENCE_DESC"
+			class="inputbox start-number-for-sequence"
+			default=""
+			showon="allow_ticket_level_sequence:1"
+			onchange="valid.startNumberValidation(this)"
+		/>
+
+		<field name="unlimited_seats" 
+			type="list" 
+			default="" 
+			label="COM_JTICKETING_TICKET_SEATS_AVAILABLE_LABEL" 
+			description="COM_JTICKETING_TICKET_SEATS_AVAILABLE_DESC"
+			required="true"
+			class="unlimited-seats ticketType">
+			<option value="">COM_JTICKETING_TICKET_SELECT_SEATS_AVAIL</option>
+			<option value="1">COM_JTICKETING_TICKET_UNLIMITED_SEATS_YES</option>
+			<option value="0">COM_JTICKETING_TICKET_UNLIMITED_SEATS_NO</option>
+		</field>
+
+		<field
+			name="available"
+			type="number"
+			label="COM_JTICKETING_TICKET_NO_OF_SEATS"
+			description="COM_JTICKETING_TICKET_NO_OF_SEATS_DESC"
+			showon="unlimited_seats:0"
+			size="20"
+			min="0"
+			class="inputbox avail validate-positive-number"
+			default=""
+		/>
+		<field
+			name="count"
+			type="number"
+			label="COM_JTICKETING_TICKET_REMAINING_SEATS_COUNT"
+			description="COM_JTICKETING_TICKET_REMAINING_SEATS_COUNT_DESC"
+			showon="unlimited_seats:0"
+			readonly="true"
+		/>
+
+		<field
+			name="max_ticket_per_order"
+			type="number"
+			onchange="valid.positiveNumber(this);"
+			label="COM_JTICKETING_TICKET_LEVEL_MAXIMUM_TICKET_PER_ORDER"
+			description="COM_JTICKETING_TICKET_LEVEL_MAXIMUM_TICKET_PER_ORDER_DESC"
+			class="o-form-control required validate-positive-number accept-empty"
+			filter="integer"
+			default="0"
+			size="25"
+		/>
+
+		<field
+			name="capacityNote"
+			type="note"
+			class="alert alert-info capacityNote ticketCapacityNote af-d-none"
+			description="COM_JTICKETING_TICKET_CAPACITY_ALERT" />
+
+		<field
+			name="access"
+			type="accesslevel"
+			label="JFIELD_ACCESS_LABEL"
+			description="JFIELD_ACCESS_DESC"
+			size="1" />
+		<field
+			name="accessNote"
+			type="note"
+			class="alert alert-info accessNote pull-left"
+			description="COM_JTICKETING_TICKET_ACCESS_ALERT" />
+	</fieldset>
+</form>

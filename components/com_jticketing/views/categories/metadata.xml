@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<view title="COM_JTICKETING_TITLE_EVENTS">
+		<message>
+			<![CDATA[COM_JTICKETING_TITLE_EVENTS_DESC]]>
+		</message>
+		<options var="layout">
+			<option value="default" name="Category View" msg="Category View" />
+		</options>
+	</view>
+</metadata>

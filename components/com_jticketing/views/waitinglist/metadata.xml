@@ -1,0 +1,8 @@
+<metadata>
+	<view title="Waitinglist" >
+		<message><![CDATA[Waiting list of All Events]]></message>
+		 <options var="task">
+			<default name="COM_JTICKETING_TITLE_WAITINGLIST" msg="COM_JTICKETING_TITLE_WAITING_LIST_DESC" />
+		</options>
+	</view>
+</metadata>

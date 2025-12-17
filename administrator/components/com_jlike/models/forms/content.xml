@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field name="id"
+			type="hidden"
+			default="0"
+			label=""
+			readonly="true"
+			class="readonly"
+			description=""/>
+ <field name="element_id"
+			type="number"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_CONTENT_ELEMENT_ID"
+			description="COM_JLIKE_FORM_DESC_CONTENT_ELEMENT_ID"
+			hint="COM_JLIKE_FORM_LBL_CONTENT_ELEMENT_ID"
+			filter="integer"
+			required="true"
+		/>
+		<field
+		name="url"
+		type="text"
+		label="COM_JLIKE_FORM_LBL_CONTENT_URL"
+		description="COM_JLIKE_FORM_DESC_CONTENT_URL"
+		required="true"
+		 />
+ <field name="element"
+			type="text"
+
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_CONTENT_ELEMENT"
+			description="COM_JLIKE_FORM_DESC_CONTENT_ELEMENT"
+			hint="COM_JLIKE_FORM_LBL_CONTENT_ELEMENT"
+			filter="safehtml"
+			required="true"
+		/>
+
+
+
+ <field name="title"
+			type="text"
+			buttons="true"
+			class="inputbox"
+			filter="safehtml"
+			label="COM_JLIKE_FORM_LBL_CONTENT_TITLE"
+			description="COM_JLIKE_FORM_DESC_CONTENT_TITLE"
+			hint="COM_JLIKE_FORM_LBL_CONTENT_TITLE"
+			required="true"
+		/>
+
+
+
+ <field name="like_cnt"
+			type="number"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_CONTENT_LIKE_CNT"
+			description="COM_JLIKE_FORM_DESC_CONTENT_LIKE_CNT"
+			hint="COM_JLIKE_FORM_LBL_CONTENT_LIKE_CNT"
+			filter="safehtml"
+			required="true"
+			default="0"
+		/>
+
+ <field name="dislike_cnt"
+			type="number"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_CONTENT_DISLIKE_CNT"
+			description="COM_JLIKE_FORM_DESC_CONTENT_DISLIKE_CNT"
+			hint="COM_JLIKE_FORM_LBL_CONTENT_DISLIKE_CNT"
+			filter="safehtml"
+			required="true"
+			default="0"
+		/>
+	</fieldset>
+
+</form>

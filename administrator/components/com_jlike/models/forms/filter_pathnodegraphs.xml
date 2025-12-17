@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			hint="JSEARCH_FILTER"
+		/>
+
+		<field
+			name="path_id"
+			type="sql"
+			filter="int"
+			onchange="this.form.submit();"
+			header="COM_JLIKE_PATH_NODE_GRAPH_PATH_SELECT"
+			query="SELECT path_id,path_title FROM `#__jlike_paths` WHERE state = '1' ORDER BY path_id DESC"
+			key_field="path_id"
+			value_field="path_title"
+			translate="false"
+		/>
+
+	</fields>
+
+	<fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

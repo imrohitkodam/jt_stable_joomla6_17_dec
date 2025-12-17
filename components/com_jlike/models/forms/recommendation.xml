@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+        <field name="id"
+			type="text"
+			default="0"
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_ID"
+			readonly="true"
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"
+		/> 
+
+ 
+		<field name="created_by"
+			type="createdby"
+			default=""
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_CREATED_BY"
+			description="COM_JLIKE_FORM_DESC_RECOMMENDATION_CREATED_BY" 
+			hint="COM_JLIKE_FORM_LBL_RECOMMENDATION_CREATED_BY"
+		/> 
+
+ <field name="content_id"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_CONTENT_ID"
+			description="COM_JLIKE_FORM_DESC_RECOMMENDATION_CONTENT_ID" 
+			hint="COM_JLIKE_FORM_LBL_RECOMMENDATION_CONTENT_ID"
+			filter="safehtml"
+		/> 
+
+ <field name="assigned_by"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_ASSIGNED_BY"
+			description="COM_JLIKE_FORM_DESC_RECOMMENDATION_ASSIGNED_BY" 
+			hint="COM_JLIKE_FORM_LBL_RECOMMENDATION_ASSIGNED_BY"
+			filter="safehtml"
+		/> 
+
+ <field name="assigned_to"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_ASSIGNED_TO"
+			description="COM_JLIKE_FORM_DESC_RECOMMENDATION_ASSIGNED_TO" 
+			hint="COM_JLIKE_FORM_LBL_RECOMMENDATION_ASSIGNED_TO"
+			filter="safehtml"
+		/> 
+
+ <field name="created_date"
+			type="calendar"
+			class="inputbox" default="0000-00-00 00:00:00" 
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_CREATED"
+			description="COM_JLIKE_FORM_DESC_RECOMMENDATION_CREATED" 
+			hint="COM_JLIKE_FORM_LBL_RECOMMENDATION_CREATED"
+			format=" %Y-%m-%d %H:%M:%S"
+			filter="safehtml"
+		/> 
+
+ <field name="start_date"
+			type="calendar"
+			class="inputbox" default="0000-00-00 00:00:00" 
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_START_DATE"
+			description="COM_JLIKE_FORM_DESC_RECOMMENDATION_START_DATE" 
+			hint="COM_JLIKE_FORM_LBL_RECOMMENDATION_START_DATE"
+			format=" %Y-%m-%d %H:%M:%S"
+			filter="safehtml"
+		/> 
+
+ <field name="due_date"
+			type="calendar"
+			class="inputbox" default="0000-00-00 00:00:00" 
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_DUE_DATE"
+			description="COM_JLIKE_FORM_DESC_RECOMMENDATION_DUE_DATE" 
+			hint="COM_JLIKE_FORM_LBL_RECOMMENDATION_DUE_DATE"
+			format=" %Y-%m-%d %H:%M:%S"
+			filter="safehtml"
+		/> 
+
+ <field name="status"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_STATUS"
+			description="COM_JLIKE_FORM_DESC_RECOMMENDATION_STATUS" 
+			hint="COM_JLIKE_FORM_LBL_RECOMMENDATION_STATUS"
+			filter="safehtml"
+		/> 
+
+ <field name="title"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_TITLE"
+			description="COM_JLIKE_FORM_DESC_RECOMMENDATION_TITLE" 
+			hint="COM_JLIKE_FORM_LBL_RECOMMENDATION_TITLE"
+			filter="safehtml"
+		/> 
+
+ <field name="type"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_TYPE"
+			description="COM_JLIKE_FORM_DESC_RECOMMENDATION_TYPE" 
+			hint="COM_JLIKE_FORM_LBL_RECOMMENDATION_TYPE"
+			filter="safehtml"
+		/> 
+
+ <field name="system_generated"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_SYSTEM_GENERATED"
+			description="COM_JLIKE_FORM_DESC_RECOMMENDATION_SYSTEM_GENERATED" 
+			hint="COM_JLIKE_FORM_LBL_RECOMMENDATION_SYSTEM_GENERATED" default="1" 
+			filter="safehtml"
+		/> 
+
+ <field name="parent_id"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_PARENT_ID"
+			description="COM_JLIKE_FORM_DESC_RECOMMENDATION_PARENT_ID" 
+			hint="COM_JLIKE_FORM_LBL_RECOMMENDATION_PARENT_ID"
+			filter="safehtml"
+		/> 
+
+ <field name="list_id"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_LIST_ID"
+			description="COM_JLIKE_FORM_DESC_RECOMMENDATION_LIST_ID" 
+			hint="COM_JLIKE_FORM_LBL_RECOMMENDATION_LIST_ID"
+			filter="safehtml"
+		/> 
+
+ <field name="modified_date"
+			type="calendar"
+			class="inputbox" default="0000-00-00 00:00:00" 
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_MODIFIED_DATE"
+			description="COM_JLIKE_FORM_DESC_RECOMMENDATION_MODIFIED_DATE" 
+			hint="COM_JLIKE_FORM_LBL_RECOMMENDATION_MODIFIED_DATE"
+			format=" %Y-%m-%d %H:%M:%S"
+			filter="safehtml"
+		/> 
+
+ <field name="modified_by"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_MODIFIED_BY"
+			description="COM_JLIKE_FORM_DESC_RECOMMENDATION_MODIFIED_BY" 
+			hint="COM_JLIKE_FORM_LBL_RECOMMENDATION_MODIFIED_BY"
+			filter="safehtml"
+		/> 
+
+ <field name="can_override"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_CAN_OVERRIDE"
+			description="COM_JLIKE_FORM_DESC_RECOMMENDATION_CAN_OVERRIDE" 
+			hint="COM_JLIKE_FORM_LBL_RECOMMENDATION_CAN_OVERRIDE"
+			filter="safehtml"
+		/> 
+
+ <field name="overriden"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_OVERRIDEN"
+			description="COM_JLIKE_FORM_DESC_RECOMMENDATION_OVERRIDEN" 
+			hint="COM_JLIKE_FORM_LBL_RECOMMENDATION_OVERRIDEN"
+			filter="safehtml"
+		/> 
+
+ <field name="params"
+			type="editor"
+			buttons="true"
+			class="inputbox"
+			filter="safehtml"
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_PARAMS"
+			description="COM_JLIKE_FORM_DESC_RECOMMENDATION_PARAMS" 
+			hint="COM_JLIKE_FORM_LBL_RECOMMENDATION_PARAMS"
+		/> 
+
+ <field name="todo_list_id"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_TODO_LIST_ID"
+			description="COM_JLIKE_FORM_DESC_RECOMMENDATION_TODO_LIST_ID" 
+			hint="COM_JLIKE_FORM_LBL_RECOMMENDATION_TODO_LIST_ID"
+			filter="safehtml"
+		/> 
+
+ <field name="ideal_time"
+			type="text"
+			size="40"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_RECOMMENDATION_IDEAL_TIME"
+			description="COM_JLIKE_FORM_DESC_RECOMMENDATION_IDEAL_TIME" 
+			hint="COM_JLIKE_FORM_LBL_RECOMMENDATION_IDEAL_TIME"
+			filter="safehtml"
+		/> 
+
+ 
+		<field name="version_note"
+			type="text"
+			label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
+			description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
+			class="inputbox"
+			size="45"
+			labelclass="control-label"
+		/> 
+
+ 
+		<field name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="inputbox"
+			size="1"
+			default="1"
+		>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field> 
+
+ 
+		<field name="checked_out"
+			type="hidden"
+			filter="unset"
+		/>
+
+		<field name="checked_out_time"
+			type="hidden"
+			filter="unset"
+		/> 
+
+ 
+	</fieldset> 
+
+ 
+	<fieldset name="accesscontrol">
+
+		<field name="asset_id"
+			type="hidden"
+			filter="unset"
+		/>
+
+		<field name="rules"
+			type="rules"
+			label="JFIELD_RULES_LABEL"
+			translate_label="false"
+			filter="rules"
+			validate="rules"
+			class="inputbox"
+			component="com_jlike"
+			section="recommendation"
+		/>
+
+	</fieldset>
+
+</form>

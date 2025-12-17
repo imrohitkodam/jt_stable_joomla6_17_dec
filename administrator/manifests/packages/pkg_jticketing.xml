@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="6.0" method="upgrade">
+	<name>JTicketing Package</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2009 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>28th Apr 2025</creationDate>
+	<version>5.1.1</version>
+	<packagename>jticketing</packagename>
+	<packager>Techjoomla Team</packager>
+	<description />
+	<files>
+		<file type="component" id="com_tjfields">com_tjfields.zip</file>
+		<file type="component" id="com_tjnotification">com_tjnotification.zip</file>
+		<file type="component" id="com_tjreports">com_tjreports.zip</file>
+		<file type="component" id="com_tjvendors">com_tjvendors.zip</file>
+		<file type="component" id="com_tjcertificate">com_tjcertificate.zip</file>
+		<file type="component" id="com_jticketing">com_jticketing.zip</file>
+		<file type="component" id="com_activitystream">com_activitystream.zip</file>
+		<file type="component" id="com_jlike">com_jlike.zip</file>
+		<file type="component" id="com_hierarchy">com_hierarchy.zip</file>
+		<file type="component" id="com_tjprivacy">com_tjprivacy.zip</file>
+	</files>
+	<scriptfile>script.pkg_jticketing.php</scriptfile>
+	<updateservers>
+		<server type="collection" priority="1" name="JTicketing"><![CDATA[https://techjoomla.com/updates/stream/jticketing.xml?format=xml]]></server>
+	</updateservers>
+</extension>

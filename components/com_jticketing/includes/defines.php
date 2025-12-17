@@ -1,0 +1,40 @@
+<?php
+/**
+ * @package     JTicketing
+ * @subpackage  com_jticketing
+ *
+ * @author      Techjoomla <extensions@techjoomla.com>
+ * @copyright   Copyright (C) 2009 - 2025 Techjoomla. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+if (defined('COM_JTICKETING_SITE_DEFINE_FILE'))
+{
+	return;
+}
+
+define('COM_JTICKETING_CONSTANT_ORDER_STATUS_COMPLETED', 'C');
+define('COM_JTICKETING_CONSTANT_ORDER_STATUS_PENDING', 'P');
+define('COM_JTICKETING_CONSTANT_ORDER_STATUS_REVERSED', 'RV');
+define('COM_JTICKETING_CONSTANT_ORDER_STATUS_INCOMPLETE', 'I');
+define('COM_JTICKETING_CONSTANT_ORDER_STATUS_REFUND', 'RF');
+define('COM_JTICKETING_CONSTANT_ORDER_STATUS_FAILED', 'E');
+define('COM_JTICKETING_CONSTANT_ORDER_STATUS_DECLINE', 'D');
+define('COM_JTICKETING_CONSTANT_ORDER_STATUS_CANCEL_REVERSED', 'CRV');
+define('COM_JTICKETING_CONSTANT_ORDER_STATUS_UNDER_REVIEW', 'UR');
+
+define('COM_JTICKETING_CONSTANT_ATTENDEE_STATUS_APPROVED', 'A');
+define('COM_JTICKETING_CONSTANT_ATTENDEE_STATUS_REJECTED', 'R');
+define('COM_JTICKETING_CONSTANT_ATTENDEE_STATUS_PENDING', 'P');
+define('COM_JTICKETING_CONSTANT_ATTENDEE_STATUS_MOVE', 'M');
+
+define('COM_JTICKETING_CONSTANT_INTEGRATION_JOMSOCIAL', 1);
+define('COM_JTICKETING_CONSTANT_INTEGRATION_NATIVE', 2);
+define('COM_JTICKETING_CONSTANT_INTEGRATION_JEVENTS', 3);
+define('COM_JTICKETING_CONSTANT_INTEGRATION_EASYSOCIAL', 4);
+
+// Need this constant for defining the unilimited tickets
+define('COM_JTICKETING_CONSTANT_TICKET_TYPE_UNLIMITED', 'Unlimited');
+
+// Need this constant for performance purpose Always define this at the end of file
+define('COM_JTICKETING_SITE_DEFINE_FILE', true);

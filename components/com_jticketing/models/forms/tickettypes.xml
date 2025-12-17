@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath ="/administrator/components/com_jticketing/models/fields">
+		<field
+				name="id"
+				type="hidden"
+				/>
+		<field
+				name="title"
+				type="text"
+				label="COM_JTICKETING_TICKET_TITLE"
+				description="COM_JTICKETING_TICKET_TITLE_DESC"
+				size="40"
+				class="title"
+				required="true"
+				validation="required"
+				hint="COM_JTICKETING_TICKET_TITLE"
+				/>
+
+		<field
+				name="desc"
+				type="textarea"
+				label="COM_JTICKETING_TICKET_DESCRIPTION"
+				description="COM_JTICKETING_TICKET_DESCRIPTION_DESC"
+				class="description"
+				hint="Enter Ticket Type Description"
+				cols="40"
+				/>
+
+		<field
+				name="price"
+				type="price"
+				label="COM_JTICKETING_TICKET_PRICE"
+				description="COM_JTICKETING_TICKET_PRICE_DESC"
+				class="form-control price validate-positive-number"
+				filter="string"
+				default="0"
+				hint="COM_JTICKETING_TICKET_PRICE"
+				/>
+
+		<field
+				name="ticket_enddate"
+				type="calendar"
+				class="af-w100 ticket-end-date inputbox-date"
+				timeformat="24"
+				format="%Y-%m-%d %H:%M"
+				default=""
+				showtime="true"
+				label="COM_JTICKETING_TICKET_ENDDATE"
+				description="COM_JTICKETING_TICKET_ENDDATE_DESC"
+				filter="user_utc"
+				/>
+
+		<field
+			name="allow_ticket_level_sequence"
+			type="radio"
+			default="0"
+			label="COM_JTICKETING_ALLOW_TICKET_LEVEL_SEQUENCE"
+			description="COM_JTICKETING_ALLOW_TICKET_LEVEL_SEQUENCE_DESC"
+			class="inputbox radio btn-group btn-group-yesno">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field
+			name="start_number_for_sequence"
+			type="text"
+			label="COM_JTICKETING_START_NUMBER_FOR_SEQUENCE"
+			description="COM_JTICKETING_START_NUMBER_FOR_SEQUENCE_DESC"
+			class="inputbox start-number-for-sequence"
+			default=""
+			showon="allow_ticket_level_sequence:1"
+			onchange="valid.startNumberValidation(this)"
+		/>
+
+		<field name="state" type="list" default="1" label="JSTATUS" description="COM_JTICKETING_TICKET_STATE_DESC" class="state">
+				<option value="1">COM_JTICKETING_PUBLISH</option>
+				<option value="0">COM_JTICKETING_UNPUBLISH</option>
+		</field>
+
+		<field name="unlimited_seats" 
+			type="list" 
+			default="" 
+			label="COM_JTICKETING_TICKET_SEATS_AVAILABLE" 
+			description="COM_JTICKETING_TICKET_SEATS_AVAILABLE_DESC" 
+			required="true"
+			class="unlimited-seats ticketType">
+			<option value="">COM_JTICKETING_TICKET_SELECT_SEATS_AVAIL</option>
+			<option value="1">COM_JTICKETING_TICKET_UNLIMITED_SEATS_YES</option>
+			<option value="0">COM_JTICKETING_TICKET_UNLIMITED_SEATS_NO</option>
+		</field>
+
+		<field
+			name="available"
+			type="number"
+			label="COM_JTICKETING_TICKET_NO_OF_SEATS"
+			description="COM_JTICKETING_TICKET_NO_OF_SEATS_DESC"
+			class="af-w100 avail validate-positive-number"
+			min="0"
+			default=""
+			hint="COM_JTICKETING_TICKET_NO_OF_SEATS"
+			showon="unlimited_seats:0"
+			/>
+
+		<field
+			name="count"
+			type="number"
+			label="COM_JTICKETING_TICKET_REMAINING_SEATS_COUNT"
+			description="COM_JTICKETING_TICKET_REMAINING_SEATS_COUNT_DESC"
+			showon="unlimited_seats:0"
+			readonly="true"
+			class="af-w100"
+			/>
+
+		<field
+			name="capacityNote"
+			type="note"
+			class="alert alert-info capacityNote ticketCapacityNote af-d-none ms-2"
+			description="COM_JTICKETING_TICKET_CAPACITY_ALERT" />
+
+		<field
+			name="max_ticket_per_order"
+			type="number"
+			onchange="valid.positiveNumber(this);"
+			label="COM_JTICKETING_TICKET_LEVEL_MAXIMUM_TICKET_PER_ORDER"
+			description="COM_JTICKETING_TICKET_LEVEL_MAXIMUM_TICKET_PER_ORDER_DESC"
+			class="o-form-control required validate-positive-number accept-empty"
+			filter="integer"
+			default="0"
+			size="25"
+		/>
+
+		<field
+			name="access"
+			type="accesslevel"
+			label="JFIELD_ACCESS_LABEL"
+			class="access"
+			description="JFIELD_ACCESS_DESC"
+			size="1" />
+		<field
+			name="accessNote"
+			type="note"
+			id="accessNote"
+			class="alert alert-info accessNote pull-right ms-2"
+			description="" />
+
+	</fieldset>
+</form>

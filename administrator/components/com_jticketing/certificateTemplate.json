@@ -1,0 +1,22 @@
+{
+  "template1": {
+    "id": "",
+    "title": "Checkin Certificate Template",
+    "unique_code": "com_jticketing.checkin",
+    "body": "<div class='full-width-height' style='line-height: normal; padding: 20px; text-align: center; border: 10px solid #787878;'><div class='full-width-height' style='padding: 20px; text-align: center; border: 5px solid #787878;'><span style='font-size: 50px; font-weight: bold;'>Certificate of Completion</span> <br /><br /><span style='font-size: 25px;'><i>This is to certify that</i></span> <br /><br /><span style='font-size: 30px;'><b>[ATTENDEENAME]</b></span> <br /><br /><span style='font-size: 25px;'> <i> has attended the event</i></span> <br /><br /><span style='font-size: 30px;'><b>[EVENTNAME]</b></span> <br /><br /><span style='font-size: 25px;'><i> dated </i></span> <br /><br /><span style='font-size: 30px;'>[EVENTDATE]</span></div></div>",
+    "template_css": "div {color: red;text-align: center;}",
+    "client": "com_jticketing.event",
+    "is_public": "2",
+    "params": "{\"certificate_font\":\"DeJaVu Sans\",\"certificate_custom_font\":\"DeJaVu Sans\",\"certifcate_page_size\":\"A4\",\"certificate_pdf_width\":\"80\",\"certificate_pdf_height\":\"80\",\"orientation\":\"portrait\"}"
+  },
+  "template2": {
+    "id": "",
+    "title": "Checkin Certificate Template 2",
+    "unique_code": "com_jticketing.checkin2",
+    "body": "<div style='background: linear-gradient(to right, #156680 0%,#0e7184 18%,#027986 32%,#097e87 38%,#0b8188 44%,#108087 44%,#128288 47%,#128288 48%,#0d8488 48%,#0d8488 49%,#13858a 49%,#15858a 50%,#178c8c 61%,#21948c 73%,#21958d 75%,#19968d 75%,#18978d 76%,#1a988d 79%,#22988d 79%,#24a28f 94%,#1fa790 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#156680', endColorstr='#1fa790',GradientType=1 ); background-color: #15858a; padding: 20px; margin: 0 auto; width: 95%;'><div style='background: #FFF; border: 8px solid #F2F3F4;'><div style='width: 100%;'><div style='width: 22%; display: inline-block; vertical-align: top;'> </div><div style='width: 44%; padding: 50px 10px 10px 10px; display: inline-block;'><div style='border: 1px solid #E8DEA3; color: #3c7f95; font-size: 13px;'><div style='font-size: 100%; padding: 20px;'>This message is to confirm that you have successfully attended the event</div><div style='padding: 20px;'><div style='width: 40%; color: #136981; font-size: 13px; display: inline-block; margin: 0 5px 0 0;'>Name: [ATTENDEENAME]</div><div style='width: 40%; color: #136981; font-size: 13px; display: inline-block;'>Date:[EVENTDATE]</div></div></div><div style='padding: 20px;'><h3 style='font-size: 36px; display: inline-block; color: #0f1b2f; border-bottom: 2px solid #156680; font-weight: bold; line-height: 40px; text-align: center;'>[EVENTNAME]</h3><div style='width: 95%; margin: 0 auto;'><div style='color: #136981; font-size: 13px; margin: 20px 0 5px 0;'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</div><div style='color: #136981; font-size: 13px; margin: 0 0 20px 0;'>when an unknown printer took a galley of type and scrambled it to make a type specimen book</div></div></div></div></div><footer style='margin: 0; width: 100%; display: block; text-align: left; padding: 0 0 20px 0;'></footer></div></div>",
+    "template_css": "div {color: red;text-align: center;}",
+    "client": "com_jticketing.event",
+    "is_public": "2",
+    "params": "{\"certificate_font\":\"DeJaVu Sans\",\"certificate_custom_font\":\"DeJaVu Sans\",\"certifcate_page_size\":\"A4\",\"certificate_pdf_width\":\"80\",\"certificate_pdf_height\":\"80\",\"orientation\":\"portrait\"}"
+  }
+}

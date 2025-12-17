@@ -1,0 +1,1 @@
+ALTER TABLE `#__jlike_annotations` ADD COLUMN `images` text DEFAULT NULL COMMENT 'review images';

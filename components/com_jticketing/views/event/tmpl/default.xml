@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JTICKETING_SELECT_EVENT_TITLE" option="View">
+		<message>
+			<![CDATA[COM_JTICKETING_SELECT_EVENT_TITLE_DESC]]>
+		</message>
+	</layout>
+	<fields name="request" addfieldpath="administrator/components/com_jticketing/models/fields">
+		<fieldset name="request">
+			<field 
+				name="id"
+				type="modal_single" 
+				label="COM_JTICKETING_SELECT_EVENT" 
+				description="COM_JTICKETING_SELECT_EVENT"
+				required="true"
+				select="true"
+				clear="true"
+			/>
+		</fieldset>
+	</fields>
+</metadata>

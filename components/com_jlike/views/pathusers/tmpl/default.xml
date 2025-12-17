@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JLIKE_PATH_USERS_TITLE">
+		<message>
+			<![CDATA[COM_JLIKE_PATH_USERS_TITLE_DESC]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request">
+			<field name="path_filters" type="list"
+				label="COM_JLIKE_PATH_USERS_FILTERS_TITLE"
+				description="COM_JLIKE_PATH_USERS_FILTERS_DESC"
+				required="true"
+			>
+				<option value="all">COM_JLIKE_PATH_USERS_FILTERS_ALL_PATHS_TITLE</option>
+				<option value="my">COM_JLIKE_PATH_USERS_FILTERS_MY_PATHS_TITLE</option>
+				<option value="open">COM_JLIKE_PATH_USERS_FILTERS_OPEN_PATHS_TITLE</option>
+				<option value="closed">COM_JLIKE_PATH_USERS_FILTERS_CLOSED_PATHS_TITLE</option>
+				<option value="opening_soon">COM_JLIKE_PATH_USERS_FILTERS_OPENING_SOON_PATHS_TITLE</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

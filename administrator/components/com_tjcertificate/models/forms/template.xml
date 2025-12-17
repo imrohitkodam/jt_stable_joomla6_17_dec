@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="/administrator/components/com_tjcertificate/models/fields">
+		<field name="id" type="hidden"/>
+
+		<field name="title"
+			type="text"
+			label="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_LBL_TITLE"
+			description="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_DESC_TITLE"
+			required="true"
+			filter="safehtml"
+		/>
+
+		<field name="unique_code"
+			type="text"
+			label="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_LBL_UNIQUE_CODE"
+			description="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_DESC_UNIQUE_CODE"
+			required="true"
+			filter="CMD"
+		/>
+
+		<field
+			name="sample_template"
+			type="sampletemplates"
+			label="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_LBL_SAMPLE_TEMPLATE"
+			description="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_DESC_SAMPLE_TEMPLATE"
+		/>
+
+		<field name="body"
+			type="editor"
+			label="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_LBL_BODY"
+			description="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_DESC_BODY"
+			required="true"
+			filter="raw"
+		/>
+
+		<field name="template_css"
+			type="textarea"
+			cols="45"
+			rows="10"
+		/>
+
+		<field name="client"
+			type="text"
+			label="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_LBL_CLIENT"
+			description="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_DESC_CLIENT"
+			required="true"
+			filter="safehtml"
+		/>
+
+		<field
+			name="is_public"
+			type="radio"
+			filter="int"
+			label="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_LBL_PUBLIC"
+			description="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_DESC_PUBLIC"
+			default="1"
+			size="1"
+			class="btn-group btn-group-yesno"
+			>
+				<option value="1">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_PRIVATE</option>
+				<option value="2">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_PUBLIC</option>
+		</field>
+
+		<field
+			name="state"
+			type="list"
+			filter="int"
+			label="JSTATUS"
+			description=""
+			default="1"
+			class="inputbox"
+			size="1">
+				<option value="1">JPUBLISHED</option>
+				<option value="0">JUNPUBLISHED</option>
+				<option value="2">JARCHIVED</option>
+				<option value="-2">JTRASHED</option>
+		</field>
+
+		<field
+			name="created_by"
+			type="hidden"
+		/>
+
+		<field
+			name="modified_on"
+			type="hidden"/>
+
+		<field
+			name="modified_by"
+			type="hidden"
+		/>
+
+		<field
+			name="created_on"
+			type="hidden"/>
+
+		<field
+			name="ordering"
+			type="hidden"
+			filter="int"/>
+
+		<field
+			name="checked_out"
+			type="hidden"
+			filter="unset"/>
+
+		<field
+			name="checked_out_time"
+			type="hidden"
+			filter="unset"/>
+	</fieldset>
+	<fields name="params">
+		<fieldset name="basic" label="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_OPTIONS">
+			<field name="certificate_font" type="list" default="DeJaVu Sans"
+				label="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_FONT_LABEL" description="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_FONT_DESC">
+				<option value="Courier">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_FONT_COURIER</option>
+				<option value="DeJaVu Sans">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_FONT_DEJAVUSANS</option>
+				<option value="Helvetica">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_FONT_HELVETICA</option>
+				<option value="Times new roman">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_FONT_TIMES</option>
+				<option value="custom">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_FONT_CUSTOM</option>
+			</field>
+
+			<field name="certificate_custom_font" type="text" default="DeJaVu Sans" label="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_CUSTOMFONT_LABEL"
+				showon="certificate_font:custom" description="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_CUSTOMFONT_DESC" />
+
+			<field name="certifcate_page_size" type="list" default="A4"
+				description="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_SIZE_DESC"
+				label="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_SIZE">
+				<option value="A1">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_SIZE_A1</option>
+				<option value="A2">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_SIZE_A2</option>
+				<option value="A3">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_SIZE_A3</option>
+				<option value="A4">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_SIZE_A4</option>
+				<option value="A5">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_SIZE_A5</option>
+				<option value="A6">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_SIZE_A6</option>
+				<option value="Legal">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_SIZE_LEGAL</option>
+				<option value="Letter">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_SIZE_LETTER</option>
+				<option value="custom">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_SIZE_CUSTOM</option>
+			</field>
+
+			<field name="certificate_pdf_width" class="validate-numeric" type="text" default="80" label="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_WIDTH"
+				showon="certifcate_page_size:custom" description="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_WIDTH_DESC" />
+			<field name="certificate_pdf_height" class="validate-numeric" type="text" default="80" label="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_HEIGHT"
+				showon="certifcate_page_size:custom" description="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PDF_HEIGHT_DESC" />
+
+			<field name="orientation" class="btn-group" type="radio"  default="portrait" description="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_ORIENTATION_OPTION_DESC" label="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_ORIENTATION_OPTION">
+				<option value="portrait">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_PORTRAIT</option>
+				<option value="landscape">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FORM_LANDSCAPE</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

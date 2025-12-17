@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="id"
+			type="text"
+			default="0"
+			label="COM_JTICKETING_FORM_LABEL_PDF_TEMPLATE_ID"
+			readonly="true"
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"
+		/>
+
+		<field
+			name="event_id"
+            type="eventslist"
+            required="true"
+			label="COM_JTICKETING_FORM_LABEL_PDF_TEMPLATE_SELECT_EVENT"
+			description="COM_JTICKETING_FORM_LABEL_PDF_TEMPLATE_SELECT_EVENT_DESC"
+		/>
+
+		<field
+			name="body" 	
+            type="editor" 
+            filter="raw" 
+            buttons="true"
+			height="700px"
+			label="COM_JTICKETING_FORM_LABEL_PDF_TEMPLATE_EMAIL_TEMPLATE"
+			description="COM_JTICKETING_FORM_DESC_REMINDER_EMAIL_TEMPLATE"
+		/>
+
+		<field
+			name="css"
+			type="textarea"
+			label="COM_JTICKETING_FORM_LABEL_PDF_TEMPLATE_CSS"
+			description="COM_JTICKETING_FORM_DESC_REMINDER_CSS"
+			rows="15"
+			cols="90"
+			option_on="Yes"
+			option_off="Yes"
+		/>
+
+		<field
+			name="state"
+			type="list"
+			label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC"
+			class="inputbox"
+			size="1"
+			default="1">
+				<option value="1">JPUBLISHED</option>
+				<option value="0">JUNPUBLISHED</option>
+		</field>
+
+	</fieldset>
+</form>

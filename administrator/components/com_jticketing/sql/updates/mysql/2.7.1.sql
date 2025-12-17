@@ -1,0 +1,16 @@
+ALTER TABLE `#__jticketing_attendees` ADD INDEX event_id_idx (event_id);
+ALTER TABLE `#__jticketing_attendees` ADD INDEX ticket_type_id_idx (ticket_type_id);
+ALTER TABLE `#__jticketing_attendee_fields` ADD INDEX eventid_idx (eventid);
+ALTER TABLE `#__jticketing_attendee_field_values` ADD INDEX attendee_id_idx (attendee_id);
+ALTER TABLE `#__jticketing_attendee_field_values` ADD INDEX field_source_idx (field_source);
+ALTER TABLE `#__jticketing_attendee_field_values` ADD INDEX field_id_idx (field_id);
+ALTER TABLE `#__jticketing_checkindetails` ADD INDEX eventid_idx (eventid);
+ALTER TABLE `#__jticketing_checkindetails` ADD INDEX attendee_id_idx (attendee_id);
+ALTER TABLE `#__jticketing_checkindetails` ADD INDEX ticketid_idx (ticketid);
+ALTER TABLE `#__jticketing_order` ADD INDEX event_details_id_idx (event_details_id);
+ALTER TABLE `#__jticketing_order_items` ADD INDEX order_id_idx (order_id);
+ALTER TABLE `#__jticketing_order_items` ADD INDEX type_id_idx (type_id);
+ALTER TABLE `#__jticketing_types` ADD INDEX eventid_idx (eventid);
+ALTER TABLE `#__jticketing_users` ADD INDEX order_id_idx (order_id);
+ALTER TABLE `#__jticketing_waiting_list` ADD INDEX user_id_idx (user_id);
+ALTER TABLE `#__jticketing_waiting_list` ADD INDEX event_id_idx (event_id);

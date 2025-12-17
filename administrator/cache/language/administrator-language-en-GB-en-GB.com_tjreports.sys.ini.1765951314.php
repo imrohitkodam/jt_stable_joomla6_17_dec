@@ -1,0 +1,14 @@
+<?php
+defined('_JEXEC') or die;
+return array (
+  'COM_TJREPORTS' => 'Tjreports',
+  'COM_TJREPORTS_XML_DESCRIPTION' => 'This component is used to access all the report at single place.',
+  'COM_TJREPORTS_TEST_LABEL' => 'Test label',
+  'COM_TJREPORTS_TITLE_TESTS' => 'Reports',
+  'COM_TJREPORTS_FORM_LBL_REPORT_PERMISSIONS' => 'Permissions',
+  'COM_TJREPORTS_TITLE_TJREPORTS' => 'Tjreports',
+  'COM_TJREPORTS_DEFAULT_REPORTS' => 'Enter Client Name',
+  'COM_TJREPORT_DEFAULT_REPORTS_DESC' => 'Enter comma seperated client name for displaying reports on frontend',
+  'COM_TJREPORTS_BOOTSTRAP_SETTING' => 'Load bootstrap 3 CSS for',
+  'COM_TJREPORTS_BOOTSTRAP_SETTING_DESC' => 'Note: Tj Strapper should be installed for this.',
+);

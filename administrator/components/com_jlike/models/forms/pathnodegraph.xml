@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+ <field name="pathnode_graph_id"
+			type="hidden"
+			default="0"
+			class="readonly"
+			label="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_NODEGRAPH_ID"
+			description="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_NODEGRAPH_ID_DESC"
+			hint="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_NODEGRAPH_ID"
+			readonly="true"
+		/>
+ <field name="path_id"
+			type="number"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_PATH_ID"
+			description="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_PATH_ID"
+			hint="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_PATH_ID"
+			filter="integer"
+			required="true"
+		/>
+		<field name="lft"
+			type="number"
+			label="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_PATH_LFT"
+			description="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_PATH_LFT"
+			required="true"
+			filter="integer"
+		/>
+ <field name="node"
+			type="number"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_NODE"
+			description="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_PATH_NODE"
+			hint="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_NODE"
+			filter="integer"
+			required="true"
+		/>
+		<field name="rgt"
+			type="number"
+			label="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_RGT"
+			description="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_RGT"
+			class="inputbox"
+			labelclass="control-label"
+			required="true"
+			filter="integer"
+		/>
+ <field name="order"
+			type="number"
+			buttons="true"
+			class="inputbox"
+			filter="integer"
+			label="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_ORDER"
+			description="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_ORDER"
+			hint="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_ORDER"
+			required="true"
+		/>
+
+		<field name="isPath"
+			type="number"
+			label="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_ISPATH"
+			description=""
+			required="true"
+			filter="integer"
+
+		/>
+
+ <field name="this_compulsory"
+			type="number"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_THIS_COMPULSORY"
+			description="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_THIS_COMPULSORY"
+			hint="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_THIS_COMPULSORY"
+			required="true"
+			default="0"
+			filter="integer"
+		/>
+
+ <field name="delay"
+			type="number"
+			class="inputbox"
+			label="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_DELAY"
+			description="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_DELAY"
+			hint="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_DELAY"
+			filter="safehtml"
+			required="true"
+			default="0"
+		/>
+		<field name="duration"
+			type="number"
+			label="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_DURATION"
+			description="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_DURATION"
+			class="inputbox"
+			labelclass="control-label"
+			filter="integer"
+			required="true"
+		/>
+		<field name="visibility"
+			type="number"
+			label="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPH_VISIBLITY"
+			description="COM_JLIKE_FORM_LBL_PATH_NODE_GRAPTH_VISIBLITY"
+			class="inputbox"
+			labelclass="control-label"
+			filter="integer"
+			required="true"
+		/>
+	</fieldset>
+
+</form>

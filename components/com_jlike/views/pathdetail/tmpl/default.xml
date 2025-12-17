@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JLIKE_PATHDETAILS_TITLE" option="View">
+		<message>
+			<![CDATA[COM_JLIKE_PATHDETAILS_TITLE_DESC]]>
+		</message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request">
+			<field
+				name="path_id"
+				query="SELECT `path_id` AS id, `path_title` AS title FROM #__jlike_paths ORDER BY `path_id`"
+				type="sql"
+				key_field="id"
+				value_field="title"
+				label="COM_JLIKE_PATHDETAILS_MENU_PATH_PARAM_TITLE"
+				require="true"
+				description="COM_JLIKE_PATHDETAILS_MENU_PATH_PARAM_DESC"
+			/>
+		</fieldset>
+	</fields>
+</metadata>

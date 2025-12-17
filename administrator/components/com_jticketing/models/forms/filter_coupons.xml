@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field name="search" type="text"
+			label="COM_JTICKETING_FILTER_SEARCH_COUPONS"
+			hint="COM_JTICKETING_COUPONS_SEARCH_NAME"
+			description="COM_JTICKETING_COUPONS_SEARCH_NAME"
+		/>
+		<field name="vendors" type="vendorslist"
+			label="COM_JTICKETING_COUPONS_SELECT_VENDOR"
+			description="COM_JTICKETING_COUPONS_SELECT_VENDOR_DESC"
+			client="com_jticketing"
+			addfieldpath="/administrator/components/com_tjvendors/models/fields"
+			onchange="this.form.submit();"
+			>
+		</field>
+		<field
+			name="state"
+			type="list"
+			label="COM_CONTENT_FILTER_PUBLISHED"
+			description="COM_CONTENT_FILTER_PUBLISHED_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">JOPTION_SELECT_PUBLISHED</option>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+	</fields>
+
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="COM_CONTENT_LIST_FULL_ORDERING"
+			description="COM_CONTENT_LIST_FULL_ORDERING_DESC"
+			onchange="this.form.submit();"
+			default="a.id DESC"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="a.ordering ASC">COM_JTICKETING_COUPONS_ORDERING_ASC</option>
+			<option value="a.ordering DESC">COM_JTICKETING_COUPONS_ORDERING_DESC</option>
+			<option value="a.state ASC">COM_JTICKETING_COUPONS_ORDER_STATE_ASC</option>
+			<option value="a.state DESC">COM_JTICKETING_COUPONS_ORDER_STATE_DESC</option>
+			<option value="a.name ASC">COM_JTICKETING_COUPONS_ORDER_NAME_ASC</option>
+			<option value="a.name DESC">COM_JTICKETING_COUPONS_ORDER_NAME_DESC</option>
+			<option value="a.code ASC">COM_JTICKETING_COUPONS_ORDER_CODE_ASC</option>
+			<option value="a.code DESC">COM_JTICKETING_COUPONS_ORDER_CODE_DESC</option>
+			<option value="a.value ASC">COM_JTICKETING_COUPONS_ORDER_VALUE_ASC</option>
+			<option value="a.value DESC">COM_JTICKETING_COUPONS_ORDER_VALUE_DESC</option>
+			<option value="a.limit ASC">COM_JTICKETING_COUPONS_ORDER_LIMIT_ASC</option>
+			<option value="a.limit DESC">COM_JTICKETING_COUPONS_ORDER_LIMIT_DESC</option>
+			<option value="a.used ASC">COM_JTICKETING_COUPONS_ORDER_USED_ASC</option>
+			<option value="a.used DESC">COM_JTICKETING_COUPONS_ORDER_USED_DESC</option>
+			<option value="a.valid_from ASC">COM_JTICKETING_COUPONS_ORDER_VALID_FROM_ASC</option>
+			<option value="a.valid_from DESC">COM_JTICKETING_COUPONS_ORDER_VALID_FROM_DESC</option>
+			<option value="a.valid_to ASC">COM_JTICKETING_COUPONS_ORDER_VALID_TO_ASC</option>
+			<option value="a.valid_to DESC">COM_JTICKETING_COUPONS_ORDER_VALID_TO_DESC</option>
+			<option value="a.vendor_id ASC">COM_JTICKETING_COUPONS_ORDER_VENDOR_ASC</option>
+			<option value="a.vendor_id DESC">COM_JTICKETING_COUPONS_ORDER_VENDOR_DESC</option>
+			<option value="a.id ASC">COM_JTICKETING_COUPONS_ORDER_ID_ASC</option>
+			<option value="a.id DESC">COM_JTICKETING_COUPONS_ORDER_ID_DESC</option>
+		</field>
+		<field
+			name="limit"
+			type="limitbox"
+			label="COM_CONTENT_LIST_LIMIT"
+			description="COM_CONTENT_LIST_LIMIT_DESC"
+			class="inputbox input-mini"
+			default=""
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

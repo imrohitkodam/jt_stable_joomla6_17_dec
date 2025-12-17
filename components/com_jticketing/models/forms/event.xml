@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="tags"
+			type="tag"
+			label="JTAG"
+			description="JTAG_DESC"
+			multiple="true" />
+
+		<field
+			name="id"
+			type="hidden"
+			default="0"
+			label="COM_JTICKETING_FORM_LBL_EVENT_ID"
+			readonly="true"
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field
+			name="created_by"
+			type="hidden" />
+
+		<field
+			name="title"
+			type="text"
+			class="required"
+			label="COM_JTICKETING_FORM_LBL_EVENT_TITLE"
+			description="COM_JTICKETING_FORM_DESC_EVENT_TITLE"
+			required="true"
+			menu_published="0"
+			size="25"
+			filter=""
+			maxlength="250"/>
+
+		<field
+			name="alias"
+			type="text"
+			label="COM_JTICKETING_FORM_LBL_EVENT_ALIAS"
+			description="COM_JTICKETING_FORM_DESC_EVENT_ALIAS"
+			size="25"
+			filter="alias" />
+
+		<field
+			name="catid"
+			type="jtcategories"
+			extension="com_jticketing"
+			class="chzn-done required list-width form-select"
+			label="COM_JTICKETING_FORM_LBL_EVENT_CATEGORY"
+			description="COM_JTICKETING_FORM_DESC_EVENT_CATEGORY"
+			published="1"
+			required="true" />
+
+		<field
+			name="venue"
+			type="list"
+			class="form-select venueCheck chzn-done list-width"
+			default="0"
+			label="COM_JTICKETING_FORM_LBL_VENUE"
+			description="COM_JTICKETING_FORM_DESC_VENUE_NAME"
+			required="true"/>
+
+		<field
+			name="state"
+			type="radio"
+			default="1"
+			label="COM_JTICKETING_FORM_LBL_EVENT_PUBLISHED"
+			description="COM_JTICKETING_FORM_DESC_EVENT_PUBLISHED"
+			class="btn-group">
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+		</field>
+
+		<field
+			name="allow_view_attendee"
+			type="radio"
+			default="1"
+			label="COM_JTICKETING_FORM_LBL_EVENT_ALLOW_ATTENDEE_TO_VIEW"
+			description="COM_JTICKETING_FORM_DESC_EVENT_ALLOW_ATTENDEE_TO_VIEW"
+			class="btn-group">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field
+			name="ideal_time"
+			type="text"
+			label="COM_JTICKETING_FORM_LBL_EVENT_IDEAL_TIME"
+			description="COM_JTICKETING_FORM_EVENT_IDEAL_TIME_DESC"
+			class="inputbox validate-whole-number"
+			size="25"
+			/>
+
+		<field
+			name="params"
+			default=""
+			type="hidden" />
+
+		<field
+			name="image"
+			type="file"
+			label="COM_JTICKETING_FORM_LBL_EVENT_AVATAR"
+			description="COM_JTICKETING_FORM_DESC_EVENT_AVATAR"
+			onchange="tjMediaFile.validateFile(this, 0, 0, 'eventform')"
+			menu_published="0"
+			upload_directory="media/com_jticketing"
+			accept="image/jpeg,image/png,image/jpg" />
+		<field
+			name="coverImage"
+			type="file"
+			label="COM_JTICKETING_FORM_LBL_COVER_IMAGE"
+			description="COM_JTICKETING_FORM_DESC_COVER_IMAGE"
+			onchange="tjMediaFile.validateFile(this, 2, 0, 'eventform')"
+			menu_published="0"
+			upload_directory="media/com_jticketing"
+			accept="image/jpeg,image/png,image/jpg"
+			/>
+		<field
+			name="short_description"
+			type="textarea"
+			label="COM_JTICKETING_FORM_LBL_EVENT_SUMMARY"
+			description="COM_JTICKETING_FORM_DESC_EVENT_SUMMARY"
+			menu_published="0"
+			cols="100"
+			rows="8"
+			filter="safehtml" />
+
+		<field
+			name="long_description"
+			type="editor"
+			label="COM_JTICKETING_FORM_LBL_EVENT_DESCRIPTION"
+			description="COM_JTICKETING_FORM_DESC_EVENT_DESCRIPTION"
+			menu_published="0"
+			buttons="true"
+			filter="safehtml"/>
+
+		<field
+			name="certificate_template"
+			type="certificatetemplates"
+			client="com_jticketing.event"
+			label="COM_JTICKETING_FORM_LBL_EVENT_CERTIFICATE"
+			description="COM_JTICKETING_FORM_DESC_EVENT_CERTIFICATE"
+			filter="int"
+			addfieldpath="/administrator/components/com_tjcertificate/models/fields"
+		/>
+
+		<field
+			name="certificate_expiry"
+			type="number"
+			label="COM_JTICKETING_FORM_LBL_EVENT_CERTIFICATE_EXPIRY"
+			description="COM_JTICKETING_FORM_DESC_EVENT_EXPIRY"
+			default="0"
+			min="0"
+			filter="int"
+		/>
+
+		<field
+			name="meta_data"
+			type="textarea"
+			maxlength="150"
+			label="COM_JTICKETING_META_DATA"
+			description="COM_JTICKETING_META_DATA_TOOLTIP"
+			cols="30"
+			filter=""
+			/>
+
+		<field
+			name="meta_desc"
+			type="textarea"
+			maxlength="250"
+			label="COM_JTICKETING_META_DESCRIPTION"
+			description="COM_JTICKETING_META_DESCRIPTION_TOOLTIP"
+			cols="30"
+			filter=""
+			/>
+
+		<field
+			name="access"
+			type="accesslevel"
+			label="JFIELD_ACCESS_LABEL"
+			description="JFIELD_ACCESS_DESC"
+			class="list-width form-select"
+			size="1" />
+		<field
+			name="eventstart_date"
+			type="calendar"
+			required="true"
+			class="inputbox-date required"
+			label="COM_JTICKETING_FORM_LBL_EVENTS_STARTDATE"
+			format="%Y-%m-%d"
+			showtime="false"
+			timeformat="12"
+			filter="user_utc"
+			default="now"
+			>
+		</field>
+		<field
+			name="eventend_date"
+			type="calendar"
+			required="true"
+			class="inputbox-date"
+			label="COM_JTICKETING_FORM_LBL_EVENTS_ENDDATE"
+			format="%Y-%m-%d"
+			showtime="false"
+			timeformat="12"
+			filter="user_utc"
+			default="now"
+			showon="recurring_type:No_repeat"
+			data-dependency="recurring_type"
+			>
+		</field>
+
+		<field
+			name="start_time"
+			type="time"
+			class="inputbox-date required"
+			required="true"
+			format="%I:%M %P"
+			label="COM_JTICKETING_START_TIME"
+			description="COM_JTICKETING_DESC_START_TIME"
+			filter="user_utc"
+			default="now"
+		/>
+		<field
+			name="end_time"
+			type="time"
+			class="inputbox-date required"
+			required="true"
+			format="%I:%M %P"
+			label="COM_JTICKETING_END_TIME"
+			description="COM_JTICKETING_DESC_END_TIME"
+			filter="user_utc"
+			default="now"
+		/>
+		<field name="recurring_type"
+				type="radio"
+				class="inputbox radio btn-group btn-group-yesno"
+				default="No_repeat"
+				label="COM_JTICKETING_FORM_REPEAT_TYPE"
+				description="COM_JTICKETING_FORM_DESC_REPEAT_TYPE">
+			   <option value="No_repeat">COM_JTICKETING_NO_REPEAT</option>
+				<option value="Daily">COM_JTICKETING_REPEAT_DAILY</option>
+				<option value="Weekly">COM_JTICKETING_REPEAT_WEEKLY</option>
+				<option value="Monthly">COM_JTICKETING_REPEAT_MONTHLY</option>
+				<option value="Yearly">COM_JTICKETING_REPEAT_YEARLY</option>
+		</field>
+		<field
+			name="repeat_interval"
+			type="number"
+			default="0"
+			label="COM_JTICKETING_FORM_REPEAT_INTERVAL"
+			description="COM_JTICKETING_FORM_DESC_REPEAT_INTERVAL"
+			showon="recurring_type:Daily,Weekly,Monthly,Yearly"
+			class="inputbox avail"
+		/>
+		<field name="repeat_via"
+			type="radio"
+			default="rep_count"
+			class="inputbox radio btn-group btn-group-yesno"
+			label="COM_JTICKETING_TICKET_FORM_REPEAT_REPEAT_VIA"
+			showon="recurring_type:Daily,Weekly,Monthly,Yearly">
+			<option value="rep_count">COM_JTICKETING_FORM_REPEAT_COUNT</option>
+			<option value="rep_until">COM_JTICKETING_FORM_REPEAT_UNTIL</option>
+		</field>
+		<field
+			name="repeat_count"
+			type="number"
+			label="COM_JTICKETING_FORM_REPEAT_COUNT"
+			description="COM_JTICKETING_FORM_DESC_REPEAT_COUNT"
+			default="1"
+			class="input-small"
+			filter="int"
+			showon="recurring_type:Daily,Weekly,Monthly,Yearly[AND]repeat_via:rep_count"
+			>
+		</field>
+		<field
+			name="repeat_until"
+			type="calendar"
+			label="COM_JTICKETING_FORM_REPEAT_UNTIL"
+			description="COM_JTICKETING_FORM_REPEAT_UNTIL"
+			class="input-small"
+			format="%Y-%m-%d"
+			showtime="false"
+			timeformat="12"
+			filter="user_utc"
+			showon="recurring_type:Daily,Weekly,Monthly,Yearly[AND]repeat_via:rep_until">
+			</field>
+
+		<field
+			name="booking_start_date"
+			type="calendar"
+			class="inputbox-date"
+			format="%Y-%m-%d %H:%M"
+			showtime="true"
+			label="COM_JTICKETING_FORM_LBL_EVENT_BOOKING_START_DATE"
+			description="COM_JTICKETING_FORM_DESC_EVENT_BOOKING_START_DATE"
+			timeformat="12"
+			filter="user_utc" />
+
+		<field
+			name="booking_end_date"
+			type="calendar"
+			class="inputbox-date"
+			format="%Y-%m-%d %H:%M"
+			showtime="true"
+			label="COM_JTICKETING_FORM_LBL_EVENT_BOOKING_END_DATE"
+			description="COM_JTICKETING_FORM_DESC_EVENT_BOOKING_END_DATE"
+			timeformat="12"
+			filter="user_utc" />
+
+		<field
+			name="online_events"
+			type="radio"
+			onchange="toggleProvider()"
+			label="COM_JTICKETING_ONLINE_EVENTS"
+			description="COM_JTICKETING_ONLINE_EVENTS_DESC"
+			class="input-group radio btn-group btn-group-yesno"
+			size="1"
+			default="0">
+			<option value="1">COM_JTICKETING_YES</option>
+			<option value="0">COM_JTICKETING_NO</option>
+		</field>
+
+		<field
+			name="venuechoice"
+			type="radio"
+			label=""
+			description=""
+			class="btn-group venuechoice"
+			size="1"
+			default="existing" >
+			<option value="new">COM_JTICKETING_FORM_OPTION_CREAT_NEW_EVENT</option>
+			<option value="existing">COM_JTICKETING_FORM_OPTION_EXISTING_EVENT</option>
+		</field>
+
+		<field
+			name="online_provider"
+			default="plug_tjevents_adobeconnect"
+			type="gatewayplgonlineevents"
+			label="COM_JTICKETING_ONLINE_EVENTS_PROVIDER"
+			description="COM_JTICKETING_ONLINE_EVENTS_PROVIDER_DESC">
+		</field>
+
+		<field
+			name="existing_event"
+			type="list"
+			class="inputbox existingEvent chzn-done"
+			default=""
+			label="COM_JTICKETING_FORM_EXISTING_EVENT"
+			description="COM_JTICKETING_FORM_DESC_EXISTING_EVENT"
+			onchange="existingEventSelection()">
+			<option value="">COM_JTICKETING_FORM_SELECT_EXISTING_EVENT_OPTION</option>
+		</field>
+
+		<field
+			name="location"
+			type="textarea"
+			maxlength="150"
+			label="COM_JTICKETING_FORM_LBL_EVENT_LOCATION"
+			cols="26"
+			description="COM_JTICKETING_FORM_DESC_EVENT_LOCATION" />
+		<field name="latitude" type="hidden" />
+		<field name="longitude" type="hidden" />
+
+		<field
+			name="start_number_for_event_level_sequence"
+			type="text"
+			label="COM_JTICKETING_START_NUMBER_FOR_EVENT_LEVEL_SEQUENCE"
+			description="COM_JTICKETING_START_NUMBER_FOR_EVENT_LEVEL_SEQUENCE_DESC"
+			class="inputbox"
+			default=""
+		/>
+
+	<field
+		name= "tickettypes"
+		description= "Ticket types"
+		default='[{"title": "Free"}]'
+		type= "subform"
+		label= "ticket_types"
+		min= "1"
+		required= "true"
+		formsource= "/components/com_jticketing/models/forms/tickettypes.xml"
+		multiple= "true"
+		buttons= "add,remove"
+		layout="JTsubformlayouts.layouts.bs3.subform.repeatable"
+		groupByFieldset="false"/>
+
+	<field
+		name= "attendeefields"
+		description= "attendee field"
+		type= "subform"
+		label= "attendee field"
+		min= "0"
+		formsource= "components/com_jticketing/models/forms/attendeefields.xml"
+		multiple= "true"
+		buttons= "add,remove"
+		layout="JTsubformlayouts.layouts.bs3.subform.repeatable"
+		groupByFieldset="false"/>
+		<field
+			name="id"
+			type="hidden"/>
+
+		<field
+			name="gallary_file_type"
+			type="list"
+			default="0"
+			label="JSELECT"
+			description="COM_JTICKETING_GALLERY_DESC"
+			class="btn btn-group-yesno" >
+			<option value="0">COM_JTICKETING_GALLERY_FILE</option>
+			<option value="1">COM_JTICKETING_GALLERY_LINK</option>
+		</field>
+
+		<field
+			name="gallery_file"
+			type="file"
+			label="COM_JTICKETING_GALLERY_FILE"
+			description="COM_JTICKETING_GALLERY_FILE_DESC"
+			onchange="tjMediaFile.validateFile(this, 1, 0, 'eventform')"
+			menu_published="0"
+			accept="image/jpeg,image/png,image/jpg,video/mp4,video/webm">
+		</field>
+
+		<field
+			name="gallery_link"
+			type="text"
+			label="COM_JTICKETING_GALLERY_LINK"
+			description="COM_JTICKETING_GALLERY_LINK_DESC"
+			class="inputbox"
+			default=""
+			>
+		</field>
+	</fieldset>
+</form>

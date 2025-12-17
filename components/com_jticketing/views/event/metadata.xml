@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<view title="Event">
+		<message>
+			<![CDATA[
+				COM_JTICKETING_SELECT_EVENT_TITLE
+			]]>
+		</message>
+		<options var="layout">
+			<option value="default" name="COM_JTICKETING_SELECT_EVENT_TITLE" msg="COM_JTICKETING_SELECT_EVENT_TITLE_DESC" />
+		</options>
+	</view>
+</metadata>

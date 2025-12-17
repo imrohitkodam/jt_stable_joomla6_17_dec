@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="rating">
+		<field name="id"
+			type="hidden"
+			default="0"
+			label="COM_JLIKE_TYPE_ID"
+			readonly="true"
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"
+		/>
+		<field name="rating_type_id"
+			type="hidden"
+			default="0"
+			label="COM_JLIKE_RATING_TYPE_ID"
+			readonly="true"
+			class="readonly"
+			description="COM_JLIKE_RATING_TYPE_ID_DESC"
+		/>
+		<field name="title"
+			type="text"
+			label="COM_JLIKE_RATING_TITLE"
+			description=""
+			autocomplete="off"
+		/>
+		<field name="review"
+			type="textarea"
+			label="COM_JLIKE_RATING_REVIEW"
+			rows="4"
+			cols="50"
+			description=""
+		/>
+		<field name="submitted_by"
+			type="hidden"
+			label="COM_JLIKE_RATING_SUBMITTED_BY"
+			description=""
+		/>
+		<field name="content_id"
+			type="hidden"
+			label="COM_JLIKE_RATING_TYPE_CLIENT"
+			description=""
+		/>
+		<field name="rating_scale"
+			type="hidden"
+			label="COM_JLIKE_RATING_RATING_SCALE"
+			description=""
+		/>
+		 <field name="created_by"
+			type="hidden"
+			default="0"
+			label="COM_JLIKE_RATING_CREATED_BY"
+			description=""
+			hidden="true"
+			hint=""
+		/>
+		<field name="created_date"
+			type="hidden"
+			label="COM_JLIKE_RATING_CREATED_DATE"
+			description=""
+			hidden="true"
+			hint=""
+		/>
+		<field name="modified_date"
+			type="hidden"
+			label="COM_JLIKE_RATING_MODIFIED_DATE"
+			description=""
+			hidden="true"
+			hint=""
+		/>
+		<field name="tjucm_content_id"
+			type="hidden"
+			label="COM_JLIKE_RATING_TJUCM_CONTENT_ID"
+			description=""
+		/>
+		<field name="state"
+			type="hidden"
+			label="COM_JLIKE_RATING_STATE"
+			default="1"
+			description=""
+		/>
+	</fieldset>
+</form>

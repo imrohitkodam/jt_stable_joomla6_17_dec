@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath="administrator/components/com_tjcertificate/models/fields">
+		<field
+			name="id"
+			type="hidden"
+			default="0"
+			label="COM_TJCERTIFICATE_FORM_LBL_EVENT_ID"
+			readonly="true"
+			class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field
+			name="user_id"
+			type="hidden" />
+
+		<field 
+			name="agency_id" 
+			type="agencies"
+			label="COM_TJCERTIFICATE_FORM_CLUSTER_LBL" 
+			onchange="certificate.getAgencyUsers(this)"
+			/>
+
+		<field
+			name="assigned_user_id"
+			type="allusers"
+			required="true"
+			label="COM_TJCERTIFICATE_FORM_LBL_ASSIGNED_USER"
+			>
+			<option value="">COM_TJCERTIFICATE_AGENCY_USER_SELECT</option>
+		</field>
+
+		<field
+			name="name"
+			type="text"
+			class="required"
+			label="COM_TJCERTIFICATE_FORM_LBL_CERTIFICATE_NAME"
+			description="COM_TJCERTIFICATE_FORM_LBL_CERTIFICATE_NAME_DESC"
+			required="true"
+			menu_published="0"
+			size="25"
+			filter=""
+		/>
+
+		<field
+			name="unique_certificate_id"
+			type="text"
+			filter="safehtml"
+			label="COM_TJCERTIFICATE_CERTIFICATE_FORM_LBL_CERTIFICATE_ID"
+			description="COM_TJCERTIFICATE_CERTIFICATE_FORM_LBL_CERTIFICATE_ID_DESC"
+			size="25"
+		/>
+
+		<field
+			name="cert_url"
+			type="text"
+			label="COM_TJCERTIFICATE_FORM_LBL_CERTIFICATE_URL"
+			description="COM_TJCERTIFICATE_FORM_LBL_CERTIFICATE_URL_DESC"
+			menu_published="0"
+			size="25"
+			filter=""
+			validate="url" 
+			schemes="http,https"
+		/>
+
+		<field
+			name="issuing_org"
+			type="text"
+			label="COM_TJCERTIFICATE_FORM_LBL_ISSUE_ORG"
+			description="COM_TJCERTIFICATE_FORM_LBL_ISSUE_ORG_DESC"
+			required="true"
+			menu_published="0"
+			size="25"
+			filter=""
+		/>
+
+		<field
+			name="issued_on"
+			type="calendar"
+			required="true"
+			filter="user_utc"
+			format="%Y-%m-%d %H:%M:%S"
+			singleheader="true"
+			showtime="true"
+			timeformat="24"
+			todaybutton="false"
+			weeknumbers="false"
+			filltable="true"
+			label="COM_TJCERTIFICATE_CERTIFICATE_FORM_LBL_CERTIFICATE_ISSUED_DATE"
+			description="COM_TJCERTIFICATE_CERTIFICATE_FORM_LBL_CERTIFICATE_ISSUED_DATE_DESC"
+			size="25"
+		/>
+
+		<field
+			name="expired_on"
+			type="calendar"
+			filter="user_utc"
+			format="%Y-%m-%d %H:%M:%S"
+			singleheader="true"
+			showtime="true"
+			timeformat="24"
+			todaybutton="false"
+			weeknumbers="false"
+			filltable="true"
+			label="COM_TJCERTIFICATE_CERTIFICATE_FORM_LBL_CERTIFICATE_EXPIRY_DATE"
+			description="COM_TJCERTIFICATE_CERTIFICATE_FORM_LBL_CERTIFICATE_EXPIRY_DATE_DESC"
+			size="25"
+			onchange="certificate.validationEndDate(this)"
+			class="validate-expdate"
+		/>
+
+		<field name="status" default="completed" type="list" label="COM_TJCERTIFICATE_CERTIFICATE_FORM_LBL_CERTIFICATE_STATUS" description="COM_TJCERTIFICATE_CERTIFICATE_FORM_LBL_CERTIFICATE_STATUS_DESC">
+		  <option value="attended">COM_TJCERTIFICATE_CERTIFICATE_FORM_STATUS_ATTENDED</option>
+		  <option value="completed">COM_TJCERTIFICATE_CERTIFICATE_FORM_STATUS_COMPLETED</option>
+		  <option value="passed">COM_TJCERTIFICATE_CERTIFICATE_FORM_STATUS_PASSED</option>
+		  <option value="failed">COM_TJCERTIFICATE_CERTIFICATE_FORM_STATUS_FAILED</option>
+		</field>
+
+		<field
+			name="cert_file"
+			type="file"
+			label="COM_TJCERTIFICATE_FORM_LBL_CERTIFICATE_FILE"
+			description="COM_TJCERTIFICATE_FORM_LBL_CERTIFICATE_FILE_DESC"
+			onchange="certificate.validateFile(this)"
+			accept="image/jpeg,image/png,image/jpg,application/pdf" />
+
+		<field name="comment"
+			type="textarea"
+			label="COM_TJCERTIFICATE_CERTIFICATE_FORM_LBL_CERTIFICATE_COMMENT"
+			description="COM_TJCERTIFICATE_CERTIFICATE_FORM_LBL_CERTIFICATE_COMMENT_DESC"
+			cols="45"
+			rows="10"
+		/>
+
+		<field
+			name="state"
+			type="list"
+			filter="int"
+			label="JSTATUS"
+			description=""
+			default="1"
+			class="inputbox"
+			size="1">
+				<option value="1">JPUBLISHED</option>
+				<option value="0">JUNPUBLISHED</option>
+		</field>
+
+		<field name="created_by" type="createdby" default=""
+			label="COM_TJCERTIFICATE_CERTIFICATE_FORM_LBL_COUPON_CREATED_BY"
+			description="COM_TJCERTIFICATE_CERTIFICATE_FORM_LBL_COUPON_CREATED_BY_DESC"  />
+
+	</fieldset>
+</form>

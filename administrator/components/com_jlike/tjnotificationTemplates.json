@@ -1,0 +1,492 @@
+{
+    "template1": {
+        "id": "",
+        "client": "jlike",
+        "key": "jlike.like",
+        "title": "Jlike Likes Notification",
+        "state": 1,
+        "user_control": 1,
+        "core": 1,
+        "email":{
+          "state": 1,
+          "cc": "",
+          "bcc": "",
+          "from_name": "",
+          "from_email": "",
+          "emailfields": {
+            "emailfields0": {
+              "id": "",
+              "language": "*",
+              "subject": "Received like on your content",
+              "body": "<p>Hello {{notification.owner}}, <br />{{notification.user}} likes your content '{{notification.title}}'</p>"
+            }
+          }
+        },
+        "replacement_tags": [
+          {
+              "name": "notification.owner",
+              "description": "Content Owner's Name"
+          },
+          {
+              "name": "notification.user",
+              "description": "End User's Name"
+          },
+          {
+              "name": "notification.title",
+              "description": "Content Title"
+          }
+        ]
+    },
+    "template2": {
+        "id": "",
+        "client": "jlike",
+        "key": "jlike.dislike",
+        "title": "Jlike Dislikes Notification",
+        "state": 1,
+        "user_control": 1,
+        "core": 1,
+        "email":{
+          "state": 1,
+          "cc": "",
+          "bcc": "",
+          "from_name": "",
+          "from_email": "",
+          "emailfields": {
+            "emailfields0": {
+              "id": "",
+              "language": "*",
+              "subject": "Received dislike on your content",
+              "body": "<p>Hello {{notification.owner}}, <br />{{notification.user}} dislikes your content '{{notification.title}}'</p>"
+            }
+          }
+        },
+        "replacement_tags": [
+          {
+              "name": "notification.owner",
+              "description": "Content Owner's Name"
+          },
+          {
+              "name": "notification.user",
+              "description": "End User's Name"
+          },
+          {
+              "name": "notification.title",
+              "description": "Content Title"
+          }
+        ]
+    },
+    "template3": {
+        "id": "",
+        "client": "jlike",
+        "key": "jlike.comment",
+        "title": "Jlike Comment Notification",
+        "state": 1,
+        "user_control": 1,
+        "core": 1,
+        "email":{
+          "state": 1,
+          "cc": "",
+          "bcc": "",
+          "from_name": "",
+          "from_email": "",
+          "emailfields": {
+            "emailfields0": {
+              "id": "",
+              "language": "*",
+              "subject": "Received comment on your content",
+              "body": "<p>Hello {{notification.owner}}, <br />{{notification.user}} has commented on your content '{{notification.title}}'</p>"
+            }
+          }
+        },
+        "replacement_tags": [
+          {
+              "name": "notification.owner",
+              "description": "Content Owner's Name"
+          },
+          {
+              "name": "notification.user",
+              "description": "End User's Name"
+          },
+          {
+              "name": "notification.title",
+              "description": "Content Title"
+          }
+        ]
+    },
+    "template4": {
+        "id": "",
+        "client": "jlike",
+        "key": "jlike.commentlike",
+        "title": "Jlike Like on Comment Notification",
+        "state": 1,
+        "user_control": 1,
+        "core": 1,
+        "email":{
+          "state": 1,
+          "cc": "",
+          "bcc": "",
+          "from_name": "",
+          "from_email": "",
+          "emailfields": {
+            "emailfields0": {
+              "id": "",
+              "language": "*",
+              "subject": "Received like on your comment",
+              "body": "<p>Hello {{notification.owner}}, <br />{{notification.user}} likes your comment for the content '{{notification.title}}'</p>"
+            }
+          }
+        },
+        "replacement_tags": [
+          {
+              "name": "notification.owner",
+              "description": "Content Owner's Name"
+          },
+          {
+              "name": "notification.user",
+              "description": "End User's Name"
+          },
+          {
+              "name": "notification.title",
+              "description": "Content Title"
+          }
+        ]
+    },
+    "template5": {
+        "id": "",
+        "client": "jlike",
+        "key": "jlike.commentdislike",
+        "title": "Jlike Dislike on Comment Notification",
+        "state": 1,
+        "user_control": 1,
+        "core": 1,
+        "email":{
+          "state": 1,
+          "cc": "",
+          "bcc": "",
+          "from_name": "",
+          "from_email": "",
+          "emailfields": {
+            "emailfields0": {
+              "id": "",
+              "language": "*",
+              "subject": "Received dislike on your comment",
+              "body": "<p>Hello {{notification.owner}}, <br />{{notification.user}} dislikes your comment for the content '{{notification.title}}'</p>"
+            }
+          }
+        },
+        "replacement_tags": [
+          {
+              "name": "notification.owner",
+              "description": "Content Owner's Name"
+          },
+          {
+              "name": "notification.user",
+              "description": "End User's Name"
+          },
+          {
+              "name": "notification.title",
+              "description": "Content Title"
+          }
+        ]
+    },
+    "template6": {
+        "id": "",
+        "client": "jlike",
+        "key": "jlike.commentreply",
+        "title": "Jlike Comment Reply Notification",
+        "state": 1,
+        "user_control": 1,
+        "core": 1,
+        "email":{
+          "state": 1,
+          "cc": "",
+          "bcc": "",
+          "from_name": "",
+          "from_email": "",
+          "emailfields": {
+            "emailfields0": {
+              "id": "",
+              "language": "*",
+              "subject": "Received reply on your comment",
+              "body": "<p>Hello {{notification.owner}}, <br />{{notification.user}} has replied on your comment for the content '{{notification.title}}'</p>"
+            }
+          }
+        },
+        "replacement_tags": [
+          {
+              "name": "notification.owner",
+              "description": "Content Owner's Name"
+          },
+          {
+              "name": "notification.user",
+              "description": "End User's Name"
+          },
+          {
+              "name": "notification.title",
+              "description": "Content Title"
+          }
+        ]
+    },
+    "template7": {
+        "id": "",
+        "client": "jlike",
+        "key": "jlike.recommend",
+        "title": "Jlike Recommend Notification",
+        "state": 1,
+        "user_control": 1,
+        "core": 1,
+        "email":{
+          "state": 1,
+          "cc": "",
+          "bcc": "",
+          "from_name": "",
+          "from_email": "",
+          "emailfields": {
+            "emailfields0": {
+              "id": "",
+              "language": "*",
+              "subject": "You have received a recommendation",
+              "body": "<p>Hello {{notification.user}}, <br /> You have received a notification: <b>{{notification.msg}}</b></p>"
+            }
+          }
+        },
+        "replacement_tags": [
+          {
+              "name": "notification.user",
+              "description": "User Name"
+          },
+          {
+              "name": "notification.msg",
+              "description": "Notification Message"
+          }
+        ]
+    },
+    "template8": {
+        "id": "",
+        "client": "jlike",
+        "key": "jlike.like.jlike_articles",
+        "title": "Article Likes Notification",
+        "state": 1,
+        "user_control": 1,
+        "core": 1,
+        "email":{
+          "state": 1,
+          "cc": "",
+          "bcc": "",
+          "from_name": "",
+          "from_email": "",
+          "emailfields": {
+            "emailfields0": {
+              "id": "",
+              "language": "*",
+              "subject": "Received like on your article",
+              "body": "<p>Hello {{notification.owner}}, <br />{{notification.user}} likes your article {{notification.article}}</p>"
+            }
+          }
+        },
+        "replacement_tags": [
+          {
+              "name": "notification.owner",
+              "description": "Article Owner's Name"
+          },
+          {
+              "name": "notification.user",
+              "description": "End User's Name"
+          },
+          {
+              "name": "notification.article",
+              "description": "Article Title"
+          }
+        ]
+    },
+    "template9": {
+        "id": "",
+        "client": "jlike",
+        "key": "jlike.dislike.jlike_articles",
+        "title": "Article Dislikes Notification",
+        "state": 1,
+        "user_control": 1,
+        "core": 1,
+        "email":{
+          "state": 1,
+          "cc": "",
+          "bcc": "",
+          "from_name": "",
+          "from_email": "",
+          "emailfields": {
+            "emailfields0": {
+              "id": "",
+              "language": "*",
+              "subject": "Received dislike on your article",
+              "body": "<p>Hello {{notification.owner}}, <br />{{notification.user}} dislikes your article {{notification.article}}</p>"
+            }
+          }
+        },
+        "replacement_tags": [
+          {
+              "name": "notification.owner",
+              "description": "Article Owner's Name"
+          },
+          {
+              "name": "notification.user",
+              "description": "End User's Name"
+          },
+          {
+              "name": "notification.article",
+              "description": "Article Title"
+          }
+        ]
+    },
+    "template10": {
+        "id": "",
+        "client": "jlike",
+        "key": "jlike.comment.jlike_articles",
+        "title": "Article Comment Notification",
+        "state": 1,
+        "user_control": 1,
+        "core": 1,
+        "email":{
+          "state": 1,
+          "cc": "",
+          "bcc": "",
+          "from_name": "",
+          "from_email": "",
+          "emailfields": {
+            "emailfields0": {
+              "id": "",
+              "language": "*",
+              "subject": "Received comment on your article",
+              "body": "<p>Hello {{notification.owner}}, <br />{{notification.user}} has commented on your article {{notification.article}}</p>"
+            }
+          }
+        },
+        "replacement_tags": [
+          {
+              "name": "notification.owner",
+              "description": "Article Owner's Name"
+          },
+          {
+              "name": "notification.user",
+              "description": "End User's Name"
+          },
+          {
+              "name": "notification.article",
+              "description": "Article Title"
+          }
+        ]
+    },
+    "template11": {
+        "id": "",
+        "client": "jlike",
+        "key": "jlike.commentreply.jlike_articles",
+        "title": "Article Comment Reply Notification",
+        "state": 1,
+        "user_control": 1,
+        "core": 1,
+        "email":{
+          "state": 1,
+          "cc": "",
+          "bcc": "",
+          "from_name": "",
+          "from_email": "",
+          "emailfields": {
+            "emailfields0": {
+              "id": "",
+              "language": "*",
+              "subject": "Received reply on your comment",
+              "body": "<p>Hello {{notification.owner}}, <br />{{notification.user}} has replied on your comment for the article {{notification.article}}</p>"
+            }
+          }
+        },
+        "replacement_tags": [
+          {
+              "name": "notification.owner",
+              "description": "Article Owner's Name"
+          },
+          {
+              "name": "notification.user",
+              "description": "End User's Name"
+          },
+          {
+              "name": "notification.article",
+              "description": "Article Title"
+          }
+        ]
+    },
+    "template12": {
+        "id": "",
+        "client": "jlike",
+        "key": "jlike.commentlike.jlike_articles",
+        "title": "Article Comment Like Notification",
+        "state": 1,
+        "user_control": 1,
+        "core": 1,
+        "email":{
+          "state": 1,
+          "cc": "",
+          "bcc": "",
+          "from_name": "",
+          "from_email": "",
+          "emailfields": {
+            "emailfields0": {
+              "id": "",
+              "language": "*",
+              "subject": "Like on your comment",
+              "body": "<p>Hello {{notification.owner}}, <br />{{notification.user}} likes your comment for the article {{notification.article}}</p>"
+            }
+          }
+        },
+        "replacement_tags": [
+          {
+              "name": "notification.owner",
+              "description": "Article Owner's Name"
+          },
+          {
+              "name": "notification.user",
+              "description": "End User's Name"
+          },
+          {
+              "name": "notification.article",
+              "description": "Article Title"
+          }
+        ]
+    },
+    "template13": {
+        "id": "",
+        "client": "jlike",
+        "key": "jlike.commentdislike.jlike_articles",
+        "title": "Article Comment Dislike Notification",
+        "state": 1,
+        "user_control": 1,
+        "core": 1,
+        "email":{
+          "state": 1,
+          "cc": "",
+          "bcc": "",
+          "from_name": "",
+          "from_email": "",
+          "emailfields": {
+            "emailfields0": {
+              "id": "",
+              "language": "*",
+              "subject": "Dislike on your comment",
+              "body": "<p>Hello {{notification.owner}}, <br />{{notification.user}} dislikes your comment for the article {{notification.article}}</p>"
+            }
+          }
+        },
+        "replacement_tags": [
+          {
+              "name": "notification.owner",
+              "description": "Article Owner's Name"
+          },
+          {
+              "name": "notification.user",
+              "description": "End User's Name"
+          },
+          {
+              "name": "notification.article",
+              "description": "Article Title"
+          }
+        ]
+    }
+}

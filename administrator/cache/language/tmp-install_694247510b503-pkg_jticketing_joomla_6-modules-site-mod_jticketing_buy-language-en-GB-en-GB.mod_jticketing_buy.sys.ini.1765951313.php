@@ -1,0 +1,6 @@
+<?php
+defined('_JEXEC') or die;
+return array (
+  'MOD_JTICKETING_BUY' => 'JTicketing Buy Tickets',
+  'MOD_JTICKETING_BUY_DESCRIPTION' => 'Module to show ticket types to let users buy tickets. Please publish on event details pages',
+);

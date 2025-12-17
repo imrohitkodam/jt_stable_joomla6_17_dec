@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="filter">
+		<field name="search" type="text"
+			label="COM_JTICKETING_FILTER_SEARCH_DESC_ATTENDEE"
+			hint="COM_JTICKETING_FILTER_SEARCH_DESC_ATTENDEE"
+			description="COM_JTICKETING_FILTER_SEARCH_DESC_ATTENDEE"
+		/>
+		<field name="events" type="eventslist"
+			label="COM_JTICKETING_FILTER_SELECT_EVENT"
+			description="COM_JTICKETING_FILTER_SELECT_EVENT_DESC"
+			onchange="this.form.submit();"
+			published="1,0"
+			>
+			<option value="">COM_JTICKETING_FILTER_SELECT_EVENT</option>
+		</field>
+		<field name="attended_status" type="list"
+			label="COM_JTICKETING_SELECT_ATTENDED_STATUS"
+			description="COM_JTICKETING_FILTER_SELECT_EVENT_DESC"
+			class="btn-group"
+			onchange="this.form.submit();"
+			>
+			<option value="">COM_JTICKETING_SELECT_ATTENDED_STATUS</option>
+			<option value="1">COM_JTICKETING_ATTENDED</option>
+			<option value="2">COM_JTICKETING_NOT_ATTENDED</option>
+		</field>
+		<field name="status" type="list"
+			label="COM_JTICKETING_SELECT_ATTENDEE_STATUS"
+			description="COM_JTICKETING_SELECT_ATTENDEE_STATUS_DESC"
+			class="btn-group"
+			onchange="this.form.submit();"
+			>
+			<option value="">COM_JTICKETING_SELECT_ATTENDEE_STATUS</option>
+			<option value="A">COM_JTICKETING_ENROLMENT_STATUS_APPROVED</option>
+			<option value="P">COM_JTICKETING_ENROLMENT_STATUS_PENDING</option>
+			<option value="R">COM_JTICKETING_ENROLMENT_STATUS_REJECTED</option>
+		</field>
+		<field name="subuserfilter" type="subuserfilter"
+			class="input" label="COM_TJLMS_FILTER_SUBUSERFILTER"
+			description="COM_TJLMS_FILTER_SUBUSERFILTER_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+		<fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			label="COM_JTICKETING_LIST_LIMIT"
+			description="COM_JTICKETING_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

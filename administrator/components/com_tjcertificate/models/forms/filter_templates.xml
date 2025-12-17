@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			filter="string"
+			label="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FILTER_SEARCH_LABEL"
+			description="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FILTER_SEARCH_LABEL_DESC"
+			hint="JSEARCH_FILTER"
+		/>
+
+		<field name="client"
+			type="getclientlist"
+			filter="safehtml"
+			label="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FILTER_CERTIFICATE_CLIENT"
+			description="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FILTER_DESC_CERTIFICATE_CLIENT"
+			addfieldpath="/components/com_tjcertificate/models/fields"
+			clientByUser="1"
+			onchange="this.form.submit();" />
+
+		<field
+			name="created_by"
+			type="sql"
+			query="SELECT DISTINCT (`ct`.`created_by`) as tmpl_created_by, u.name FROM `#__tj_certificate_templates` AS ct LEFT JOIN `#__users` AS u ON (ct.created_by = u.id)" key_field="tmpl_created_by" value_field="name"
+			filter="safehtml"
+			label="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FILTER_ISSUED_USER"
+			description="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FILTER_ISSUED_USER"
+			onchange="this.form.submit();">
+			<option value="">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FILTER_ISSUED_SELECT_USER</option>
+		</field>
+
+		<field
+			name="is_public"
+			type="list"
+			label="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FILTER_PUBLIC"
+			description="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FILTER_PUBLIC_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">- Select Access -</option>
+			<option value="1">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_PRIVATE</option>
+			<option value="2">COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_PUBLIC</option>
+		</field>
+
+		<field
+			name="state"
+			type="status"
+			label="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FILTER_PUBLISHED"
+			description="COM_TJCERTIFICATE_CERTIFICATE_TEMPLATE_FILTER_PUBLISHED_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">JOPTION_SELECT_PUBLISHED</option>
+		</field>
+		<input type="hidden" name="form_submited" value="1"/>
+	</fields>
+
+	<fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

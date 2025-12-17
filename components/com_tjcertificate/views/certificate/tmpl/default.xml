@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="Certificate" option="View">
+        <message>
+            <![CDATA[COM_TJCERTIFICATE_TITLE_ITEM_VIEW_CERTIFICATE]]>
+        </message>
+    </layout>
+</metadata>

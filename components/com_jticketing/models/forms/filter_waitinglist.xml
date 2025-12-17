@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="filter">
+		<field name="search" type="text"
+			label="COM_JTICKETING_FILTER_SEARCH_WAITINGLIST"
+			hint="COM_JTICKETING_FILTER_SEARCH_DESC_WAITINGLIST"
+			description="COM_JTICKETING_FILTER_SEARCH_DESC_WAITINGLIST"
+		/>
+		<field name="events" type="eventslist"
+			label="COM_JTICKETING_FILTER_SELECT_EVENT"
+			description="COM_JTICKETING_FILTER_SELECT_EVENT_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">COM_JTICKETING_FILTER_SELECT_EVENT</option>
+		</field>
+
+		<field name="behaviour" type="list"
+			label="COM_JTICKETING_WAITING_LIST_BEHAVIOUR_STATUS"
+			description="COM_JTICKETING_WAITING_LIST_BEHAVIOUR_STATUS_DESC"
+			class="btn-group"
+			onchange="this.form.submit();"
+			>
+			<option value="">COM_JTICKETING_SELECT_WAITING_LIST_BEHAVIOUR</option>
+			<option value="1">COM_JTICKETING_E_COMMERCE</option>
+			<option value="2">COM_JTICKETING_CLASSROOM_TRAINING</option>
+		</field>
+
+		<field name="waitinglist_status" type="list"
+			label="COM_JTICKETING_SELECT_WAITINGLIST_STATUS"
+			description="COM_JTICKETING_FILTER_SELECT_WAITINGLIST_DESC"
+			class="btn-group"
+			onchange="this.form.submit();"
+			>
+			<option value="">COM_JTICKETING_SELECT_WAITINGLIST_STATUS</option>
+			<option value="WL">COM_JTICKETING_WAITLIST</option>
+			<option value="C">COM_JTICKETING_CLEAR</option>
+			<option value="CA">COM_JTICKETING_CANCEL</option>
+		</field>
+
+	</fields>
+		<fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			label="COM_JTICKETING_LIST_LIMIT"
+			description="COM_JTICKETING_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

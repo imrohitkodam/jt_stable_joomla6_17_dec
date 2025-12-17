@@ -1,0 +1,27 @@
+{
+  "core": {
+    "approval": "admin"
+  },
+  "onaftersubscribe": {
+    "advanced": {
+      "esgroup": "",
+      "jugroup": "",
+      "course": "",
+      "notify": "",
+      "activity": ""
+    },
+    "custom": {
+    }
+  },
+  "onaftercompletion": {
+    "advanced": {
+      "esgroup": "",
+      "jugroup": "",
+      "course": "",
+      "notify": "",
+      "activity": ""
+    },
+    "custom": {
+    }
+  }
+}

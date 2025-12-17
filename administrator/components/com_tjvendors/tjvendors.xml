@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="6.0" method="upgrade">
+	<name>COM_TJVENDORS</name>
+	<creationDate>26th November 2025</creationDate>
+	<copyright>Copyright (C) 2016 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>6.0.0</version>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>2.0.0</version>
+	<description>COM_TJVENDORS_PRODUCT_DESC</description>
+	<install>
+		<!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<update>
+		<!-- Runs on update -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	<uninstall>
+		<!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<scriptfile>script.tjvendors.php</scriptfile>
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>tjvendors.php</filename>
+		<filename>controller.php</filename>
+		<filename>router.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>events</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>tables</folder>
+		<folder>includes</folder>
+	</files>
+	<media destination="com_tjvendor" folder="media">
+		<folder>js</folder>
+		<folder>css</folder>
+		<folder>vendors</folder>
+		<folder>dist</folder>
+		<folder>images</folder>
+		<filename>package.json</filename>
+		<filename>webpack.common.js</filename>
+		<filename>webpack.dev.js</filename>
+		<filename>webpack.prod.js</filename>
+	</media>
+	<languages folder="site_language">
+		<language tag="en-GB">en-GB/en-GB.com_tjvendors.ini</language>
+		<language tag="en-GB">en-GB/en-GB.com_tjvendors.sys.ini</language>
+	</languages>
+	<administration>
+		<menu>COM_TJVENDORS</menu>
+		<submenu>
+			<menu link="option=com_tjnotifications&amp;extension=com_tjvendors" img="../.../../media/com_jgive/images/icon-16-campaigns.png">COM_TJVENDORS_TJNOTIFICATIONS_MENU</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>tjvendors.php</filename>
+			<filename>tjvendorsTemplate.json</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<folder>houseKeeping</folder>
+		</files>
+		<languages folder="admin_language">
+			<language tag="en-GB">en-GB/en-GB.com_tjvendors.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_tjvendors.sys.ini</language>
+		</languages>
+	</administration>
+	<config>
+		<fields name="params">
+			<fieldset name="component">
+				<field name="bulk_payout" default="0" />
+				<field name="payout_limit_days" default="0" />
+				<field name="image_size" default="2500" />
+				<field name="vendor_approval" default="0" />
+			</fieldset>
+		</fields>
+	</config>
+	<plugins>
+		<plugin group="search" plugin="tjvendors" />
+	</plugins>
+</extension>

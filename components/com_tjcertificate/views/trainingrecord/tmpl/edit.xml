@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_TJCERTIFICATE_ADD_EXTERNAL_CERTIFICATE" option="View">
+		<message>
+			<![CDATA[COM_TJCERTIFICATE_ADD_EXTERNAL_CERTIFICATE]]>
+		</message>
+	</layout>
+</metadata>

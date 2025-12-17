@@ -1,0 +1,49 @@
+ [{
+    "name": "event.organizer",
+    "description": "Event Organizer Name"
+  },
+  {
+    "name": "event.organizer_detail",
+    "description": "Event Organizer Details"
+  },
+  {
+    "name": "event.title",
+    "description": "Event Title"
+  },
+  {
+    "name": "event.location",
+    "description": "Event Location"
+  },
+  {
+    "name": "event.startdate",
+    "description": "Event Date"
+  },
+  {
+    "name": "ticket.title",
+    "description": "Ticket Type Name"
+  },
+  {
+    "name": "checkin.attendee_name",
+    "description": "Attendee Name"
+  },
+  {
+    "name": "checkin.attendee_email",
+    "description": "Attendee Email Id"
+  },
+  {
+    "name": "checkin.spent_time",
+    "description": "Spent Time"
+  },
+  {
+    "name": "checkin.checkintime",
+    "description": "User Checked in Time"
+  },
+  {
+    "name": "checkin.checkouttime",
+    "description": "User Checked out Time"
+  },
+  {
+    "name": "certificate.expiry",
+    "description": "Certificate Expiry Date"
+  }
+ ]

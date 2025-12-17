@@ -1,0 +1,12 @@
+<?php
+defined('_JEXEC') or die;
+return array (
+  'PLG_ACTIONLOG_HIERARCHY' => 'Actionlog - Hierarchy',
+  'PLG_ACTIONLOG_HIERARCHY_XML_DESCRIPTION' => 'Hierarchy actionlog plugin',
+  'PLG_ACTIONLOG_HIERARCHY_LOG_ACTION_ASSIGN_MANAGER_LBL' => 'Log action for assigning a manager to a user?',
+  'PLG_ACTIONLOG_HIERARCHY_LOG_ACTION_ASSIGN_MANAGER_DESC' => 'Log action when a manager is assigned to a user',
+  'PLG_ACTIONLOG_HIERARCHY_LOG_ACTION_REMOVE_MANAGER_LBL' => 'Log action for removing a manager of the user?',
+  'PLG_ACTIONLOG_HIERARCHY_LOG_ACTION_REMOVE_MANAGER_DESC' => 'Log action when a manager of user is removed',
+  'PLG_ACTIONLOG_HIERARCHY_ASSIGN_MANAGER' => 'User <a href="{actorAccountLink}">{actorName}</a> assigned <a href="{managerForUserAccountLink}">{managerForUser}</a> as manager to <a href="{userAccountLink}">{user}</a>',
+  'PLG_ACTIONLOG_HIERARCHY_REMOVE_MANAGER' => 'User <a href="{actorAccountLink}">{actorName}</a> removed <a href="{managerForUserAccountLink}">{managerForUser}</a> as manager to <a href="{userAccountLink}">{user}</a>',
+);

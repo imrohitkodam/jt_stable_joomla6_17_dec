@@ -1,0 +1,6 @@
+<?php
+defined('_JEXEC') or die;
+return array (
+  'PLG_CONTENT_EVENTINFO' => 'Content - JTicketing plugin for event info HTML',
+  'PLG_CONTENT_EVENTINFO_XML_DESCRIPTION' => 'This plugin provides the JTicketing event info HTML',
+);

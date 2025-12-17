@@ -1,0 +1,23 @@
+-- Change engine
+ALTER TABLE `#__jticketing_atteendeelist` ENGINE = InnoDB;
+ALTER TABLE `#__jticketing_attendees` ENGINE = InnoDB;
+ALTER TABLE `#__jticketing_attendee_fields` ENGINE = InnoDB;
+ALTER TABLE `#__jticketing_attendee_field_values` ENGINE = InnoDB;
+ALTER TABLE `#__jticketing_balance_order_items` ENGINE = InnoDB;
+ALTER TABLE `#__jticketing_checkindetails` ENGINE = InnoDB;
+ALTER TABLE `#__jticketing_coupon` ENGINE = InnoDB;
+ALTER TABLE `#__jticketing_events` ENGINE = InnoDB;
+ALTER TABLE `#__jticketing_event_images` ENGINE = InnoDB;
+ALTER TABLE `#__jticketing_integration_xref` ENGINE = InnoDB;
+ALTER TABLE `#__jticketing_order` ENGINE = InnoDB;
+ALTER TABLE `#__jticketing_order_items` ENGINE = InnoDB;
+ALTER TABLE `#__jticketing_types` ENGINE = InnoDB;
+ALTER TABLE `#__jticketing_users` ENGINE = InnoDB;
+ALTER TABLE `#__jticketing_reminder_types` ENGINE = InnoDB;
+ALTER TABLE `#__Stripe_xref` ENGINE = InnoDB;
+ALTER TABLE `#__tjlms_user_xref` ENGINE = InnoDB;
+ALTER TABLE `#__jticketing_venues` ENGINE = InnoDB;
+ALTER TABLE `#__techjoomlaAPI_users` ENGINE = InnoDB;
+ALTER TABLE `#__tj_media_files` ENGINE = InnoDB;
+ALTER TABLE `#__tj_media_files_xref` ENGINE = InnoDB;
+ALTER TABLE `#__jticketing_waiting_list` ENGINE = InnoDB;

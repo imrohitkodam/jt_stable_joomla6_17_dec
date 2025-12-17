@@ -1,0 +1,24 @@
+[
+	{
+		"extension" : "com_jlike",
+		"element"	: "Jlike_notification",
+		"rule"	: "create",
+		"value"	:
+		{
+			"email"		: false,
+			"system"	: true,
+			"core"		: true
+		}
+	},
+	{
+		"extension" : "com_jlike",
+		"element": "Jlike_notification",
+		"rule"   : "create.comment",
+		"value"	:
+		{
+			"email"		: true,
+			"system"	: true,
+			"core"		: true
+		}
+	}
+]

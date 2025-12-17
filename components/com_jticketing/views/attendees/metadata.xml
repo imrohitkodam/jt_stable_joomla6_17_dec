@@ -1,0 +1,8 @@
+<metadata>
+	<view title="Attendees" >
+		<message><![CDATA[Attendees of All Events]]></message>
+		 <options var="task">
+			<default name="COM_JTICKETING_TITLE_ATTENDEES" msg="COM_JTICKETING_TITLE_ATTENDEES_DESC" />
+		</options>
+	</view>
+</metadata>

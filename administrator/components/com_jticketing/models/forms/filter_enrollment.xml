@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fields name="filter">
+		<field name="search" type="text" label="COM_JTICKEING_FILTER_SEARCH_DESC_ENROLLMENT"
+			hint="COM_JTICKETING_FILTER_SEARCH_DESC_NAME"
+			description="COM_JTICKEING_FILTER_SEARCH_DESC_ENROLLMENT"
+		/>
+	</fields>
+	<fields name="list">
+		<field name="limit" type="limitbox" class="input-mini"
+			default="25" label="COM_JTICKEING_LIST_LIMIT"
+			description="COM_JTICKETING_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

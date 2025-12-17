@@ -1,0 +1,1 @@
+ALTER TABLE `#__jticketing_checkindetails` CHANGE `spend_time` `spent_time` time DEFAULT NULL;

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JTICKETING_TITLE_COUPON_FORM" option="View">
+		<message>
+			<![CDATA[COM_JTICKETING_TITLE_COUPON_FORM_DESC]]>
+		</message>
+	</layout>
+</metadata>

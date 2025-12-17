@@ -1,0 +1,2 @@
+ALTER TABLE `#__jticketing_venues` add column `seats_capacity` tinyint(1) NOT NULL DEFAULT 1 COLLATE utf8_bin AFTER `address`;
+ALTER TABLE `#__jticketing_venues` add column `capacity_count` int(11) NOT NULL DEFAULT 0 AFTER `seats_capacity`;

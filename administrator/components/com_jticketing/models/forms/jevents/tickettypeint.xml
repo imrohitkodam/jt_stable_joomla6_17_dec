@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldpath ="/administrator/components/com_jticketing/models/fields">
+		<field
+				name="id"
+				type="hidden"
+				/>
+		<field
+				name="title"
+				type="text"
+				label="COM_JTICKETING_TICKET_TITLE"
+				description="COM_JTICKETING_TICKET_TITLE_DESC"
+				onchange="valid.titleValidation(this)"
+				validation="required"
+				class="o-form-control titlevalid"
+				size="40"
+				/>
+
+		<field
+				name="desc"
+				type="textarea"
+				label="COM_JTICKETING_TICKET_DESCRIPTION"
+				description="COM_JTICKETING_TICKET_DESCRIPTION_DESC"
+				class="o-form-control"
+				/>
+
+		<field
+			name="ticket_startdate"
+			type="calendar"
+			class="o-form-control inputbox-date ticketdate ticket-start-date"
+			size="25"
+			timeformat="24"
+			format="%Y-%m-%d %H:%M"
+			default=""
+			onchange="valid.ticketStartDateValidation('jevents', this);"
+			showtime="true"
+			label="COM_JTICKETING_TICKET_STARTDATE"
+			description="COM_JTICKETING_TICKET_STARTDATE_DESC"
+			filter="user_utc"
+			/>
+
+		<field
+			name="ticket_enddate"
+			type="calendar"
+			class="o-form-control inputbox-date ticketdate ticket-end-date"
+			size="25"
+			timeformat="24"
+			format="%Y-%m-%d %H:%M"
+			default=""
+			onchange="valid.ticketDateValidation('jevents', this);"
+			showtime="true"
+			label="COM_JTICKETING_TICKET_ENDDATE"
+			description="COM_JTICKETING_TICKET_ENDDATE_DESC"
+			filter="user_utc"
+			/>
+
+		<field
+			name="allow_ticket_level_sequence"
+			type="radio"
+			default="0"
+			label="COM_JTICKETING_ALLOW_TICKET_LEVEL_SEQUENCE"
+			description="COM_JTICKETING_ALLOW_TICKET_LEVEL_SEQUENCE_DESC"
+			class="inputbox radio btn-group btn-group-yesno">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field
+			name="start_number_for_sequence"
+			type="text"
+			label="COM_JTICKETING_START_NUMBER_FOR_SEQUENCE"
+			description="COM_JTICKETING_START_NUMBER_FOR_SEQUENCE_DESC"
+			class="inputbox start-number-for-sequence"
+			default=""
+			onchange="valid.startNumberValidation(this)"
+		/>
+
+		<field
+			name="price"
+			type="price"
+			onchange="valid.positiveNumber(this);"
+			label="COM_JTICKETING_TICKET_PRICE"
+			description="COM_JTICKETING_TICKET_PRICE_DESC"
+			class="o-form-control price required validate-positive-number updateFormGroupToOFormGroup"
+			filter="integer"
+			default="0"
+			size="25"
+		/>
+
+		<field name="state" type="list" default="1" label="JSTATUS" description="COM_JTICKETING_TICKET_STATE_DESC" class="o-form-select">
+			<option value="1">COM_JTICKETING_PUBLISH</option>
+			<option value="0">COM_JTICKETING_UNPUBLISH</option>
+		</field>
+		<field name="unlimited_seats" type="list" default="1" label="COM_JTICKETING_TICKET_SEATS_AVAILABLE" description="COM_JTICKETING_TICKET_SEATS_AVAILABLE_DESC" class="o-form-select unlimitedseats" onchange="valid.seatsValidation('es', this);">
+			<option value="1">COM_JTICKETING_TICKET_UNLIMITED_SEATS_YES</option>
+			<option value="0">COM_JTICKETING_TICKET_UNLIMITED_SEATS_NO</option>
+		</field>
+
+		<field
+			name="available"
+			type="number"
+			label="COM_JTICKETING_TICKET_NO_OF_SEATS"
+			description="COM_JTICKETING_TICKET_NO_OF_SEATS_DESC"
+			class="o-form-control avail validate-positive-number"
+			default=""
+			min="0"
+			size="40"
+			onchange="valid.seatsValidation('es', this);"
+			/>
+		<field
+			name="count"
+			type="number"
+			label="COM_JTICKETING_TICKET_REMAINING_SEATS_COUNT"
+			description="COM_JTICKETING_TICKET_REMAINING_SEATS_COUNT_DESC"
+			readonly="true"
+			size="40"
+			class="o-form-control"
+		/>
+
+		<field
+			name="max_ticket_per_order"
+			type="number"
+			onchange="valid.positiveNumber(this);"
+			label="COM_JTICKETING_TICKET_LEVEL_MAXIMUM_TICKET_PER_ORDER"
+			description="COM_JTICKETING_TICKET_LEVEL_MAXIMUM_TICKET_PER_ORDER_DESC"
+			class="o-form-control required validate-positive-number accept-empty"
+			filter="integer"
+			default="0"
+			size="25"
+		/>
+
+		<field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" description="JFIELD_ACCESS_DESC" class="form-control" />
+	</fieldset>
+</form>
