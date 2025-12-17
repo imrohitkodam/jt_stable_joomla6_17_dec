@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension method="upgrade" type="module" client="site" version="3.0">
+	<name>mod_jlike_most_likes</name>
+
+	<author>Techjoomla</author>
+    <copyright>Copyright (C) 2010 - 2023 Techjoomla. All rights reserved.</copyright>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <creationDate>8th Dec 2023</creationDate>
+	<version>4.0.1</version>
+
+	<description>
+		Module to show Most liked content
+	</description>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_jlike_most_likes.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_jlike_most_likes.sys.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_jlike_most_likes">mod_jlike_most_likes.php</filename>
+		<folder>tmpl</folder>
+		<folder>js</folder>
+		<folder>css</folder>
+	</files>
+
+	<!-- Fields for Joomla 1.6.x and onwards -->
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default="" label="MOD_JLIKE_LBL_MCS" description="MOD_JLIKE_DES_MCS" />
+				<field name="showlikescount" type="radio" default="1" label="MOD_JLIKE_SHOW_LIKE_COUNT" description="MOD_JLIKE_SHOW_LIKE_COUNT_DESC">
+					<option value="1">MOD_JLIKE_YES</option>
+					<option value="0">MOD_JLIKE_NO</option>
+				</field>
+				<field name="no_of_likes" type="text" default="5" label="MOD_JLIKE_TOTAL_NUMBER_OF_CONTENT" description="MOD_JLIKE_TOTAL_NUMBER_OF_CONTENT_DESC"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

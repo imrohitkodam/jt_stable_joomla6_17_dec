@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="plugin" version="3.7.0" group="jticketing"
+	method="upgrade">
+	<name>PLG_JTICKETING_TJLESSON</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>(C)Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>14 April 2020</creationDate>
+	<version>1.0.0</version>
+	<description>PLG_JTICKETING_TJLESSON_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="tjlesson">tjlesson.php</filename>
+		<folder>fields</folder>
+		<folder>tmpl</folder>
+		<folder>layouts</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_jticketing_tjlesson.ini</language>
+		<language tag="en-GB">en-GB.plg_jticketing_tjlesson.sys.ini</language>
+	</languages>
+	<config name="params">
+		<fields name="tjlesson" addfieldpath="/plugins/jticketing/tjlesson/fields/">
+			<field name="lessons" type="tjlesson" multiple="multiple"
+				label="PLG_TJLESSON_CONFIG_FIELD_LABEL"
+				description="PLG_TJLESSON_CONFIG_FIELD_DESC"
+				/>
+		</fields>
+		<fields name="params">
+			<fieldset name="basic" label="PLG_TJLESSON_CONFIG_ACCESSIBILITY" >
+				<field name="accessibility" type="radio" default="1" label="PLG_TJLESSON_CONFIG_ACCESSIBILITY" description="PLG_TJLESSON_CONFIG_ACCESSIBILITY_DESC">
+					<option value="1">PLG_TJLESSON_CONFIG_ACCESSIBILITY_FIELD_OPTION_PUBLIC_USERS</option>
+					<option value="0">PLG_TJLESSON_CONFIG_ACCESSIBILITY_FIELD_OPTION_PURCHASED_USERS</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

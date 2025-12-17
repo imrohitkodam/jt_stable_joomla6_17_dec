@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="tjevents" method="upgrade">
+	<name>plg_tjevents_jitsi</name>
+	<description>PLG_TJEVENTS_JITSI_XML_DESCRIPTION</description>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https:/techjoomla.com</authorUrl>
+	<creationDate>Jun 24, 2020</creationDate>
+	<copyright>Copyright (C) 2009 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http:/www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.0.0</version>
+
+	<files>
+		<filename plugin="jitsi">jitsi.php</filename>
+		<filename>index.html</filename>
+		<folder>install</folder>
+		<folder>jitsi</folder>
+		<folder>tmpl</folder>
+	</files>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">install/sql/install.sql</file>
+		</sql>
+	</install>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_tjevents_jitsi.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_tjevents_jitsi.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

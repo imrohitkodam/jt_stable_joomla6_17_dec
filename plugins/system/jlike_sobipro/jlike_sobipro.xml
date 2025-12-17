@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<extension type="plugin" version="3.0" client="site" method="upgrade" group="system">
+	<name>System - Jlike-Sobipro</name>
+
+	<author>Techjoomla</author>
+    <copyright>Copyright (C) 2010 - 2023 Techjoomla. All rights reserved.</copyright>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>25th Jan 2022</creationDate>
+	<version>4.0.0</version>
+
+	<description>This plugin adds a like interface at the bottom of the sobipro article</description>
+	<files>
+		<filename plugin="jlike_sobipro">jlike_sobipro.php</filename>
+	</files>
+	<config>
+	<fields name="params">
+		<fieldset name="basic">
+		</fieldset>
+	</fields>
+	</config>
+</extension>

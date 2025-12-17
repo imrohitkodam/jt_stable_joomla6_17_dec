@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension method="upgrade" type="module" client="site" version="3.0">
+	<name>JTicketing Event Module(Only for Native Integration)</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2009 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>28th Apr 2025</creationDate>
+	<version>5.1.1</version>
+	<description>Module to show JTicketing Events(Only for Native Integration)</description>
+	<languages folder="languages">
+		<language tag="en-GB">en-GB/en-GB.mod_jticketing_event.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_jticketing_event.sys.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_jticketing_event">mod_jticketing_event.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>css</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="personalized_event_suggestion" type="radio" class="btn-group" label="MOD_JTICKETING_PERSONALIZED_EVENT_SUGGESTIONS" default="0" description="MOD_JTICKETING_PERSONALIZED_EVENT_SUGGESTIONS_DESC">
+					<option value="1">MOD_JTICKETING_EVENT_YES</option>
+					<option value="0">MOD_JTICKETING_EVENT_NO</option>
+				</field>
+				<field
+					name="defaultCatid"
+					type="category"
+					label="MOD_JTICKETING_EVENT_FORM_LBL_EVENT_CATEGORY"
+					description="MOD_JTICKETING_EVENT_FORM_LBL_EVENT_CATEGORY_DESC"
+					extension="com_jticketing"
+					showon="personalized_event_suggestion:0"
+					>
+					<option value="">JOPTION_SELECT_CATEGORY</option>
+				</field>
+				<field name="event_order_by" type="list" label="MOD_JTICKETING_EVENT_ORDER_BY" default="start_date" showon="personalized_event_suggestion:0" description="MOD_JTICKETING_EVENT_ORDER_BY_DESC">
+					<option value="startdate">MOD_JTICKETING_EVENT_DATE_START</option>
+					<option value="enddate">MOD_JTICKETING_EVENT_DATE_END</option>
+					<option value="booking_start_date">MOD_JTICKETING_EVENT_START</option>
+					<option value="booking_end_date">MOD_JTICKETING_EVENT_END</option>
+				</field>
+				<field name="order_dir" type="radio" class="btn-group" label="MOD_JTICKETING_EVENT_ORDER_BY_DIRECTION" default="ASC" showon="personalized_event_suggestion:0" description="MOD_JTICKETING_EVENT_ORDER_BY_DIRECTION_DESC">
+					<option value="ASC">MOD_JTICKETING_EVENT_ASC</option>
+					<option value="DESC">MOD_JTICKETING_EVENT_DESC</option>
+				</field>
+				<field name="tags" type="tag" label="JTAG" description="JTAG_DESC" class="inputbox span4" showon="personalized_event_suggestion:0" multiple="true"/>
+
+				<field name="no_of_event_show" type="text" label="MOD_JTICKETING_EVENT_NO_OF_CAMPAIGNS_TO_SHOW" default="5" description="MOD_JTICKETING_EVENT_NO_OF_CAMPAIGNS_TO_SHOW_DESC" />
+
+				<field name="featured_event" type="radio" class="btn-group" label="MOD_JTICKETING_EVENT_FEATURED_ONLY" default="0" description="MOD_JTICKETING_EVENT_FEATURED_DESC">
+					<option value="1">MOD_JTICKETING_EVENT_YES</option>
+					<option value="0">MOD_JTICKETING_EVENT_NO</option>
+				</field>
+				<field name="show_time" type="radio" class="btn-group" label="MOD_JTICKETING_EVENT_SHOW_TIME" default="show_all" showon="personalized_event_suggestion:0" description="MOD_JTICKETING_EVENT_SHOW_TIME_DESC">
+					<option value="show_all">MOD_JTICKETING_EVENT_ALL</option>
+					<option value="upcoming">MOD_JTICKETING_EVENT_UPCOMING</option>
+					<option value="past">MOD_JTICKETING_EVENT_PAST</option>
+					<option value="today">MOD_JTICKETING_EVENT_TODAY</option>
+					<option value="ongoing">MOD_JTICKETING_EVENT_ONGOING</option>
+				</field>
+
+				<field name="moduleclass_sfx" type="text" label="MOD_JTICKETING_EVENT_MODULE_CLASS_SUFF" default="" showon="personalized_event_suggestion:0" description="MOD_JTICKETING_EVENT_MODULE_CLASS_SUFF_DESC" />
+				<field name="mod_pin_width" class="validate-numeric" type="text" default="270" label="MOD_JTICKETING_PIN_WIDTH" description="MOD_JTICKETING_PIN_WIDTH_DESC" />
+				<field name="mod_pin_padding" type="text" class="validate-numeric" default="10" label="MOD_JTICKETING_PIN_PADDING" description="MOD_JTICKETING_PIN_PADDING_DESC" />
+				<field 
+                    name="distance_limit" 
+                    type="number" 
+                    label="MOD_JTICKETING_DISTANCE" 
+                    description="MOD_JTICKETING_DISTANCE_DESCRIPTION" 
+                    default=""
+                />
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field name="layout" type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

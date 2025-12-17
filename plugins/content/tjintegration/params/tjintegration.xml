@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params">
+		<fieldset name="Integration" label="PLG_CONTENT_TJINTEGRATION_INTEGRATION_LABEL">
+		</fieldset>
+	</fields>
+</form>

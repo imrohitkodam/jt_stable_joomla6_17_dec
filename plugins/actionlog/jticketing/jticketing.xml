@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.9" type="plugin" group="actionlog" method="upgrade">
+	<name>PLG_ACTIONLOG_JTICKETING</name>
+	<author>Techjoomla</author>
+	<creationDate>28th Apr 2025</creationDate>
+	<copyright>Copyright (C) 2009 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>5.1.1</version>
+	<description>PLG_ACTIONLOG_JTICKETING_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="jticketing">jticketing.php</filename>
+		<file>index.html</file>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_actionlog_jticketing.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_actionlog_jticketing.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<!--Event Actions-->
+				<field name="logActionForEventCreate" type="radio" label="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_EVENT_CREATE" description="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForEventDelete" type="radio" label="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_EVENT_DELETE" description="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForEventChangeState" type="radio" label="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_EVENT_CHANGE_STATE" description="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<!--Venue Actions-->
+				<field name="logActionForVenueCreate" type="radio" label="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_VENUE_CREATE" description="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForVenueDelete" type="radio" label="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_VENUE_DELETE" description="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForVenueChangeState" type="radio" label="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_VENUE_CHANGE_STATE" description="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<!--Coupon Actions-->
+				<field name="logActionForCouponCreate" type="radio" label="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_COUPON_CREATE" description="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForCouponDelete" type="radio" label="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_COUPON_DELETE" description="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForCouponChangeState" type="radio" label="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_COUPON_CHANGE_STATE" description="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<!--Attendee Fields Actions-->
+				<field name="logActionForAttendeeFieldsChangeState" type="radio" label="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_ATTENDEE_FIELDS_CHANGE_STATE" description="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForAttendeeCheckin" type="radio" label="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_ATTENDEE_CHECK_IN" description="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<!--Orders Action-->
+				<field name="logActionForEnrollment" type="radio" label="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_ENROLLMENT" description="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForOrderPlaced" type="radio" label="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_ORDER" description="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForOrderDeleted" type="radio" label="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_ORDER_DELETED" description="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<!-- Waiting List Action-->
+				<field name="logActionForAddToWaitList" type="radio" label="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_ADD_TO_WAITLIST" description="PLG_ACTIONLOG_JTICKETING_LOG_ACTION_ADD_TO_WAITLIST_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,188 @@
+<?php
+/**
+ * @version    SVN: <svn_id>
+ * @package    JTicketing
+ * @author     Techjoomla <extensions@techjoomla.com>
+ * @copyright  Copyright (c) 2009-2015 TechJoomla. All rights reserved.
+ * @license    GNU General Public License version 2 or later.
+ */
+
+defined('_JEXEC') or die;
+use Joomla\CMS\Factory;
+use Joomla\CMS\Language\Text;
+
+/**
+ * Class for get attendee list based on event id
+ *
+ * @package     JTicketing
+ * @subpackage  component
+ * @since       1.0
+ */
+class JticketApiResourcegetAttendeelist extends ApiResource
+{
+	/**
+	 * Get Event attendee list based on event id
+	 *
+	 * @return  json event details
+	 *
+	 * @since   1.0
+	 */
+	public function get()
+	{
+		$lang      = Factory::getLanguage();
+		$extension = 'com_jticketing';
+		$base_dir  = JPATH_SITE;
+		$lang->load($extension, $base_dir);
+		$input                = Factory::getApplication()->input;
+		$eventid              = $input->get('eventid', '0', 'INT');
+		$var['attendtype']    = $input->get('attendtype', 'all', 'STRING');
+		$var['tickettypeid']  = $input->get('tickettypeid', '0', 'INT');
+		$jticketingmainhelper = new jticketingmainhelper;
+
+		if (empty($eventid) OR empty($var))
+		{
+			$obj->success = 0;
+			$obj->message = Text::_("COM_JTICKETING_INVALID_EVENT");
+			$this->plugin->setResponse($obj);
+
+			return;
+		}
+
+		$results = $jticketingmainhelper->GetOrderitemsAPI($eventid, $var);
+
+		if (empty($results))
+		{
+			$obj->success = "0";
+			$obj->data    = Text::_("COM_JTICKETING_INVALID_TICKET");
+			$this->plugin->setResponse($obj);
+
+			return;
+		}
+
+		if ($eventid)
+		{
+			$data = array();
+
+			foreach ($results as &$orderitem)
+			{
+				$obj = new stdClass;
+
+				if ($orderitem->attendee_id)
+				{
+					// Get Attendee Details
+					$attendeeFields = JT::attendeefieldvalues()->loadByAttendeeId($orderitem->attendee_id);
+
+					foreach ($attendeeFields as $attendeeField)
+					{
+						$attendee_details[$attendeeField->name] = $attendeeField->field_value;
+					}
+				}
+
+				if (!empty($attendee_details['first_name']))
+				{
+					$attendee_nm = $attendee_details['first_name'] . " " . $attendee_details['last_name'];
+				}
+				else
+				{
+					$buyername = $orderitem->name;
+				}
+
+				if (!empty($attendee_details['phone']))
+				{
+					$attendee_phone = $attendee_details['phone'];
+				}
+
+				if (!empty($attendee_details['email']))
+				{
+					$attendee_email = $attendee_details['email'];
+				}
+
+				$obj->checkin           = JT::model('checkin')->getCheckinStatusByTicketId($orderitem->order_items_id);
+				$obj->ticketid          = $orderitem->oid . '-' . $orderitem->order_items_id;
+				$obj->attendee_nm       = strtolower($buyername);
+				$obj->tickettypeid      = $orderitem->tickettypeid;
+				$obj->ticket_type_title = $orderitem->ticket_type_title;
+				$obj->event_title       = $orderitem->event_title;
+				$obj->ticket_prefix     = Text::_("TICKET_PREFIX");
+				$obj->bought_on       	= $orderitem->cdate;
+				$obj->price_per_ticket  = $orderitem->amount;
+				$obj->original_amount   = $orderitem->totalamount;
+				$obj->email   			= $attendee_email;
+				$obj->phone   			= $attendee_phone;
+
+				if ($var['attendtype'] == "all")
+				{
+					$data[] = $obj;
+				}
+				elseif ($var['attendtype'] == "attended" && $obj->checkin == 1)
+				{
+					$data[] = $obj;
+				}
+				elseif ($var['attendtype'] == "notattended" && $obj->checkin == 0)
+				{
+					$data[] = $obj;
+				}
+			}
+
+			$fobj          = new stdClass;
+			$fobj->success = "1";
+			$fobj->total   = count($data);
+			$fobj->data    = $data;
+		}
+		else
+		{
+			$fobj->success = "0";
+			$fobj->data    = Text::_("COM_JTICKETING_INVALID_TICKET");
+		}
+
+		$this->plugin->setResponse($fobj);
+	}
+
+	/**
+	 * Post Method
+	 *
+	 * @return  void
+	 *
+	 * @since   1.0
+	 */
+	public function post()
+	{
+		$obj          = new stdClass;
+		$obj->success = 0;
+		$obj->code    = 20;
+		$obj->message = Text::_("COM_JTICKETING_SELECT_GET_METHOD");
+		$this->plugin->setResponse($obj);
+	}
+
+	/**
+	 * Put method
+	 *
+	 * @return  void
+	 *
+	 * @since   1.0
+	 */
+	public function put()
+	{
+		$obj          = new stdClass;
+		$obj->success = 0;
+		$obj->code    = 20;
+		$obj->message = Text::_("COM_JTICKETING_SELECT_GET_METHOD");
+		$this->plugin->setResponse($obj);
+	}
+
+	/**
+	 * Delete method
+	 *
+	 * @return  void
+	 *
+	 * @since   1.0
+	 */
+	public function delete()
+	{
+		$obj          = new stdClass;
+		$obj->success = 0;
+		$obj->code    = 20;
+		$obj->message = Text::_("COM_JTICKETING_SELECT_GET_METHOD");
+		$this->plugin->setResponse($obj);
+	}
+}

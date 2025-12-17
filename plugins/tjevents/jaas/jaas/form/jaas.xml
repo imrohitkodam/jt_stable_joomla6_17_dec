@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<fields name="plugin">
+	<fieldset name="plugin">
+		<field
+			name="event_type"
+			type="hidden"
+			default="meeting" />
+		<field
+			name="domain"
+			type="url"
+			size="35"
+			readonly="true"
+			class="required form-group"
+			default="https://8x8.vc"
+			label="PLG_TJEVENTS_JAAS_DOMAIN"
+			description="PLG_TJEVENTS_JAAS_DOMAIN_DESC"
+			required="true"
+			/>
+		<field
+			name="apikey"
+			type="textarea"
+			class="form-group"
+			default=""
+			label="PLG_TJEVENTS_JAAS_API_KEY"
+			description="PLG_TJEVENTS_JAAS_API_KEY_DESC"
+			required="true"
+			/>
+
+		<field
+			name="publicKey"
+			type="textarea"
+			class="form-group"
+			default=""
+			label="PLG_TJEVENTS_JAAS_PUBLIC_KEY"
+			description="PLG_TJEVENTS_JAAS_PUBLIC_KEY_DESC"
+			required="true"
+			/>
+		<field
+			name="privateKey"
+			type="textarea"
+			class="form-group"
+			default=""
+			label="PLG_TJEVENTS_JAAS_PRIVATE_KEY"
+			description="PLG_TJEVENTS_JAAS_PRIVATE_KEY_DESC"
+			required="true"
+			/>
+
+		<field
+			name="toolbar"
+			type="textarea"
+			class="required form-group"
+			default="microphone,camera,hangup,desktop,fullscreen,profile,chat,recording,settings,raisehand,videoquality,tileview"
+			label="PLG_TJEVENTS_JAAS_TOOLBAR"
+			description="PLG_TJEVENTS_JAAS_TOOLBAR_DESC"
+			row="3"
+			required="true" />
+
+		<field
+			name="setting"
+			type="textarea"
+			class="required form-group"
+			default="devices,language,moderator,profile,calendar"
+			label="PLG_TJEVENTS_JAAS_SETTING"
+			description="PLG_TJEVENTS_JAAS_SETTING_DESC"
+			row="3"
+			required="true" />
+
+		<field
+			name="start_with_audio"
+			type="radio"
+			class="required form-group"
+			default="0"
+			label="PLG_TJEVENTS_JAAS_START_WITH_AUDIO"
+			description="PLG_TJEVENTS_JAAS_START_WITH_AUDIO_DESC"
+			required="true"
+			>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+			</field>
+
+		<field
+			name="disable_video_quality_indicator"
+			type="radio"
+			class="required form-group"
+			default="0"
+			label="PLG_TJEVENTS_JAAS_DISABLE_VIDEO_QALITY_INDICATOR"
+			description="PLG_TJEVENTS_JAAS_DISABLE_VIDEO_QALITY_INDICATOR_DESC"
+			required="true"
+			>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+			</field>
+		<field
+			name="width"
+			type="text"
+			size="35"
+			class="required form-group"
+			default="100"
+			label="PLG_TJEVENTS_JAAS_WIDTH"
+			description="PLG_TJEVENTS_JAAS_WIDTH_DESC"
+			required="true"
+			/>
+
+		<field
+			name="height"
+			type="text"
+			size="35"
+			class="required form-group"
+			default="700"
+			label="PLG_TJEVENTS_JAAS_HEIGHT"
+			description="PLG_TJEVENTS_JAAS_HEIGHT_DESC"
+			required="true"
+			/>
+
+	</fieldset>
+</fields>
+</form>

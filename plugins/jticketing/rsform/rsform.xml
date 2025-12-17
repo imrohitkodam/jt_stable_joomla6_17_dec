@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="plugin" version="3.7.0" group="jticketing"
+	method="upgrade">
+	<name>plg_jticketing_rsform</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>(C)Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>02 April 2019</creationDate>
+	<version>1.0.0</version>
+	<description>PLG_JTICKETING_RSFORM_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="rsform">rsform.php</filename>
+		<folder>models</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_jticketing_rsform.ini</language>
+		<language tag="en-GB">en-GB.plg_jticketing_rsform.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="rsform" addfieldpath="/plugins/jticketing/rsform/models/fields/">
+			<field name="onAfterJtAttendeeCheckin" type="rsform"
+				label="PLG_ONAFTEREVENTCHECKIN_RSFORM_CONFIG_FIELD_LABEL"
+				description="PLG_ONAFTEREVENTCHECKIN_RSFORM_CONFIG_DESC"
+				/>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="tjsms" method="upgrade">
+	<name>plg_tjsms_twilio</name>
+	<description>PLG_TJSMS_TWILIO_XML_DESCRIPTION</description>
+	<author>Techjoomla</author>
+	<authorEmail>contact@techjoomla.com</authorEmail>
+	<authorUrl>https:/techjoomla.com</authorUrl>
+	<creationDate>Jun 13, 2020</creationDate>
+	<copyright>Copyright (C) 2009 - 2020 Techjoomla. All rights reserved.</copyright>
+	<license>http:/www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.0.0</version>
+
+	<files>
+		<filename plugin="twilio">twilio.php</filename>
+		<filename>index.html</filename>
+		<filename>composer.json</filename>
+		<filename>composer.lock</filename>
+		<folder>vendor</folder>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_tjsms_twilio.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_tjsms_twilio.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="account_sid" type="text"
+					label="PLG_TJSMS_TWILIO_ACCOUNT_SID_LABEL"
+					description="PLG_TJSMS_TWILIO_ACCOUNT_SID_DESC"
+					hint="PLG_TJSMS_TWILIO_ACCOUNT_SID_DESC"
+					default=""
+					class="input-xxlarge"
+					filter="string" />
+				<field name="api_key" type="text"
+					label="PLG_TJSMS_TWILIO_API_KEY_LABEL"
+					description="PLG_TJSMS_TWILIO_API_KEY_DESC"
+					hint="PLG_TJSMS_TWILIO_API_KEY_DESC"
+					default=""
+					class="input-xxlarge"
+					filter="string" />
+				<field name="from" type="text"
+					label="PLG_TJSMS_TWILIO_FROM"
+					description="PLG_TJSMS_TWILIO_FROM_DESC"
+					hint="PLG_TJSMS_TWILIO_FROM_DESC"
+					filter="string" />
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

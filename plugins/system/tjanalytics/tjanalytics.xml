@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.0" type="plugin" group="system" method="upgrade">
+	<name>plg_system_tjanalytics</name>
+	<description>PLG_SYSTEM_TJANALYTICS_DESCRIPTION</description>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<creationDate>11th Oct 2019</creationDate>
+	<copyright>Copyright (C) 2009 - 2019 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.1.0</version>
+
+	<files>
+		<filename plugin="tjanalytics">tjanalytics.php</filename>
+		<filename>index.html</filename>
+		<filename>provider.php</filename>
+		<filename>providerinterface.php</filename>
+		<folder>providers</folder>
+	</files>
+
+	<!-- Media files -->
+	<media destination="tjanalytics" folder="media">
+		<filename>index.html</filename>
+		<folder>js</folder>
+	</media>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_tjanalytics.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_tjanalytics.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="provider" type="list" class="input-large" default="googleanalytics" label="PLG_SYSTEM_TJANALYTICS_TRACKING_PROVIDER" description="PLG_SYSTEM_TJANALYTICS_TRACKING_PROVIDER_DESC">
+					<option value="googleanalytics">PLG_SYSTEM_TJANALYTICS_TRACKING_PROVIDER_GOOGLE</option>
+					<option value="matomo">PLG_SYSTEM_TJANALYTICS_TRACKING_PROVIDER_MATOMO</option>
+				</field>
+				<field name="enable_admin" type="radio" class="btn-group" label="PLG_SYSTEM_TJANALYTICS_ENABLE_ADMIN" description="PLG_SYSTEM_TJANALYTICS_ENABLE_ADMIN_DESC" default="0">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="ga" label="PLG_SYSTEM_TJANALYTICS_FIELDSET_LABEL_GOOGLE">
+				<field name="mode_ga" type="radio" class="btn-group" label="PLG_SYSTEM_TJANALYTICS_MODE_GOOGLE" description="PLG_SYSTEM_TJANALYTICS_MODE_DESC_GOOGLE" default="analytics">
+					<option value="analytics">PLG_SYSTEM_TJANALYTICS_MODE_GOOGLE_ANALYTICS</option>
+					<option value="tagmanager">PLG_SYSTEM_TJANALYTICS_MODE_GOOGLE_TAGMANAGER</option>
+				</field>
+
+				<field name="container_id_ga" type="text" default="" hint="GTM-XXXXXXX" label="PLG_SYSTEM_TJANALYTICS_TAGMANAGER_CONTAINER_ID_GOOGLE" description="PLG_SYSTEM_TJANALYTICS_TAGMANAGER_CONTAINER_ID_DESC_GOOGLE" showon="mode_ga:tagmanager" />
+
+				<field name="property_id_ga" type="text" default="" hint="UA-XXXXX-X" label="PLG_SYSTEM_TJANALYTICS_WEB_PROPERTY_ID_GOOGLE" description="PLG_SYSTEM_TJANALYTICS_WEB_PROPERTY_ID_DESC_GOOGLE" showon="mode_ga:analytics" />
+				<field name="domain_ga" type="text" default="auto" label="PLG_SYSTEM_TJANALYTICS_DOMAIN_GOOGLE" description="PLG_SYSTEM_TJANALYTICS_DOMAIN_DESC_GOOGLE" showon="mode_ga:analytics" />
+				<field name="load_js_ga" type="radio" class="btn-group" label="PLG_SYSTEM_TJANALYTICS_LOADJS_GOOGLE" description="PLG_SYSTEM_TJANALYTICS_LOADJS_DESC_GOOGLE" default="1" showon="mode_ga:analytics">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="load_js_ec_ga" type="radio" class="btn-group" label="PLG_SYSTEM_TJANALYTICS_LOADSJS_EC_GOOGLE" description="PLG_SYSTEM_TJANALYTICS_LOADSJS_EC_DESC_GOOGLE" default="enhanced_ec" showon="mode_ga:analytics">
+					<option value="0">JNO</option>
+					<option value="ec">PLG_SYSTEM_TJANALYTICS_LOADSJS_EC_GOOGLE_EC</option>
+					<option value="enhanced_ec">PLG_SYSTEM_TJANALYTICS_LOADSJS_EC_GOOGLE_E_EC</option>
+				</field>
+				<field name="track_userid_ga" type="radio" class="btn-group" label="PLG_SYSTEM_TJANALYTICS_TRACK_UID_GOOGLE" description="PLG_SYSTEM_TJANALYTICS_TRACK_UID_DESC_GOOGLE" default="0" showon="mode_ga:analytics">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="anonymize_ip_ga" type="radio" class="btn-group" label="PLG_SYSTEM_TJANALYTICS_ANONYMIZE_IP_GOOGLE" description="PLG_SYSTEM_TJANALYTICS_ANONYMIZE_IP_GOOGLE_DESC_GOOGLE" default="1" showon="mode_ga:analytics">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="dimension_id_ga" type="text" default="" label="PLG_SYSTEM_TJANALYTICS_DIMENSION_ID_GOOGLE" description="PLG_SYSTEM_TJANALYTICS_DIMENSION_ID_DESC_GOOGLE" showon="mode_ga:analytics" />
+				<!--<field name="send_ga_data" type="radio" class="btn-group" label="PLG_SYSTEM_TJANALYTICS_ORDER_STATUS_GOOGLE" description="PLG_SYSTEM_TJANALYTICS_ORDER_STATUS_DESC_GOOGLE" default="1" showon="mode_ga:analytics"> <option value="1">JYES</option> <option value="0">JNO</option> </field>-->
+				<!--<field name="namespace_ga" type="text" label="PLG_ANALYTICS_TRACKING_NAME_GOOGLE" description="PLG_ANALYTICS_TRACKING_NAME_DESC_GOOGLE" default="" showon="mode_ga:analytics"/>-->
+
+				<field name="track_nojs_ga" type="radio" class="btn-group" label="PLG_TJANALYTICS_TRACK_WHEN_JS_DISABLED_GOOGLE" description="PLG_TJANALYTICS_TRACK_WHEN_JS_DISABLED_DESC_GOOGLE" default="0" showon="mode_ga:tagmanager">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="matomo" label="PLG_SYSTEM_TJANALYTICS_FIELDSET_LABEL_MATOMO">
+				<field name="url_matomo" type="text" label="PLG_TJANALYTICS_URL_MATOMO" description="PLG_TJANALYTICS_URL_DESC_MATOMO" filter="url" hint="https://matomo-instance-url.com" />
+				<field name="mode_matomo" type="radio" class="btn-group" label="PLG_SYSTEM_TJANALYTICS_MODE_MATOMO" description="PLG_SYSTEM_TJANALYTICS_MODE_DESC_MATOMO" default="analytics">
+					<option value="analytics">PLG_SYSTEM_TJANALYTICS_MODE_MATOMO_ANALYTICS</option>
+					<option value="tagmanager">PLG_SYSTEM_TJANALYTICS_MODE_MATOMO_TAGMANAGER</option>
+				</field>
+
+				<field name="container_id_matomo" type="text" default="" label="PLG_SYSTEM_TJANALYTICS_TAGMANAGER_CONTAINER_ID_MATOMO" description="PLG_SYSTEM_TJANALYTICS_TAGMANAGER_CONTAINER_ID_DESC_MATOMO" showon="mode_matomo:tagmanager" />
+
+				<field name="site_id_matomo" type="text" label="PLG_TJANALYTICS_SITE_ID_MATOMO" description="PLG_TJANALYTICS_SITE_ID_DESC_MATOMO" filter="int" default="" hint="PLG_TJANALYTICS_SITE_ID_DESC_MATOMO" showon="mode_matomo:analytics"/>
+				<field name="track_userid_matomo" type="radio" class="btn-group" label="PLG_SYSTEM_TJANALYTICS_TRACK_UID_MATOMO" description="PLG_SYSTEM_TJANALYTICS_TRACK_UID_DESC_MATOMO" default="0" showon="mode_matomo:analytics">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<!--<field name="prepend_domain_matomo" type="radio" class="btn-group" label="PLG_TJANALYTICS_PREPEND_DOMAIN_MATOMO" description="PLG_TJANALYTICS_PREPEND_DOMAIN_DESC_MATOMO" default="0" showon="mode_matomo:analytics"> <option value="1">JYES</option> <option value="0">JNO</option> </field>-->
+				<field name="enable_donottrack_detection_matomo" type="radio" class="btn-group" label="PLG_TJANALYTICS_ENABLE_CLIENT_DO_NOT_TRACK_DETECTION_MATOMO" description="PLG_TJANALYTICS_ENABLE_CLIENT_DO_NOT_TRACK_DETECTION_DESC_MATOMO" default="0" showon="mode_matomo:analytics">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="disable_cookies_matomo" type="radio" class="btn-group" label="PLG_TJANALYTICS_DISABLE_TRACKING_COOKIES_MATOMO" description="PLG_TJANALYTICS_DISABLE_TRACKING_COOKIES_DESC_MATOMO" default="0" showon="mode_matomo:analytics">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<!--<field name="namespace_matomo" type="text" label="PLG_ANALYTICS_TRACKING_NAME_MATOMO" description="PLG_ANALYTICS_TRACKING_NAME_MATOMO_DESC" default="" hint="eventtrack" showon="mode_matomo:analytics"/>-->
+				<field name="track_nojs_matomo" type="radio" class="btn-group" label="PLG_TJANALYTICS_TRACK_WHEN_JS_DISABLED_MATOMO" description="PLG_TJANALYTICS_TRACK_WHEN_JS_DISABLED_DESC_MATOMO" default="0" showon="mode_matomo:analytics">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<fields name="plugin" label="PLG_TJEVENTS_ADOBECONNECT_API_PARAMETER" >
+	<fieldset name="plugin" label="PLG_TJEVENTS_ADOBECONNECT_API_PARAMETER" >
+		<field name="api_username" size="35" type="text" class="required form-control" default="" label="PLG_TJEVENTS_ADOBECONNECT_USER_NAME" description="PLG_TJEVENTS_ADOBECONNECT_USER_NAME_DESC" required="true" />
+		<field name="api_password" size="35" type="password" class="required form-control" default="" label="PLG_TJEVENTS_ADOBECONNECT_API_PASSWORD_KEY" description="PLG_TJEVENTS_ADOBECONNECT_API_PASSWORD_KEY_DESC" required="true" />
+		<field name="host_url" size="35" type="text" class="required form-control" default="" label="PLG_TJEVENTS_ADOBECONNECT_API_BASE_URL" description="PLG_TJEVENTS_ADOBECONNECT_API_BASE_URL_DESC" required="true" />
+		<field name="source_sco_id" size="35" type="text" class="required form-control" default="" label="PLG_TJEVENTS_ADOBECONNECT_SELECT_LICENCE_SCO_ID" description="PLG_TJEVENTS_ADOBECONNECT_SELECT_LICENCE_SCO_ID_DESC" required="true" />
+		<field name="event_type" type="list"
+			label="PLG_TJEVENTS_ADOBECONNECT_SELECT_LICENCE_TYPE"
+			description="PLG_TJEVENTS_ADOBECONNECT_SELECT_LICENCE_TYPE_DESC"
+			class="inputbox chzn-done form-select" default="meeting">
+			<option value="seminar">PLG_TJEVENTS_ADOBECONNECT_SELECT_LICENCE_VALUE_SEMINAR</option>
+			<option value="meeting">PLG_TJEVENTS_ADOBECONNECT_SELECT_LICENCE_VALUE_MEETING</option>
+		</field>
+		<field name="minimum_time_tomark_completion"
+			type="text"
+			size="35"
+			class="validate-numeric form-control"
+			default="0"
+			label="PLG_TJEVENTS_ADOBECONNECT_API_BASE_MIN_TIME_COMPLETION"
+			description="PLG_TJEVENTS_ADOBECONNECT_API_BASE_MIN_TIME_COMPLETION_DESC"
+			hint="PLG_TJEVENTS_ADOBECONNECT_API_BASE_MIN_TIME_COMPLETION_HINT" />
+		<field name="meeting_permission" type="list"
+			label="PLG_TJEVENTS_ADOBECONNECT_MEETINGS_PERMISSION"
+			description="PLG_TJEVENTS_ADOBECONNECT_MEETINGS_PERMISSION_DESC"
+			class="inputbox chzn-done form-select" size="1" default="denied">
+			<option value="denied">PLG_TJEVENTS_ADOBECONNECT_REGISTER_ACCESS</option>
+			<option value="remove">PLG_TJEVENTS_ADOBECONNECT_GUEST_WITH_PERMISSION</option>
+			<option value="view-hidden">PLG_TJEVENTS_ADOBECONNECT_GUEST</option>
+		</field>
+	</fieldset>
+</fields>
+</form>

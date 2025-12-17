@@ -1,0 +1,15 @@
+#customFields .jticketing-wrapper .jticketing_params_container .input-mini {
+    width: inherit;
+}
+
+#customFields .jticketing-wrapper .jticketing_params_container .input-append{
+    display: inline-flex;
+}
+
+#customFields .jticketing-wrapper .jticketing_params_container input[type="text"]:not(.removeWidth){
+    width: 100%;
+}
+
+#customFields .jticketing-wrapper .jticketing_params_container .btn-toolbar{
+   margin-bottom: 5px;
+}

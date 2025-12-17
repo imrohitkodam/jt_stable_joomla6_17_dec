@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="tjevents" method="upgrade">
+	<name>plg_tjevents_zoom</name>
+	<description>PLG_TJEVENTS_ZOOM_XML_DESCRIPTION</description>
+	<author>Techjoomla</author>
+	<authorEmail>contact@techjoomla.com</authorEmail>
+	<authorUrl>https:/techjoomla.com</authorUrl>
+	<creationDate>Apr 1, 2020</creationDate>
+	<copyright>Copyright (C) 2009 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http:/www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.0.0</version>
+
+	<files>
+		<filename plugin="zoom">zoom.php</filename>
+		<filename>index.html</filename>
+		<folder>zoom</folder>
+		<folder>activity</folder>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_tjevents_zoom.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_tjevents_zoom.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="debug_integration"
+					type="radio"
+					label="PLG_TJEVENTS_ZOOM_DEBUG_FIELD_LABEL"
+					description="PLG_TJEVENTS_ZOOM_DEBUG_FIELD_DESC"
+					class="btn-group btn-group-yesno"
+					default="1"
+					filter="integer"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="log_response"
+					type="radio"
+					label="PLG_TJEVENTS_ZOOM_DEBUG_LOG_RESPONSE_FIELD_LABEL"
+					description="PLG_TJEVENTS_ZOOM_DEBUG_LOG_RESPONSE_FIELD_DESC"
+					class="btn-group btn-group-yesno"
+					default="0"
+					showon="debug_integration:1"
+					filter="integer"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="enable_downloading"
+					type="radio"
+					label="PLG_TJEVENTS_ZOOM_ENABLE_DOWNLOADING"
+					description="PLG_TJEVENTS_ZOOM_ENABLE_DOWNLOADING_DESC"
+					class="btn-group btn-group-yesno"
+					default="0"
+					filter="integer"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

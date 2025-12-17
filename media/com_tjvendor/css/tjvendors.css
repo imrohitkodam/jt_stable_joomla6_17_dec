@@ -1,0 +1,104 @@
+/* BEM Format
+ Page cover Ex: pin-cover
+ Block: 	Ex: pin
+ Element: 	Ex: pin__input
+ Modifier:	Ex: pin__input--btn */
+
+/*----TJvendor css---*/
+#tjv-wrapper .date .input-group-btn {
+width:auto;
+}
+
+#tjv-wrapper .date__field {
+min-width:100px;
+}
+
+#tjv-wrapper .search .search__icon {
+background-color:#ddd;
+padding:12px;
+}
+
+#tjv-wrapper ul.tabs li.active {
+border-bottom:2px solid #999;
+}
+
+/*--Bootstrap Overrides-- */
+#tjv-wrapper .date .icon-calendar:before {
+content:"\f073";
+font: normal normal normal 14px/1 FontAwesome;
+}
+
+#tjv-wrapper .date .input-append,#tjv-wrapper .search__field {
+display:inline-flex;
+margin-right:4px;
+}
+
+#tjv-wrapper #jform_payment_gateway_chzn,
+#tjv-wrapper .vendorForm .chzn-container{
+width:200px !important;
+}
+
+/*----Uber Template----*/
+#tjv-wrapper .vendor-report .btn{
+padding:6px 10px;
+}
+
+/*----Reusable css--*/
+#tjv-wrapper .mt-0{
+margin-top:0;
+}
+#tjv-wrapper .mt-10{
+margin-top:10px;
+}
+#tjv-wrapper .mb-15{
+margin-bottom:15px;;
+}
+#tjv-wrapper .pr-0{
+padding-right:0;
+}
+#tjv-wrapper .p-10{
+padding:10px;
+}
+.d-flex {
+display: flex;
+}
+
+/*----Media Query for Tab css--*/
+@media (max-width: 576px){
+	.vendorForm__nav {
+		white-space: nowrap;
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
+}
+
+/* Since v1.3.3*/
+.tjBs3 .vendor-report, .tjBs3 .vendorForm input {
+  height: inherit;
+}
+
+.tjBs3 .vendor-report .chzn-container-single .chzn-single {
+  height: inherit;
+}
+
+.tjBs3 .vendorForm .btn-toolbar .btn,
+.tjBs3 .vendorForm .btn-toolbar .btn-group,
+.tjBs3 .vendorForm .btn-toolbar .input-group {
+  float: unset;
+}
+
+.tjBs3.vendor-report .icon-calendar {
+    display: inline-block;
+    font: normal normal normal 14px / 1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.tjBs3.vendor-report .icon-calendar:before {
+    content: "\f073";
+}
+
+.tjBs3.vendor-report #dates, .tjBs3.vendor-report #date {
+	display: inline-block;
+}

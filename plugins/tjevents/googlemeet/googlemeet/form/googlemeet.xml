@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="plugin" label="Google meet config">
+		<fieldset name="plugin">
+			<field name="hostemail" type="text" label="PLG_TJEVENTS_GOOGLEMEET_HOST_EMAIL" description="PLG_TJEVENTS_GOOGLEMEET_HOST_EMAIL_DESC"
+				class="required form-group"
+				default=""
+				required="true"
+				>
+			</field>
+			<field
+				name="calendarid" type="text" label="PLG_TJEVENTS_GOOGLEMEET_CALENDAR_ID" description="PLG_TJEVENTS_GOOGLEMEET_CALENDAR_ID_DESC"
+				class="required form-group"
+				default=""
+				required="true"
+				>
+			</field>
+			<field
+				name="serviceaccountjson" type="text" length="200" label="PLG_TJEVENTS_GOOGLEMEET_SERVICE_ACCOUNT_JSON" description="PLG_TJEVENTS_GOOGLEMEET_SERVICE_ACCOUNT_JSON_DESC"
+				class="required form-group"
+				default=""
+				required="true"
+				>
+			</field>
+			
+		</fieldset>
+	</fields>
+</form>

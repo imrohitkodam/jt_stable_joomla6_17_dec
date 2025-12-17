@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="tjqueue" method="upgrade">
+	<name>plg_tjqueue_certificate</name>
+	<author>Techjoomla</author>
+	<creationDate>31st March 2021</creationDate>
+	<copyright>Copyright (C) 2016 - 2021 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_TJQUEUE_CERTIFICATE_XML_DESCRIPTION</description>
+
+  <files>
+		<filename plugin="certificate">certificate.php</filename>
+		<filename>index.html</filename>
+    <folder>consumers</folder>
+	</files>
+
+	<languages folder="languages">
+		<language tag="en-GB">en-GB/en-GB.plg_tjqueue_certificate.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_tjqueue_certificate.sys.ini</language>
+	</languages>
+</extension>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD plugin 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/plugin-install.dtd">
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+	<name>JLike Phoca Gallery Plugin</name>
+
+	<author>Techjoomla</author>
+    <copyright>Copyright (C) 2010 - 2023 Techjoomla. All rights reserved.</copyright>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>25th Jan 2022</creationDate>
+	<version>4.0.0</version>
+
+	<description>This plugin adds like/dislike button formatting and functionality for Phoca Gallery.</description>
+	<files>
+		<filename plugin="jlike_phocagallery">jlike_phocagallery.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB/en-GB.plg_content_jlike_phocagallery.ini</language>
+	</languages>
+    <config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="jlike_comments" type="radio" class="btn-group" label="PLG_JLIKE_PHOCA_ALLOW_COMMENT" default="0" description="PLG_JLIKE_PHOCA_ALLOW_COMMENT_DESC">
+					<option value="1">PLG_JLIKE_YES</option>
+					<option value="0">PLG_JLIKE_NO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

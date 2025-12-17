@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="finder" method="upgrade">
+	<name>plg_finder_jticketingevents</name>
+	<version>5.1.1</version>
+	<description>PLG_FINDER_JTICKETINGEVENTS_XML_DESCRIPTION</description>
+
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2009 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>28th Apr 2025</creationDate>
+	<files>
+		<filename plugin="jticketingevents">jticketingevents.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB/en-GB.plg_finder_jticketingevents.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_finder_jticketingevents.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldprefix="Joomla\Component\Finder\Administrator\Field">
+				<field
+					name="search_archived"
+					type="radio"
+					layout="joomla.form.field.radio.switcher"
+					label="PLG_FINDER_JTICKETINGEVENTS_FIELD_SEARCH_ARCHIVED_LABEL"
+					description="PLG_FINDER_JTICKETINGEVENTS_FIELD_SEARCH_ARCHIVED_DESC"
+					default="1"
+					filter="integer"
+					>
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

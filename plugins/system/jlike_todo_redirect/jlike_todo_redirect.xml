@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+	<name>plg_system_jlike_todo_redirection</name>
+	<creationDate>25th Jan 2022</creationDate>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2010 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>4.0.0</version>
+	<description>PLG_SYSTEM_JLIKE_TODO_REDIRECTION_DESC</description>
+	<files>
+		<filename plugin="jlike_todo_redirect">jlike_todo_redirect.php</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_jlike_todo_redirect.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_jlike_todo_redirect.sys.ini</language>
+	</languages>
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="todo_redirection_time"
+					type="text"
+					filter="String"
+					default="10"
+					label="PLG_SYSTEM_JLIKE_TODO_REDIRECTION_TIME_LABEL"
+					description="PLG_SYSTEM_JLIKE_TODO_REDIRECTION_TIME_DESC"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

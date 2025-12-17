@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="tjevents" method="upgrade">
+	<name>plg_tjevents_plug_tjevents_adobeconnect</name>
+	<author>Techjoomla</author>
+	<creationDate>28th Apr 2025</creationDate>
+	<version>5.1.1</version>
+	<copyright>Copyright (C) 2009 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<isapplication>true</isapplication>
+	<description>PLG_TJEVENTS_ADOBECONNECT_DESC</description>
+	<files>
+		<file plugin="plug_tjevents_adobeconnect">plug_tjevents_adobeconnect.php</file>
+		<folder>plug_tjevents_adobeconnect</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_tjevents_plug_tjevents_adobeconnect.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_tjevents_plug_tjevents_adobeconnect.ini</language>
+	</languages>
+		<config name="params">
+			<fields name="params">
+				<fieldset name="basic" label="PLG_TJEVENTS_ADOBECONNECT_API_PARAMETER" >
+					<field
+						name="debug_integration"
+						type="radio"
+						label="PLG_TJEVENTS_ADOBECONNECT_DEBUG_FIELD_LABEL"
+						description="PLG_TJEVENTS_ADOBECONNECT_DEBUG_FIELD_DESC"
+						class="btn-group btn-group-yesno"
+						default="1"
+						filter="integer"
+						>
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+					</field>
+					<field
+						name="log_response"
+						type="radio"
+						label="PLG_TJEVENTS_ADOBECONNECT_DEBUG_LOG_RESPONSE_FIELD_LABEL"
+						description="PLG_TJEVENTS_ADOBECONNECT_DEBUG_LOG_RESPONSE_FIELD_DESC"
+						class="btn-group btn-group-yesno"
+						default="0"
+						showon="debug_integration:1"
+						filter="integer"
+						>
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+					</field>
+				</fieldset>
+			</fields>
+	</config>
+</extension>

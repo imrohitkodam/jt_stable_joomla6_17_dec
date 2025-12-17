@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="tjsms" method="upgrade">
+	<name>plg_tjsms_mvaayoo</name>
+	<description>PLG_TJSMS_MVAAYOO_XML_DESCRIPTION</description>
+	<author>Techjoomla</author>
+	<authorEmail>contact@techjoomla.com</authorEmail>
+	<authorUrl>https:/techjoomla.com</authorUrl>
+	<creationDate>Jul 21, 2020</creationDate>
+	<copyright>Copyright (C) 2009 - 2020 Techjoomla. All rights reserved.</copyright>
+	<license>http:/www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.0.0</version>
+
+	<files>
+		<filename plugin="mvaayoo">mvaayoo.php</filename>
+		<filename>index.html</filename>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_tjsms_mvaayoo.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_tjsms_mvaayoo.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="username" type="text" label="PLG_TJSMS_MVAAYOO_USERNAME" description="PLG_TJSMS_MVAAYOO_USERNAME_DESC" hint="PLG_TJSMS_MVAAYOO_USERNAME_DESC" />
+				<field name="password" type="text" label="PLG_TJSMS_MVAAYOO_PASSWORD" description="PLG_TJSMS_MVAAYOO_PASSWORD_DESC" hint="PLG_TJSMS_MVAAYOO_PASSWORD_DESC" />
+				<field name="senderid" type="text" label="PLG_TJSMS_MVAAYOO_SENDERID" description="PLG_TJSMS_MVAAYOO_SENDERID_DESC" hint="PLG_TJSMS_MVAAYOO_SENDERID_DESC"/>
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

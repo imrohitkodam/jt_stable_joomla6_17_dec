@@ -1,0 +1,1502 @@
+.events__filter .active {
+  transition: all .3s
+}
+
+#jtwrap .events .events__search--clear {
+  background-color: transparent;
+  cursor: pointer;
+  right: 45px;
+  z-index: 5
+}
+
+#jtwrap .events .events__search--clear:focus {
+  outline: 0!important
+}
+
+#jtwrap .events .events__search--input {
+  border: 1px solid #014982;
+  height: 36px;
+  width: auto
+}
+
+#jtwrap .play_icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -24px;
+  margin-top: -18px;
+  width: 40px;
+}
+
+.relative {
+  position: relative!important
+}
+
+#jtwrap .pin__cover:hover {
+  border: 1px solid #014982;
+  transition: all .5s
+}
+
+#jtwrap .pin__ticket {
+  opacity: .9;
+  right: 15px;
+  top: 9px
+}
+
+#jtwrap .pin__img a {
+  height: auto
+}
+
+#jtwrap .jt-image-gallery-inner {
+  padding-top: 50%
+}
+
+#jtwrap .basicDetails__desc .mce-edit-area {
+  height: 180px;
+  overflow: auto
+}
+
+#jtwrap .gallary-filters .chzn-container {
+  min-width: 110px;
+  float: right
+}
+
+#jtwrap #couponform .input-append,
+#jtwrap .jtFilters .btn-toolbar,
+#jtwrap .jtFilters .input-append,
+#jtwrap .tab__container .field-calendar .input-append {
+  display: inline-flex!important
+}
+
+#jtwrap .icon-calendar:before {
+  content: "\f073"
+}
+
+#jtwrap .icon-plus:before {
+  content: "\f067"
+}
+
+#jtwrap .icon-search:before {
+  content: "\f002"
+}
+
+#jtwrap .icon-calendar:before:not(#jtwrap.tjBs5 .icon-calendar:before),
+#jtwrap .icon-search:before:not(#jtwrap.tjBs5 .icon-search:before) {
+  font-family: FontAwesome!important
+}
+
+#jtwrap .chzn-container .chzn-drop {
+  z-index: 9999
+}
+
+#jtwrap .eventDateTime .chzn-container,
+#jtwrap .jtFilters .js-stools-field-filter,
+#jtwrap .jtFilters .js-stools-field-filter .chzn-drop,
+#jtwrap .jtFilters .js-stools-field-filter .chzn-single,
+.filter-search .chzn-container {
+  width: 200px!important
+}
+
+#jtwrap #couponform .radio input[type=radio],
+#jtwrap .eventDateTime .radio input[type=radio] {
+  margin-left: 0
+}
+
+.tjBs3 #jtwrap .jtVideo .modal {
+  z-index: inherit
+}
+
+#jtwrap .gallary__media--li video {
+  height: 113px
+}
+
+#jtwrap .jtFilters .btn-wrapper {
+  margin: 0 5px 5px 0
+}
+
+#jtwrap .gallary__media--li iframe {
+  height: 70px
+}
+
+#jtwrap .border-tb {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd
+}
+
+.border-gray {
+  border: 1px solid #ddd
+}
+
+
+.tjBs3 #jtwrap .form_price .input-group input[type=text],
+.tjBs3 #jtwrap .subform-repeatable-group .chzn-container,
+.tjBs3 .form_available input,
+.tjBs3 .form_description textarea,
+.tjBs3 .form_inputbox input,
+.tjBs3 .form_inputbox textarea,
+.tjBs3 .form_price .input-group,
+.tjBs3 .form_title input {
+  width: 100%!important
+}
+
+#jtwrap .form_btn-group,
+#jtwrap .form_state,
+#jtwrap .jtFilters .btn-toolbar {
+  margin-bottom: 30px
+}
+
+#jtwrap .subform-repeatable-group {
+  border: 1px solid #ddd
+}
+
+.tjBs3 #jtwrap .subform-layout .btn-toolbar .btn {
+  text-shadow: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none
+}
+
+#jtwrap .input-group-addon {
+  background-color: #e6e6e6
+}
+
+#jtwrap .modal .modal-header {
+  overflow: hidden
+}
+
+#jtwrap .modal-dialog {
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 95%
+}
+
+.clear-search {
+  background: 0 0;
+  border: 0;
+  padding: 0
+}
+
+.align-items-center {
+  -webkit-box-align: center!important;
+  -webkit-align-items: center!important;
+  -ms-flex-align: center!important;
+  align-items: center!important
+}
+
+@media screen and (max-width:1024px) {
+  .jTEventPluginForm .control-group .form-group {
+      margin: 0
+  }
+}
+
+@media screen and (max-width:767px) {
+  #jtwrap .events__create {
+      text-align: center;
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      font-size: 30px;
+      height: 45px;
+      width: 45px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 99999;
+      background-color: #1b416e;
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .14), 0 2px 5px 0 rgba(0, 0, 0, .12), 0 3px 2px -2px rgba(0, 0, 0, .2)
+  }
+  #jtwrap .events__create i {
+      color: #fff;
+      line-height: 2;
+      font-size: 24px
+  }
+  #jtwrap .form-horizontal .control-group .controls {
+      margin-left: 0
+  }
+  #jtwrap .text-xs-center {
+      text-align: center
+  }
+  #jtwrap .event__separation {
+      padding: 0 6px
+  }
+  .sm-px-0 {
+      padding-left: 0!important;
+      padding-right: 0!important
+  }
+}
+
+@media (max-width:576px) {
+  .eventForm__tab {
+      white-space: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden
+  }
+  #jtwrap.tjBs3 .collapse.in {
+      display: block!important
+  }
+  #jtwrap.tjBs3 .collapse {
+      display: none!important
+  }
+}
+
+@media screen and (max-width:480px) {
+  #jtwrap .ticketBookBtn,
+  .generic-btn {
+      background: #fff;
+      bottom: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .7);
+      left: 0;
+      position: fixed;
+      text-align: center;
+      z-index: 999;
+      width: 100%
+  }
+  #jtwrap .createVenue .control-group .controls {
+      margin-left: 0
+  }
+  #jtwrap .organizer {
+      margin-bottom: 40px
+  }
+  #jtwrap .gallary__validateBtn {
+      margin-top: 35px
+  }
+  #jtwrap .jtFilters .btn-toolbar {
+      overflow: auto;
+      max-width: 330px
+  }
+}
+
+@media (max-width:768px) {
+  #jtwrap .subform-repeatable-group .chzn-container,
+  .form_available input,
+  .form_description textarea,
+  .form_inputbox input,
+  .form_inputbox textarea,
+  .form_price .input-group,
+  .form_title input {
+      width: 100%!important
+  }
+  .view-order .t3-content,
+  .xs-p-0 {
+      padding-left: 0;
+      padding-right: 0
+  }
+}
+
+#jt_video_gallery .jt_gallery_image_item {
+  position: relative;
+  margin-top: 10px
+}
+
+@media print {
+  .no-print {
+      display: none!important
+  }
+  .only-in-print {
+      display: block!important
+  }
+  a[href]:after {
+      content: none!important
+  }
+}
+
+@page {
+  size: auto;
+  margin: 0 5mm
+}
+
+.chzn-container-multi .chzn-choices li.search-field input[type=text] {
+  width: 100%!important;
+  height: 25px!important
+}
+
+.chzn-container-multi {
+  width: 80%!important
+}
+
+.jt-ticket-buttons .ui.attached.button {
+  position: relative;
+  width: 30px;
+  margin: 0;
+  color: #fff;
+  font-size: 14px;
+  color: #099e44!important;
+  background: #fff!important;
+  height: 27px;
+  border: 1px solid #099e44;
+  float: left;
+  top: -1px;
+  padding: 0;
+  text-align: center;
+  border-radius: 0
+}
+
+.jt-ticket-buttons .ticketCount {
+  position: relative;
+  width: 30px;
+  margin: 0;
+  background: #099e44!important;
+  color: #fff;
+  font-size: 14px;
+  height: 27px;
+  border: 1px solid #099e44;
+  float: left;
+  top: -1px;
+  padding: 0;
+  text-align: center;
+  border-radius: 0
+}
+
+.tabs-left {
+  border-bottom: none!important;
+  padding-top: 2px
+}
+
+.tabs-left>li {
+  float: none;
+  margin-bottom: 2px;
+  margin-right: -1px
+}
+
+#sbox-window iframe {
+  width: 100%!important
+}
+
+body.contentpane {
+  background-color: #fff
+}
+
+.contentpane.modal {
+  padding: 0
+}
+
+.contentpane .window-mainbody {
+  padding: 50!important;
+}
+
+#ticketform h3 {
+  margin-top: 10px
+}
+
+.coupon {
+  background: #ecebeb
+}
+
+.coupon input[type=checkbox] {
+  margin: 0;
+  vertical-align: middle
+}
+
+input#coupon_code {
+  width: 100px
+}
+
+.custom-fixed-bottom {
+  background-color: #f1f1f1;
+  padding: 10px 15px
+}
+
+.box-shadow {
+  box-shadow: 0 1px 10px 0 rgba(128, 128, 128, .5)
+}
+
+.r-btn {
+  width: 100%;
+  text-align: center
+}
+
+.event-info .event-title {
+  font-size: 16px
+}
+
+.event-info .event-date,
+.event-info .event-location,
+.event-info .event-title {
+  margin-bottom: 3px
+}
+
+.event-info .event-location,
+.event-info .event-title {
+  width: 95%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+
+.event-info .pin__img {
+  padding-right: 0
+}
+
+#jtwrap.event-info .pin__img a {
+  height: 150px!important
+}
+
+.attendee_form input:not([type=radio]):not([type=checkbox]),
+.user-info input {
+  width: 100%!important
+}
+
+.checkout-first-step-billing-info input:not([type=checkbox]),
+.checkout-first-step-billing-info select,
+.checkout-first-step-billing-info textarea {
+  width: 100%;
+  display: inline-block
+}
+
+.country_mobile_code select {
+  width: 100px!important;
+  display: inline-block
+}
+
+.country_mobile_code input {
+  width: calc(100% - 104px)!important
+}
+
+.user-info .btn {
+  width: 100%
+}
+
+.responsive-embed-16by9 {
+  padding-top: 56.25%
+}
+
+#jtwrap.event-info .pin__img {
+  padding-left: 0
+}
+
+#jtwrap.event-info .pin__img a {
+  height: 105px!important
+}
+
+.body-overlayed #sbox-btn-close {
+ /* top: 5px;
+  right: 5px;*/
+  z-index: 10000
+}
+
+.checkout-tab>ul {
+  margin-bottom: 0
+}
+
+.custom-new-panel .field-calendar .input-append {
+  width: 100%;
+  position: relative
+}
+
+.custom-new-panel .field-calendar .input-append>button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  padding: 5px 12px
+}
+
+.custom-new-panel .chzn-container,
+.custom-new-panel textarea {
+  width: 100%!important
+}
+
+.required-star {
+  color: red
+}
+
+.custom-new-panel .chzn-container .chzn-choices {
+  height: auto
+}
+
+.custom-radio-btn {
+  height: 38px
+}
+
+.custom-radio-style input[type=radio] {
+  top: 0
+}
+
+.custom-radio-style label {
+  border-radius: 7px;
+  padding-left: 30px;
+  padding-top: 5px!important;
+  background-color: #fff;
+  margin-top: 5px!important
+}
+
+@media (min-width:480px) {
+  .custom-radio-style input[type=radio] {
+      top: 4px
+  }
+  .custom-radio-style label {
+      border-radius: 0;
+      background-color: transparent;
+      margin-top: 5px!important
+  }
+  .r-btn {
+      width: auto
+  }
+  #jtwrap.event-info .pin__img a {
+      height: auto
+  }
+}
+
+@media (min-width:320px) {
+  .btn-fixed {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      z-index: 9;
+      padding-top: 5px;
+      left:0;
+      right:0;
+      box-shadow: inset 0 18px 20px -23px #d4d6d8;
+      -webkit-box-shadow: inset 0 18px 20px -23px #d4d6d8
+  }
+  .grey-text {
+      color: #999
+  }
+  .jticketing-checkout-steps .form-actions {
+      padding-left: 15px!important
+  }
+  .jticketing-checkout-content .form-horizontal .control-label,
+  .jticketing-checkout-content .form-horizontal .controls input {
+      width: auto
+  }
+  .checkout-first-step-billing-info textarea {
+      height: auto!important
+  }
+  #sp-main-body {
+      padding: 0!important
+  }
+  .user-info .btn {
+      width: auto!important
+  }
+  .single-ticket-detail select,
+  .single-ticket-detail>.chzn-container-single {
+      width: 100%!important
+  }
+}
+
+#jtwrap .generic-btn>button {
+  width: 100%
+}
+
+.text-muted {
+  margin-top: 15px
+}
+
+@media screen and (min-width:768px) {
+  #jtwrap .generic-btn>button {
+      width: 50%
+  }
+  .text-muted {
+      margin-top: 0
+  }
+  .collapse.dont-collapse-sm {
+      display: block;
+      height: auto!important;
+      visibility: visible
+  }
+  .btn-w-50 {
+      width: unset!important
+  }
+  #jtwrap .activityTab {
+      border-right: 1px solid #ddd
+  }
+  #jtwrap .socialSharing {
+      display: inline-flex
+  }
+  .event-info .event-title {
+      font-size: 20px
+  }
+  .event-info .event-location,
+  .event-info .event-title {
+      width: 100%;
+      overflow: visible;
+      white-space: normal
+  }
+  #jtwrap.event-info .pin__img a {
+      height: 150px!important
+  }
+  .customized-row {
+      margin-right: 0;
+      margin-left: 0
+  }
+  .btn-fixed {
+      position: static!important;
+      width: auto;
+      padding: 15px 10px!important;
+      box-shadow: none
+  }
+  .md-mx-0 {
+      margin-left: 0!important;
+      margin-right: 0!important
+  }
+}
+
+.ml-0 {
+  margin-right: 0!important
+}
+
+.mr-0 {
+  margin-left: 0!important
+}
+
+.w-100 {
+  width: 100%
+}
+
+.tjBs3 .custom-select-height {
+  height: 38px
+}
+
+.p-0 {
+  padding: 0!important
+}
+
+.custom-select-height>select {
+  height: 100%
+}
+
+.align-top {
+  vertical-align: top
+}
+
+.ml-5 {
+  margin-left: 5px!important
+}
+
+.mt-60 {
+  margin-top: 60px
+}
+
+.font-16 {
+  font-size: 16px
+}
+
+.bg-gray {
+  background-color: #f5f5f5
+}
+
+.border-bottom {
+  border-bottom: 1px solid #ddd
+}
+
+.border-top {
+  border-top: 1px solid #ddd
+}
+
+.bg-light-gray {
+  border: 1px solid #e1e1e8;
+  background-color: #f7f7f9
+}
+
+.light-gray-border {
+  border: 1px solid #e1e1e8!important
+}
+
+.overflow-hidden {
+  overflow: hidden
+}
+
+.btn-loading {
+  position: relative
+}
+
+.btn-loading:before {
+  font-family: FontAwesome;
+  content: "\f1ce";
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+  display: inline-block;
+  margin-right: 5px
+}
+
+.ticket-list .col-xxs-4 {
+  padding-left: 10px;
+  padding-right: 10px
+}
+
+.jtloader-list {
+  background: #fff;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .05), 0 5px 15px 0 rgba(0, 0, 0, .05);
+  height: 60px;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(90deg, transparent 0, #d5d5d5 50%, transparent 100%);
+  background-size: 900px 60px;
+  animation: jtlist-loader-animation .9s infinite
+}
+
+@keyframes jtlist-loader-animation {
+  from {
+      background-position: 0 0
+  }
+  to {
+      background-position: 100% 0
+  }
+}
+
+.jtlistSkeletonLoader {
+  background-color: #eef2f6;
+  -webkit-transition: background-color .5s ease-out 1s;
+  -moz-transition: background-color .5s ease-out 1s;
+  -o-transition: background-color .5s ease-out 1s;
+  transition: background-color .5s ease-out 1s;
+  position: relative;
+  min-height: 430px
+}
+
+.isloading {
+  background-color: #eef2f6;
+  z-index: 5;
+  opacity: .6;
+  -webkit-transition: background-color .5s ease-out 1s;
+  -moz-transition: background-color .5s ease-out 1s;
+  -o-transition: background-color .5s ease-out 1s;
+  transition: background-color .5s ease-out 1s;
+  pointer-events: none
+}
+
+.isloading:before {
+  font-family: FontAwesome;
+  content: "\f110";
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  font-size: 40px;
+  animation: fa-spin 2s infinite linear;
+  transform: translate(-50%, -50%);
+  text-align: center
+}
+
+.bill-to-details span {
+  display: block
+}
+
+#sbox-window {
+  width: 100%!important;
+  left: 0!important;
+  top: 0!important;
+  position: fixed;
+  padding: 0
+}
+
+#sbox-window #sbox-content iframe {
+  height: 100%!important
+}
+
+.mt-0 {
+  margin-top: 0!important
+}
+
+.w-150 {
+  width: 150px!important
+}
+
+.mr-5 {
+  margin-right: 5px!important
+}
+
+.custom-new-panel .chzn-container .chzn-choices {
+  height: auto
+}
+
+@media (min-width:480px) {
+  #sbox-window {
+      top: 50%!important;
+      left: 50%!important;
+      width: 65%!important;
+      transform: translate(-50%, -50%)!important
+  }
+  .btn-fixed {
+      position: fixed;
+      bottom: 0;
+      padding: 8px
+  }
+}
+
+.nav-tabs>li.active>a {
+  background: 0 0!important;
+  border: none!important;
+  border-bottom: 2px solid #8c0!important
+}
+
+.t3-header-wrap {
+  z-index: 100
+}
+
+.tjBs3 #jtwrap .event_details_form .chzn-container,
+.tjBs3 .event_details_form .input-append,
+.tjBs3 .event_details_form input:not([type=radio], [type=checkbox]),
+.tjBs3 .event_details_form select,
+.event_details_form textarea {
+  width: 100%!important
+}
+
+.tjBs3 #venueform .chzn-container,
+.tjBs3 #venueform .input-append,
+.tjBs3 #venueform input:not([type=radio], [type=checkbox]),
+.tjBs3 #venueform select,
+#venueform textarea {
+  width: 90%!important
+}
+
+.tjBs3 #couponform .chzn-container,
+.tjBs3 #couponform .input-append,
+.tjBs3 #couponform input:not([type=radio], [type=checkbox]),
+.tjBs3 #couponform select,
+#couponform textarea {
+  width: 100%!important
+}
+
+.event_details_form input[type=checkbox] {
+  width: unset!important
+}
+
+.align-text-top {
+  vertical-align: text-top
+}
+
+.form-horizontal .control-group .controls:not(.form-horizontal.sendEmailtoAtttendeeForm .control-group .controls):not(.form-horizontal.sendEmailtoWaitingListForm .control-group .controls):not(.tjBs3 .form-horizontal.venueForm .control-group .controls) {
+  margin-left: 70px
+}
+
+.custom-create-event .chzn-container .chzn-single {
+  line-height: 36px;
+  padding: 0 12px
+}
+
+.jticketing-checkout-steps #jticketing-payHtmlDiv {
+  padding: 10px
+}
+
+.eventDetails {
+  display: flex;
+  flex-direction: column;
+  width: 100%
+}
+
+.eventDetails-chart {
+  width: 100%;
+  position: relative;
+  background: #fff
+}
+
+.eventDetails-banner {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
+  padding-top: 50%
+}
+
+.eventDetails-meta {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  text-align: center
+}
+
+.eventDetails-socialSharing {
+  display: flex;
+  align-items: center
+}
+
+.eventDetails-venue {
+  text-align: center
+}
+
+.pt-responsive {
+  height: 100%
+}
+
+@media screen and (min-width:360px) {
+  .pt-responsive {
+      padding-top: 56.25%
+  }
+}
+
+@media screen and (min-width:768px) {
+  .eventDetails {
+      flex-direction: row;
+      background-color: #eee
+  }
+  .eventDetails-chart {
+      width: 66.67%;
+      padding: 15px
+  }
+  .eventDetails-banner {
+      width: 66.67%;
+      padding-top: 35%
+  }
+  .eventDetails-meta {
+      width: 33.33%;
+      padding: 15px 20px;
+      text-align: left
+  }
+  .eventDetails-body {
+      margin-top: 30px
+  }
+  .eventDetails-metaBlocks {
+      padding: 15px 0 15px 50px
+  }
+  .eventDetails-metaBlocks .fa {
+      top: 20px;
+      left: 20px;
+      font-size: 1.2em
+  }
+  .eventDetails-venue {
+      text-align: left
+  }
+  .searchinputBox{
+      padding-left: 0;
+  }
+}
+
+.divider {
+  margin: 10px 0 15px 0
+}
+
+.custom-form-elements input[type=text].events__search--input {
+  width: 100%;
+  padding-right: 35px;
+}
+
+.custom-form-elements .chzn-single,
+.custom-form-elements select {
+  height: 38px!important
+}
+
+.daterangepicker {
+  z-index: 99999
+}
+.events__options{
+    margin-bottom:0;
+}
+.events__options li{
+    border-left:1px solid #ddd;
+    padding: 0 7px;;
+}
+.events__options li:first-child,
+.events__options li:last-child,
+.event__separation
+{
+  border-left:0 !important;
+}
+
+.searchinputBox{
+    position: relative;
+    padding-left: 0;
+}
+.sort-result .chzn-container-single{
+  width: 110px !important;
+}
+.searchinputBox .events__search--buttons{
+  position: absolute;
+  right: -7px;
+  top: 1px;
+}
+
+.tjBs5 .searchinputBox .events__search--buttons{
+  position: absolute;
+  right: 0px;
+  top: 1px;
+}
+
+.searchinputBox .events__search--buttons .btn{
+  color:#555555;
+}
+.tjBs3 .col-10 {
+  width: 100%!important
+}
+.height-auto{
+  height: auto !important;
+  line-height: normal !important;
+}
+.min-width-105 {
+  min-width: 105px
+}
+.btn-transparent {
+  background-color: transparent;
+  border:0;
+}
+
+.btn-transparent:focus,
+.btn-transparent:hover {
+  box-shadow: none;
+  outline: 0;
+  background-color: transparent;
+}
+
+.jt-btn-clear {
+  padding: 1px 10px;
+  position: absolute;
+  outline: 0;
+  line-height: 22px!important;
+  height: 28px!important
+}
+
+.jt-btn-clear:focus,
+.jt-btn-clear:hover {
+  box-shadow: none;
+  outline: 0;
+}
+
+/* New File Upload */
+.csv-import-user-select .controls{
+  margin-left: 0 !important;
+}
+.fileupload-new {
+  margin-right: 10px;
+  position: relative;
+}
+.fileupload-new .btn-file {
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.fileupload-new .uneditable-input {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+  cursor: text;
+  color: #4a4545;
+}
+.fileupload-new input {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+  margin: 0;
+  opacity: 0;
+  font-size: 23px;
+  direction: ltr;
+  cursor: pointer;
+}
+.fileupload-new .btn-file > input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  cursor: pointer;
+  border: solid transparent;
+  border-width: 0 0 100px 200px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -moz-transform: translate(-300px, 0) scale(4);
+  direction: ltr;
+}
+.fileupload-new .btn {
+  vertical-align: middle;
+}
+
+.progress-line, .progress-line:before {
+  height: 5px;
+  width: 100%;
+  margin: 0;
+}
+.progress-line {
+  background-color: #b3d4fc;
+  display: -webkit-flex;
+  display: flex;
+}
+.progress-line:before {
+  background-color: #3f51b5;
+  content: '';
+  -webkit-animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Mobile Filter options */
+.events__mobilefilter--buttons .btn{
+  margin: 0 4px;
+  padding: 7px 3px;
+  font-size: 17px;
+}
+
+/* Attendees stricker */
+.stricker-name{
+  font-size: 46px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 46px;
+}
+.stricker-extra-info{
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 28px;
+  word-break: break-all;
+}
+.jt-search-tools .js-stools-container-bar input{
+  display: inline-block;
+}
+.jt-search-tools .js-stools-container-bar{
+  float: left !important;
+}
+.jt-search-tools .js-stools-container-list {
+  float: right !important;
+}
+/* Equal height cols */
+.equal-height-col {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+.equal-height-col > .equal-items {
+  display: flex;
+  flex-direction: column;
+}
+/* To fix move attendee popup content overlap */
+.z-index-9999{
+        z-index:9999;
+}
+.move-attendee .chzn-container{
+        width:100% !important;
+}
+/*To fix dropdown width of chozen for move attendee table */
+.jtFilters.attendees .chzn-container{
+    width: 75px !important;
+}
+
+/*To fix com_fields design issue on frontend event edit view*/
+.jt-event-frontend-edit .tab-content .tab-pane
+{
+    padding-top: 15px;
+}
+#es .jticketing-wrapper .field-calendar input, .displayinline{
+  display: inline !important;
+}
+#es .jticketing-wrapper .field-calendar .input-append .btn{
+  background-color: #eeeeee;
+  height: 38px !important;
+}
+
+#jtwrap #venueform .createVenue .radio input[type=radio]{
+    margin-left: 5px;
+}
+
+/* To fix attendee popup layout of searchtools */
+#window-mainbody .jticketing-wrapper .js-stools-container-bar .btn-wrapper{
+  margin-bottom: 1px!important;
+  margin: 0 45px 0 0;
+}
+#window-mainbody .jticketing-wrapper .js-stools .btn-wrapper #filter_search{
+  display: inline-block;
+}
+
+/*Hide the prev button of choose payment gateway view */
+#jticketing-payHtmlDiv #btnWizardPrev1{
+    display:none;
+}
+
+/* To fix calendar button alignment of ticket type */
+#community-wrap .jticketing-wrapper .field-calendar input:not(.removeWidthAndDisplayinline){
+  display: inline !important;
+  width: 314px;
+}
+
+/* To fix calendar button alignment of ticket type */
+#community-wrap .jticketing-wrapper .field-calendar .btn-secondary{
+  height: 38px;
+}
+
+/* To fix the mis- alignment between toolbar and fields of ticket type*/
+#community-wrap .jticketing-wrapper .btn-toolbar{
+  margin-bottom: 20px;
+}
+
+/* For access note on Tickettype form at Frontend*/
+.subform-repeatable-group .form-group:last-child:not(body.com_jticketing.admin #attendeefields .form-group){
+  margin-left: 0px;
+  margin-right: 20px;
+}
+
+/* For access note on Tickettype form at Backend*/
+#tickettypes .subform-repeatable-group .control-group:last-child{
+  margin-left: -170px;
+}
+.tjBs3 #searchFilterInputBox {
+  margin-left: -16px;
+}
+#addToGoogleModal:not(.tjBs5 #addToGoogleModal) {
+    top: 10%;
+    left: 50%;
+}
+@media (max-width: 979px) {
+  .invoice {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+  }
+}
+
+.hide {
+  display: none !important;
+}
+
+.tjBs5 th {
+  white-space: initial !important;
+}
+
+.gallary__media--li {
+  list-style: none;
+  vertical-align: middle;
+  display: inline-block;
+  float: none;
+}
+
+#provider_html .control-label {
+  margin-right: 15px;
+}
+
+.admin div.modal.fade.in{
+  display: block !important;
+}
+
+.tjBs3 .modal.in {
+  display:flex !important;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tjBs3 .modal .modal-header {
+  display: none;
+}
+
+.tjBs5 joomla-toolbar-button {
+  margin-right: 10px;
+}
+
+.tjBs5 .js-stools-container-bar {
+  padding: 0px !important;
+}
+
+.tjBs5 .chosen-single {
+  width: -webkit-fill-available;
+}
+
+.tjBs3.custom-create-event .field-calendar .input-append {
+  display: inline-flex !important;
+}
+
+.tjBs3.custom-create-event #tickettypes .chzn-container {
+  width: 100% !important;
+}
+
+@media screen and (max-width:480px) {
+  .tjBs3 iframe {
+    width: 100% !important;
+  }
+}
+#ajax_loader {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    overflow: hidden;
+    z-index: 10000;
+    display: none;
+    background-color: rgb(255, 255, 255);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 200px;
+    }
+
+.jticketing-wrapper div.div-mt-2
+{
+  margin-top: 0.5rem !important;
+}
+
+.jticketing-wrapper div.div-mt-3
+{
+  margin-top: 1rem !important;
+}
+
+.readMore.displayFullText{
+  padding: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+
+.categories-list .jt-category--image {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
+}
+
+/*This CSS code is defining the styles for a container that holds text*/
+.categories-list .category-image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.categories-list .jt-category--image {
+    transition: 0.5s all ease-in-out;
+}
+
+.categories-list .jt-category--image:hover img {
+    transform: scale(1.5);
+}
+
+.categories-list .jt-category--image {
+    overflow: hidden;
+}
+
+.categories-list .jt-category--image img {
+    height: 200px !important;
+}
+
+/* Mirella - mangesh - start*/
+.jt-category-card .jt-category--link .jt-category--image {
+    border-radius: 15px;
+}
+
+.jt-category-card .jt-category--link .jt-category--image img {
+    width: 100%;
+    border: 1px solid #111;
+    border-radius: 15px;
+    height: 80px;
+}
+
+@media only screen and (min-width: 768px) {
+    .jt-category-card .jt-category--link .jt-category--image img {
+        height: auto;
+    }
+}
+
+.jt-category-card .jt-category--link .jt-category--title {
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: 7px 0px;
+    font-weight: 400;
+}
+
+@media only screen and (min-width: 768px) {
+    .jt-category-card .jt-category--link .jt-category--title {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .jt-category-card {
+        margin-bottom: 20px;
+    }
+}
+
+.jt-category-card .jt-category--link .jt-category--image {
+    border-radius: 15px;
+}
+
+.jt-category-card .jt-category--link .jt-category--image img {
+    width: 100%;
+    border: 1px solid #111;
+    border-radius: 15px;
+    height: 80px;
+}
+
+@media only screen and (min-width: 768px) {
+    .jt-category-card .jt-category--link .jt-category--image img {
+        height: auto;
+    }
+}
+
+.jt-category-card .jt-category--link .jt-category--title {
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: 7px 0px;
+    font-weight: 400;
+}
+
+@media only screen and (min-width: 768px) {
+    .jt-category-card .jt-category--link .jt-category--title {
+        font-size: 20px;
+    }
+}
+
+.tjBs5.jt-admin-dashboard .calendar-container {
+  min-width: 260px !important;
+}
+
+.tjBs5.jt-admin-dashboard .input-group {
+  display: flex!important;
+  flex-wrap: nowrap!important;
+}
+
+/*Backported "list group" from bootstrap 3 by adding namespace "tj-"*/
+.tj-list-group {min-width:50px; margin-bottom: 20px; padding-left: 0;}
+.tj-list-group-item {position: relative; display: block; padding: 10px 15px; margin-bottom: -1px; background-color: #ffffff; border: 1px solid #dddddd;}
+.tj-list-group-item {position: relative; display: block; padding: 10px 15px; margin-bottom: -1px; background-color: #ffffff; border: 1px solid #dddddd;}
+.tj-list-group-item:first-child {border-top-right-radius: 4px; border-top-left-radius: 4px;}
+.tj-list-group-item:last-child {margin-bottom: 0; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px;}
+.tj-list-group-item.active, .tj-list-group-item.active:hover, .tj-list-group-item.active:focus {z-index: 2; color: #ffffff; background-color: #0088cc; border-color: #0088cc;}
+.tj-list-group-item > .badge {float: right;}
+a.tj-list-group-item {color: #555555;}
+a.tj-list-group-item.active > .badge, .nav-pills > .active > a > .badge {color: #0088cc; background-color: #ffffff; text-shadow:0 0 0; /*^ manoj*/}
+a.tj-list-group-item:hover, a.tj-list-group-item:focus {text-decoration: none; color: #555555; background-color: #f5f5f5;}
+/*+ manoj - end*/
+
+#jtwrap.tjBs5 .custom-form-elements .chosen-container.chosen-container-single, #jtwrap .tjBs5.all-orders-page .chosen-container.chosen-container-single {
+  width: 100% !important;
+}
+
+.jticketing-menu-module .tj-list-group-item a {
+  text-decoration: none;
+}
+
+.jticketing-menu-module .tj-list-group-item a.active {
+  text-decoration: underline;
+}
+
+#jtwrap .js-stools-container-filters {
+  display: none;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+#jtwrap .js-stools-container-filters-visible {
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  padding: 10px;
+  background-color: white;
+}
+#jtwrap .js-stools-container-filters > * {
+  margin: 4px 0;
+  -webkit-margin-end: 8px;
+          margin-inline-end: 8px;
+}
+
+#jtwrap.couponsListing [role="tooltip"]:not(.show)[id^="id-skip-"], [role="tooltip"]:not(.show)[id^="cbunpublish"], #jtwrap.couponsListing [role="tooltip"]:not(.show)[id^="id-skip-"], [role="tooltip"]:not(.show)[id^="cbpublish"] {
+  right: auto;
+}
+
+@media (min-width: 768px) {
+  #ordersList .payment-order-status {
+    width: -webkit-fill-available !important;
+  }
+}
+
+#jform_venue_chosen{
+  width: 100% !important;
+}

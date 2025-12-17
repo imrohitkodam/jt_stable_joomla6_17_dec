@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="jticketing" method="upgrade">
+    <name>PLG_JTICKETING_JTEVENTREMINDER</name>
+    <version>1.0.0</version>
+    <description>PLG_JTICKETING_JTEVENTREMINDER_DESC</description>
+    <files>
+        <filename plugin="jteventreminder">jteventreminder.php</filename>
+    </files>
+    <languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_jticketing_jteventreminder.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_jticketing_jteventreminder.sys.ini</language>
+	</languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="frequency"
+                    type="radio"
+                    label="PLG_JTICKETING_JTEVENTREMINDER_LBL_REMINDER_FREQUENCY"
+                    description="PLG_JTICKETING_JTEVENTREMINDER_DESC_REMINDER_FREQUENCY"
+                    class="inputbox radio btn-group btn-group-yesno"
+                    size="1"
+                    default="0">
+                    <option value="0">PLG_JTICKETING_JTEVENTREMINDER_LBL_REMINDER_DAYS</option>
+                    <option value="1">PLG_JTICKETING_JTEVENTREMINDER_LBL_REMINDER_MINUTES</option>
+                </field>
+                <field name="days_before" type="number" label="PLG_JTICKETING_JTEVENTREMINDER_LBL_REMINDER_DAYS_BEFORE" description="PLG_JTICKETING_JTEVENTREMINDER_DESC_REMINDER_DAYS_BEFORE" class="validate-positive-number" default="1" filter="int" showon="frequency:0"/>
+                <field name="minutes_before" type="number" label="PLG_JTICKETING_JTEVENTREMINDER_LBL_REMINDER_MINUTES_BEFORE" description="PLG_JTICKETING_JTEVENTREMINDER_DESC_REMINDER_MINUTES_BEFORE" class="validate-positive-number"  default="0" filter="int" showon="frequency:1"/>
+                <field name="notetext" type="note" description="PLG_JTICKETING_JTEVENTREMINDER_DESC_REMINDER_NOTE" showon="frequency:1"/>
+
+                <field name="email_subject" type="text" label="Email Subject" description="Subject for reminder email."/>
+                <field name="email_template" type="editor" label="Email Template" filter="safehtml" description="Template for reminder email."/>
+                <field name="tagstouse" type="note" label="Tags to use" description="COM_PLUGIN_TAG_INFO"/>
+                
+            </fieldset>
+            <fields name="jteventreminder">
+                <field
+                    name="create_reminder"
+                    default="1"
+                    type="radio"
+                    class="btn-group"
+                    label="PLG_JTICKETING_JTEVENTREMINDER_LBL_JT_REMINDER"
+                    description="PLG_JTICKETING_JTEVENTREMINDER_DESC_JT_REMINDER">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fields>
+
+        </fields>
+    </config>
+</extension>

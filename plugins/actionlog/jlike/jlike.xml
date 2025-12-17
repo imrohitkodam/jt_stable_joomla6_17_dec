@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.4" type="plugin" group="actionlog" method="upgrade">
+	<name>plg_actionlog_jlike</name>
+	<author>Techjoomla</author>
+	<creationDate>8th Dec 2023</creationDate>
+	<copyright>Copyright (C) 2010 - 2023 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>4.0.1</version>
+	<description>PLG_ACTIONLOG_JLIKE_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="jlike">jlike.php</filename>
+		<file>index.html</file>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_actionlog_jlike.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_actionlog_jlike.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="logActionForCommentSave" type="radio" label="PLG_ACTIONLOG_JLIKE_LOG_ACTION_COMMENT_SAVE" description="PLG_ACTIONLOG_JLIKE_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForCommentDelete" type="radio" label="PLG_ACTIONLOG_JLIKE_LOG_ACTION_COMMENT_DELETE" description="PLG_ACTIONLOG_JLIKE_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="logActionForTodoSave" type="radio" label="PLG_ACTIONLOG_JLIKE_LOG_ACTION_TODO_SAVE" description="PLG_ACTIONLOG_JLIKE_LOG_ACTION_COMMON_DESC" default="0" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForTodoDelete" type="radio" label="PLG_ACTIONLOG_JLIKE_LOG_ACTION_TODO_DELETE" description="PLG_ACTIONLOG_JLIKE_LOG_ACTION_COMMON_DESC" default="0" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="logActionForLikeDislikeSave" type="radio" label="PLG_ACTIONLOG_JLIKE_LOG_ACTION_LIKE_DISLIKE_SAVE" description="PLG_ACTIONLOG_JLIKE_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="logActionForLikeUnlikeCommentSave" type="radio" label="PLG_ACTIONLOG_JLIKE_LOG_ACTION_LIKE_UNLIKE_COMMENT_SAVE" description="PLG_ACTIONLOG_JLIKE_LOG_ACTION_COMMON_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

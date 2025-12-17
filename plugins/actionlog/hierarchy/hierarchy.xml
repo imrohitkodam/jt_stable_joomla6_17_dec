@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="actionlog" method="upgrade">
+	<name>plg_actionlog_hierarchy</name>
+	<version>2.0.0</version>
+	<creationDate>29th Apr 2022</creationDate>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2016 - 2022 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>PLG_ACTIONLOG_HIERARCHY_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="hierarchy">hierarchy.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_actionlog_hierarchy.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_actionlog_hierarchy.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="logActionForAssigningManager" type="radio" label="PLG_ACTIONLOG_HIERARCHY_LOG_ACTION_ASSIGN_MANAGER_LBL" description="PLG_ACTIONLOG_HIERARCHY_LOG_ACTION_ASSIGN_MANAGER_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForRemoveManager" type="radio" label="PLG_ACTIONLOG_HIERARCHY_LOG_ACTION_REMOVE_MANAGER_LBL" description="PLG_ACTIONLOG_HIERARCHY_LOG_ACTION_REMOVE_MANAGER_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

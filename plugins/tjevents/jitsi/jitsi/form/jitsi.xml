@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<fields name="plugin">
+	<fieldset name="plugin">
+		<field 
+			name="event_type" 
+			type="hidden" 
+			default="meeting" />
+		<field 
+			name="domain" 
+			type="url"
+			size="35" 
+			class="required form-group" 
+			default="https://meet.jit.si" 
+			label="PLG_TJEVENTS_JITSI_DOMAIN" 
+			description="PLG_TJEVENTS_JITSI_DOMAIN_DESC" 
+			required="true"
+			/>
+		<field 
+			name="enablejwt" 
+			type="radio"
+			class="required form-group" 
+			default="0" 
+			label="PLG_TJEVENTS_JITSI_ENABLE_JWT" 
+			description="PLG_TJEVENTS_JITSI_ENABLE_JWT_DESC" 
+			required="true"
+			>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+			</field>
+		<field 
+			name="apikey"
+			type="text" 
+			class="form-group" 
+			default=""
+			showon="enablejwt:1" 
+			label="PLG_TJEVENTS_JITSI_API_KEY" 
+			description="PLG_TJEVENTS_JITSI_API_KEY_DESC"
+			/>
+
+		<field 
+			name="apisecret"
+			type="text" 
+			showon="enablejwt:1" 
+			class="form-group" 
+			default="" 
+			label="PLG_TJEVENTS_JITSI_API_SECRET" 
+			description="PLG_TJEVENTS_JITSI_API_SECRET_DESC"
+			/>
+
+		<field 
+			name="toolbar"
+			type="textarea" 
+			class="required form-group" 
+			default="microphone,camera,hangup,desktop,fullscreen,profile,chat,recording,settings,raisehand,videoquality,tileview" 
+			label="PLG_TJEVENTS_JITSI_TOOLBAR" 
+			description="PLG_TJEVENTS_JITSI_TOOLBAR_DESC"
+			row="3" 
+			required="true" />
+
+		<field 
+			name="setting"
+			type="textarea" 
+			class="required form-group" 
+			default="devices,language,moderator,profile,calendar" 
+			label="PLG_TJEVENTS_JITSI_SETTING" 
+			description="PLG_TJEVENTS_JITSI_SETTING_DESC"
+			row="3" 
+			required="true" />
+
+		<field 
+			name="start_with_audio" 
+			type="radio"
+			class="required form-group" 
+			default="0" 
+			label="PLG_TJEVENTS_JITSI_START_WITH_AUDIO" 
+			description="PLG_TJEVENTS_JITSI_START_WITH_AUDIO_DESC" 
+			required="true"
+			>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+			</field>
+
+		<field 
+			name="disable_video_quality_indicator" 
+			type="radio"
+			class="required form-group" 
+			default="0" 
+			label="PLG_TJEVENTS_JITSI_DISABLE_VIDEO_QALITY_INDICATOR" 
+			description="PLG_TJEVENTS_JITSI_DISABLE_VIDEO_QALITY_INDICATOR_DESC" 
+			required="true"
+			>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+			</field>
+			
+		<field 
+			name="width" 
+			type="text"
+			size="35" 
+			class="required form-group" 
+			default="100" 
+			label="PLG_TJEVENTS_JITSI_WIDTH" 
+			description="PLG_TJEVENTS_JITSI_WIDTH_DESC" 
+			required="true"
+			/>
+
+		<field 
+			name="height" 
+			type="text"
+			size="35" 
+			class="required form-group" 
+			default="700" 
+			label="PLG_TJEVENTS_JITSI_HEIGHT" 
+			description="PLG_TJEVENTS_JITSI_HEIGHT_DESC" 
+			required="true"
+			/>
+
+	</fieldset>
+</fields>
+</form>

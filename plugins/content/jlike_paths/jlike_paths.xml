@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD plugin 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/plugin-install.dtd">
+<extension version="1.0" type="plugin" group="content" method="upgrade">
+	<name>JLike Paths Plugin</name>
+	<author>Techjoomla</author>
+    <copyright>Copyright (C) 2010 - 2023 Techjoomla. All rights reserved.</copyright>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <creationDate>25th Jan 2022</creationDate>
+	<version>4.0.0</version>
+	<description>This plugin finds and replaces path description tags based on path statuses.</description>
+	<files>
+		<filename plugin="jlike_paths">jlike_paths.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB/en-GB.plg_content_jlike_paths.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="replace_path_description_tags" class="btn-group" type="radio" default="1" label="PLG_REPLACE_PATH_DESCRIPTION_TAGS_LABEL" description="PLG_REPLACE_PATH_DESCRIPTION_TAGS_DESC">
+					<option value="1">PLG_JLIKE_YES</option>
+					<option value="0">PLG_JLIKE_NO</option>
+				</field>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

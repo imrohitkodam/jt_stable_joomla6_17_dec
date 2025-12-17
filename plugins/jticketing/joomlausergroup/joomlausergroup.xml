@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="plugin" version="3.7.0" group="jticketing"
+	method="upgrade">
+	<name>plg_jticketing_joomlausergroup</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>(C)Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>27 November 2020</creationDate>
+	<version>1.0.0</version>
+	<description>PLG_JTICKETING_JOOMLAUSERGROUP_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="joomlausergroup">joomlausergroup.php</filename>
+		<folder>language</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_jticketing_joomlausergroup.ini</language>
+		<language tag="en-GB">en-GB.plg_jticketing_joomlausergroup.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="joomlausergroup">
+			<field type="spacer" class="tjintegration-label" label="PLG_JTICKETING_JOOMLAUSERGROUP" />
+			<field name="onAfterEnrolUserGroup" type="usergroup"
+				label="PLG_ONAFTEREVENTENROLL_JOOMLAUSERGROUP_CONFIG_FIELD_LABEL"
+				description="PLG_ONAFTEREVENTENROLL_JOOMLAUSERGROUP_CONFIG_FIELD_LABEL"
+				multiple="true" />
+		</fields>
+	</config>
+</extension>

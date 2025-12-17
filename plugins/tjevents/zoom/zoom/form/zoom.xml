@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+<fields name="plugin" label="COM_TJFIELDS_FIELD_BASIC_LABEL">
+	<fieldset name="plugin">
+		<field name="api_key" size="35" type="text" class="form-control" readonly="true" default="" label="PLG_TJEVENTS_ZOOM_API_KEY" description="PLG_TJEVENTS_ZOOM_API_KEY_DESC"/>
+		<field name="api_secret" size="35" type="password" class="form-control" readonly="true" default="" label="PLG_TJEVENTS_ZOOM_API_SECRET" description="PLG_TJEVENTS_ZOOM_API_SECRET_DESC"/>
+		<field name="host_id" size="35" type="text" class="required form-control" default="" label="PLG_TJEVENTS_ZOOM_HOST_ID" description="PLG_TJEVENTS_ZOOM_HOST_ID_DESC" required="true"/>
+		<field name="account_id" size="35" type="text" class="required form-control" default="" label="PLG_TJEVENTS_ZOOM_ACCOUNT_ID" description="PLG_TJEVENTS_ZOOM_ACCOUNT_ID_DESC" required="true" />
+		<field name="client_id" size="35" type="text" class="required form-control" default="" label="PLG_TJEVENTS_ZOOM_CLIENT_ID" description="PLG_TJEVENTS_ZOOM_CLIENT_ID_DESC" required="true" />
+		<field name="client_secret" size="35" type="password" class="required form-control" default="" label="PLG_TJEVENTS_ZOOM_CLIENT_SECRET" description="PLG_TJEVENTS_ZOOM_CLIENT_SECRET_DESC" required="true" />
+		<field name="viewmeeting"
+			type="radio"
+			label="PLG_TJEVENTS_MEETING_VIEW"
+			description="PLG_TJEVENTS_MEETING_VIEW"
+			class="radio"
+			size="1"
+			filter="int"
+			default="1">
+			<option value="1">PLG_TJEVENTS_MEETING_INPAGE_VIEW</option>
+			<option value="0">PLG_TJEVENTS_MEETING_EXTERNAL_VIEW</option>
+		</field>
+
+		<field name="sdk_key" size="35" type="text" class="form-control" default="" label="PLG_TJEVENTS_ZOOM_SDK_KEY" description="PLG_TJEVENTS_ZOOM_SDK_KEY_DESC" required="viewmeeting:1" showon="viewmeeting:1"/>
+		<field name="sdk_secret" size="35" type="password form-control" default="" label="PLG_TJEVENTS_ZOOM_SDK_SECRET" description="PLG_TJEVENTS_ZOOM_SDK_SECRET_DESC" required="viewmeeting:1" showon="viewmeeting:1"/>
+		<field name="event_type" type="list"
+			label="PLG_TJEVENTS_ZOOM_SELECT_LICENCE_TYPE"
+			description="PLG_TJEVENTS_ZOOM_SELECT_LICENCE_TYPE_DESC"
+			class="inputbox chzn-done form-control" default="meeting">
+			<option value="webinar">PLG_TJEVENTS_ZOOM_SELECT_LICENCE_VALUE_SEMINAR</option>
+			<option value="meeting">PLG_TJEVENTS_ZOOM_SELECT_LICENCE_VALUE_MEETING</option>
+		</field>
+		<field name="approval_type" type="list"
+			label="PLG_TJEVENTS_ZOOM_SELECT_ATTENDEE_APPROVAL_TYPE"
+			description="PLG_TJEVENTS_ZOOM_SELECT_ATTENDEE_APPROVAL_TYPE_DESC"
+			class="inputbox chzn-done form-select" default="0">
+			<option value="1">PLG_TJEVENTS_ZOOM_SELECT_ATTENDEE_APPROVAL_VALUE_MANNUAL</option>
+			<option value="0">PLG_TJEVENTS_ZOOM_SELECT_ATTENDEE_APPROVAL_VALUE_AUTO</option>
+		</field>
+	</fieldset>
+</fields>
+</form>

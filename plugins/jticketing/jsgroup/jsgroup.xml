@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<extension type="plugin" version="3.7.0" group="jticketing"
+	method="upgrade">
+	<name>plg_jticketing_jsgroup</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>(C)Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>27 November 2020</creationDate>
+	<version>1.0.0</version>
+	<description>PLG_JTICKETING_JSGROUP_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="jsgroup">jsgroup.php</filename>
+		<folder>language</folder>
+		<folder>elements</folder>
+		<filename>jsgroup.js</filename>
+		<folder>models</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_jticketing_jsgroup.ini</language>
+		<language tag="en-GB">en-GB.plg_jticketing_jsgroup.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="jsgroup" addfieldpath="/plugins/jticketing/jsgroup/models/fields/">
+			<field type="spacer" class="tjintegration-label" label="PLG_JTICKETING_JSGROUP" />
+		 	<field name="eventgroup" class="btn-group cgroup radio-inline" type="radio" default="select" description="COM_JTICKETING_SELECT_JS_GROUP_FOR_EVENT_DESC" label="COM_JTICKETING_SELECT_JS_GROUP_FOR_EVENT">
+				<option value="select">COM_JTICKETING_CONFIG_SELECT_JS_GROUP</option>
+				<option value="create">COM_JTICKETING_CONFIG_CREATE_JS_GROUP</option>
+			</field>
+			<field
+			name="onAfterEnrollJsGroups" 
+			type="jomsocialgrouplist" 
+			label="PLG_JTICKETING_JSGROUP_AFTERENROLL_LABEL"
+			description="PLG_JTICKETING_JSGROUP_AFTERENROLL_DESC" 
+			multiple="true">
+			</field>
+			<field name="groupCategory" type="groupcategories" label="COM_JTICKETING_SELECT_GROUP_CAT" description="COM_JTICKETING_SELECT_GROUP_CAT_DESC" />
+		</fields>
+	</config>
+</extension>

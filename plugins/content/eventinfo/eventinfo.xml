@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content" method="upgrade">
+	<name>plg_content_eventinfo</name>
+	<author>Techjoomla</author>
+	<creationDate>11th Sept 2020</creationDate>
+	<copyright>Copyright (C) 2009 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_CONTENT_EVENTINFO_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="eventinfo">eventinfo.php</filename>
+		<folder>layouts</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_content_eventinfo.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_content_eventinfo.sys.ini</language>
+	</languages>
+</extension>
