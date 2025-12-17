@@ -1,0 +1,2 @@
+# jt_stable_joomla6_17_dec
+jt_stable_joomla6_17_dec
