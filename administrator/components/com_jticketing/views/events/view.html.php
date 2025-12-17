@@ -134,12 +134,7 @@ class JticketingViewEvents extends HtmlView
 		$bar   = Toolbar::getInstance('toolbar');
 
 		// Register CsvExport button path for Joomla 6
-		$csvExportPath = JPATH_LIBRARIES . '/techjoomla/tjtoolbar/button/csvexport.php';
-		if (file_exists($csvExportPath))
-		{
-			require_once $csvExportPath;
-			$bar->addButtonPath(JPATH_LIBRARIES . '/techjoomla/tjtoolbar/button');
-		}
+		JticketingHelper::registerCsvExportButton($bar);
 
 		ToolbarHelper::title(Text::_('COM_JTICKETING_COMPONENT') . Text::_('COM_JTICKETING_TITLE_EVENTS'), 'list');
 

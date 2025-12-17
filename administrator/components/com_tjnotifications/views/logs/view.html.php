@@ -80,10 +80,13 @@ class TjnotificationsViewLogs extends HtmlView
 
 		if ($this->canDo->get('core.export'))
 		{
-			// Adding techjoomla library for csv Export
-			require_once JPATH_LIBRARIES . '/techjoomla/tjtoolbar/button/csvexport.php';
+		// Adding techjoomla library for csv Export
+		require_once JPATH_LIBRARIES . '/techjoomla/tjtoolbar/button/csvexport.php';
 
-			$bar = Toolbar::getInstance('toolbar');
+		$bar = Toolbar::getInstance('toolbar');
+		
+		// Register CsvExport button path
+		$bar->addButtonPath(JPATH_LIBRARIES . '/techjoomla/tjtoolbar/button');
 
 			$message = array();
 			$message['success']    = Text::_("COM_TJNOTIFICATIONS_EXPORT_FILE_SUCCESS");

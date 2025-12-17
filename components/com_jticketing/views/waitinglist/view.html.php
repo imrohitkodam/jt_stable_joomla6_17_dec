@@ -113,6 +113,14 @@ class JTicketingViewWaitinglist extends HtmlView
 		$com_params = ComponentHelper::getParams('com_jticketing');
 		$autoAdvanceWaitingList = $com_params->get('auto_advance_waiting_list');
 		$toolbar = Toolbar::getInstance('toolbar');
+		
+		// Register CsvExport button path
+		$csvExportPath = JPATH_LIBRARIES . '/techjoomla/tjtoolbar/button/csvexport.php';
+		if (file_exists($csvExportPath))
+		{
+			require_once $csvExportPath;
+			$toolbar->addButtonPath(JPATH_LIBRARIES . '/techjoomla/tjtoolbar/button');
+		}
 
 		Text::script('TJTOOLBAR_NO_SELECT_MSG');
 		$alert = "alert(Joomla.Text._('TJTOOLBAR_NO_SELECT_MSG'));";

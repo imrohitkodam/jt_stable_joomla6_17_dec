@@ -217,10 +217,21 @@ class JticketingModelCouponform extends AdminModel
 		}
 		else
 		{
-			$eventId = (count($data['event_ids']) > 1) ? implode(',', $data['event_ids']) : $data['event_ids'][0];
+			if (count($data['event_ids']) > 1)
+			{
+				$eventId = implode(',', $data['event_ids']);
+			}
+			elseif (!empty($data['event_ids']) && isset($data['event_ids'][0]))
+			{
+				$eventId = $data['event_ids'][0];
+			}
+			else
+			{
+				$eventId = '';
+			}
 		}
 
-		$data['event_ids'] = StringHelper::trim($eventId, ',');
+		$data['event_ids'] = StringHelper::trim((string) $eventId, ',');
 		unset($data['checked_out']);
 		unset($data['checked_out_time']);
 

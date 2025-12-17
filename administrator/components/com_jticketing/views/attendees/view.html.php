@@ -334,6 +334,10 @@ class JticketingViewAttendees extends HtmlView
 		$layout    = Factory::getApplication()->getInput()->get('layout', 'default');
 		$comParams = JT::config();
 		$toolbar   = Toolbar::getInstance('toolbar');
+		
+		// Register CsvExport button path
+		JticketingHelper::registerCsvExportButton($toolbar);
+		
 		$integration = $comParams->get('integration', '', 'INT');
 
 		if ($layout == 'contactus')

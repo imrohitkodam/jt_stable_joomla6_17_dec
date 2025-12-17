@@ -113,7 +113,7 @@ use Joomla\CMS\Event\AbstractEvent;
 			// Check if venue with same alias is present
 			$venue = Table::getInstance('Venue', 'JTicketingTable', array('dbo', $db));
 
-			if ($venue->load(array('alias' => $this->alias)))
+			if ($venue && $venue->load(array('alias' => $this->alias)))
 			{
 				$msg = Text::_('COM_JTICKETING_SAVE_EVENT_WARNING_DUPLICATE_VENUE_ALIAS');
 
@@ -404,11 +404,11 @@ else
 				Factory::getApplication()->enqueueMessage($msg, 'warning');
 			}
 
-			// Check if category with same alias is present
-			Table::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_categories/tables');
-			$category = Table::getInstance('Category', 'CategoriesTable', array('dbo', Factory::getDbo()));
+		// Check if category with same alias is present
+		Table::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_categories/tables');
+		$category = Table::getInstance('Category', 'CategoriesTable', array('dbo', Factory::getDbo()));
 
-			if ($category->load(array('alias' => $this->alias)))
+		if ($category && $category->load(array('alias' => $this->alias)))
 			{
 				$msg = Text::_('COM_JTICKETING_SAVE_EVENT_WARNING_DUPLICATE_CAT_ALIAS');
 
@@ -423,7 +423,7 @@ else
 			// Check if venue with same alias is present
 			$venue = Table::getInstance('Venue', 'JTicketingTable', array('dbo', $db));
 
-			if ($venue->load(array('alias' => $this->alias)))
+			if ($venue && $venue->load(array('alias' => $this->alias)))
 			{
 				$msg = Text::_('COM_JTICKETING_SAVE_EVENT_WARNING_DUPLICATE_VENUE_ALIAS');
 

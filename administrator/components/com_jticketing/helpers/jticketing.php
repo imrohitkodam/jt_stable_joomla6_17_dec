@@ -498,4 +498,24 @@ class JticketingHelper
 
 		return $isEnabled;
 	}
+
+	/**
+	 * Register CsvExport button path for toolbar
+	 *
+	 * @param   \Joomla\CMS\Toolbar\Toolbar  $toolbar  The toolbar instance
+	 *
+	 * @return  void
+	 *
+	 * @since   1.0
+	 */
+	public static function registerCsvExportButton($toolbar)
+	{
+		$csvExportPath = JPATH_LIBRARIES . '/techjoomla/tjtoolbar/button/csvexport.php';
+		
+		if (file_exists($csvExportPath))
+		{
+			require_once $csvExportPath;
+			$toolbar->addButtonPath(JPATH_LIBRARIES . '/techjoomla/tjtoolbar/button');
+		}
+	}
 }

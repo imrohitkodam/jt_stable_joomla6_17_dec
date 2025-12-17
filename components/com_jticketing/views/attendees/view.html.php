@@ -331,6 +331,15 @@ class JticketingViewAttendees extends HtmlView
 	protected function addTJtoolbar()
 	{
 		$toolbar   = Toolbar::getInstance('toolbar');
+		
+		// Register CsvExport button path
+		$csvExportPath = JPATH_LIBRARIES . '/techjoomla/tjtoolbar/button/csvexport.php';
+		if (file_exists($csvExportPath))
+		{
+			require_once $csvExportPath;
+			$toolbar->addButtonPath(JPATH_LIBRARIES . '/techjoomla/tjtoolbar/button');
+		}
+		
 		$canDo     = $this->canDo;
 		$comParams = JT::config();
 		$integration = $comParams->get('integration', '', 'INT');

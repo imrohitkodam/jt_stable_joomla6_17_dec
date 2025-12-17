@@ -1,58 +1,59 @@
 <?php 
 
 $emails_config=array(
-'message_body'=>"<table class=\"maintab\" >
+'message_body'=>"<table class=\"maintab\" style=\"background: #ccc;\">
 <tbody>
 <tr>
-<td class=\"img barcode\" > </td>
-<td >
-<table class=\"info\"  cellspacing=\"1\" cellpadding=\"4\">
+<td class=\"img barcode\" style=\"vertical-align: top;\"> </td>
+<td style=\"vertical-align: top;\">
+<table class=\"info\" style=\"vertical-align: top;\" cellspacing=\"1\" cellpadding=\"4\">
 <tbody>
-<tr >
-<td class=\"jtlabel\" >Event</td>
-<td class=\"val event\" >[EVENT_NAME]</td>
+<tr style=\"border: 5px solid #ccc;\">
+<td class=\"jtlabel\" style=\"vertical-align: top; background: #fff;\">Event</td>
+<td class=\"val event\" style=\"color: #333; font-size: 28px; font-family: Tahoma; text-align: left; width: 350px; vertical-align: top; background: #fff;\">[EVENT_NAME]</td>
 </tr>
-<tr >
-<td class=\"jtlabel\" >Date + Time</td>
-<td class=\"val\" >[ST_DATE] to [EN_DATE]</td>
+<tr style=\"border: 5px solid #ccc;\">
+<td class=\"jtlabel\" style=\"vertical-align: top; background: #fff;\">Date + Time</td>
+<td class=\"val\" style=\"color: #333; font-size: 18px; font-family: Tahoma; text-align: left; width: 350px; vertical-align: top; background: #fff;\">[ST_DATE] to [EN_DATE]</td>
 </tr>
-<tr >
-<td class=\"jtlabel\" >Booking ID</td>
-<td class=\"val valbig\" >[TICKET_ID]</td>
+<tr style=\"border: 5px solid #ccc;\">
+<td class=\"jtlabel\" style=\"vertical-align: top; background: #fff;\">Booking ID</td>
+<td class=\"val valbig\" style=\"color: #333; font-size: 20px; font-family: Tahoma; text-align: left; width: 350px; font-weight: bold; vertical-align: top; background: #fff;\">[TICKET_ID]</td>
 </tr>
-<tr >
-<td class=\"jtlabel\" ><span>Name</span></td>
-<td class=\"val valbig\" >[NAME]</td>
+<tr style=\"border: 5px solid #ccc;\">
+<td class=\"jtlabel\" style=\"vertical-align: top; background: #fff;\">Name</td>
+<td class=\"val valbig\" style=\"color: #333; font-size: 20px; font-family: Tahoma; text-align: left; width: 350px; font-weight: bold; vertical-align: top; background: #fff;\">[NAME]</td>
 </tr>
-<tr >
-<td class=\"jtlabel\" >Location</td>
-<td class=\"val\" >[EVENT_LOCATION]</td>
+<tr style=\"border: 5px solid #ccc;\">
+<td class=\"jtlabel\" style=\"vertical-align: top; background: #fff;\">Location</td>
+<td class=\"val\" style=\"color: #333; font-size: 18px; font-family: Tahoma; text-align: left; width: 350px; vertical-align: top; background: #fff;\">[EVENT_LOCATION]</td>
 </tr>
-<tr >
-<td class=\"jtlabel\" >Order</td>
-<td class=\"val valsmall\" >[BUYER_NAME]</span> on [BOOKING_DATE]</td>
+<tr style=\"border: 5px solid #ccc;\">
+<td class=\"jtlabel\" style=\"vertical-align: top; background: #fff;\">Order</td>
+<td class=\"val valsmall\" style=\"color: #333; font-size: 14px; font-family: Tahoma; text-align: left; width: 350px; vertical-align: top; background: #fff;\">[BUYER_NAME] on [BOOKING_DATE]</td>
 </tr>
 </tbody>
 </table>
 </td>
-<td >
-<table class=\"info2\"  cellspacing=\"1\" cellpadding=\"1\">
+<td style=\"vertical-align: top;\">
+<table class=\"info2\" style=\"vertical-align: top;\" cellspacing=\"1\" cellpadding=\"1\">
 <tbody>
 <tr>
-<td class=\"img\" >[EVENT_IMAGE]</td>
+<td class=\"img\" style=\"vertical-align: top; background: #fff;\">[EVENT_IMAGE]</td>
 </tr>
 <tr>
-<td class=\"jtlabel1\" >Ticket Type:<br /> [TICKET_TYPE]</td>
+<td class=\"jtlabel1\" style=\"vertical-align: top; background: #fff;\">Ticket Type:<br>[TICKET_TYPE]</td>
 </tr>
 <tr>
-<td class=\"img\" >[QR_CODE]</td>
+<td class=\"img\" style=\"vertical-align: top; background: #fff;\">[QR_CODE]</td>
 </tr>
 </tbody>
 </table>
 </td>
 </tr>
 </tbody>
-</table>"
+</table>
+<p> </p>"
 );
 
 ?>

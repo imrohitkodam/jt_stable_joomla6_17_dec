@@ -143,10 +143,13 @@ class JTicketingViewWaitinglist extends HtmlView
 			{
 				$canDo  = $this->canDo;
 
-				// Get an instance of the Toolbar
-				$toolbar = Toolbar::getInstance('toolbar');
+			// Get an instance of the Toolbar
+			$toolbar = Toolbar::getInstance('toolbar');
+			
+			// Register CsvExport button path
+			JticketingHelper::registerCsvExportButton($toolbar);
 
-				ToolbarHelper::custom('waitinglist.redirectForEmail', 'mail.png', '', Text::_('COM_JTICKETING_EMAIL_TO_ALL_SELECTED_WAITLISTED_USERS'));
+			ToolbarHelper::custom('waitinglist.redirectForEmail', 'mail.png', '', Text::_('COM_JTICKETING_EMAIL_TO_ALL_SELECTED_WAITLISTED_USERS'));
 
 				if (($canDo->{'core.enrollall'} || $canDo->{'core.enrollown'}) && empty($autoAdvanceWaitingList)
 					&& ($this->enableWaitingList == 'both' || $this->enableWaitingList == 'classroom_training'))

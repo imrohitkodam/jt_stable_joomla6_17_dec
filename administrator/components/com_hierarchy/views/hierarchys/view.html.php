@@ -108,6 +108,14 @@ class HierarchyViewHierarchys extends HtmlView
 		// Import Csv export button
 		// Note: Custom toolbar buttons may need to be updated for Joomla 6
 		$bar = Factory::getApplication()->getDocument()->getToolbar();
+		
+		// Register CsvExport button path
+		$csvExportPath = JPATH_LIBRARIES . '/techjoomla/tjtoolbar/button/csvexport.php';
+		if (file_exists($csvExportPath))
+		{
+			require_once $csvExportPath;
+			$bar->addButtonPath(JPATH_LIBRARIES . '/techjoomla/tjtoolbar/button');
+		}
 
 		$state = $this->get('State');
 		$canDo = HierarchyHelper::getActions($state->get('filter.category_id'));

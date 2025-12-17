@@ -66,6 +66,14 @@ class TjreportsViewReports extends ReportsViewBase
 		$user                 = Factory::getUser();
 		$userAuthorisedExport = $user->authorise('core.export', 'com_tjreports.tjreport.' . $reportId);
 		$bar                  = Toolbar::getInstance('toolbar');
+		
+		// Register CsvExport button path
+		$csvExportPath = JPATH_LIBRARIES . '/techjoomla/tjtoolbar/button/csvexport.php';
+		if (file_exists($csvExportPath))
+		{
+			require_once $csvExportPath;
+			$bar->addButtonPath(JPATH_LIBRARIES . '/techjoomla/tjtoolbar/button');
+		}
 		$canDo                = TjreportsHelper::getActions();
 
 		if ($app->isClient("administrator"))
